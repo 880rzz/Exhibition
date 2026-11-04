@@ -105,3 +105,10 @@ html.menu-open .vipach-contact-dock{visibility:hidden;pointer-events:none}
   .vipach-contact-panel:not([hidden]){animation:vipachDockIn .16s ease-out}
   @keyframes vipachDockIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 }
+
+.header-tools{display:flex;align-items:center;gap:6px;margin-left:auto}
+.header-tools .lang-nav{margin:0}
+@media(max-width:680px){
+  .header-tools{gap:2px}
+  .lang-nav a{min-width:36px;min-height:38px}
+}
