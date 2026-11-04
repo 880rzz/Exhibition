@@ -15,4 +15,15 @@ Official multilingual microsite for the VIPACH — Vienna Photo Art & Creative H
 - German: https://exhibition.vipach.at/de/
 - Hungarian: https://exhibition.vipach.at/hu/
 
-The exhibition is VIPACH’s second major group exhibition in Vienna and presents the participating community’s own photographic perspectives after a learning year focused on major figures and movements in photography history.
+The exhibition is VIPACH’s third major group exhibition in Vienna and presents the participating community’s own photographic perspectives after a learning year focused on major figures and movements in photography history.
+
+
+## Previous group exhibitions
+1. As I Like It Austria — 30 November–6 December 2025, CITYgalleryVIENNA, Vienna
+   - HU: https://www.vipach.at/asilikeit
+   - EN: https://www.vipach.at/asilikeit?lang=en-GB
+   - DE: https://www.vipach.at/asilikeit?lang=de
+2. Életem képe / Picture of My Life — 7–13 December 2025, CITYgalleryVIENNA, Vienna
+   - HU: https://www.vipach.at/eletemkepe
+   - EN: https://www.vipach.at/eletemkepe?lang=en-GB
+   - DE: https://www.vipach.at/eletemkepe?lang=de
