@@ -112,3 +112,14 @@ html.menu-open .vipach-contact-dock{visibility:hidden;pointer-events:none}
   .header-tools{gap:2px}
   .lang-nav a{min-width:36px;min-height:38px}
 }
+
+.credits{padding:clamp(88px,11vw,160px) var(--gutter);border-bottom:1px solid var(--line);background:var(--paper)}
+.credits-inner{max-width:var(--max);margin:0 auto}
+.credits-head{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(36px,8vw,130px);align-items:end;margin-bottom:clamp(40px,6vw,72px)}
+.credit-list{border-top:1px solid var(--ink)}
+.credit-row{display:grid;grid-template-columns:150px minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(18px,3vw,48px);align-items:center;padding:20px 0;border-bottom:1px solid var(--line)}
+.credit-role{font-size:var(--fs-caption);line-height:1.35;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.credit-name{font-size:var(--fs-h3);line-height:1.08;letter-spacing:var(--tracking-heading);font-weight:600}
+.credit-title{font-size:var(--fs-meta);line-height:1.45;color:var(--muted)}
+@media(max-width:980px){.credits-head{grid-template-columns:1fr}.credit-row{grid-template-columns:110px 1fr}.credit-title{grid-column:2}}
+@media(max-width:680px){.credits{padding:82px 20px}.credit-row{grid-template-columns:1fr;gap:6px}.credit-title{grid-column:auto}}
