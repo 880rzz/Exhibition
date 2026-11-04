@@ -52,3 +52,10 @@ The microsite exposes a consistent Schema.org graph for:
 - ExhibitionEvent
 
 The ExhibitionEvent uses a stable @id of https://exhibition.vipach.at/#event and links to the VIPACH event page as supporting sameAs evidence. The organizer entity links to VIPACH official social profiles. The event is marked free, offline, scheduled, with doorTime 16:00 and official startDate 17:00.
+
+
+## Exhibition team
+- Curator: Balogh Dávid — art historian and museologist
+- Organizers: Hölcz Eszter and Ayadi Lívia
+- Patron: Bánhalmi Norbert — photographic artist
+- Works on view: 20 photographs
