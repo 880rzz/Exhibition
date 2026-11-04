@@ -78,3 +78,12 @@ if(mapButton){
   document.addEventListener('keydown',(event)=>{if(event.key==='Escape'&&!panel.hidden)setOpen(false);});
   document.addEventListener('click',(event)=>{if(!panel.hidden&&!dock.contains(event.target))setOpen(false);});
 })();
+
+
+/* LANGUAGE-PREFERENCE-V1 */
+document.querySelectorAll('.lang-nav a').forEach((link)=>{
+  link.addEventListener('click',()=>{
+    const lang=(link.getAttribute('lang')||'en').slice(0,2).toLowerCase();
+    if(['en','de','hu'].includes(lang)) localStorage.setItem('vipach-language-choice',lang);
+  });
+});
