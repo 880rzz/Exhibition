@@ -1,22 +1,37 @@
-# SPONTÁN — VIPACH Photo Exhibition 2026
+# SPONTÁN / SPONTANEOUS / SPONTAN — VIPACH Photo Exhibition 2026
 
-Official multilingual microsite for the VIPACH — Vienna Photo Art & Creative Hub group exhibition in Vienna.
+Official multilingual microsite for the third major Vienna group exhibition of VIPACH — Vienna Photo Art & Creative Hub.
 
-- Exhibition: SPONTÁN
-- Dates: 15–22 November 2026
-- Opening: 15 November 2026, 17:00 (Europe/Vienna)
-- Venue: CITYgalleryVIENNA by publicartists, Mahlerstraße 11, 1010 Vienna, Austria
+## Event facts
+- Hungarian title: SPONTÁN
+- English title: SPONTANEOUS
+- German title: SPONTAN
+- Exhibition dates: 15–22 November 2026
+- Guest reception: 15 November 2026 from 16:00 (Europe/Vienna)
+- Official opening: 15 November 2026 at 17:00 (Europe/Vienna)
+- Admission: free
+- Advance registration: not required
+- Venue: CITYgalleryVIENNA by publicartists
+- Address: Mahlerstraße 11, 1010 Wien, Austria
 - Organizer: VIPACH — Vienna Photo Art & Creative Hub
-- Languages: English, German (Austria), Hungarian
+- Contact: office@vipach.at
+- WhatsApp / phone: +43 677 616 55592
+- VIPACH event page: https://www.vipach.at/event-details/spontan-vipach-fotokiallitas-2026
 - Official VIPACH website: https://www.vipach.at/
+
+On the opening evening, several exhibition openings take place at the venue at the same time, so multiple artistic disciplines are represented alongside photography.
 
 ## Language pages
 - English: https://exhibition.vipach.at/
-- German: https://exhibition.vipach.at/de/
+- German (Austria): https://exhibition.vipach.at/de/
 - Hungarian: https://exhibition.vipach.at/hu/
 
-The exhibition is VIPACH’s third major group exhibition in Vienna and presents the participating community’s own photographic perspectives after a learning year focused on major figures and movements in photography history.
-
+## Photography History evidence network
+The exhibition microsite links only to subjects that have a published BANHALMI Photography History article in all three languages.
+- Hungarian category: https://blog.banhalmi.art/blog/categories/fototortenelem
+- English category: https://blog.banhalmi.art/en/blog/categories/photography-history
+- German category: https://blog.banhalmi.art/de/blog/categories/fotogeschichte
+- 19 verified multilingual episode groups are linked directly from the exhibition pages.
 
 ## Previous group exhibitions
 1. As I Like It Austria — 30 November–6 December 2025, CITYgalleryVIENNA, Vienna
@@ -27,3 +42,13 @@ The exhibition is VIPACH’s third major group exhibition in Vienna and presents
    - HU: https://www.vipach.at/eletemkepe
    - EN: https://www.vipach.at/eletemkepe?lang=en-GB
    - DE: https://www.vipach.at/eletemkepe?lang=de
+
+## Machine-readable identity
+The microsite exposes a consistent Schema.org graph for:
+- WebSite
+- WebPage
+- Organization
+- Place
+- ExhibitionEvent
+
+The ExhibitionEvent uses a stable @id of https://exhibition.vipach.at/#event and links to the VIPACH event page as supporting sameAs evidence. The organizer entity links to VIPACH official social profiles. The event is marked free, offline, scheduled, with doorTime 16:00 and official startDate 17:00.
