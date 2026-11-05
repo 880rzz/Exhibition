@@ -129,3 +129,12 @@ html.menu-open .vipach-contact-dock{visibility:hidden;pointer-events:none}
 
 /* Additional works by an existing exhibitor */
 .exhibitor-additional-work{margin:clamp(28px,4vw,52px) 0;padding:clamp(20px,3vw,32px) 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.exhibitor-additional-work .exhibitor-extra-title{margin:8px 0 0}.exhibitor-additional-work .exhibitor-date{margin:10px 0 18px}.exhibitor-additional-work>p:not(.kicker):not(.exhibitor-date){margin:0 0 18px;line-height:1.55}
+
+/* Featured sponsor: compact, accessible and distinct from the exhibition artwork. */
+.hero-sponsor{margin-top:clamp(24px,3vw,40px);padding-top:clamp(16px,2vw,24px);border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.hero-sponsor-label{margin:0;font-size:var(--fs-caption);font-weight:600;letter-spacing:.12em;line-height:1.4;text-transform:uppercase}
+.hero-sponsor-link{display:inline-flex;align-items:center;justify-content:center;width:clamp(84px,8vw,110px);min-height:84px;flex:0 0 auto;border:1px solid var(--line);background:#fff;transition:border-color .2s ease}
+.hero-sponsor-link img{display:block;width:100%;height:auto;aspect-ratio:670/666;object-fit:contain}
+.hero-sponsor-link:hover,.hero-sponsor-link:focus-visible{border-color:var(--ink)}
+.hero-sponsor-link:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+@media(max-width:480px){.hero-sponsor{gap:14px}.hero-sponsor-link{width:84px;min-height:84px}}
