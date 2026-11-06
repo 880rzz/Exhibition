@@ -144,3 +144,10 @@ html.menu-open .vipach-contact-dock{visibility:hidden;pointer-events:none}
 .hero-sponsor-link:hover,.hero-sponsor-link:focus-visible{opacity:.75}
 .hero-sponsor-link:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
 @media(max-width:480px){.hero-sponsor{gap:14px}.hero-sponsor-link{width:64px;min-height:64px}}
+
+/* Exhibition visit information directly beneath the privacy-first map. */
+.map-visit-details{padding:22px clamp(18px,3vw,32px) 26px;border-top:1px solid var(--line)}
+.map-visit-details p{margin:0 0 10px;font-size:clamp(14px,1.15vw,16px);line-height:1.55}
+.map-visit-details p:last-child{margin-bottom:0}
+.map-visit-details strong{font-weight:600}
+.map-visit-details a{text-underline-offset:3px}
