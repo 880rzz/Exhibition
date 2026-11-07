@@ -151,3 +151,7 @@ html.menu-open .vipach-contact-dock{visibility:hidden;pointer-events:none}
 .map-visit-details p:last-child{margin-bottom:0}
 .map-visit-details strong{font-weight:600}
 .map-visit-details a{text-underline-offset:3px}
+
+/* Hero eyebrow: wrap at semantic phrase boundaries, not between 'közös' and 'kiállítás'. */
+.hero-eyebrow .eyebrow-keep{white-space:nowrap}
+@media(max-width:480px){.hero-eyebrow{font-size:clamp(10px,2.55vw,11px);letter-spacing:.075em;line-height:1.5}}
