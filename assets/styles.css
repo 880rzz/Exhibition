@@ -155,3 +155,8 @@ html.menu-open .vipach-contact-dock{visibility:hidden;pointer-events:none}
 /* Hero eyebrow: wrap at semantic phrase boundaries, not between 'közös' and 'kiállítás'. */
 .hero-eyebrow .eyebrow-keep{white-space:nowrap}
 @media(max-width:480px){.hero-eyebrow{font-size:clamp(10px,2.55vw,11px);letter-spacing:.075em;line-height:1.5}}
+
+/* Naylivart: preserve the exhibited photograph's intrinsic 3:4 proportions. */
+#naylivart-exhibitor .exhibitor-artwork{margin:0 0 1.5rem;max-width:520px;min-width:0}
+#naylivart-exhibitor .exhibitor-artwork img{display:block;width:100%;height:auto;max-width:100%;object-fit:contain;aspect-ratio:auto}
+#naylivart-exhibitor .exhibitor-artwork figcaption{margin-top:.5rem;font-size:.85rem}
