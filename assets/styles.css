@@ -173,3 +173,6 @@ html.menu-open .vipach-contact-dock{visibility:hidden;pointer-events:none}
 .exhibitor-jump-details a:hover,.exhibitor-jump-details a:focus-visible{background:var(--paper-2);text-decoration:underline;text-underline-offset:3px}
 .exhibitor-card{scroll-margin-top:clamp(72px,9vw,120px)}
 @media(max-width:520px){.exhibitor-jump-details ul{grid-template-columns:1fr}}
+
+/* Copyright attribution applies to exhibited artworks, not artist portraits. */
+.exhibitor-work-image .artwork-copyright{margin-top:8px;font-size:clamp(11px,1vw,12px);line-height:1.5;letter-spacing:.015em;opacity:.72}
