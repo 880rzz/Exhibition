@@ -160,3 +160,16 @@ html.menu-open .vipach-contact-dock{visibility:hidden;pointer-events:none}
 #naylivart-exhibitor .exhibitor-artwork{margin:0 0 1.5rem;max-width:520px;min-width:0}
 #naylivart-exhibitor .exhibitor-artwork img{display:block;width:100%;height:auto;max-width:100%;object-fit:contain;aspect-ratio:auto}
 #naylivart-exhibitor .exhibitor-artwork figcaption{margin-top:.5rem;font-size:.85rem}
+
+/* Exhibitor index: native disclosure, keyboard-accessible and no JavaScript. */
+.exhibitor-jump{max-width:520px;margin:clamp(20px,3vw,36px) 0 clamp(28px,4vw,48px)}
+.exhibitor-jump-details{border:1px solid var(--ink);border-radius:4px;background:var(--paper)}
+.exhibitor-jump-details summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:48px;padding:12px 18px;cursor:pointer;font-weight:600;list-style:none}
+.exhibitor-jump-details summary::-webkit-details-marker{display:none}
+.exhibitor-jump-details[open] summary span{transform:rotate(180deg)}
+.exhibitor-jump-details ul{list-style:none;margin:0;padding:6px 12px 14px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 8px;border-top:1px solid var(--line)}
+.exhibitor-jump-details li{min-width:0}
+.exhibitor-jump-details a{display:block;padding:11px 9px;color:inherit;text-decoration:none;overflow-wrap:normal;word-break:normal;border-radius:3px}
+.exhibitor-jump-details a:hover,.exhibitor-jump-details a:focus-visible{background:var(--paper-2);text-decoration:underline;text-underline-offset:3px}
+.exhibitor-card{scroll-margin-top:clamp(72px,9vw,120px)}
+@media(max-width:520px){.exhibitor-jump-details ul{grid-template-columns:1fr}}
