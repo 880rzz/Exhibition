@@ -55,9 +55,9 @@ if(mapButton){
   const lang=(document.documentElement.lang||'en').toLowerCase();
   const locale=lang.startsWith('hu')?'hu':lang.startsWith('de')?'de':'en';
   const copy={
-    hu:{contact:'Kapcsolat',close:'Kapcsolati panel bezárása',email:'E-mail',whatsapp:'WhatsApp',map:'Helyszín',mapHint:'Google Térkép',wa:'Kedves VIPACH, a SPONTÁN kiállítással kapcsolatban keresem Önöket.'},
-    en:{contact:'Contact',close:'Close contact panel',email:'Email',whatsapp:'WhatsApp',map:'Venue',mapHint:'Google Maps',wa:'Hello VIPACH, I am contacting you regarding the SPONTANEOUS exhibition.'},
-    de:{contact:'Kontakt',close:'Kontaktfenster schließen',email:'E-Mail',whatsapp:'WhatsApp',map:'Ort',mapHint:'Google Maps',wa:'Hallo VIPACH, ich kontaktiere Sie wegen der Ausstellung SPONTAN.'}
+    hu:{contact:'Kapcsolat',close:'Kapcsolati panel bezárása',email:'E-mail',whatsapp:'WhatsApp',map:'Helyszín',mapHint:'Google Térkép',wa:'Kedves VIPACH, a SPONTÁN kiállítással kapcsolatban keresem Önöket.',visitTitle:'Kiállítás látogatása',visitDates:'2026. november 15. 16:00-tól november 21-ig',visitHours:'Naponta 14:00–20:00 · CITYgalleryVIENNA',visitOpening:'Hivatalos megnyitó: november 15., 17:00'},
+    en:{contact:'Contact',close:'Close contact panel',email:'Email',whatsapp:'WhatsApp',map:'Venue',mapHint:'Google Maps',wa:'Hello VIPACH, I am contacting you regarding the SPONTANEOUS exhibition.',visitTitle:'Visit the exhibition',visitDates:'15 November 2026 from 16:00 until 21 November',visitHours:'Daily 14:00–20:00 · CITYgalleryVIENNA',visitOpening:'Official opening: 15 November, 17:00'},
+    de:{contact:'Kontakt',close:'Kontaktfenster schließen',email:'E-Mail',whatsapp:'WhatsApp',map:'Ort',mapHint:'Google Maps',wa:'Hallo VIPACH, ich kontaktiere Sie wegen der Ausstellung SPONTAN.',visitTitle:'Ausstellung besuchen',visitDates:'15. November 2026 ab 16:00 bis 21. November',visitHours:'Täglich 14:00–20:00 Uhr · CITYgalleryVIENNA',visitOpening:'Offizielle Eröffnung: 15. November, 17:00 Uhr'}
   }[locale];
   const dock=document.createElement('div');
   dock.className='vipach-contact-dock';
@@ -67,6 +67,7 @@ if(mapButton){
       '<a class="vipach-contact-action" href="mailto:office@vipach.at"><strong>'+copy.email+'</strong><span>office@vipach.at</span></a>'+
       '<a class="vipach-contact-action" href="https://wa.me/4367761655592?text='+encodeURIComponent(copy.wa)+'" target="_blank" rel="noopener noreferrer"><strong>'+copy.whatsapp+'</strong><span>+43 677 616 55592</span></a>'+
       '<a class="vipach-contact-action" href="https://www.google.com/maps/search/?api=1&query=Mahlerstra%C3%9Fe%2011%2C%201010%20Wien" target="_blank" rel="noopener noreferrer"><strong>'+copy.map+'</strong><span>'+copy.mapHint+'</span></a>'+
+      '<div class="vipach-contact-visit" role="note"><strong>'+copy.visitTitle+'</strong><span>'+copy.visitDates+'</span><span>'+copy.visitHours+'</span><small>'+copy.visitOpening+'</small></div>'+
     '</div></div><button class="vipach-contact-trigger" type="button" aria-expanded="false" aria-controls="vipach-contact-panel">'+copy.contact+'</button>';
   document.body.appendChild(dock);
   const panel=dock.querySelector('.vipach-contact-panel');
