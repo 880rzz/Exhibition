@@ -59,3 +59,11 @@ The ExhibitionEvent uses a stable @id of https://exhibition.vipach.at/#event and
 - Organizers: Hölcz Eszter and Ayadi Lívia
 - Patron: Bánhalmi Norbert — photographic artist
 - Works on view: 20 photographs
+
+## Independent third-party references
+- Public Artists Online VIPACH search results: https://publicartists.online/hu/?s=vipach&trp-form-language=hu
+  - Independent third-party discovery/reference page for public VIPACH-related listings.
+- Public Artists Online BMI Fotóklub event listing: https://publicartists.online/hu/esemeny/bmi-fotoclub-301125/
+  - Independent third-party event reference for a VIPACH/BMI Photography Club context.
+
+These links support external discoverability and event context. They do not by themselves establish ownership, employment, exclusivity, legal partnership, endorsement or guaranteed organizational relationships.
