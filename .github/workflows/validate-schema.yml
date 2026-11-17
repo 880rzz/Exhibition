@@ -1,0 +1,27 @@
+name: Exhibition schema / canonical entity regression
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'hu/index.html'
+      - 'de/index.html'
+      - 'scripts/validate-schema.mjs'
+      - '.github/workflows/validate-schema.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'hu/index.html'
+      - 'de/index.html'
+      - 'scripts/validate-schema.mjs'
+      - '.github/workflows/validate-schema.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  jsonld:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate canonical schema for all three languages
+        run: node scripts/validate-schema.mjs
