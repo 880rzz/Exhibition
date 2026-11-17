@@ -1,0 +1,26 @@
+name: Verify exhibition schema and graph
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'hu/index.html'
+      - 'de/index.html'
+      - 'scripts/verify-federation-schema.py'
+      - '.github/workflows/verify-federation-schema.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'hu/index.html'
+      - 'de/index.html'
+      - 'scripts/verify-federation-schema.py'
+      - '.github/workflows/verify-federation-schema.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  schema:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/verify-federation-schema.py
