@@ -492,5 +492,42 @@
     "preservePermanentUrl": true,
     "chronologyStart": "2025-11-30",
     "releaseNote": "Historical archive is navigable; 40 artworks remain withheld until licence verification."
+  },
+  "pressCoverage": {
+    "sourceReview": "2026-11-22",
+    "discoverySource": "https://hu.wikipedia.org/wiki/VIPACH",
+    "editorialNote": "Sources are linked to this exhibition, including clearly labelled advance/secondary mentions. Wikipedia is discovery context, not a press outlet.",
+    "items": [
+      {
+        "id": "orf-as-i-like-it-2025",
+        "publication": "ORF Volksgruppen",
+        "title": "Fotókiállítással ünnepel a BMI Fotóklub",
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3332313/",
+        "language": "hu",
+        "date": "2025-12-01",
+        "type": "exhibition-report",
+        "description": {
+          "hu": "Az ORF tudósítása a november 30-án megnyílt As I Like It Austria kiállításról, fotóriporttal és alkotói-közösségi háttérrel.",
+          "en": "ORF coverage of the As I Like It Austria exhibition opened on 30 November 2025, including a photo report.",
+          "de": "ORF-Bericht zur am 30. November 2025 eröffneten Ausstellung As I Like It Austria, mit Fotoreportage."
+        },
+        "evidence": "Wikipedia VIPACH reference 1; original ORF article explicitly names show and opening"
+      },
+      {
+        "id": "rolunk-as-i-like-it-2025",
+        "publication": "Rólunk.at",
+        "title": "Egyéves a BMI Fotóklub – hogyan teremt közösséget a művészet",
+        "url": "https://rolunk.at/kultura/egyeves-a-bmi-fotoklub-hogyan-teremt-kozosseget-a-muveszet/",
+        "language": "hu",
+        "date": "2025-12-11",
+        "type": "exhibition-report",
+        "description": {
+          "hu": "Részletes riport a fotóklub évfordulójáról és az As I Like It Austria kiállításáról, alkotókkal és a kurátorral készült megszólalásokkal.",
+          "en": "An anniversary feature covering As I Like It Austria, the participating artists and curator.",
+          "de": "Ein Jubiläumsbericht über As I Like It Austria mit Beiträgen der Ausstellenden und des Kurators."
+        },
+        "evidence": "Wikipedia VIPACH reference 3; Rólunk article specifically documents As I Like It Austria"
+      }
+    ]
   }
 }
