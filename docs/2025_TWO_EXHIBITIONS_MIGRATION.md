@@ -12,7 +12,7 @@
 | Catalogue work images with unique Wix source + existing private mirror | 20 | 20 | **40** |
 | Original Wix CMS biographies represented | 15 | 19 | **34 profile displays**, sourced from 32 unique CMS records |
 | Works with full source descriptions matched | 18 | 19 | **37** |
-| Works without verified artist attribution | 2 | 1 | **3** |
+| Works without a Wix gallery artist link | 0 | 0 | **0** |
 | Works with verified publication rights in repository | 0 | 0 | **0** |
 
 The 3 Életem képe portraits and biographies not present in that show's Wix CMS rows are linked to **the same person's** public Wix record in the As I Like It dataset. That cross-exhibition *profile* provenance is preserved and is **not** proof that any As I Like It image was exhibited in Életem képe.
@@ -34,7 +34,7 @@ All full original biographies and artwork descriptions are imported directly fro
 
 - Review artifact only. `staging-preview/` is not part of the current Exhibition production build and carries `noindex,nofollow,noimageindex`.
 - User-requested content assembly is separate from image-use permissions. All 40 art works and 34 portraits remain **rights-review-required** or **license-verification-required**, not cleared for a new release.
-- Three gallery works' artist identification is still unresolved. Their images are staged with provenance; no artist name was invented.
+- All 40 gallery images now have exact Wix Pro Gallery item IDs and direct artist-profile links. Three previously unidentified works are attributed to Denise Trajkovska, Norbert Bánhalmi and NaylivArt. This is authorship provenance, **not** a publication licence.
 - At least three source art descriptions are absent from the verified matching CMS record; those fields remain clearly unconfirmed.
 - Original English/German translations of individual artist biographies and artwork descriptions are not available in the verified Wix CMS source. Their absence is not hidden.
 - Existing SPONTÁN live pages, current sitemap, GitHub Pages configuration, DNS and `www.vipach.at` remain unchanged.
@@ -42,7 +42,7 @@ All full original biographies and artwork descriptions are imported directly fro
 ## Release prerequisites
 
 1. Visual review of the six generated pages including the 74 image slots and long biographies.
-2. Source/editorial review of missing work titles and three unidentified artist credits; resolve show-date source conflicts.
+2. Source/editorial review of unverified work titles, three missing work descriptions and any show-date source conflicts. All 40 artist links are now mapped from Wix.
 3. Verify actual usage permissions for the images **before** copying new binaries into the public Exhibition deploy.
 4. Translate/approve source biographies and work narratives if full HU/EN/DE linguistic parity is required.
 5. Convert the reviewed staging pages into production `full-html` templates only after rights and content sign-off, then run CI and exact-live verification.
@@ -76,7 +76,7 @@ node scripts/check-2025-publication-gate.mjs --require-go
 
 Private JSON schema: `schemaVersion: "vipach-2025-rights-v1"`; `usageApprovals` contains 74 per-use approvals, keyed `<exhibition-slug>/work/<work-id>` or `<exhibition-slug>/portrait/<artist-id>`. Each record must carry `key`, exact matching image `sha256`, `approved:true`, `scope:"VIPACH Exhibition website archive"`, `copyrightHolder`, `licensee`, `approvedBy`, `approvalDate`, a relative `evidenceFile` under the trusted private directory, and the evidence document's `evidenceSha256`. Expired permissions and absent/mismatched files fail.
 
-**This automated validation does not replace a human legal review of the evidence and its scope.** No manifest currently exists, and the current preflight is NO-GO. Three work attributions also remain unresolved, independently blocking publication.
+**This automated validation does not replace a human legal review of the evidence and its scope.** No manifest currently exists, and the current preflight is NO-GO. All 40 work-to-artist links are now mapped from Wix; image republication remains blocked by absent rights evidence.
 
 ### No production promotion without new reviewed PR
 
@@ -86,4 +86,10 @@ After rights sign-off, prepare exact `full-html` publication templates for both 
 
 ### Lingual and historical editorial gaps
 
-The 32 original Wix CMS biographies and 37 matched work narratives are **Hungarian originals**, not EN/DE translations. The six page structures and exhibition introductions are localized, but full individual biography/artwork translation requires a separate factual translation pass. The two shows contain **3 remaining creator attribution gaps** and 3 source descriptions with no verified matching CMS record; neither attribution nor description may be guessed.
+The 32 original Wix CMS biographies and 37 matched work narratives are **Hungarian originals**, not EN/DE translations. The six page structures and exhibition introductions are localized, but full individual biography/artwork translation requires a separate factual translation pass. All 40 works now have original Wix gallery-to-artist provenance. Three source descriptions remain absent from verified CMS records; these descriptions must not be invented.
+
+### Original Wix photo-to-artist mapping (2026-11-22)
+
+The Wix Pro Gallery API was queried directly for gallery IDs `6633bc43-2980-4c26-b5d8-ff681a94d44c` (Életem képe) and `adbad2f0-6faf-45ab-84a8-131723699615` (As I Like It Austria). All 40 images matched by **exact Wix media file ID** and each gallery entry's explicitly configured artist link. Evidence for all 40 works — source image ID, gallery item ID, original gallery position, artist profile URL, corresponding work ID and media SHA-256 — is preserved in `data/staging/2025-progallery-artist-mapping.json` and checked by `scripts/check-2025-gallery-attribution.mjs` in CI.
+
+Three previously unresolved credits are now traced to the original Wix gallery links: Életem képe #2 → Denise Trajkovska (`/artist/denisetrajkovska`), Életem képe #20 → Norbert Bánhalmi (`https://www.norbertbanhalmi.com/mybest`), As I Like It Austria #20 → NaylivArt (`https://www.bmifotoklub.at/artist/naylivart`). The external Norbert page is retained as the original Wix source link. This mapping does **not** imply that these photographers consented to image republication in the public Exhibition repository; the 74-usage rights gate stays NO-GO.
