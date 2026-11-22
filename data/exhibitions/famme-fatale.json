@@ -1,0 +1,74 @@
+{
+  "slug": "famme-fatale",
+  "status": "historical",
+  "featured": false,
+  "render": "archive",
+  "organizationContext": "VIPACH exhibition history lists 'Famme Fatale' at CITYgalleryVIENNA, Wien, 2025 (VIPACH spelling retained in slug/title).",
+  "titles": {
+    "hu": "Famme Fatale",
+    "en": "Famme Fatale",
+    "de": "Famme Fatale"
+  },
+  "titleSpellingNotes": [
+    "VIPACH fotokiallitasok uses 'Famme Fatale'.",
+    "External Banhalmi Art archive uses 'Femme Fatale' (2025-03-02, CITYgalleryVIENNA). Documented as a spelling/source variant — do not silently rewrite VIPACH listing spelling."
+  ],
+  "subtitle": {
+    "hu": "CITYgalleryVIENNA · Wien · 2025",
+    "en": "CITYgalleryVIENNA · Vienna · 2025",
+    "de": "CITYgalleryVIENNA · Wien · 2025"
+  },
+  "year": 2025,
+  "venue": {
+    "name": "CITYgalleryVIENNA",
+    "addressLocality": "Wien",
+    "addressCountry": "AT",
+    "streetAddress": "missing — likely Mahlerstraße 11 / 1010 but not confirmed for this stub from VIPACH listing alone",
+    "postalCode": "missing"
+  },
+  "dates": {
+    "publicVisit": "missing — VIPACH listing gives year 2025 only",
+    "relatedExternalNotes": [
+      {
+        "source": "https://www.banhalmi.art/de-at/exhibitions/femmefatale.html",
+        "claim": "External page states 2 March 2025 · CITYgalleryVIENNA, Wien for Femme Fatale. Treat as related external documentation pending VIPACH confirmation.",
+        "rights": "missing"
+      }
+    ]
+  },
+  "team": {
+    "curator": "missing",
+    "organizers": "missing",
+    "patron": "missing"
+  },
+  "artists": [],
+  "works": [],
+  "cover": {
+    "url": "missing",
+    "rights": "unverified — do not embed as cleared cover/OG until licence evidence exists",
+    "publicationStatus": "rights-review-required",
+    "publicReleaseApproved": false
+  },
+  "supporters": {
+    "featuredEventOnly": []
+  },
+  "external": {
+    "vipachHistoryListing": "https://www.vipach.at/fotokiallitasok"
+  },
+  "missing": [
+    "Confirmed public visit date range on VIPACH-owned pages",
+    "Street address confirmation for this show",
+    "Curator / organizers / patron",
+    "Artist roster",
+    "Artwork list and image files",
+    "Image rights",
+    "Localized long-form copy"
+  ],
+  "routes": {
+    "permanentSlug": {
+      "en": "/famme-fatale/",
+      "hu": "/hu/famme-fatale/",
+      "de": "/de/famme-fatale/"
+    }
+  }
+}

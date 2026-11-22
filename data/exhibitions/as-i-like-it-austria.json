@@ -1,0 +1,490 @@
+{
+  "slug": "as-i-like-it-austria",
+  "status": "historical",
+  "featured": false,
+  "render": "archive",
+  "organizationContext": "VIPACH community group exhibition (BMI Fotoklub / VIPACH lineage). Source pages: vipach.at/asilikeit and exhibition.vipach.at history block.",
+  "titles": {
+    "hu": "As I Like It Austria",
+    "en": "As I Like It Austria",
+    "de": "As I Like It Austria"
+  },
+  "subtitle": {
+    "hu": "Közösségi fotókiállítás · 2025",
+    "en": "Community photo exhibition · 2025",
+    "de": "Gemeinschaftliche Fotoausstellung · 2025"
+  },
+  "year": 2025,
+  "venue": {
+    "name": "CITYgalleryVIENNA by publicartists",
+    "addressLocality": "Wien",
+    "addressCountry": "AT",
+    "districtNote": "1. kerület / 1st district (VIPACH page)",
+    "streetAddress": "missing on asilikeit page body (not copied as Mahlerstraße 11 without confirmation)",
+    "postalCode": "missing"
+  },
+  "dates": {
+    "publicVisit": {
+      "start": "2025-11-30",
+      "end": "2025-12-06",
+      "sources": [
+        "https://www.vipach.at/asilikeit",
+        "https://exhibition.vipach.at/ llms.txt / history block",
+        "https://www.vipach.at/event-list opening listing"
+      ]
+    },
+    "opening": {
+      "source": "https://www.vipach.at/event-list",
+      "claim": "Opening event listed 2025-11-30 16:00–19:00 at CITYgalleryVIENNA",
+      "officialStart": "missing — exact ceremonial minute not isolated beyond the event-list window"
+    }
+  },
+  "team": {
+    "curator": {
+      "name": "Balogh Dávid",
+      "title": "művészettörténész és muzeológus",
+      "source": "https://www.vipach.at/asilikeit"
+    },
+    "organizers": [
+      {
+        "name": "Bánhalmi Norbert",
+        "with": "Bécsi Magyar Iskola (BMI) Fotoklubjának csapata",
+        "source": "https://www.vipach.at/asilikeit"
+      }
+    ],
+    "patron": "missing as a separate role on the source page"
+  },
+  "artists": [
+    "Adamski",
+    "AndreaWettstein",
+    "Anett Elek",
+    "B.ella",
+    "Denise Trajkovska",
+    "Eszter",
+    "Isa",
+    "Jowan Trajkovski",
+    "Jupiter",
+    "Liz",
+    "Nagy Márton",
+    "NaylivArt",
+    "Nina",
+    "Norbert Bánhalmi",
+    "Tamás Pfundt",
+    "Tóth Manó",
+    "ZZ",
+    "Zoltan Kondits",
+    "native pictures"
+  ],
+  "artistRosterNote": "Authoritative creator list derived from VIPACH 2025 gallery/CMS reconciliation synced 2026-11-22. Unidentified works remain listed with publicationStatus=rights-review-required and must not be published.",
+  "works": [
+    {
+      "id": "asilikeit-da0aa75aab64",
+      "creatorName": "Tamás Pfundt",
+      "creatorIdentificationStatus": "identified",
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
+      "titleDataStatus": "missing",
+      "image": {
+        "sha256": "da0aa75aab64f63c2784e8f93fb66d1e01ada50a29e91b8b3db6542eac49c5d6",
+        "width": 1920,
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
+      }
+    },
+    {
+      "id": "asilikeit-ce5b826f4ae3",
+      "creatorName": "Nina",
+      "creatorIdentificationStatus": "identified",
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
+      "titleDataStatus": "missing",
+      "image": {
+        "sha256": "ce5b826f4ae3ac942874e03c8e8f473d46f3ea8d4c3be09b4fa30f3293dd1bd4",
+        "width": 1920,
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
+      }
+    },
+    {
+      "id": "asilikeit-e863ff3082b8",
+      "creatorName": "Zoltan Kondits",
+      "creatorIdentificationStatus": "identified",
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
+      "titleDataStatus": "missing",
+      "image": {
+        "sha256": "e863ff3082b8a32666166b999c30a1d848a2c8ab5e5a4a9c2c05771876466d56",
+        "width": 1920,
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
+      }
+    },
+    {
+      "id": "asilikeit-844936de3dd5",
+      "creatorName": "Jupiter",
+      "creatorIdentificationStatus": "identified",
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
+      "titleDataStatus": "missing",
+      "image": {
+        "sha256": "844936de3dd5cef41d79c573622f6f42f5a98f8c8d271f812833920a94bb092d",
+        "width": 1920,
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
+      }
+    },
+    {
+      "id": "asilikeit-4789a7c2c1f0",
+      "creatorName": "AndreaWettstein",
+      "creatorIdentificationStatus": "identified",
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
+      "titleDataStatus": "missing",
+      "image": {
+        "sha256": "4789a7c2c1f09f59f823e8fb818481d96a1b78d1bdd900cbdebcc91ede503c59",
+        "width": 1920,
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
+      }
+    },
+    {
+      "id": "asilikeit-5020371540fb",
+      "creatorName": "ZZ",
+      "creatorIdentificationStatus": "identified",
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
+      "titleDataStatus": "missing",
+      "image": {
+        "sha256": "5020371540fb414eaa930a4cf37ff7adcd290ea582d62d7e19cab1e64fb7c4df",
+        "width": 1920,
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
+      }
+    },
+    {
+      "id": "asilikeit-a1e2cb005f07",
+      "creatorName": "Eszter",
+      "creatorIdentificationStatus": "identified",
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
+      "titleDataStatus": "missing",
+      "image": {
+        "sha256": "a1e2cb005f07f2df9db790908fba489c02f043930a8da3d0fed8f85c14e58d9c",
+        "width": 1920,
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
+      }
+    },
+    {
+      "id": "asilikeit-8e955fa88e16",
+      "creatorName": "Denise Trajkovska",
+      "creatorIdentificationStatus": "identified",
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
+      "titleDataStatus": "missing",
+      "image": {
+        "sha256": "8e955fa88e160de261e2adc85939cd03f08038ccc6b367c9a4319bf2b6bd79ad",
+        "width": 1920,
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
+      }
+    },
+    {
+      "id": "asilikeit-3c51b19aa027",
+      "creatorName": null,
+      "creatorIdentificationStatus": "unidentified",
+      "publicationStatus": "rights-review-required",
+      "licenseVerificationStatus": "absent",
+      "publicReleaseApproved": false,
+      "titleDataStatus": "missing",
+      "image": {
+        "sha256": "3c51b19aa027a2833ec4be7a070d9da45c693414c3ee9b1e2ae500840d5a0d96",
+        "width": 1920,
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
+      }
+    },
+    {
+      "id": "asilikeit-f5ce80663718",
+      "creatorName": "Nagy Márton",
+      "creatorIdentificationStatus": "identified",
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
+      "titleDataStatus": "missing",
+      "image": {
+        "sha256": "f5ce806637187ea3b4187d5ad763ce62321c18072011d24b2ffc03b8a729df21",
+        "width": 1920,
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
+      }
+    },
+    {
+      "id": "asilikeit-7f10b8f48731",
+      "creatorName": "NaylivArt",
+      "creatorIdentificationStatus": "identified",
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
+      "titleDataStatus": "missing",
+      "image": {
+        "sha256": "7f10b8f4873107db996b1a0ac86fc5edb36c10ac0a95bb6a7ee05ec51a3d7b47",
+        "width": 1920,
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
+      }
+    },
+    {
+      "id": "asilikeit-89a64ca4313e",
+      "creatorName": "B.ella",
+      "creatorIdentificationStatus": "identified",
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
+      "titleDataStatus": "missing",
+      "image": {
+        "sha256": "89a64ca4313e1e8c7a0fd8ebc9c9c19b95a1db2cf13c181b80fc72b78b658ed0",
+        "width": 1920,
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
+      }
+    },
+    {
+      "id": "asilikeit-accee5c39590",
+      "creatorName": "Norbert Bánhalmi",
+      "creatorIdentificationStatus": "identified",
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
+      "titleDataStatus": "missing",
+      "image": {
+        "sha256": "accee5c39590c5174c7177d6954d1713bf7b9a182919c1171486559ec63b2b96",
+        "width": 1920,
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
+      }
+    },
+    {
+      "id": "asilikeit-844abe713397",
+      "creatorName": "Adamski",
+      "creatorIdentificationStatus": "identified",
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
+      "titleDataStatus": "missing",
+      "image": {
+        "sha256": "844abe713397f0b45bda1e4760476160e17984b58ddd12e10a8b3cc64a524eb8",
+        "width": 1920,
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
+      }
+    },
+    {
+      "id": "asilikeit-f34e5c36d713",
+      "creatorName": "Isa",
+      "creatorIdentificationStatus": "identified",
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
+      "titleDataStatus": "missing",
+      "image": {
+        "sha256": "f34e5c36d713d2f26cfd093467be7a8e391181e14d839ecabd2202385c16a618",
+        "width": 1920,
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
+      }
+    },
+    {
+      "id": "asilikeit-c90dce593fd2",
+      "creatorName": "Jowan Trajkovski",
+      "creatorIdentificationStatus": "identified",
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
+      "titleDataStatus": "missing",
+      "image": {
+        "sha256": "c90dce593fd21ab0028c978a57189e2927e960617059f0b6b4d5242994d55fff",
+        "width": 1920,
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
+      }
+    },
+    {
+      "id": "asilikeit-474a405f62e0",
+      "creatorName": "Tóth Manó",
+      "creatorIdentificationStatus": "identified",
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
+      "titleDataStatus": "missing",
+      "image": {
+        "sha256": "474a405f62e099fc77b933c146cc52268ba92fd9fd6b2d57f7c44b65a800191f",
+        "width": 1920,
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
+      }
+    },
+    {
+      "id": "asilikeit-e4aba83b9917",
+      "creatorName": "Anett Elek",
+      "creatorIdentificationStatus": "identified",
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
+      "titleDataStatus": "missing",
+      "image": {
+        "sha256": "e4aba83b9917a3c4ddfdfa1bb25c6f248c8136f8d0dd922152ed70e085f8866b",
+        "width": 1920,
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
+      }
+    },
+    {
+      "id": "asilikeit-1ad77d482128",
+      "creatorName": "native pictures",
+      "creatorIdentificationStatus": "identified",
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
+      "titleDataStatus": "missing",
+      "image": {
+        "sha256": "1ad77d482128fe1f1588906bf3272c97de55b05097fa83158e0ed7841dcb3d34",
+        "width": 1920,
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
+      }
+    },
+    {
+      "id": "asilikeit-ad326a449763",
+      "creatorName": "Liz",
+      "creatorIdentificationStatus": "identified",
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
+      "titleDataStatus": "missing",
+      "image": {
+        "sha256": "ad326a449763eb7a9ba26397c970af16f1ae463c48c49bcc44a1f359db17f89a",
+        "width": 1920,
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
+      }
+    }
+  ],
+  "counts": {
+    "photographers": 19,
+    "works": 20,
+    "approvedForPublicDisplay": 0,
+    "withheldRightsReviewRequired": 1,
+    "identifiedCatalogueCreators": 19,
+    "identifiedCatalogueCreatorNames": [
+      "Adamski",
+      "AndreaWettstein",
+      "Anett Elek",
+      "B.ella",
+      "Denise Trajkovska",
+      "Eszter",
+      "Isa",
+      "Jowan Trajkovski",
+      "Jupiter",
+      "Liz",
+      "Nagy Márton",
+      "native pictures",
+      "NaylivArt",
+      "Nina",
+      "Norbert Bánhalmi",
+      "Tamás Pfundt",
+      "Tóth Manó",
+      "Zoltan Kondits",
+      "ZZ"
+    ],
+    "licenceVerifiedApprovedForPublicDisplay": 0,
+    "priorWixPublicationOnlyLicenseVerificationRequired": 19,
+    "rightsReviewRequiredUnidentified": 1,
+    "derivedFromWorksAt": "2026-11-22",
+    "derivation": "scripts/regenerate_exhibition_counts.mjs — counts must match works[]"
+  },
+  "cover": {
+    "url": "https://static.wixstatic.com/media/b0aee1_479cfc4cc3644a22a3008fe3cd580fc3~mv2.jpg",
+    "source": "og/page image observed on vipach.at/asilikeit",
+    "rights": "unverified — do not embed as cleared cover/OG until licence evidence exists",
+    "publicationStatus": "rights-review-required",
+    "publicReleaseApproved": false
+  },
+  "admission": {
+    "free": true,
+    "registrationRequired": true,
+    "source": "https://www.vipach.at/asilikeit"
+  },
+  "supporters": {
+    "featuredEventOnly": [],
+    "printPartner": "missing — page mentions Nyomdai partnerünk without extracting the name here",
+    "professionalPartner": "missing — page mentions Szakmai partnerünk without extracting the name here"
+  },
+  "external": {
+    "vipachPage": {
+      "hu": "https://www.vipach.at/asilikeit",
+      "en": "https://www.vipach.at/asilikeit?lang=en-GB",
+      "de": "https://www.vipach.at/asilikeit?lang=de"
+    }
+  },
+  "missing": [
+    "Complete artist roster with rights-cleared portraits",
+    "Artwork list, filenames, credits",
+    "Confirmed street address for this edition",
+    "Print / professional partner names",
+    "Full localized body copy for EN/DE archive pages",
+    "verified artwork titles for many works",
+    "public HTML artwork gallery on exhibition.vipach.at archive pages pending approved cutover copy"
+  ],
+  "routes": {
+    "permanentSlug": {
+      "en": "/as-i-like-it-austria/",
+      "hu": "/hu/as-i-like-it-austria/",
+      "de": "/de/as-i-like-it-austria/"
+    }
+  },
+  "rightsInventory": {
+    "schema": "public-safe-summary-v4",
+    "note": "Aggregates regenerated from works[]. Detailed licence evidence stays in VIPACH private-build/staging.",
+    "publicationApprovalStatus": "partial",
+    "counts": {
+      "licenceVerifiedApprovedForPublicDisplay": 0,
+      "priorWixPublicationOnlyLicenseVerificationRequired": 19,
+      "rightsReviewRequiredUnidentified": 1
+    },
+    "preserve": {
+      "archiveImages": 40,
+      "cmsMatches": 37,
+      "unresolvedAttributions": 3
+    }
+  },
+  "migrationCompleteness": "partial-historical-archive"
+}

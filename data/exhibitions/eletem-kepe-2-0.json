@@ -1,0 +1,63 @@
+{
+  "slug": "eletem-kepe-2-0",
+  "status": "planned",
+  "featured": false,
+  "render": "archive",
+  "realized": false,
+  "organizationContext": "Planned VIPACH follow-up exhibition. Not realised.",
+  "titles": {
+    "hu": "Életem képe 2.0",
+    "en": "Picture of My Life 2.0",
+    "de": "Picture of My Life 2.0"
+  },
+  "subtitle": {
+    "hu": "Tervezett kiállítás · 2027 április",
+    "en": "Planned exhibition · April 2027",
+    "de": "Geplante Ausstellung · April 2027"
+  },
+  "year": 2027,
+  "dates": {
+    "publicVisit": {
+      "month": "2027-04",
+      "exactDays": "missing",
+      "status": "planned — not realised"
+    }
+  },
+  "venue": {
+    "name": "missing",
+    "addressLocality": "missing",
+    "addressCountry": "missing"
+  },
+  "team": {
+    "curator": "missing",
+    "organizers": "missing",
+    "patron": "missing"
+  },
+  "artists": [],
+  "works": [],
+  "cover": {
+    "url": "missing",
+    "rights": "unverified — do not embed as cleared cover/OG until licence evidence exists",
+    "publicationStatus": "rights-review-required",
+    "publicReleaseApproved": false
+  },
+  "supporters": {
+    "featuredEventOnly": []
+  },
+  "missing": [
+    "Exact dates in April 2027",
+    "Venue",
+    "Team",
+    "Artists",
+    "Works",
+    "Images and rights",
+    "Confirmed public announcement URL"
+  ],
+  "routes": {
+    "permanentSlug": {
+      "en": "/eletem-kepe-2-0/",
+      "hu": "/hu/eletem-kepe-2-0/",
+      "de": "/de/eletem-kepe-2-0/"
+    }
+  }
+}

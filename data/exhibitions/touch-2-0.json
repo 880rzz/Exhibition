@@ -1,0 +1,72 @@
+{
+  "slug": "touch-2-0",
+  "status": "historical",
+  "featured": false,
+  "render": "archive",
+  "organizationContext": "Historical exhibition listed on VIPACH exhibition history; may predate the VIPACH organizational form. Do not rebrand as VIPACH-only.",
+  "titles": {
+    "hu": "Touch 2.0",
+    "en": "Touch 2.0",
+    "de": "Touch 2.0"
+  },
+  "subtitle": {
+    "hu": "Spiritual Touch · München · 2024",
+    "en": "Spiritual Touch · Munich · 2024",
+    "de": "Spiritual Touch · München · 2024"
+  },
+  "year": 2024,
+  "venue": {
+    "name": "Spiritual Touch",
+    "addressLocality": "München",
+    "addressCountry": "DE",
+    "streetAddress": "missing",
+    "postalCode": "missing"
+  },
+  "dates": {
+    "publicVisit": "missing — year 2024 only on VIPACH fotokiallitasok listing",
+    "relatedExternalNotes": [
+      {
+        "source": "https://www.banhalmi.art/hu/exhibitions/touch-wien.html",
+        "claim": "Mentions a Munich presentation 2024-05-15 at Spiritual Touch Tantra Institut as part of a broader Touch Bécs & Touch München project. Treat as related external documentation, not as a VIPACH-owned fact pack.",
+        "rights": "missing"
+      }
+    ]
+  },
+  "team": {
+    "curator": "missing",
+    "organizers": "missing",
+    "patron": "missing"
+  },
+  "artists": [],
+  "works": [],
+  "cover": {
+    "url": "missing",
+    "rights": "unverified — do not embed as cleared cover/OG until licence evidence exists",
+    "publicationStatus": "rights-review-required",
+    "publicReleaseApproved": false
+  },
+  "supporters": {
+    "featuredEventOnly": [],
+    "note": "No OM SYSTEM Shop supporter on this historical stub."
+  },
+  "external": {
+    "vipachHistoryListing": "https://www.vipach.at/fotokiallitasok"
+  },
+  "missing": [
+    "Exact public visit dates",
+    "Street address / postal code",
+    "Curator / organizers / patron",
+    "Artist roster",
+    "Artwork list and image files",
+    "Image rights",
+    "Localized long-form copy",
+    "Whether this show was organized under VIPACH as a legal/organizational entity"
+  ],
+  "routes": {
+    "permanentSlug": {
+      "en": "/touch-2-0/",
+      "hu": "/hu/touch-2-0/",
+      "de": "/de/touch-2-0/"
+    }
+  }
+}

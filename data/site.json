@@ -1,0 +1,41 @@
+{
+  "siteName": "VIPACH Exhibition",
+  "baseUrl": "https://exhibition.vipach.at",
+  "featuredExhibitionSlug": "spontan-2026",
+  "locales": [
+    {
+      "id": "en",
+      "htmlLang": "en",
+      "hreflang": "en",
+      "pathPrefix": ""
+    },
+    {
+      "id": "hu",
+      "htmlLang": "hu",
+      "hreflang": "hu",
+      "pathPrefix": "/hu"
+    },
+    {
+      "id": "de",
+      "htmlLang": "de-AT",
+      "hreflang": "de-AT",
+      "pathPrefix": "/de"
+    }
+  ],
+  "organization": {
+    "name": "VIPACH — Vienna Photo Art & Creative Hub",
+    "url": "https://www.vipach.at/#organization",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q138416887"
+    ],
+    "subjectOf": "https://okoszisztema.kozpontiszovetseg.at/intezmenyek/vipach/",
+    "contactEmail": "office@vipach.at",
+    "phone": "+43 677 616 55592",
+    "zvr": "079797621"
+  },
+  "notes": [
+    "Root paths `/`, `/hu/`, `/de/` remain the featured-exhibition landing (currently SPONTÁN 2026) for live continuity.",
+    "Every exhibition also gets permanent slug paths `/{slug}/`, `/hu/{slug}/`, `/de/{slug}/`.",
+    "OM SYSTEM Shop is an event-level SPONTÁN supporter only; brand partnership belongs on vipach.at."
+  ]
+}

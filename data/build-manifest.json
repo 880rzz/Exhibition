@@ -1,0 +1,114 @@
+{
+  "builtAt": "2026-11-22T11:26:53.521Z",
+  "featuredExhibitionSlug": "spontan-2026",
+  "exhibitions": [
+    {
+      "slug": "as-i-like-it-austria",
+      "status": "historical",
+      "render": "archive",
+      "routes": {
+        "featured": null,
+        "permanent": {
+          "en": "/as-i-like-it-austria/",
+          "hu": "/hu/as-i-like-it-austria/",
+          "de": "/de/as-i-like-it-austria/"
+        }
+      }
+    },
+    {
+      "slug": "eletem-kepe",
+      "status": "historical",
+      "render": "archive",
+      "routes": {
+        "featured": null,
+        "permanent": {
+          "en": "/eletem-kepe/",
+          "hu": "/hu/eletem-kepe/",
+          "de": "/de/eletem-kepe/"
+        }
+      }
+    },
+    {
+      "slug": "eletem-kepe-2-0",
+      "status": "planned",
+      "render": "archive",
+      "routes": {
+        "featured": null,
+        "permanent": {
+          "en": "/eletem-kepe-2-0/",
+          "hu": "/hu/eletem-kepe-2-0/",
+          "de": "/de/eletem-kepe-2-0/"
+        }
+      }
+    },
+    {
+      "slug": "en-a-no",
+      "status": "historical",
+      "render": "archive",
+      "routes": {
+        "featured": null,
+        "permanent": {
+          "en": "/en-a-no/",
+          "hu": "/hu/en-a-no/",
+          "de": "/de/en-a-no/"
+        }
+      }
+    },
+    {
+      "slug": "famme-fatale",
+      "status": "historical",
+      "render": "archive",
+      "routes": {
+        "featured": null,
+        "permanent": {
+          "en": "/famme-fatale/",
+          "hu": "/hu/famme-fatale/",
+          "de": "/de/famme-fatale/"
+        }
+      }
+    },
+    {
+      "slug": "famme-fatale-2-0",
+      "status": "planned",
+      "render": "archive",
+      "routes": {
+        "featured": null,
+        "permanent": {
+          "en": "/famme-fatale-2-0/",
+          "hu": "/hu/famme-fatale-2-0/",
+          "de": "/de/famme-fatale-2-0/"
+        }
+      }
+    },
+    {
+      "slug": "spontan-2026",
+      "status": "closed",
+      "render": "full-html",
+      "routes": {
+        "featured": {
+          "en": "/",
+          "hu": "/hu/",
+          "de": "/de/"
+        },
+        "permanent": {
+          "en": "/spontan-2026/",
+          "hu": "/hu/spontan-2026/",
+          "de": "/de/spontan-2026/"
+        }
+      }
+    },
+    {
+      "slug": "touch-2-0",
+      "status": "historical",
+      "render": "archive",
+      "routes": {
+        "featured": null,
+        "permanent": {
+          "en": "/touch-2-0/",
+          "hu": "/hu/touch-2-0/",
+          "de": "/de/touch-2-0/"
+        }
+      }
+    }
+  ]
+}

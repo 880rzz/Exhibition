@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 Disallow: /artist-submission/
+Disallow: /eletem-kepe-2-0/
+Disallow: /hu/eletem-kepe-2-0/
+Disallow: /de/eletem-kepe-2-0/
+Disallow: /famme-fatale-2-0/
+Disallow: /hu/famme-fatale-2-0/
+Disallow: /de/famme-fatale-2-0/
 Sitemap: https://exhibition.vipach.at/sitemap.xml
