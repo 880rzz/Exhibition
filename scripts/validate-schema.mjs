@@ -118,6 +118,58 @@ for (const exhibition of exhibitions.filter((e) => e.render === 'archive')) {
   }
 }
 
+// --- Counts must be derived from works[], never stale marketing approvals ---
+for (const exhibition of exhibitions.filter((e) => Array.isArray(e.works) && e.works.length)) {
+  const works = exhibition.works;
+  const identified = new Set(
+    works
+      .filter((w) => w.creatorIdentificationStatus === 'identified' && w.creatorName)
+      .map((w) => String(w.creatorName).trim())
+  );
+  const licenceVerified = works.filter(
+    (w) =>
+      w.publicationStatus === 'approved-for-public-display' &&
+      w.licenseVerificationStatus === 'verified' &&
+      w.publicReleaseApproved === true
+  ).length;
+  assert.equal(
+    exhibition.counts?.licenceVerifiedApprovedForPublicDisplay,
+    licenceVerified,
+    `${exhibition.slug}: licenceVerified count must match works`
+  );
+  assert.equal(
+    exhibition.counts?.approvedForPublicDisplay,
+    licenceVerified,
+    `${exhibition.slug}: approvedForPublicDisplay must equal licence-verified (not prior-Wix counts)`
+  );
+  assert.equal(
+    exhibition.counts?.identifiedCatalogueCreators,
+    identified.size,
+    `${exhibition.slug}: identifiedCatalogueCreators must match works`
+  );
+  assert.equal(
+    exhibition.counts?.photographers,
+    identified.size,
+    `${exhibition.slug}: photographers field is identified catalogue creators`
+  );
+  assert.equal(licenceVerified, 0, `${exhibition.slug}: expected 0 licence-verified until instruments exist`);
+  assert.equal(
+    exhibition.cover?.publicationStatus,
+    'rights-review-required',
+    `${exhibition.slug}: cover must remain rights-review-required until verified`
+  );
+  if (exhibition.slug === 'eletem-kepe') {
+    assert.equal(exhibition.counts.sourceClaimedPhotographers, 15, 'Életem képe source claim stays 15');
+    assert.equal(exhibition.counts.identifiedCatalogueCreators, 13, 'Életem képe identified creators = 13');
+  }
+}
+
+assert.equal(
+  exhibitions.find((e) => e.slug === 'spontan-2026')?.cover?.publicationStatus,
+  'rights-review-required',
+  'SPONTÁN cover/OG not cleared for republication without licence evidence'
+);
+
 // --- Sitemap / robots continuity ---
 const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
 assert.match(sitemap, /https:\/\/exhibition\.vipach\.at\//, 'featured EN in sitemap');

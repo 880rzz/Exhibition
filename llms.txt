@@ -13,7 +13,7 @@ Multilingual static exhibition site for VIPACH — Vienna Photo Art & Creative H
   - EN: https://exhibition.vipach.at/as-i-like-it-austria/
   - HU: https://exhibition.vipach.at/hu/as-i-like-it-austria/
   - DE: https://exhibition.vipach.at/de/as-i-like-it-austria/
-- Picture of My Life (`eletem-kepe`) — status: historical
+- The Image of My Life (`eletem-kepe`) — status: historical
   - EN: https://exhibition.vipach.at/eletem-kepe/
   - HU: https://exhibition.vipach.at/hu/eletem-kepe/
   - DE: https://exhibition.vipach.at/de/eletem-kepe/

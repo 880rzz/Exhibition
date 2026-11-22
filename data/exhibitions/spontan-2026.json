@@ -6,7 +6,8 @@
     "README and public visit copy historically said 15–22 November 2026.",
     "VIPACH Wix event page lists 2026-11-15 16:00 – 2026-11-22 23:59.",
     "Hero/visit/contact dock on the live microsite use 15–21 November 2026.",
-    "As of 2026-11-22 extraction day, treated as closed relative to the live-site endDate (21 Nov); Wix still listed through 22 Nov — both sources documented."
+    "As of 2026-11-22 extraction day, treated as closed relative to the live-site endDate (21 Nov); Wix still listed through 22 Nov — both sources documented.",
+    "Cover/OG (Wix CDN poster) remains rights-review-required — not a verified republication licence. Do not treat frozen HTML og:image as rights-cleared."
   ],
   "featured": true,
   "render": "full-html",
@@ -25,7 +26,9 @@
   "cover": {
     "url": "https://static.wixstatic.com/media/b0aee1_4a059d3770694e2f9ba4effb0a39905e~mv2.png",
     "source": "VIPACH Wix Media Manager / og:image on exhibition.vipach.at",
-    "rights": "missing — confirm reuse rights for archive pages"
+    "rights": "unverified — do not embed as cleared cover/OG until licence evidence exists · publicPublicationBlockedUntilVerified",
+    "publicationStatus": "rights-review-required",
+    "publicReleaseApproved": false
   },
   "dates": {
     "opening": {
@@ -113,7 +116,9 @@
     "photographers": 16,
     "worksClaimed": 20,
     "visualArtworksInSchema": 20,
-    "licensedImageObjectsInSchema": 21
+    "licensedImageObjectsInSchema": 21,
+    "approvedForPublicDisplay": 0,
+    "licenceVerifiedApprovedForPublicDisplay": 0
   },
   "artists": [
     {

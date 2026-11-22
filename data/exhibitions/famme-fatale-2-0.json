@@ -37,7 +37,9 @@
   "works": [],
   "cover": {
     "url": "missing",
-    "rights": "missing"
+    "rights": "unverified — do not embed as cleared cover/OG until licence evidence exists · publicPublicationBlockedUntilVerified",
+    "publicationStatus": "rights-review-required",
+    "publicReleaseApproved": false
   },
   "supporters": {
     "featuredEventOnly": []

@@ -401,13 +401,42 @@
   "counts": {
     "photographers": 19,
     "works": 20,
-    "approvedForPublicDisplay": 19,
-    "withheldRightsReviewRequired": 1
+    "approvedForPublicDisplay": 0,
+    "withheldRightsReviewRequired": 1,
+    "identifiedCatalogueCreators": 19,
+    "identifiedCatalogueCreatorNames": [
+      "Adamski",
+      "AndreaWettstein",
+      "Anett Elek",
+      "B.ella",
+      "Denise Trajkovska",
+      "Eszter",
+      "Isa",
+      "Jowan Trajkovski",
+      "Jupiter",
+      "Liz",
+      "Nagy Márton",
+      "native pictures",
+      "NaylivArt",
+      "Nina",
+      "Norbert Bánhalmi",
+      "Tamás Pfundt",
+      "Tóth Manó",
+      "Zoltan Kondits",
+      "ZZ"
+    ],
+    "licenceVerifiedApprovedForPublicDisplay": 0,
+    "priorWixPublicationOnlyLicenseVerificationRequired": 19,
+    "rightsReviewRequiredUnidentified": 1,
+    "derivedFromWorksAt": "2026-11-22",
+    "derivation": "scripts/regenerate_exhibition_counts.mjs — counts must match works[]"
   },
   "cover": {
     "url": "https://static.wixstatic.com/media/b0aee1_479cfc4cc3644a22a3008fe3cd580fc3~mv2.jpg",
     "source": "og/page image observed on vipach.at/asilikeit",
-    "rights": "missing — confirm before embedding"
+    "rights": "unverified — do not embed as cleared cover/OG until licence evidence exists · publicPublicationBlockedUntilVerified",
+    "publicationStatus": "rights-review-required",
+    "publicReleaseApproved": false
   },
   "admission": {
     "free": true,
@@ -443,8 +472,8 @@
     }
   },
   "rightsInventory": {
-    "schema": "public-safe-summary-v3",
-    "note": "Detailed licence evidence lives only in VIPACH private-build/staging. Public Exhibition JSON carries publicationStatus summary only.",
+    "schema": "public-safe-summary-v4",
+    "note": "Aggregates regenerated from works[]. Detailed licence evidence stays in VIPACH private-build/staging.",
     "publicationApprovalStatus": "partial",
     "counts": {
       "licenceVerifiedApprovedForPublicDisplay": 0,

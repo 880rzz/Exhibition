@@ -8,6 +8,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -216,7 +217,18 @@ function renderArchive(exhibition, localeId) {
   const canonical = absoluteUrl(pathName);
   const loc = localeMeta(localeId);
   const robots = exhibition.status === 'planned' ? 'noindex,follow' : 'index,follow';
-  const missing = Array.isArray(exhibition.missing) ? exhibition.missing : ['missing field list not provided'];
+  const missing = Array.isArray(exhibition.missing) ? [...exhibition.missing] : ['missing field list not provided'];
+  const counts = exhibition.counts || {};
+  if (Array.isArray(exhibition.works) && exhibition.works.length) {
+    missing.unshift(
+      `Licence-verified approved for public display: ${counts.licenceVerifiedApprovedForPublicDisplay ?? 0} (must be regenerated from works[])`,
+      `Identified catalogue creators: ${counts.identifiedCatalogueCreators ?? counts.photographers ?? 0}` +
+        (counts.sourceClaimedPhotographers != null
+          ? ` · source-claimed participants: ${counts.sourceClaimedPhotographers}`
+          : ''),
+      `Cover/OG: ${exhibition.cover?.publicationStatus || 'rights-review-required'} — not embedded as cleared media`
+    );
+  }
   const hreflangLinks = site.locales
     .map((l) => {
       const href = absoluteUrl(slugPaths(exhibition.slug, l.id));
@@ -331,7 +343,9 @@ function renderArchive(exhibition, localeId) {
     sectionBody: escapeHtml(
       exhibition.status === 'planned'
         ? 'This exhibition is planned and not realised. No artists, artworks or image rights are claimed on this stub.'
-        : 'Text-level archive stub generated from exhibition data. Missing images and rights are marked explicitly.'
+        : Array.isArray(exhibition.works) && exhibition.works.length
+          ? `Text-level archive stub. Catalogue works: ${counts.works ?? exhibition.works.length}. Licence-verified public artworks: ${counts.licenceVerifiedApprovedForPublicDisplay ?? 0}. Cover/OG is not rights-cleared.`
+          : 'Text-level archive stub generated from exhibition data. Missing images and rights are marked explicitly.'
     ),
     externalLinks,
     missingTitle: t.missingTitle,
@@ -441,6 +455,13 @@ function buildLlms(exhibitions) {
 }
 
 function main() {
+  // Keep aggregate counts derived from works[] before emitting HTML.
+  const regen = spawnSync(process.execPath, [path.join(root, 'scripts/regenerate_exhibition_counts.mjs')], {
+    cwd: root,
+    stdio: 'inherit',
+  });
+  if (regen.status !== 0) throw new Error('regenerate_exhibition_counts failed');
+
   const exhibitions = readExhibitions();
   if (!exhibitions.length) throw new Error('No exhibitions found in data/exhibitions');
 
