@@ -1,0 +1,52 @@
+name: 2025 exhibitions — review-only HTML preview
+
+on:
+  pull_request:
+    paths:
+      - 'data/staging/2025-*.json'
+      - 'scripts/build-2025-staging-previews.mjs'
+      - 'assets/2025-exhibitions.css'
+      - '.github/workflows/2025-staging-preview.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  staging-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build two private-review galleries only
+        run: node scripts/build-2025-staging-previews.mjs
+      - name: Assert page coverage and publication lock
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('staging-preview')
+          r=json.loads((root/'staging-receipt.json').read_text())
+          assert r['productionReleaseApproved'] is False
+          assert r['imageRightsVerified']==0
+          assert r['languagePages']==6
+          assert sorted((x['artists'],x['works']) for x in r['exhibitions'])==[(15,20),(19,20)]
+          for slug,artist_count in [('eletem-kepe',15),('as-i-like-it-austria',19)]:
+              for lang in ('hu','en','de'):
+                  p=root/lang/slug/'index.html'
+                  assert p.is_file(),p
+                  s=p.read_text(encoding='utf-8')
+                  assert 'noindex,nofollow,noimageindex' in s,p
+                  assert 'PREPUBLICATION-REVIEW-NOT-LICENSED' in s,p
+                  assert s.count('class="ex25-work reveal"')==20,(p,'works')
+                  assert s.count('class="ex25-artist reveal"')==artist_count,(p,'artists')
+                  assert s.count('class="ex25-work-img"')==20,(p,'work images')
+          print('PASS six staged gallery pages; 40 Wix media references, 34 artists; no production authorization')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 2025-exhibitions-internal-review-html
+          path: staging-preview/
+          retention-days: 7
