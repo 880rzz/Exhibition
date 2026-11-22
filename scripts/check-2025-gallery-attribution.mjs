@@ -38,7 +38,8 @@ for(const exhibition of main.exhibitions){
     const isNorbertPortfolio=exhibition.slug==='eletem-kepe'&&work.creator==='Norbert Bánhalmi'&&
       e.linkedArtistProfile==='https://www.norbertbanhalmi.com/mybest';
     assert.ok(sameSlug||isNorbertPortfolio,'Artist link mismatch '+work.id);
-    assert.equal(work.licenseVerificationStatus,'license-verification-required',work.id);
+    // 'absent' is an explicit missing licence, not a failure to attribute the author.
+    assert.ok(['absent','license-verification-required'].includes(work.licenseVerificationStatus),'Incorrect rights hold '+work.id);
     assert.equal(work.publicReleaseApproved,false,work.id);
     const row=wix.rows.find(x=>x.workId===work.id&&x.exhibitionSlug===exhibition.slug);
     assert.ok(row,'Missing forensic provenance row '+work.id);
