@@ -37,3 +37,15 @@
 .ex25-body a:focus-visible,.ex25-body button:focus-visible{outline:2px solid #b79c44;outline-offset:4px}
 @media(max-width:920px){.ex25-artists-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){.ex25-hero{min-height:66vh;padding:8rem 6vw 3rem}.ex25-hero h1{font-size:clamp(3rem,14vw,5rem)}.ex25-hero .ex25-meta{flex-direction:column;gap:.65rem}.ex25-artists-grid{gap:1.35rem .7rem}.ex25-artists-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ex25-works-grid{grid-template-columns:minmax(0,1fr);gap:2.7rem}.ex25-credits{grid-template-columns:1fr;gap:.15rem}.ex25-credits dd{margin:0 0 .8rem}}
+
+/* Source-only artist statements and work descriptions: visible by choice, not clipped. */
+.ex25-original{margin:1.05rem 0 .1rem;width:100%;border-top:1px solid currentColor;padding-top:.65rem;opacity:.97}
+.ex25-original summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-size:.85rem;font-weight:500;line-height:1.4;list-style:revert;color:inherit;text-decoration:underline;text-decoration-color:#b79c44;text-underline-offset:.27em}
+.ex25-original summary:focus-visible{outline:2px solid #b79c44;outline-offset:4px}
+.ex25-original-prose{font-size:.91rem;line-height:1.75;max-width:65ch;overflow-wrap:anywhere}
+.ex25-original-prose p{margin:1rem 0 1.4rem}
+.ex25-original-prose p:first-child{margin-top:0}
+.ex25-artist .ex25-original-prose{font-size:.87rem}
+.ex25-work .ex25-original{color:#ede9de}
+.ex25-portrait .no-portrait{color:#9e8651;font-size:clamp(1.5rem,4vw,4rem);letter-spacing:-.07em}
+@media(max-width:640px){.ex25-original-prose{font-size:.86rem}}
