@@ -19,6 +19,10 @@ export function exhibitionDate(e) {
 function released(e, today) {
   if (!e || BLOCKED.has(e.status) || e.realized === false) return false;
   if (e.publicationState === 'staged' || e.publicationState === 'draft' || e.publicReleaseApproved === false) return false;
+  // New full-html exhibitions must have a deliberate release switch before becoming the homepage.
+  // The existing SPONTAN exhibition is the pre-migration legacy featured publication.
+  if (e.render === 'full-html' && e.slug !== 'spontan-2026' &&
+      (e.publicationState !== 'published' || e.publicReleaseApproved !== true)) return false;
   const date = exhibitionDate(e);
   return !!date && date <= today;
 }
