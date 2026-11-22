@@ -11,6 +11,7 @@ on:
       - 'scripts/**'
       - 'sitemap.xml'
       - 'robots.txt'
+      - '_config.yml'
       - 'llms.txt'
       - '.github/workflows/validate-schema.yml'
   push:
@@ -25,6 +26,7 @@ on:
       - 'scripts/**'
       - 'sitemap.xml'
       - 'robots.txt'
+      - '_config.yml'
       - 'llms.txt'
       - '.github/workflows/validate-schema.yml'
   workflow_dispatch:
@@ -35,6 +37,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Fail closed on unpublished 2025 image leakage and staging source access
+        run: node scripts/check-2025-public-source-separation.mjs
       - name: Verify committed Pages HTML has navigation BEFORE generation
         run: node scripts/test-exhibition-navigation.mjs
       - name: Build exhibition pages from data
@@ -43,3 +47,13 @@ jobs:
         run: node scripts/validate-schema.mjs
       - name: Verify latest published homepage and historical hamburger menu
         run: node scripts/test-exhibition-navigation.mjs
+      - name: Build public GitHub Pages output with Jekyll
+        uses: actions/jekyll-build-pages@v1
+      - name: Assert staging JSON and source code are not in published Jekyll artifact
+        run: |
+          test -f _site/index.html
+          test ! -e _site/data/staging
+          test ! -e _site/scripts
+          test ! -e _site/docs
+          test ! -e _site/staging-preview
+          echo 'PASS: exhibition staging sources absent from site artifact'
