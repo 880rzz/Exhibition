@@ -2,16 +2,18 @@
 
 **Exhibition repository** (`880rzz/Exhibition`, host `https://exhibition.vipach.at/`) is the public canonical source for VIPACH exhibition records.
 
-VIPACH (`880rzz/VIPACH`, host `https://www.vipach.at/`) is the community site and first-party image archive consumer. It must not diverge into a second public exhibition inventory.
+VIPACH (`880rzz/VIPACH`) is the community site and first-party image archive. Detailed licence evidence stays in VIPACH `private-build/staging/` and must not be mirrored into this public repo.
 
-## 2025 Életem képe / As I Like It
+## Public vs private fields
+Public Exhibition JSON may include: work id, creatorName (when identified), publicationStatus, licenseVerificationStatus, titleDataStatus, non-locating image checksums/dimensions, and aggregate counts.
 
-- Structured works + separated publication-rights fields live in:
-  - `data/exhibitions/eletem-kepe.json`
-  - `data/exhibitions/as-i-like-it-austria.json`
-- Private build evidence retained in VIPACH `private-build/staging/` (not a public URL surface by policy; selective Pages publish required before www cutover).
-- Preserve: 40 archive images, 37 CMS matches, 3 unresolved attributions, original creator credits, historical facts, full SPONTÁN presentation.
+Public Exhibition JSON must **not** include: permissionEvidence, CMS record payloads, contact/biographical staging text, or local mirror filesystem paths that would expose withheld assets.
+
+## Current 2025 status (aligned with VIPACH V3)
+- 0 licence-verified public artworks
+- 37 prior-Wix-provenance-only (`license-verification-required`)
+- 3 unidentified (`rights-review-required`)
+- Aggregate: `partial`
 
 ## SPONTÁN closing date
-
-Remain an open editorial question until a single authoritative source is chosen (Exhibition presentation 21 Nov 2026 vs Wix Events 22 Nov 2026).
+Open editorial question: Exhibition presentation 21 Nov 2026 vs Wix Events 22 Nov 2026.

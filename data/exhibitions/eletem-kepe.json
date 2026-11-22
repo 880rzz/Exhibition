@@ -86,932 +86,320 @@
       "id": "eletemkepe-719c1f37ef39",
       "creatorName": "KMD",
       "creatorIdentificationStatus": "identified",
-      "copyrightHolder": "KMD",
-      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
-      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
-      "permittedUses": [
-        "archival-public-display-on-vipach-site-with-creator-credit",
-        "no-sublicense-implied",
-        "no-copyright-assignment-to-vipach"
-      ],
-      "permissionEvidence": "wixRecordId:57492be2-49b0-4b70-be4d-3f8564823a59; matchingMediaId:b0aee1_111cc949dd4f468a94dbe304ea1f097f~mv2.jpg; priorPublicGallery:https://www.vipach.at/eletemkepe-gallery",
-      "permissionSource": "prior-public-wix-community-exhibition-display",
-      "permissionVerifiedAt": "2026-11-22",
-      "editorialApproval": {
-        "decidedAt": "2026-11-22",
-        "timezone": "Europe/Vienna",
-        "source": "VIPACH project owner editorial instruction",
-        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
-        "role": "editorial",
-        "isCopyrightEvidence": false,
-        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
-      },
-      "publicationStatus": "approved-for-public-display",
-      "publicReleaseApproved": true,
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
       "titleDataStatus": "missing",
-      "creditLine": {
-        "hu": "Alkotó: KMD",
-        "en": "Artist: KMD",
-        "de": "Kunstschaffende: KMD"
-      },
       "image": {
-        "vipachMirrorPath": "/images/wix-mirror/b0aee1_111cc949dd4f468a94dbe304ea1f097f-mv2-1cbe188c8d.webp",
-        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_111cc949dd4f468a94dbe304ea1f097f~mv2.jpg",
         "sha256": "719c1f37ef39f5f7d533ba1d4cd951990d5db125e924d2b67776845085281bcd",
         "width": 1920,
-        "height": 1920
-      },
-      "cmsProvenanceSummary": {
-        "wixRecordId": "57492be2-49b0-4b70-be4d-3f8564823a59",
-        "matchingMediaId": "b0aee1_111cc949dd4f468a94dbe304ea1f097f~mv2.jpg",
-        "artistCreditAgrees": true,
-        "exhibitionAssignmentAgrees": true,
-        "status": "source-id-match; curator approval required"
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
       }
     },
     {
       "id": "eletemkepe-7083c6460bb5",
       "creatorName": "Loksi67",
       "creatorIdentificationStatus": "identified",
-      "copyrightHolder": "Loksi67",
-      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
-      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
-      "permittedUses": [
-        "archival-public-display-on-vipach-site-with-creator-credit",
-        "no-sublicense-implied",
-        "no-copyright-assignment-to-vipach"
-      ],
-      "permissionEvidence": "wixRecordId:db723f2c-02e0-4b42-94b7-62b9a4ae58d7; matchingMediaId:b0aee1_1f384ad1f13a48ef82cc8ca83adcb5b6~mv2.jpg; priorPublicGallery:https://www.vipach.at/eletemkepe-gallery",
-      "permissionSource": "prior-public-wix-community-exhibition-display",
-      "permissionVerifiedAt": "2026-11-22",
-      "editorialApproval": {
-        "decidedAt": "2026-11-22",
-        "timezone": "Europe/Vienna",
-        "source": "VIPACH project owner editorial instruction",
-        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
-        "role": "editorial",
-        "isCopyrightEvidence": false,
-        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
-      },
-      "publicationStatus": "approved-for-public-display",
-      "publicReleaseApproved": true,
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
       "titleDataStatus": "missing",
-      "creditLine": {
-        "hu": "Alkotó: Loksi67",
-        "en": "Artist: Loksi67",
-        "de": "Kunstschaffende: Loksi67"
-      },
       "image": {
-        "vipachMirrorPath": "/images/wix-mirror/b0aee1_1f384ad1f13a48ef82cc8ca83adcb5b6-mv2-6f1f273e75.webp",
-        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_1f384ad1f13a48ef82cc8ca83adcb5b6~mv2.jpg",
         "sha256": "7083c6460bb5885103a8706d2c2366ba39d41e28c1faf57fd903118361a8a6db",
         "width": 1920,
-        "height": 1920
-      },
-      "cmsProvenanceSummary": {
-        "wixRecordId": "db723f2c-02e0-4b42-94b7-62b9a4ae58d7",
-        "matchingMediaId": "b0aee1_1f384ad1f13a48ef82cc8ca83adcb5b6~mv2.jpg",
-        "artistCreditAgrees": true,
-        "exhibitionAssignmentAgrees": true,
-        "status": "source-id-match; curator approval required"
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
       }
     },
     {
       "id": "eletemkepe-e6ef2f123b3b",
       "creatorName": "Marianna Visual",
       "creatorIdentificationStatus": "identified",
-      "copyrightHolder": "Marianna Visual",
-      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
-      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
-      "permittedUses": [
-        "archival-public-display-on-vipach-site-with-creator-credit",
-        "no-sublicense-implied",
-        "no-copyright-assignment-to-vipach"
-      ],
-      "permissionEvidence": "wixRecordId:471fcddd-4b38-4113-9112-47af1d0294c0; matchingMediaId:b0aee1_2239212c15a74440bfa4a939d1531d5d~mv2.jpg; priorPublicGallery:https://www.vipach.at/eletemkepe-gallery",
-      "permissionSource": "prior-public-wix-community-exhibition-display",
-      "permissionVerifiedAt": "2026-11-22",
-      "editorialApproval": {
-        "decidedAt": "2026-11-22",
-        "timezone": "Europe/Vienna",
-        "source": "VIPACH project owner editorial instruction",
-        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
-        "role": "editorial",
-        "isCopyrightEvidence": false,
-        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
-      },
-      "publicationStatus": "approved-for-public-display",
-      "publicReleaseApproved": true,
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
       "titleDataStatus": "missing",
-      "creditLine": {
-        "hu": "Alkotó: Marianna Visual",
-        "en": "Artist: Marianna Visual",
-        "de": "Kunstschaffende: Marianna Visual"
-      },
       "image": {
-        "vipachMirrorPath": "/images/wix-mirror/b0aee1_2239212c15a74440bfa4a939d1531d5d-mv2-d0ef48a6a4.webp",
-        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_2239212c15a74440bfa4a939d1531d5d~mv2.jpg",
         "sha256": "e6ef2f123b3bf7af42cf581d2e721aaef7c2ca0aa00f9c6ce9177d82d1d1fa14",
         "width": 1920,
-        "height": 1920
-      },
-      "cmsProvenanceSummary": {
-        "wixRecordId": "471fcddd-4b38-4113-9112-47af1d0294c0",
-        "matchingMediaId": "b0aee1_2239212c15a74440bfa4a939d1531d5d~mv2.jpg",
-        "artistCreditAgrees": true,
-        "exhibitionAssignmentAgrees": true,
-        "status": "source-id-match; curator approval required"
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
       }
     },
     {
       "id": "eletemkepe-371e50673e22",
       "creatorName": "Farkas Tamás",
       "creatorIdentificationStatus": "identified",
-      "copyrightHolder": "Farkas Tamás",
-      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
-      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
-      "permittedUses": [
-        "archival-public-display-on-vipach-site-with-creator-credit",
-        "no-sublicense-implied",
-        "no-copyright-assignment-to-vipach"
-      ],
-      "permissionEvidence": "wixRecordId:26bf46aa-80fc-4de9-a112-054eea1eda26; matchingMediaId:b0aee1_321fc00094b44cca9bf20ed3ddf0510a~mv2.jpg; priorPublicGallery:https://www.vipach.at/eletemkepe-gallery",
-      "permissionSource": "prior-public-wix-community-exhibition-display",
-      "permissionVerifiedAt": "2026-11-22",
-      "editorialApproval": {
-        "decidedAt": "2026-11-22",
-        "timezone": "Europe/Vienna",
-        "source": "VIPACH project owner editorial instruction",
-        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
-        "role": "editorial",
-        "isCopyrightEvidence": false,
-        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
-      },
-      "publicationStatus": "approved-for-public-display",
-      "publicReleaseApproved": true,
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
       "titleDataStatus": "missing",
-      "creditLine": {
-        "hu": "Alkotó: Farkas Tamás",
-        "en": "Artist: Farkas Tamás",
-        "de": "Kunstschaffende: Farkas Tamás"
-      },
       "image": {
-        "vipachMirrorPath": "/images/wix-mirror/b0aee1_321fc00094b44cca9bf20ed3ddf0510a-mv2-76cb6a6002.webp",
-        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_321fc00094b44cca9bf20ed3ddf0510a~mv2.jpg",
         "sha256": "371e50673e2254a2bf527b7dd6ce44d48f90f1c096e620df890d92fbb6a93ace",
         "width": 1920,
-        "height": 1920
-      },
-      "cmsProvenanceSummary": {
-        "wixRecordId": "26bf46aa-80fc-4de9-a112-054eea1eda26",
-        "matchingMediaId": "b0aee1_321fc00094b44cca9bf20ed3ddf0510a~mv2.jpg",
-        "artistCreditAgrees": true,
-        "exhibitionAssignmentAgrees": true,
-        "status": "source-id-match; curator approval required"
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
       }
     },
     {
       "id": "eletemkepe-f3bbb75370d8",
       "creatorName": "Ecaterina",
       "creatorIdentificationStatus": "identified",
-      "copyrightHolder": "Ecaterina",
-      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
-      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
-      "permittedUses": [
-        "archival-public-display-on-vipach-site-with-creator-credit",
-        "no-sublicense-implied",
-        "no-copyright-assignment-to-vipach"
-      ],
-      "permissionEvidence": "wixRecordId:e857f201-2214-4fde-91bb-6fa61d2d9306; matchingMediaId:b0aee1_37f1a6b0b3d04c94aaa3ace6178c3a5c~mv2.jpg; priorPublicGallery:https://www.vipach.at/eletemkepe-gallery",
-      "permissionSource": "prior-public-wix-community-exhibition-display",
-      "permissionVerifiedAt": "2026-11-22",
-      "editorialApproval": {
-        "decidedAt": "2026-11-22",
-        "timezone": "Europe/Vienna",
-        "source": "VIPACH project owner editorial instruction",
-        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
-        "role": "editorial",
-        "isCopyrightEvidence": false,
-        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
-      },
-      "publicationStatus": "approved-for-public-display",
-      "publicReleaseApproved": true,
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
       "titleDataStatus": "missing",
-      "creditLine": {
-        "hu": "Alkotó: Ecaterina",
-        "en": "Artist: Ecaterina",
-        "de": "Kunstschaffende: Ecaterina"
-      },
       "image": {
-        "vipachMirrorPath": "/images/wix-mirror/b0aee1_37f1a6b0b3d04c94aaa3ace6178c3a5c-mv2-c9929efb4c.webp",
-        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_37f1a6b0b3d04c94aaa3ace6178c3a5c~mv2.jpg",
         "sha256": "f3bbb75370d85118ddd420a68804f961e3ee0199df5a9cc9aa1a0c1bf08343d5",
         "width": 1920,
-        "height": 1920
-      },
-      "cmsProvenanceSummary": {
-        "wixRecordId": "e857f201-2214-4fde-91bb-6fa61d2d9306",
-        "matchingMediaId": "b0aee1_37f1a6b0b3d04c94aaa3ace6178c3a5c~mv2.jpg",
-        "artistCreditAgrees": true,
-        "exhibitionAssignmentAgrees": true,
-        "status": "source-id-match; curator approval required"
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
       }
     },
     {
       "id": "eletemkepe-5ba6a68d1876",
       "creatorName": "Viki Photo Art",
       "creatorIdentificationStatus": "identified",
-      "copyrightHolder": "Viki Photo Art",
-      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
-      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
-      "permittedUses": [
-        "archival-public-display-on-vipach-site-with-creator-credit",
-        "no-sublicense-implied",
-        "no-copyright-assignment-to-vipach"
-      ],
-      "permissionEvidence": "wixRecordId:94bc9eb6-6c48-4559-aaa6-bc149cddbf6f; matchingMediaId:b0aee1_392da882c6b94ecf96f3c2e1efdbb5ff~mv2.jpg; priorPublicGallery:https://www.vipach.at/eletemkepe-gallery",
-      "permissionSource": "prior-public-wix-community-exhibition-display",
-      "permissionVerifiedAt": "2026-11-22",
-      "editorialApproval": {
-        "decidedAt": "2026-11-22",
-        "timezone": "Europe/Vienna",
-        "source": "VIPACH project owner editorial instruction",
-        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
-        "role": "editorial",
-        "isCopyrightEvidence": false,
-        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
-      },
-      "publicationStatus": "approved-for-public-display",
-      "publicReleaseApproved": true,
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
       "titleDataStatus": "missing",
-      "creditLine": {
-        "hu": "Alkotó: Viki Photo Art",
-        "en": "Artist: Viki Photo Art",
-        "de": "Kunstschaffende: Viki Photo Art"
-      },
       "image": {
-        "vipachMirrorPath": "/images/wix-mirror/b0aee1_392da882c6b94ecf96f3c2e1efdbb5ff-mv2-4c963c6c3f.webp",
-        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_392da882c6b94ecf96f3c2e1efdbb5ff~mv2.jpg",
         "sha256": "5ba6a68d187631374c12a1cc0cd55786aa02748b896847011af4e26b0ed77e81",
         "width": 1920,
-        "height": 1920
-      },
-      "cmsProvenanceSummary": {
-        "wixRecordId": "94bc9eb6-6c48-4559-aaa6-bc149cddbf6f",
-        "matchingMediaId": "b0aee1_392da882c6b94ecf96f3c2e1efdbb5ff~mv2.jpg",
-        "artistCreditAgrees": true,
-        "exhibitionAssignmentAgrees": true,
-        "status": "source-id-match; curator approval required"
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
       }
     },
     {
       "id": "eletemkepe-c90ec4d760c2",
       "creatorName": "Speier Vikó",
       "creatorIdentificationStatus": "identified",
-      "copyrightHolder": "Speier Vikó",
-      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
-      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
-      "permittedUses": [
-        "archival-public-display-on-vipach-site-with-creator-credit",
-        "no-sublicense-implied",
-        "no-copyright-assignment-to-vipach"
-      ],
-      "permissionEvidence": "wixRecordId:dffd1e1a-1410-4722-9652-8f001932c614; matchingMediaId:b0aee1_66c46500982746aa8bb5be9ab5287de5~mv2.jpg; priorPublicGallery:https://www.vipach.at/eletemkepe-gallery",
-      "permissionSource": "prior-public-wix-community-exhibition-display",
-      "permissionVerifiedAt": "2026-11-22",
-      "editorialApproval": {
-        "decidedAt": "2026-11-22",
-        "timezone": "Europe/Vienna",
-        "source": "VIPACH project owner editorial instruction",
-        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
-        "role": "editorial",
-        "isCopyrightEvidence": false,
-        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
-      },
-      "publicationStatus": "approved-for-public-display",
-      "publicReleaseApproved": true,
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
       "titleDataStatus": "missing",
-      "creditLine": {
-        "hu": "Alkotó: Speier Vikó",
-        "en": "Artist: Speier Vikó",
-        "de": "Kunstschaffende: Speier Vikó"
-      },
       "image": {
-        "vipachMirrorPath": "/images/wix-mirror/b0aee1_66c46500982746aa8bb5be9ab5287de5-mv2-369227d016.webp",
-        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_66c46500982746aa8bb5be9ab5287de5~mv2.jpg",
         "sha256": "c90ec4d760c2562663244177d16159cdc3251e9060c77b8731df38297f9bd837",
         "width": 1920,
-        "height": 1920
-      },
-      "cmsProvenanceSummary": {
-        "wixRecordId": "dffd1e1a-1410-4722-9652-8f001932c614",
-        "matchingMediaId": "b0aee1_66c46500982746aa8bb5be9ab5287de5~mv2.jpg",
-        "artistCreditAgrees": true,
-        "exhibitionAssignmentAgrees": true,
-        "status": "source-id-match; curator approval required"
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
       }
     },
     {
       "id": "eletemkepe-6a0485e910a1",
       "creatorName": null,
       "creatorIdentificationStatus": "unidentified",
-      "copyrightHolder": null,
-      "publicationLicensee": null,
-      "licenseType": null,
-      "permittedUses": [],
-      "permissionEvidence": null,
-      "permissionSource": null,
-      "permissionVerifiedAt": null,
-      "editorialApproval": {
-        "decidedAt": "2026-11-22",
-        "timezone": "Europe/Vienna",
-        "source": "VIPACH project owner editorial instruction",
-        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
-        "role": "editorial",
-        "isCopyrightEvidence": false,
-        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
-      },
       "publicationStatus": "rights-review-required",
+      "licenseVerificationStatus": "absent",
       "publicReleaseApproved": false,
       "titleDataStatus": "missing",
-      "creditLine": {
-        "hu": "Alkotó: azonosítás / jogi felülvizsgálat alatt — nem publikált",
-        "en": "Creator: identification / rights review pending — not published",
-        "de": "Urheber:in: Identifikation / Rechteprüfung ausstehend — nicht veröffentlicht"
-      },
       "image": {
-        "vipachMirrorPath": "/images/wix-mirror/b0aee1_6eb5aaee2b5b42e382275ba7802881f4-mv2-cdbf60a5a6.webp",
-        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_6eb5aaee2b5b42e382275ba7802881f4~mv2.jpg",
         "sha256": "6a0485e910a1e166a8de569998a348589c4c90e40cbdfd750b78b1ee043d1a4f",
         "width": 1920,
-        "height": 1920
-      },
-      "cmsProvenanceSummary": {
-        "wixRecordId": null,
-        "matchingMediaId": null,
-        "artistCreditAgrees": null,
-        "exhibitionAssignmentAgrees": null,
-        "status": "gallery-only; no source CMS artist match; VIPACH license assigned by owner"
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
       }
     },
     {
       "id": "eletemkepe-3b5ba24c02ef",
       "creatorName": "HajNika",
       "creatorIdentificationStatus": "identified",
-      "copyrightHolder": "HajNika",
-      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
-      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
-      "permittedUses": [
-        "archival-public-display-on-vipach-site-with-creator-credit",
-        "no-sublicense-implied",
-        "no-copyright-assignment-to-vipach"
-      ],
-      "permissionEvidence": "wixRecordId:b07ea181-e937-4b7d-8851-292f689b7de0; matchingMediaId:b0aee1_79d58c3381074d6f92b0a5edfe3f2c91~mv2.jpg; priorPublicGallery:https://www.vipach.at/eletemkepe-gallery",
-      "permissionSource": "prior-public-wix-community-exhibition-display",
-      "permissionVerifiedAt": "2026-11-22",
-      "editorialApproval": {
-        "decidedAt": "2026-11-22",
-        "timezone": "Europe/Vienna",
-        "source": "VIPACH project owner editorial instruction",
-        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
-        "role": "editorial",
-        "isCopyrightEvidence": false,
-        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
-      },
-      "publicationStatus": "approved-for-public-display",
-      "publicReleaseApproved": true,
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
       "titleDataStatus": "missing",
-      "creditLine": {
-        "hu": "Alkotó: HajNika",
-        "en": "Artist: HajNika",
-        "de": "Kunstschaffende: HajNika"
-      },
       "image": {
-        "vipachMirrorPath": "/images/wix-mirror/b0aee1_79d58c3381074d6f92b0a5edfe3f2c91-mv2-4257cbdc32.webp",
-        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_79d58c3381074d6f92b0a5edfe3f2c91~mv2.jpg",
         "sha256": "3b5ba24c02efe6e350f96d76ae09bea7a30de253d95d20b3cf52bde38908578f",
         "width": 1920,
-        "height": 1920
-      },
-      "cmsProvenanceSummary": {
-        "wixRecordId": "b07ea181-e937-4b7d-8851-292f689b7de0",
-        "matchingMediaId": "b0aee1_79d58c3381074d6f92b0a5edfe3f2c91~mv2.jpg",
-        "artistCreditAgrees": true,
-        "exhibitionAssignmentAgrees": true,
-        "status": "source-id-match; curator approval required"
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
       }
     },
     {
       "id": "eletemkepe-1692a0e34a53",
       "creatorName": "Mátéfi Dalma",
       "creatorIdentificationStatus": "identified",
-      "copyrightHolder": "Mátéfi Dalma",
-      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
-      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
-      "permittedUses": [
-        "archival-public-display-on-vipach-site-with-creator-credit",
-        "no-sublicense-implied",
-        "no-copyright-assignment-to-vipach"
-      ],
-      "permissionEvidence": "wixRecordId:92d4fe6d-862f-403e-a208-c74e729d16ea; matchingMediaId:b0aee1_8d96c1daef8645c88b5df22a174333cc~mv2.jpg; priorPublicGallery:https://www.vipach.at/eletemkepe-gallery",
-      "permissionSource": "prior-public-wix-community-exhibition-display",
-      "permissionVerifiedAt": "2026-11-22",
-      "editorialApproval": {
-        "decidedAt": "2026-11-22",
-        "timezone": "Europe/Vienna",
-        "source": "VIPACH project owner editorial instruction",
-        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
-        "role": "editorial",
-        "isCopyrightEvidence": false,
-        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
-      },
-      "publicationStatus": "approved-for-public-display",
-      "publicReleaseApproved": true,
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
       "titleDataStatus": "missing",
-      "creditLine": {
-        "hu": "Alkotó: Mátéfi Dalma",
-        "en": "Artist: Mátéfi Dalma",
-        "de": "Kunstschaffende: Mátéfi Dalma"
-      },
       "image": {
-        "vipachMirrorPath": "/images/wix-mirror/b0aee1_8d96c1daef8645c88b5df22a174333cc-mv2-25421c1851.webp",
-        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_8d96c1daef8645c88b5df22a174333cc~mv2.jpg",
         "sha256": "1692a0e34a539fe433bf8c88d59d5d80995e0df0ef8bf8f0b4393327333935e2",
         "width": 1920,
-        "height": 1920
-      },
-      "cmsProvenanceSummary": {
-        "wixRecordId": "92d4fe6d-862f-403e-a208-c74e729d16ea",
-        "matchingMediaId": "b0aee1_8d96c1daef8645c88b5df22a174333cc~mv2.jpg",
-        "artistCreditAgrees": true,
-        "exhibitionAssignmentAgrees": true,
-        "status": "source-id-match; curator approval required"
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
       }
     },
     {
       "id": "eletemkepe-eed07d33a4a9",
       "creatorName": "Léna Erdős",
       "creatorIdentificationStatus": "identified",
-      "copyrightHolder": "Léna Erdős",
-      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
-      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
-      "permittedUses": [
-        "archival-public-display-on-vipach-site-with-creator-credit",
-        "no-sublicense-implied",
-        "no-copyright-assignment-to-vipach"
-      ],
-      "permissionEvidence": "wixRecordId:29c74b22-14fd-4b6c-b03a-79bcf53cbd03; matchingMediaId:b0aee1_8ed1c9ecc7bf490e974a6ad683cb359c~mv2.jpg; priorPublicGallery:https://www.vipach.at/eletemkepe-gallery",
-      "permissionSource": "prior-public-wix-community-exhibition-display",
-      "permissionVerifiedAt": "2026-11-22",
-      "editorialApproval": {
-        "decidedAt": "2026-11-22",
-        "timezone": "Europe/Vienna",
-        "source": "VIPACH project owner editorial instruction",
-        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
-        "role": "editorial",
-        "isCopyrightEvidence": false,
-        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
-      },
-      "publicationStatus": "approved-for-public-display",
-      "publicReleaseApproved": true,
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
       "titleDataStatus": "missing",
-      "creditLine": {
-        "hu": "Alkotó: Léna Erdős",
-        "en": "Artist: Léna Erdős",
-        "de": "Kunstschaffende: Léna Erdős"
-      },
       "image": {
-        "vipachMirrorPath": "/images/wix-mirror/b0aee1_8ed1c9ecc7bf490e974a6ad683cb359c-mv2-6df159633c.webp",
-        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_8ed1c9ecc7bf490e974a6ad683cb359c~mv2.jpg",
         "sha256": "eed07d33a4a9e89174b74d518913a0d04754d6be63875c5bccdd54ac2f7e9aad",
         "width": 1920,
-        "height": 1920
-      },
-      "cmsProvenanceSummary": {
-        "wixRecordId": "29c74b22-14fd-4b6c-b03a-79bcf53cbd03",
-        "matchingMediaId": "b0aee1_8ed1c9ecc7bf490e974a6ad683cb359c~mv2.jpg",
-        "artistCreditAgrees": true,
-        "exhibitionAssignmentAgrees": true,
-        "status": "source-id-match; curator approval required"
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
       }
     },
     {
       "id": "eletemkepe-ba9b1dccdc28",
       "creatorName": "Farkas Tamás",
       "creatorIdentificationStatus": "identified",
-      "copyrightHolder": "Farkas Tamás",
-      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
-      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
-      "permittedUses": [
-        "archival-public-display-on-vipach-site-with-creator-credit",
-        "no-sublicense-implied",
-        "no-copyright-assignment-to-vipach"
-      ],
-      "permissionEvidence": "wixRecordId:26bf46aa-80fc-4de9-a112-054eea1eda26; matchingMediaId:b0aee1_9ccb7a1b95634b2d80b25ec33e815ba1~mv2.jpg; priorPublicGallery:https://www.vipach.at/eletemkepe-gallery",
-      "permissionSource": "prior-public-wix-community-exhibition-display",
-      "permissionVerifiedAt": "2026-11-22",
-      "editorialApproval": {
-        "decidedAt": "2026-11-22",
-        "timezone": "Europe/Vienna",
-        "source": "VIPACH project owner editorial instruction",
-        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
-        "role": "editorial",
-        "isCopyrightEvidence": false,
-        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
-      },
-      "publicationStatus": "approved-for-public-display",
-      "publicReleaseApproved": true,
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
       "titleDataStatus": "missing",
-      "creditLine": {
-        "hu": "Alkotó: Farkas Tamás",
-        "en": "Artist: Farkas Tamás",
-        "de": "Kunstschaffende: Farkas Tamás"
-      },
       "image": {
-        "vipachMirrorPath": "/images/wix-mirror/b0aee1_9ccb7a1b95634b2d80b25ec33e815ba1-mv2-a25fbb9e13.webp",
-        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_9ccb7a1b95634b2d80b25ec33e815ba1~mv2.jpg",
         "sha256": "ba9b1dccdc28eab1daa53339b43f78eea216d6a79f42534afe82bb37e9731324",
         "width": 1920,
-        "height": 1920
-      },
-      "cmsProvenanceSummary": {
-        "wixRecordId": "26bf46aa-80fc-4de9-a112-054eea1eda26",
-        "matchingMediaId": "b0aee1_9ccb7a1b95634b2d80b25ec33e815ba1~mv2.jpg",
-        "artistCreditAgrees": true,
-        "exhibitionAssignmentAgrees": true,
-        "status": "source-id-match; curator approval required"
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
       }
     },
     {
       "id": "eletemkepe-ac4f36f8a01d",
       "creatorName": null,
       "creatorIdentificationStatus": "unidentified",
-      "copyrightHolder": null,
-      "publicationLicensee": null,
-      "licenseType": null,
-      "permittedUses": [],
-      "permissionEvidence": null,
-      "permissionSource": null,
-      "permissionVerifiedAt": null,
-      "editorialApproval": {
-        "decidedAt": "2026-11-22",
-        "timezone": "Europe/Vienna",
-        "source": "VIPACH project owner editorial instruction",
-        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
-        "role": "editorial",
-        "isCopyrightEvidence": false,
-        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
-      },
       "publicationStatus": "rights-review-required",
+      "licenseVerificationStatus": "absent",
       "publicReleaseApproved": false,
       "titleDataStatus": "missing",
-      "creditLine": {
-        "hu": "Alkotó: azonosítás / jogi felülvizsgálat alatt — nem publikált",
-        "en": "Creator: identification / rights review pending — not published",
-        "de": "Urheber:in: Identifikation / Rechteprüfung ausstehend — nicht veröffentlicht"
-      },
       "image": {
-        "vipachMirrorPath": "/images/wix-mirror/b0aee1_b0b852d43bbd4ddf894777104ff9c902-mv2-130a3ffd3b.webp",
-        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_b0b852d43bbd4ddf894777104ff9c902~mv2.jpg",
         "sha256": "ac4f36f8a01da9f6b94f89c24f471d8e5c7a7071a7f3b6516d5d7dc97c65fac7",
         "width": 1920,
-        "height": 1920
-      },
-      "cmsProvenanceSummary": {
-        "wixRecordId": null,
-        "matchingMediaId": null,
-        "artistCreditAgrees": null,
-        "exhibitionAssignmentAgrees": null,
-        "status": "gallery-only; no source CMS artist match; VIPACH license assigned by owner"
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
       }
     },
     {
       "id": "eletemkepe-5ac35f527809",
       "creatorName": "HajNika",
       "creatorIdentificationStatus": "identified",
-      "copyrightHolder": "HajNika",
-      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
-      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
-      "permittedUses": [
-        "archival-public-display-on-vipach-site-with-creator-credit",
-        "no-sublicense-implied",
-        "no-copyright-assignment-to-vipach"
-      ],
-      "permissionEvidence": "wixRecordId:b07ea181-e937-4b7d-8851-292f689b7de0; matchingMediaId:b0aee1_b44fe1d7e1e74d28a7a5af955eb42b1c~mv2.jpg; priorPublicGallery:https://www.vipach.at/eletemkepe-gallery",
-      "permissionSource": "prior-public-wix-community-exhibition-display",
-      "permissionVerifiedAt": "2026-11-22",
-      "editorialApproval": {
-        "decidedAt": "2026-11-22",
-        "timezone": "Europe/Vienna",
-        "source": "VIPACH project owner editorial instruction",
-        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
-        "role": "editorial",
-        "isCopyrightEvidence": false,
-        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
-      },
-      "publicationStatus": "approved-for-public-display",
-      "publicReleaseApproved": true,
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
       "titleDataStatus": "missing",
-      "creditLine": {
-        "hu": "Alkotó: HajNika",
-        "en": "Artist: HajNika",
-        "de": "Kunstschaffende: HajNika"
-      },
       "image": {
-        "vipachMirrorPath": "/images/wix-mirror/b0aee1_b44fe1d7e1e74d28a7a5af955eb42b1c-mv2-34c2c74818.webp",
-        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_b44fe1d7e1e74d28a7a5af955eb42b1c~mv2.jpg",
         "sha256": "5ac35f5278097b5af314d8520a11657e66d2763aa7dc44a35204b8025123d5a2",
         "width": 1920,
-        "height": 1920
-      },
-      "cmsProvenanceSummary": {
-        "wixRecordId": "b07ea181-e937-4b7d-8851-292f689b7de0",
-        "matchingMediaId": "b0aee1_b44fe1d7e1e74d28a7a5af955eb42b1c~mv2.jpg",
-        "artistCreditAgrees": true,
-        "exhibitionAssignmentAgrees": true,
-        "status": "source-id-match; curator approval required"
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
       }
     },
     {
       "id": "eletemkepe-c9ead27cf0d9",
       "creatorName": "Bödő Viktória",
       "creatorIdentificationStatus": "identified",
-      "copyrightHolder": "Bödő Viktória",
-      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
-      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
-      "permittedUses": [
-        "archival-public-display-on-vipach-site-with-creator-credit",
-        "no-sublicense-implied",
-        "no-copyright-assignment-to-vipach"
-      ],
-      "permissionEvidence": "wixRecordId:d923de72-88ad-4e56-b6a7-33bf991a5025; matchingMediaId:b0aee1_b666757075be4b71afd6d459297f2226~mv2.jpg; priorPublicGallery:https://www.vipach.at/eletemkepe-gallery",
-      "permissionSource": "prior-public-wix-community-exhibition-display",
-      "permissionVerifiedAt": "2026-11-22",
-      "editorialApproval": {
-        "decidedAt": "2026-11-22",
-        "timezone": "Europe/Vienna",
-        "source": "VIPACH project owner editorial instruction",
-        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
-        "role": "editorial",
-        "isCopyrightEvidence": false,
-        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
-      },
-      "publicationStatus": "approved-for-public-display",
-      "publicReleaseApproved": true,
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
       "titleDataStatus": "missing",
-      "creditLine": {
-        "hu": "Alkotó: Bödő Viktória",
-        "en": "Artist: Bödő Viktória",
-        "de": "Kunstschaffende: Bödő Viktória"
-      },
       "image": {
-        "vipachMirrorPath": "/images/wix-mirror/b0aee1_b666757075be4b71afd6d459297f2226-mv2-cde8f36c37.webp",
-        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_b666757075be4b71afd6d459297f2226~mv2.jpg",
         "sha256": "c9ead27cf0d9b55f25d8d48565a0bb587d7a1514f47e3cd0f6c71eb3a983f831",
         "width": 1920,
-        "height": 1920
-      },
-      "cmsProvenanceSummary": {
-        "wixRecordId": "d923de72-88ad-4e56-b6a7-33bf991a5025",
-        "matchingMediaId": "b0aee1_b666757075be4b71afd6d459297f2226~mv2.jpg",
-        "artistCreditAgrees": true,
-        "exhibitionAssignmentAgrees": true,
-        "status": "source-id-match; curator approval required"
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
       }
     },
     {
       "id": "eletemkepe-1c7fe16a4194",
       "creatorName": "Ficho",
       "creatorIdentificationStatus": "identified",
-      "copyrightHolder": "Ficho",
-      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
-      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
-      "permittedUses": [
-        "archival-public-display-on-vipach-site-with-creator-credit",
-        "no-sublicense-implied",
-        "no-copyright-assignment-to-vipach"
-      ],
-      "permissionEvidence": "wixRecordId:17b3c8fd-ed18-4795-ba04-2e6dee7d21d9; matchingMediaId:b0aee1_c65a9765151a4765a80b96ec50e45363~mv2.jpg; priorPublicGallery:https://www.vipach.at/eletemkepe-gallery",
-      "permissionSource": "prior-public-wix-community-exhibition-display",
-      "permissionVerifiedAt": "2026-11-22",
-      "editorialApproval": {
-        "decidedAt": "2026-11-22",
-        "timezone": "Europe/Vienna",
-        "source": "VIPACH project owner editorial instruction",
-        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
-        "role": "editorial",
-        "isCopyrightEvidence": false,
-        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
-      },
-      "publicationStatus": "approved-for-public-display",
-      "publicReleaseApproved": true,
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
       "titleDataStatus": "missing",
-      "creditLine": {
-        "hu": "Alkotó: Ficho",
-        "en": "Artist: Ficho",
-        "de": "Kunstschaffende: Ficho"
-      },
       "image": {
-        "vipachMirrorPath": "/images/wix-mirror/b0aee1_c65a9765151a4765a80b96ec50e45363-mv2-f38538304c.webp",
-        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_c65a9765151a4765a80b96ec50e45363~mv2.jpg",
         "sha256": "1c7fe16a4194c483504190d14245acd33b31a399f7711d12cc310deacd82e221",
         "width": 1920,
-        "height": 1920
-      },
-      "cmsProvenanceSummary": {
-        "wixRecordId": "17b3c8fd-ed18-4795-ba04-2e6dee7d21d9",
-        "matchingMediaId": "b0aee1_c65a9765151a4765a80b96ec50e45363~mv2.jpg",
-        "artistCreditAgrees": true,
-        "exhibitionAssignmentAgrees": true,
-        "status": "source-id-match; curator approval required"
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
       }
     },
     {
       "id": "eletemkepe-eac1bee30ec2",
       "creatorName": "Viki Photo Art",
       "creatorIdentificationStatus": "identified",
-      "copyrightHolder": "Viki Photo Art",
-      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
-      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
-      "permittedUses": [
-        "archival-public-display-on-vipach-site-with-creator-credit",
-        "no-sublicense-implied",
-        "no-copyright-assignment-to-vipach"
-      ],
-      "permissionEvidence": "wixRecordId:94bc9eb6-6c48-4559-aaa6-bc149cddbf6f; matchingMediaId:b0aee1_d88b93e91d404850b3b4ad9d5322fbfd~mv2.jpg; priorPublicGallery:https://www.vipach.at/eletemkepe-gallery",
-      "permissionSource": "prior-public-wix-community-exhibition-display",
-      "permissionVerifiedAt": "2026-11-22",
-      "editorialApproval": {
-        "decidedAt": "2026-11-22",
-        "timezone": "Europe/Vienna",
-        "source": "VIPACH project owner editorial instruction",
-        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
-        "role": "editorial",
-        "isCopyrightEvidence": false,
-        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
-      },
-      "publicationStatus": "approved-for-public-display",
-      "publicReleaseApproved": true,
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
       "titleDataStatus": "missing",
-      "creditLine": {
-        "hu": "Alkotó: Viki Photo Art",
-        "en": "Artist: Viki Photo Art",
-        "de": "Kunstschaffende: Viki Photo Art"
-      },
       "image": {
-        "vipachMirrorPath": "/images/wix-mirror/b0aee1_d88b93e91d404850b3b4ad9d5322fbfd-mv2-a2f47eea92.webp",
-        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_d88b93e91d404850b3b4ad9d5322fbfd~mv2.jpg",
         "sha256": "eac1bee30ec299427f010f1cd0132b7f407cbc08b549067028de268d2ff2216c",
         "width": 1920,
-        "height": 1920
-      },
-      "cmsProvenanceSummary": {
-        "wixRecordId": "94bc9eb6-6c48-4559-aaa6-bc149cddbf6f",
-        "matchingMediaId": "b0aee1_d88b93e91d404850b3b4ad9d5322fbfd~mv2.jpg",
-        "artistCreditAgrees": true,
-        "exhibitionAssignmentAgrees": true,
-        "status": "source-id-match; curator approval required"
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
       }
     },
     {
       "id": "eletemkepe-8479f727a9ef",
       "creatorName": "Loksi67",
       "creatorIdentificationStatus": "identified",
-      "copyrightHolder": "Loksi67",
-      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
-      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
-      "permittedUses": [
-        "archival-public-display-on-vipach-site-with-creator-credit",
-        "no-sublicense-implied",
-        "no-copyright-assignment-to-vipach"
-      ],
-      "permissionEvidence": "wixRecordId:db723f2c-02e0-4b42-94b7-62b9a4ae58d7; matchingMediaId:b0aee1_d8f54aa97bd84d518c943c93e631350c~mv2.jpg; priorPublicGallery:https://www.vipach.at/eletemkepe-gallery",
-      "permissionSource": "prior-public-wix-community-exhibition-display",
-      "permissionVerifiedAt": "2026-11-22",
-      "editorialApproval": {
-        "decidedAt": "2026-11-22",
-        "timezone": "Europe/Vienna",
-        "source": "VIPACH project owner editorial instruction",
-        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
-        "role": "editorial",
-        "isCopyrightEvidence": false,
-        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
-      },
-      "publicationStatus": "approved-for-public-display",
-      "publicReleaseApproved": true,
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
       "titleDataStatus": "missing",
-      "creditLine": {
-        "hu": "Alkotó: Loksi67",
-        "en": "Artist: Loksi67",
-        "de": "Kunstschaffende: Loksi67"
-      },
       "image": {
-        "vipachMirrorPath": "/images/wix-mirror/b0aee1_d8f54aa97bd84d518c943c93e631350c-mv2-e7ebd9cdcf.webp",
-        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_d8f54aa97bd84d518c943c93e631350c~mv2.jpg",
         "sha256": "8479f727a9efaff3e13678563b1822a56fce1f430c599594eaea3516aeb847fb",
         "width": 1920,
-        "height": 1920
-      },
-      "cmsProvenanceSummary": {
-        "wixRecordId": "db723f2c-02e0-4b42-94b7-62b9a4ae58d7",
-        "matchingMediaId": "b0aee1_d8f54aa97bd84d518c943c93e631350c~mv2.jpg",
-        "artistCreditAgrees": true,
-        "exhibitionAssignmentAgrees": true,
-        "status": "source-id-match; curator approval required"
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
       }
     },
     {
       "id": "eletemkepe-3bbefc05118c",
       "creatorName": "Edit Gärtner",
       "creatorIdentificationStatus": "identified",
-      "copyrightHolder": "Edit Gärtner",
-      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
-      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
-      "permittedUses": [
-        "archival-public-display-on-vipach-site-with-creator-credit",
-        "no-sublicense-implied",
-        "no-copyright-assignment-to-vipach"
-      ],
-      "permissionEvidence": "wixRecordId:a2414bc4-8fb3-401a-bb3f-e920f5d4e239; matchingMediaId:b0aee1_de6bdf41434946b2a0b1c07d73f5069f~mv2.jpg; priorPublicGallery:https://www.vipach.at/eletemkepe-gallery",
-      "permissionSource": "prior-public-wix-community-exhibition-display",
-      "permissionVerifiedAt": "2026-11-22",
-      "editorialApproval": {
-        "decidedAt": "2026-11-22",
-        "timezone": "Europe/Vienna",
-        "source": "VIPACH project owner editorial instruction",
-        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
-        "role": "editorial",
-        "isCopyrightEvidence": false,
-        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
-      },
-      "publicationStatus": "approved-for-public-display",
-      "publicReleaseApproved": true,
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
       "titleDataStatus": "missing",
-      "creditLine": {
-        "hu": "Alkotó: Edit Gärtner",
-        "en": "Artist: Edit Gärtner",
-        "de": "Kunstschaffende: Edit Gärtner"
-      },
       "image": {
-        "vipachMirrorPath": "/images/wix-mirror/b0aee1_de6bdf41434946b2a0b1c07d73f5069f-mv2-f2d92f933d.webp",
-        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_de6bdf41434946b2a0b1c07d73f5069f~mv2.jpg",
         "sha256": "3bbefc05118c0d952afa8e92649f7ec7fd9b4598578e9ed773704d8e8245308e",
         "width": 1920,
-        "height": 1920
-      },
-      "cmsProvenanceSummary": {
-        "wixRecordId": "a2414bc4-8fb3-401a-bb3f-e920f5d4e239",
-        "matchingMediaId": "b0aee1_de6bdf41434946b2a0b1c07d73f5069f~mv2.jpg",
-        "artistCreditAgrees": true,
-        "exhibitionAssignmentAgrees": false,
-        "status": "cross-exhibition or credit review required"
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
       }
     },
     {
       "id": "eletemkepe-003afe8992fd",
       "creatorName": "Léna Erdős",
       "creatorIdentificationStatus": "identified",
-      "copyrightHolder": "Léna Erdős",
-      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
-      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
-      "permittedUses": [
-        "archival-public-display-on-vipach-site-with-creator-credit",
-        "no-sublicense-implied",
-        "no-copyright-assignment-to-vipach"
-      ],
-      "permissionEvidence": "wixRecordId:29c74b22-14fd-4b6c-b03a-79bcf53cbd03; matchingMediaId:b0aee1_e3261a5ab7d84511b5348ea82ed49f79~mv2.jpg; priorPublicGallery:https://www.vipach.at/eletemkepe-gallery",
-      "permissionSource": "prior-public-wix-community-exhibition-display",
-      "permissionVerifiedAt": "2026-11-22",
-      "editorialApproval": {
-        "decidedAt": "2026-11-22",
-        "timezone": "Europe/Vienna",
-        "source": "VIPACH project owner editorial instruction",
-        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
-        "role": "editorial",
-        "isCopyrightEvidence": false,
-        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
-      },
-      "publicationStatus": "approved-for-public-display",
-      "publicReleaseApproved": true,
+      "publicationStatus": "license-verification-required",
+      "licenseVerificationStatus": "license-verification-required",
+      "publicReleaseApproved": false,
       "titleDataStatus": "missing",
-      "creditLine": {
-        "hu": "Alkotó: Léna Erdős",
-        "en": "Artist: Léna Erdős",
-        "de": "Kunstschaffende: Léna Erdős"
-      },
       "image": {
-        "vipachMirrorPath": "/images/wix-mirror/b0aee1_e3261a5ab7d84511b5348ea82ed49f79-mv2-e0f4bc9cca.webp",
-        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_e3261a5ab7d84511b5348ea82ed49f79~mv2.jpg",
         "sha256": "003afe8992fd6f06adb66d5891ef7ecb7cf3eaf7f285fa0b46fec3a0ca1d68af",
         "width": 1920,
-        "height": 1920
-      },
-      "cmsProvenanceSummary": {
-        "wixRecordId": "29c74b22-14fd-4b6c-b03a-79bcf53cbd03",
-        "matchingMediaId": "b0aee1_e3261a5ab7d84511b5348ea82ed49f79~mv2.jpg",
-        "artistCreditAgrees": true,
-        "exhibitionAssignmentAgrees": true,
-        "status": "source-id-match; curator approval required"
+        "height": 1920,
+        "publicationAllowed": false,
+        "vipachPrivateMirrorRetained": true
       }
     }
   ],
@@ -1052,10 +440,14 @@
     }
   },
   "rightsInventory": {
-    "schema": "separated-publication-rights-v2",
-    "sourcePrivateBuild": "880rzz/VIPACH private-build/staging/exhibition-works-2025.json",
-    "publicConsumer": "https://www.vipach.at/ (approved works only on detail pages)",
-    "canonicalHost": "https://exhibition.vipach.at/",
+    "schema": "public-safe-summary-v3",
+    "note": "Detailed licence evidence lives only in VIPACH private-build/staging. Public Exhibition JSON carries publicationStatus summary only.",
+    "publicationApprovalStatus": "partial",
+    "counts": {
+      "licenceVerifiedApprovedForPublicDisplay": 0,
+      "priorWixPublicationOnlyLicenseVerificationRequired": 18,
+      "rightsReviewRequiredUnidentified": 2
+    },
     "preserve": {
       "archiveImages": 40,
       "cmsMatches": 37,
