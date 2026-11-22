@@ -634,5 +634,42 @@
       "/gallery/sardi-peter-krisztina-az-ido-csendje.webp"
     ],
     "artistCreditsPreserved": true
+  },
+  "pressCoverage": {
+    "sourceReview": "2026-11-22",
+    "discoverySource": "https://hu.wikipedia.org/wiki/VIPACH",
+    "editorialNote": "Sources are linked to this exhibition, including clearly labelled advance/secondary mentions. Wikipedia is discovery context, not a press outlet.",
+    "items": [
+      {
+        "id": "becsi-szelet-spontan-hu-2026",
+        "publication": "Bécsi Szelet Magazin",
+        "title": "Amikor a pillanatból kiállítás születik – megnyílt a SPONTÁN fotókiállítás Bécsben",
+        "url": "https://www.becsiszelet.at/post/spontan-fotokiallitas-megnyito-becs-2026",
+        "language": "hu",
+        "date": "2026-11-18",
+        "type": "opening-report",
+        "description": {
+          "hu": "Magyar nyelvű beszámoló a SPONTÁN megnyitójáról, a 16 kiállítóról és a 20 műről.",
+          "en": "Hungarian-language report on the SPONTÁN opening, its 16 exhibitors and 20 artworks.",
+          "de": "Ungarischsprachiger Bericht zur Eröffnung von SPONTÁN mit 16 Ausstellenden und 20 Werken."
+        },
+        "evidence": "Bécsi Szelet published Wix Blog post by supplied canonical slug; verified 2026-11-22"
+      },
+      {
+        "id": "becsi-szelet-spontan-de-2026",
+        "publication": "Bécsi Szelet Magazin",
+        "title": "Wenn aus einem Augenblick eine Ausstellung wird: SPONTÁN in Wien eröffnet",
+        "url": "https://www.becsiszelet.at/de/post/spontan-fotoausstellung-eroeffnung-wien-2026",
+        "language": "de",
+        "date": "2026-11-18",
+        "type": "opening-report",
+        "description": {
+          "hu": "Német nyelvű beszámoló a bécsi kiállítás megnyitójáról.",
+          "en": "German-language report on the Vienna exhibition opening.",
+          "de": "Deutschsprachiger Bericht über die Eröffnung der Wiener Ausstellung."
+        },
+        "evidence": "Bécsi Szelet published Wix Blog post by supplied canonical slug; verified 2026-11-22"
+      }
+    ]
   }
 }
