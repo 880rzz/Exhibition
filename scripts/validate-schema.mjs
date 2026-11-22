@@ -170,6 +170,14 @@ assert.equal(
   'SPONTÁN cover/OG not cleared for republication without licence evidence'
 );
 
+const spontan = exhibitions.find((e) => e.slug === 'spontan-2026');
+assert.ok(spontan?.liveHtmlMedia?.externalWixImageCount > 0, 'SPONTÁN must inventory live Wix embeds');
+assert.equal(spontan.liveHtmlMedia.ogImage.publicationStatus, 'rights-review-required');
+assert.ok(spontan.liveHtmlMedia.externalWixImages.every((x) => x.publicationStatus === 'rights-review-required'));
+assert.equal(spontan.counts.licenceVerifiedApprovedForPublicDisplay, 0);
+assert.equal(spontan.counts.approvedForPublicDisplay, 0);
+
+
 // --- Sitemap / robots continuity ---
 const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
 assert.match(sitemap, /https:\/\/exhibition\.vipach\.at\//, 'featured EN in sitemap');

@@ -9,7 +9,7 @@ Public Exhibition JSON may include: work id, creatorName (when identified), publ
 
 Public Exhibition JSON must **not** include: permissionEvidence, CMS record payloads, contact/biographical staging text, or local mirror filesystem paths that would expose withheld assets.
 
-## Current 2025 status (V4 — regenerated from works[])
+## Current 2025 status (V4.1 — regenerated from works[])
 Run `node scripts/regenerate_exhibition_counts.mjs` (also invoked by `build-exhibitions.mjs`).
 
 | Exhibition | Works | Source-claimed participants | Identified catalogue creators | Licence-verified approved | Prior-Wix / verification-required | Rights-review |
@@ -20,8 +20,13 @@ Run `node scripts/regenerate_exhibition_counts.mjs` (also invoked by `build-exhi
 
 `approvedForPublicDisplay` equals licence-verified only (currently **0**). Prior Wix appearance must never inflate that field.
 
+## SPONTÁN live HTML media (V4.1)
+Frozen SPONTÁN pages still embed historical Wix CDN URLs (portraits / OG / brand) to preserve the live exhibition experience and artist credits. Those embeds are inventoried in `data/exhibitions/spontan-2026.json` → `liveHtmlMedia` with `publicationStatus: rights-review-required`. **Prior public appearance ≠ verified republication licence.**
+
+`counts.licensedImageObjectsInSchema` counts schema.org ImageObject nodes only — it is not a licence-verified total.
+
 ## Cover / OG policy
-SPONTÁN and historical cover/OG assets are marked `publicationStatus: rights-review-required` until a verified licence instrument exists. Unverified covers must not be treated as cleared public media.
+SPONTÁN and historical cover/OG assets remain `rights-review-required` until a verified licence instrument exists.
 
 ## SPONTÁN closing date
 Open editorial question: Exhibition presentation 21 Nov 2026 vs Wix Events 22 Nov 2026.
