@@ -32,6 +32,26 @@ jobs:
           assert r['productionReleaseApproved'] is False
           assert r['imageRightsVerified']==0
           assert r['languagePages']==6
+          source=json.loads(Path('data/staging/2025-two-exhibitions.json').read_text())
+          cms=json.loads(Path('data/staging/2025-cms-editorial-source.json').read_text())
+          assert len(cms['records'])==32
+          assert sum(1 for a in cms['records'] if a['biography'])==32
+          assert all(a.get('portraitPrivateMirrorRef','').startswith('VIPACH:/images/wix-mirror/') for e in source['exhibitions'] for a in e['artistProfiles'])
+          assert all(w.get('imageMirrorRef','').startswith('VIPACH:/images/wix-mirror/') for e in source['exhibitions'] for w in e['works'])
+          assert r['wixCmsRecords']==32
+          assert r['wixFullBiographies']==32
+          assert r['wixArtworkDescriptions']==32
+          cms_by_id={a['id']:a for a in cms['records']}
+          def source_description(w):
+              item=cms_by_id.get(w.get('wixRecordId'))
+              if not item: return ''
+              if w.get('sourceImageSlot')=='artwork-1': return item.get('firstArtworkDescription','')
+              if w.get('sourceImageSlot')=='artwork-2': return item.get('secondArtworkDescription','')
+              return ''
+          expected_original_details={}
+          for ex in source['exhibitions']:
+              originals=sum(bool(source_description(w)) for w in ex['works'])
+              expected_original_details[ex['slug']]=len(ex['artistProfiles'])+originals
           assert sorted((x['artists'],x['works']) for x in r['exhibitions'])==[(15,20),(19,20)]
           for slug,artist_count in [('eletem-kepe',15),('as-i-like-it-austria',19)]:
               for lang in ('hu','en','de'):
@@ -43,6 +63,10 @@ jobs:
                   assert s.count('class="ex25-work reveal"')==20,(p,'works')
                   assert s.count('class="ex25-artist reveal"')==artist_count,(p,'artists')
                   assert s.count('class="ex25-work-img"')==20,(p,'work images')
+                  assert s.count('class="ex25-portrait-img"')==artist_count,(p,'artist portraits')
+                  assert s.count('class="ex25-original"')==expected_original_details[slug],(p,'original Wix bios and work narratives',s.count('class="ex25-original"'),expected_original_details[slug])
+                  assert '../../assets/styles.css' in s and '../../assets/2025-exhibitions.css' in s
+                  assert 'noindex,nofollow,noimageindex' in s
           print('PASS six staged gallery pages; 40 Wix media references, 34 artists; no production authorization')
           PY
       - uses: actions/upload-artifact@v4
