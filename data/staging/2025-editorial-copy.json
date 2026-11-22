@@ -26,7 +26,12 @@
         "untitled": "A mű címe forrásellenőrzés alatt",
         "back": "A SPONTÁN kiállításhoz",
         "source": "Korábbi Wix-adatlap",
-        "gallery": "Galériaanyag: ideiglenes Wix-forráshivatkozás."
+        "gallery": "Galériaanyag: ideiglenes Wix-forráshivatkozás.",
+        "printPartner": "Reklám rendelő",
+        "professionalPartner": "OM SYSTEM",
+        "printPartnerLabel": "Nyomdai partner",
+        "professionalPartnerLabel": "Szakmai partner",
+        "partnerRightsNote": "A partnerkapcsolat megnevezése nem jelent automatikus logóhasználati engedélyt."
       },
       "en": {
         "title": "The Image of My Life",
@@ -51,7 +56,12 @@
         "untitled": "Artwork title pending source verification",
         "back": "SPONTÁN exhibition",
         "source": "Original Wix profile",
-        "gallery": "Images are currently sourced from legacy Wix references for staging."
+        "gallery": "Images are currently sourced from legacy Wix references for staging.",
+        "printPartner": "Reklám rendelő",
+        "professionalPartner": "OM SYSTEM",
+        "printPartnerLabel": "Print partner",
+        "professionalPartnerLabel": "Professional partner",
+        "partnerRightsNote": "Partner acknowledgment does not imply authorization to reproduce any third-party logo."
       },
       "de": {
         "title": "Das Bild meines Lebens",
@@ -76,7 +86,12 @@
         "untitled": "Werktitel noch nicht bestätigt",
         "back": "Ausstellung SPONTÁN",
         "source": "Bisheriges Wix-Profil",
-        "gallery": "Die Bildreferenzen stammen vorläufig aus dem früheren Wix-System."
+        "gallery": "Die Bildreferenzen stammen vorläufig aus dem früheren Wix-System.",
+        "printPartner": "Reklám rendelő",
+        "professionalPartner": "OM SYSTEM",
+        "printPartnerLabel": "Druckpartner",
+        "professionalPartnerLabel": "Fachpartner",
+        "partnerRightsNote": "Die Nennung einer Partnerschaft ist keine automatische Genehmigung zur Wiedergabe eines Markenlogos."
       }
     },
     "as-i-like-it-austria": {
@@ -103,7 +118,12 @@
         "untitled": "A mű címe forrásellenőrzés alatt",
         "back": "A SPONTÁN kiállításhoz",
         "source": "Korábbi Wix-adatlap",
-        "gallery": "Galériaanyag: ideiglenes Wix-forráshivatkozás."
+        "gallery": "Galériaanyag: ideiglenes Wix-forráshivatkozás.",
+        "printPartner": "Reklám rendelő",
+        "professionalPartner": "OM SYSTEM",
+        "printPartnerLabel": "Nyomdai partner",
+        "professionalPartnerLabel": "Szakmai partner",
+        "partnerRightsNote": "A partnerkapcsolat megnevezése nem jelent automatikus logóhasználati engedélyt."
       },
       "en": {
         "title": "As I Like It Austria",
@@ -128,7 +148,12 @@
         "untitled": "Artwork title pending source verification",
         "back": "SPONTÁN exhibition",
         "source": "Original Wix profile",
-        "gallery": "Images are currently sourced from legacy Wix references for staging."
+        "gallery": "Images are currently sourced from legacy Wix references for staging.",
+        "printPartner": "Reklám rendelő",
+        "professionalPartner": "OM SYSTEM",
+        "printPartnerLabel": "Print partner",
+        "professionalPartnerLabel": "Professional partner",
+        "partnerRightsNote": "Partner acknowledgment does not imply authorization to reproduce any third-party logo."
       },
       "de": {
         "title": "As I Like It Austria",
@@ -153,7 +178,12 @@
         "untitled": "Werktitel noch nicht bestätigt",
         "back": "Ausstellung SPONTÁN",
         "source": "Bisheriges Wix-Profil",
-        "gallery": "Die Bildreferenzen stammen vorläufig aus dem früheren Wix-System."
+        "gallery": "Die Bildreferenzen stammen vorläufig aus dem früheren Wix-System.",
+        "printPartner": "Reklám rendelő",
+        "professionalPartner": "OM SYSTEM",
+        "printPartnerLabel": "Druckpartner",
+        "professionalPartnerLabel": "Fachpartner",
+        "partnerRightsNote": "Die Nennung einer Partnerschaft ist keine automatische Genehmigung zur Wiedergabe eines Markenlogos."
       }
     }
   }
