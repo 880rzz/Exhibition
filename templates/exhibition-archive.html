@@ -35,14 +35,21 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#content">Skip to content</a>
   <header class="site-header">
-    <div class="brand-mark"><a href="{{homeHref}}">VIPACH Exhibition</a></div>
-    <nav class="lang-nav" aria-label="Language">
-      {{langNav}}
-    </nav>
-    <nav class="site-menu" id="site-menu" aria-label="Primary">
+    <a class="brand" href="{{homeHref}}" aria-label="VIPACH Exhibition">
+      <strong>VIPACH</strong><span> / Exhibition</span>
+    </a>
+    <div class="header-tools">
+      <nav class="lang-nav" aria-label="Language">
+        {{langNav}}
+      </nav>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open exhibitions menu"><span></span><span></span></button>
+    </div>
+    <nav class="site-menu" id="site-menu" aria-label="Exhibition navigation">
       <a href="{{homeHref}}">{{navHome}}</a>
       <a href="https://www.vipach.at/" rel="noopener">VIPACH</a>
+      {{archiveMenu}}
     </nav>
   </header>
   <main id="content">
