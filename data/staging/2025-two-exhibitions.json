@@ -186,7 +186,16 @@
           "wixRecordId": "57492be2-49b0-4b70-be4d-3f8564823a59",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "57492be2-49b0-4b70-be4d-3f8564823a59",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "eletemkepe-7083c6460bb5",
@@ -212,7 +221,16 @@
           "wixRecordId": "db723f2c-02e0-4b42-94b7-62b9a4ae58d7",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "db723f2c-02e0-4b42-94b7-62b9a4ae58d7",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "eletemkepe-e6ef2f123b3b",
@@ -238,7 +256,16 @@
           "wixRecordId": "471fcddd-4b38-4113-9112-47af1d0294c0",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "471fcddd-4b38-4113-9112-47af1d0294c0",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "eletemkepe-371e50673e22",
@@ -264,7 +291,16 @@
           "wixRecordId": "26bf46aa-80fc-4de9-a112-054eea1eda26",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "26bf46aa-80fc-4de9-a112-054eea1eda26",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "eletemkepe-f3bbb75370d8",
@@ -290,7 +326,16 @@
           "wixRecordId": "e857f201-2214-4fde-91bb-6fa61d2d9306",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "e857f201-2214-4fde-91bb-6fa61d2d9306",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "eletemkepe-5ba6a68d1876",
@@ -316,7 +361,16 @@
           "wixRecordId": "94bc9eb6-6c48-4559-aaa6-bc149cddbf6f",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "94bc9eb6-6c48-4559-aaa6-bc149cddbf6f",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "eletemkepe-c90ec4d760c2",
@@ -342,7 +396,16 @@
           "wixRecordId": "dffd1e1a-1410-4722-9652-8f001932c614",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "dffd1e1a-1410-4722-9652-8f001932c614",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "eletemkepe-6a0485e910a1",
@@ -368,7 +431,11 @@
           "wixRecordId": null,
           "descriptionSourceAvailable": false,
           "licenseVerificationStatus": "absent",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": null,
+          "sourceDescriptionReference": null,
+          "creditBasis": "unidentified-creator; withheld",
+          "provenanceStatus": "gallery-only; no source CMS artist match; VIPACH license assigned by owner"
         },
         {
           "id": "eletemkepe-3b5ba24c02ef",
@@ -394,7 +461,16 @@
           "wixRecordId": "b07ea181-e937-4b7d-8851-292f689b7de0",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-2",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "b07ea181-e937-4b7d-8851-292f689b7de0",
+            "field": "secondArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "eletemkepe-1692a0e34a53",
@@ -420,7 +496,16 @@
           "wixRecordId": "92d4fe6d-862f-403e-a208-c74e729d16ea",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "92d4fe6d-862f-403e-a208-c74e729d16ea",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "eletemkepe-eed07d33a4a9",
@@ -446,7 +531,16 @@
           "wixRecordId": "29c74b22-14fd-4b6c-b03a-79bcf53cbd03",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "29c74b22-14fd-4b6c-b03a-79bcf53cbd03",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "eletemkepe-ba9b1dccdc28",
@@ -472,7 +566,16 @@
           "wixRecordId": "26bf46aa-80fc-4de9-a112-054eea1eda26",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-2",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "26bf46aa-80fc-4de9-a112-054eea1eda26",
+            "field": "secondArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "eletemkepe-ac4f36f8a01d",
@@ -498,7 +601,11 @@
           "wixRecordId": null,
           "descriptionSourceAvailable": false,
           "licenseVerificationStatus": "absent",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": null,
+          "sourceDescriptionReference": null,
+          "creditBasis": "unidentified-creator; withheld",
+          "provenanceStatus": "gallery-only; no source CMS artist match; VIPACH license assigned by owner"
         },
         {
           "id": "eletemkepe-5ac35f527809",
@@ -524,7 +631,16 @@
           "wixRecordId": "b07ea181-e937-4b7d-8851-292f689b7de0",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "b07ea181-e937-4b7d-8851-292f689b7de0",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "eletemkepe-c9ead27cf0d9",
@@ -550,7 +666,16 @@
           "wixRecordId": "d923de72-88ad-4e56-b6a7-33bf991a5025",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "d923de72-88ad-4e56-b6a7-33bf991a5025",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "eletemkepe-1c7fe16a4194",
@@ -576,7 +701,16 @@
           "wixRecordId": "17b3c8fd-ed18-4795-ba04-2e6dee7d21d9",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "17b3c8fd-ed18-4795-ba04-2e6dee7d21d9",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "eletemkepe-eac1bee30ec2",
@@ -602,7 +736,16 @@
           "wixRecordId": "94bc9eb6-6c48-4559-aaa6-bc149cddbf6f",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-2",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "94bc9eb6-6c48-4559-aaa6-bc149cddbf6f",
+            "field": "secondArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "eletemkepe-8479f727a9ef",
@@ -628,7 +771,16 @@
           "wixRecordId": "db723f2c-02e0-4b42-94b7-62b9a4ae58d7",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-2",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "db723f2c-02e0-4b42-94b7-62b9a4ae58d7",
+            "field": "secondArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "eletemkepe-3bbefc05118c",
@@ -654,7 +806,16 @@
           "wixRecordId": "a2414bc4-8fb3-401a-bb3f-e920f5d4e239",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "a2414bc4-8fb3-401a-bb3f-e920f5d4e239",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page; exhibition-cms-conflict-noted",
+          "provenanceStatus": "cross-exhibition or credit review required"
         },
         {
           "id": "eletemkepe-003afe8992fd",
@@ -680,7 +841,16 @@
           "wixRecordId": "29c74b22-14fd-4b6c-b03a-79bcf53cbd03",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-2",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "29c74b22-14fd-4b6c-b03a-79bcf53cbd03",
+            "field": "secondArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         }
       ],
       "unresolvedWorkCount": 2
@@ -891,7 +1061,16 @@
           "wixRecordId": "a15eb83b-4358-446a-a772-427b26d0f131",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "a15eb83b-4358-446a-a772-427b26d0f131",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "asilikeit-ce5b826f4ae3",
@@ -917,7 +1096,16 @@
           "wixRecordId": "0e891812-1b50-4352-8327-4c0ac911ce53",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "0e891812-1b50-4352-8327-4c0ac911ce53",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "asilikeit-e863ff3082b8",
@@ -943,7 +1131,16 @@
           "wixRecordId": "15ed1153-d7d2-48fd-afd6-e5a74651af50",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "15ed1153-d7d2-48fd-afd6-e5a74651af50",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "asilikeit-844936de3dd5",
@@ -969,7 +1166,16 @@
           "wixRecordId": "68d4d8b6-3469-4e4b-af71-1d1caa6c4ff4",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "68d4d8b6-3469-4e4b-af71-1d1caa6c4ff4",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "asilikeit-4789a7c2c1f0",
@@ -995,7 +1201,16 @@
           "wixRecordId": "391a95cf-c7e4-4d07-8aed-ed7beb73151a",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "391a95cf-c7e4-4d07-8aed-ed7beb73151a",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "asilikeit-5020371540fb",
@@ -1021,7 +1236,16 @@
           "wixRecordId": "6ca63939-6a2b-4368-8ec1-64590a5b3526",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "6ca63939-6a2b-4368-8ec1-64590a5b3526",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "asilikeit-a1e2cb005f07",
@@ -1047,7 +1271,16 @@
           "wixRecordId": "b46adf2e-c651-412d-bcbf-46fc2e65c905",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "b46adf2e-c651-412d-bcbf-46fc2e65c905",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "asilikeit-8e955fa88e16",
@@ -1073,7 +1306,16 @@
           "wixRecordId": "04cd99c4-1704-4ee6-a350-097e5c4b2dbb",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "04cd99c4-1704-4ee6-a350-097e5c4b2dbb",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "asilikeit-3c51b19aa027",
@@ -1099,7 +1341,11 @@
           "wixRecordId": null,
           "descriptionSourceAvailable": false,
           "licenseVerificationStatus": "absent",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": null,
+          "sourceDescriptionReference": null,
+          "creditBasis": "unidentified-creator; withheld",
+          "provenanceStatus": "gallery-only; no source CMS artist match; VIPACH license assigned by owner"
         },
         {
           "id": "asilikeit-f5ce80663718",
@@ -1125,7 +1371,16 @@
           "wixRecordId": "0cc463bd-9a69-480d-b7a8-79b9705e7650",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "0cc463bd-9a69-480d-b7a8-79b9705e7650",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "asilikeit-7f10b8f48731",
@@ -1151,7 +1406,16 @@
           "wixRecordId": "bd5fe81e-baef-495f-abde-41e359807c32",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "bd5fe81e-baef-495f-abde-41e359807c32",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "asilikeit-89a64ca4313e",
@@ -1177,7 +1441,16 @@
           "wixRecordId": "0b9cca44-6041-48f5-9861-2bbb856d47f8",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "0b9cca44-6041-48f5-9861-2bbb856d47f8",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "asilikeit-accee5c39590",
@@ -1203,7 +1476,16 @@
           "wixRecordId": "d19aff1f-5a3c-43a1-9130-d48c34cddd16",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "d19aff1f-5a3c-43a1-9130-d48c34cddd16",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "asilikeit-844abe713397",
@@ -1229,7 +1511,16 @@
           "wixRecordId": "42d9cca4-1831-4a5d-b3e1-822f5b224605",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "42d9cca4-1831-4a5d-b3e1-822f5b224605",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "asilikeit-f34e5c36d713",
@@ -1255,7 +1546,16 @@
           "wixRecordId": "15679777-257d-4ea8-82b8-1c949256cecd",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "15679777-257d-4ea8-82b8-1c949256cecd",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "asilikeit-c90dce593fd2",
@@ -1281,7 +1581,16 @@
           "wixRecordId": "6e727e27-0fc8-41ec-920a-a848cd8fb19d",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "6e727e27-0fc8-41ec-920a-a848cd8fb19d",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "asilikeit-474a405f62e0",
@@ -1307,7 +1616,16 @@
           "wixRecordId": "b4115f24-7a26-4bc2-b987-66d23672335a",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "b4115f24-7a26-4bc2-b987-66d23672335a",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "asilikeit-e4aba83b9917",
@@ -1333,7 +1651,16 @@
           "wixRecordId": "44a0bd7f-5ab4-4710-90fc-ed08fc02e35f",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "44a0bd7f-5ab4-4710-90fc-ed08fc02e35f",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "asilikeit-1ad77d482128",
@@ -1359,7 +1686,16 @@
           "wixRecordId": "a64b57c9-3201-46b3-95a3-990e927329d7",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "a64b57c9-3201-46b3-95a3-990e927329d7",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         },
         {
           "id": "asilikeit-ad326a449763",
@@ -1385,7 +1721,16 @@
           "wixRecordId": "80357add-64d3-4e8d-84a6-277b4565ca94",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
-          "publicReleaseApproved": false
+          "publicReleaseApproved": false,
+          "sourceImageSlot": "artwork-1",
+          "sourceDescriptionReference": {
+            "file": "private-build/staging/2025-artwork-text-staging.json",
+            "recordId": "80357add-64d3-4e8d-84a6-277b4565ca94",
+            "field": "firstArtworkDescription",
+            "available": true
+          },
+          "creditBasis": "matched-original-Wix-artist-page",
+          "provenanceStatus": "source-id-match; curator approval required"
         }
       ],
       "unresolvedWorkCount": 1
