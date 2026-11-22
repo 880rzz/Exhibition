@@ -1,0 +1,18 @@
+/* Historical pages share the SPONTAN / Exhibition components and base stylesheet.
+   These small rules are only for source-text length and explicit preview state. */
+.ex25-body .ex25-prepublication{padding:18px var(--gutter);background:#f1e6cd;border-top:1px solid #b79c44;border-bottom:1px solid #b79c44;font-size:.83rem;line-height:1.55}
+.ex25-prepublication strong{font-weight:650;letter-spacing:.08em;font-size:.73rem}
+.ex25-prepublication p{margin:.2rem 0 0}
+.ex25-body .ex25-theme{background:#1e2022;color:#f2efeb}
+.ex25-body .ex25-theme .prose{color:#e2dfd8}
+.ex25-body .exhibitor-content .ex25-source-text{line-height:1.65;font-size:clamp(.94rem,1.1vw,1.05rem);overflow-wrap:anywhere;hyphens:auto}
+.ex25-source-text p{margin:.65rem 0 1.25rem}
+.ex25-source-text p:first-child{margin-top:0}
+.ex25-primary-work{margin:clamp(20px,3vw,30px) 0 clamp(28px,4vw,44px)}
+.ex25-primary-work .exhibitor-extra-title{font-size:var(--fs-h3);line-height:1.2;letter-spacing:var(--tracking-heading);margin:10px 0 16px;text-transform:none}
+.ex25-unattributed{margin:clamp(48px,8vw,96px) 0 0;border-top:1px solid var(--ink);padding:24px 0}
+.ex25-unattributed .exhibitor-work-image{max-width:740px}
+.ex25-body .exhibitor-portrait img{object-fit:cover}
+.ex25-body .artwork-copyright{display:block;line-height:1.5}
+@media(max-width:760px){.ex25-body .exhibitor-content{max-width:none}.ex25-body .exhibitor-card{grid-template-columns:minmax(0,1fr)}.ex25-body .visit-grid{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-reduced-motion:reduce){.ex25-body .reveal{opacity:1;transform:none}}
