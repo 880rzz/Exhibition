@@ -10,6 +10,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { newestFeatured, menuExhibitions, exhibitionDate } from './exhibition-chronology.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -123,7 +124,62 @@ function subtitleFor(exhibition, localeId) {
   return exhibition.subtitle?.[localeId] || exhibition.subtitle?.en || '';
 }
 
-function rewriteFullHtml({ html, exhibition, localeId, mode }) {
+
+function archiveNavigationHtml(exhibitions, featured, localeId, currentSlug, mode) {
+  const copy = {
+    en: { heading: 'Exhibitions', current: 'Latest exhibition', history: 'Previous exhibitions', hint: '2025 photo exhibitions' },
+    hu: { heading: 'Kiállítások', current: 'Legújabb kiállítás', history: 'Korábbi kiállítások', hint: 'Fotókiállítások archívuma' },
+    de: { heading: 'Ausstellungen', current: 'Neueste Ausstellung', history: 'Frühere Ausstellungen', hint: 'Fotoausstellungen im Archiv' },
+  }[localeId];
+  const links = menuExhibitions(exhibitions, featured).map((ex) => {
+    const isFeatured = ex.slug === featured.slug;
+    const target = isFeatured ? featuredPaths(localeId) : slugPaths(ex.slug,localeId);
+    const isCurrent = isFeatured ? currentSlug===featured.slug && mode==='featured' : currentSlug===ex.slug;
+    const year = exhibitionDate(ex)?.slice(0,4) || ex.year || '';
+    const label = titleFor(ex,localeId);
+    return '<a class="exhibition-menu-entry' + (isFeatured ? ' exhibition-menu-current' : '') +
+      '" href="' + target + '"' + (isCurrent?' aria-current="page"':'') + '>' +
+      '<span>' + escapeHtml(label) + '</span><small>' + escapeHtml(year) + '</small></a>';
+  });
+  const first = links.shift() || '';
+  return '<div class="exhibition-nav-group" aria-label="' + escapeHtml(copy.heading) + '">' +
+    '<p class="exhibition-nav-heading">' + escapeHtml(copy.heading) + '</p>' +
+    '<div class="exhibition-nav-primary"><span class="exhibition-nav-kicker">' + escapeHtml(copy.current) + '</span>' + first + '</div>' +
+    (links.length ? '<div class="exhibition-nav-history"><p class="exhibition-nav-kicker">' +
+      escapeHtml(copy.history) + '</p>' + links.join('') + '</div>' : '') + '</div>';
+}
+
+function renderPressSection(exhibition, localeId) {
+  const press = exhibition.pressCoverage?.items || [];
+  if (!Array.isArray(press) || press.length === 0) return '';
+  const copy = {
+    en: { kicker: 'In the press', title: 'Press coverage', read: 'Read original article', type: { 'exhibition-report': 'Exhibition report', 'opening-report': 'Opening report', 'advance-mention': 'Exhibition preview', 'exhibition-mention': 'Exhibition mention' } },
+    hu: { kicker: 'Sajtómegjelenések', title: 'A kiállítás a sajtóban', read: 'Eredeti cikk megnyitása', type: { 'exhibition-report': 'Kiállítási riport', 'opening-report': 'Megnyitóbeszámoló', 'advance-mention': 'Előzetes sajtóemlítés', 'exhibition-mention': 'Kiállítási sajtóemlítés' } },
+    de: { kicker: 'Presse', title: 'Die Ausstellung in den Medien', read: 'Originalartikel öffnen', type: { 'exhibition-report': 'Ausstellungsbericht', 'opening-report': 'Eröffnungsbericht', 'advance-mention': 'Vorbericht', 'exhibition-mention': 'Erwähnung der Ausstellung' } },
+  }[localeId];
+  const esc = escapeHtml;
+  const items = press.map((item) => {
+    if (!/^https:\/\//.test(item.url || '')) throw new Error('Non-HTTPS press source: ' + exhibition.slug);
+    const lang = item.language === 'de' ? 'de' : item.language === 'hu' ? 'hu' : 'en';
+    const published = /^\d{4}-\d{2}-\d{2}$/.test(item.date || '') ? item.date : '';
+    const type = copy.type[item.type];
+    if (!type || !item.title || !item.publication || !item.description?.[localeId]) throw new Error('Incomplete press source: ' + exhibition.slug + '/' + item.id);
+    return '<article class="ex-press-item">' +
+      '<div class="ex-press-meta"><span>' + esc(item.publication) + '</span><span>' + esc(type) + '</span>' +
+      (published ? '<time datetime="' + published + '">' + published + '</time>' : '') + '</div>' +
+      '<h3><a href="' + esc(item.url) + '" hreflang="' + lang + '" lang="' + lang +
+      '" target="_blank" rel="noopener noreferrer external">' + esc(item.title) + '</a></h3>' +
+      '<p lang="' + (localeId === 'de' ? 'de' : localeId) + '">' + esc(item.description[localeId]) + '</p>' +
+      '<a class="ex-press-read" href="' + esc(item.url) + '" target="_blank" rel="noopener noreferrer external">' +
+      esc(copy.read) + ' ↗</a></article>';
+  });
+  return '<section class="ex-press-section" id="press" aria-labelledby="ex-press-title">' +
+    '<div class="ex-press-inner"><p class="kicker">' + esc(copy.kicker) + '</p>' +
+    '<h2 class="display-2" id="ex-press-title">' + esc(copy.title) + '</h2>' +
+    '<div class="ex-press-list">' + items.join('') + '</div></div></section>';
+}
+
+function rewriteFullHtml({ html, exhibition, localeId, mode, exhibitions, featured }) {
   const slug = exhibition.slug;
   const routes = {
     en: mode === 'featured' ? featuredPaths('en') : slugPaths(slug, 'en'),
@@ -131,6 +187,10 @@ function rewriteFullHtml({ html, exhibition, localeId, mode }) {
     de: mode === 'featured' ? featuredPaths('de') : slugPaths(slug, 'de'),
   };
   let out = html;
+  const menu = archiveNavigationHtml(exhibitions, featured, localeId, slug, mode);
+  const siteMenu = /(<nav\b[^>]*\bid="site-menu"[^>]*>)([\s\S]*?)(<\/nav>)/i;
+  if (!siteMenu.test(out)) throw new Error('Missing hamburger site-menu in full HTML template: ' + slug + '/' + localeId);
+  out = out.replace(siteMenu, (_whole, open, inner, close) => open + inner + menu + close);
 
   // Language switcher + hreflang + canonical
   out = out
@@ -186,6 +246,11 @@ function rewriteFullHtml({ html, exhibition, localeId, mode }) {
     out = out.replace('<body', `<body data-exhibition-slug="${slug}" data-route-mode="featured"`);
   }
 
+  const pressSection = renderPressSection(exhibition, localeId);
+  if (pressSection) {
+    if (!out.includes('</main>')) throw new Error('Full HTML missing main close for press: ' + slug);
+    out = out.replace('</main>', pressSection + '</main>');
+  }
   return out;
 }
 
@@ -209,7 +274,7 @@ function whereText(exhibition) {
   return parts.length ? parts.join(', ') : 'missing';
 }
 
-function renderArchive(exhibition, localeId) {
+function renderArchive(exhibition, localeId, exhibitions, featured) {
   const t = copy[localeId];
   const title = titleFor(exhibition, localeId);
   const subtitle = subtitleFor(exhibition, localeId);
@@ -328,6 +393,7 @@ function renderArchive(exhibition, localeId) {
     jsonLd: JSON.stringify(clean(jsonLd), null, 2),
     homeHref: featuredPaths(localeId),
     langNav,
+    archiveMenu: archiveNavigationHtml(exhibitions, featured, localeId, exhibition.slug, 'slug'),
     navHome: t.navHome,
     statusLabel: t.status[exhibition.status] || exhibition.status,
     kicker: 'VIPACH Exhibition archive',
@@ -348,6 +414,7 @@ function renderArchive(exhibition, localeId) {
           : 'Text-level archive stub generated from exhibition data. Missing images and rights are marked explicitly.'
     ),
     externalLinks,
+    pressSection: renderPressSection(exhibition, localeId),
     missingTitle: t.missingTitle,
     missingItems: missing.map((item) => `<li>${escapeHtml(item)}</li>`).join('\n            '),
     footerOrg: t.footerOrg,
@@ -369,9 +436,8 @@ function outputPathFor(localeId, slug, mode) {
   return path.join(root, localeId, slug, 'index.html');
 }
 
-function buildSitemap(exhibitions) {
+function buildSitemap(exhibitions, featured) {
   const urls = [];
-  const featured = exhibitions.find((e) => e.slug === site.featuredExhibitionSlug) || exhibitions.find((e) => e.featured);
   const lastmod = new Date().toISOString().slice(0, 10);
 
   function pushTriple(getPath) {
@@ -407,8 +473,7 @@ function buildSitemap(exhibitions) {
   );
 }
 
-function buildLlms(exhibitions) {
-  const featured = exhibitions.find((e) => e.slug === site.featuredExhibitionSlug);
+function buildLlms(exhibitions, featured) {
   const lines = [
     '# VIPACH Exhibition engine',
     '',
@@ -465,9 +530,8 @@ function main() {
   const exhibitions = readExhibitions();
   if (!exhibitions.length) throw new Error('No exhibitions found in data/exhibitions');
 
-  const featuredSlug = site.featuredExhibitionSlug;
-  const featured = exhibitions.find((e) => e.slug === featuredSlug);
-  if (!featured) throw new Error(`Featured exhibition not found: ${featuredSlug}`);
+  const featured = newestFeatured(exhibitions);
+  const featuredSlug = featured.slug;
 
   for (const exhibition of exhibitions) {
     for (const locale of site.locales) {
@@ -490,6 +554,8 @@ function main() {
             exhibition,
             localeId,
             mode: 'featured',
+            exhibitions,
+            featured,
           });
           writeFile(outputPathFor(localeId, exhibition.slug, 'featured'), featuredHtml);
         }
@@ -500,21 +566,25 @@ function main() {
           exhibition,
           localeId,
           mode: 'slug',
+          exhibitions,
+          featured,
         });
         writeFile(outputPathFor(localeId, exhibition.slug, 'slug'), slugHtml);
       } else {
-        const html = renderArchive(exhibition, localeId);
+        const html = renderArchive(exhibition, localeId, exhibitions, featured);
         writeFile(outputPathFor(localeId, exhibition.slug, 'slug'), html);
       }
     }
   }
 
-  writeFile(path.join(root, 'sitemap.xml'), buildSitemap(exhibitions));
-  writeFile(path.join(root, 'llms.txt'), buildLlms(exhibitions));
+  writeFile(path.join(root, 'sitemap.xml'), buildSitemap(exhibitions, featured));
+  writeFile(path.join(root, 'llms.txt'), buildLlms(exhibitions, featured));
 
   const manifest = {
     builtAt: new Date().toISOString(),
     featuredExhibitionSlug: featuredSlug,
+    featuredSelection: 'latest published full-html exhibition by opening date at build time',
+    menuSlugs: menuExhibitions(exhibitions, featured).map(e=>e.slug),
     exhibitions: exhibitions.map((e) => ({
       slug: e.slug,
       status: e.status,

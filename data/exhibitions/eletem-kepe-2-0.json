@@ -59,5 +59,11 @@
       "hu": "/hu/eletem-kepe-2-0/",
       "de": "/de/eletem-kepe-2-0/"
     }
+  },
+  "pressCoverage": {
+    "sourceReview": "2026-11-22",
+    "discoverySource": "https://hu.wikipedia.org/wiki/VIPACH",
+    "editorialNote": "Future planned exhibition; no press coverage may be claimed before coverage actually exists.",
+    "items": []
   }
 }

@@ -68,5 +68,11 @@
       "hu": "/hu/touch-2-0/",
       "de": "/de/touch-2-0/"
     }
+  },
+  "pressCoverage": {
+    "sourceReview": "2026-11-22",
+    "discoverySource": "https://hu.wikipedia.org/wiki/VIPACH",
+    "editorialNote": "No exhibition-specific article identified in the cited VIPACH Wikipedia sources; general organisation coverage is intentionally not mislabelled as reporting on this show.",
+    "items": []
   }
 }

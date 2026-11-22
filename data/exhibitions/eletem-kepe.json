@@ -479,5 +479,48 @@
       "unresolvedAttributions": 3
     }
   },
-  "migrationCompleteness": "partial-historical-archive"
+  "migrationCompleteness": "partial-historical-archive",
+  "navigation": {
+    "showInHamburger": true,
+    "preservePermanentUrl": true,
+    "chronologyStart": "2025-12-07",
+    "releaseNote": "Historical archive is navigable; 40 artworks remain withheld until licence verification."
+  },
+  "pressCoverage": {
+    "sourceReview": "2026-11-22",
+    "discoverySource": "https://hu.wikipedia.org/wiki/VIPACH",
+    "editorialNote": "Sources are linked to this exhibition, including clearly labelled advance/secondary mentions. Wikipedia is discovery context, not a press outlet.",
+    "items": [
+      {
+        "id": "orf-eletem-kepe-preview-2025",
+        "publication": "ORF Volksgruppen",
+        "title": "Fotókiállítással ünnepel a BMI Fotóklub",
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3332313/",
+        "language": "hu",
+        "date": "2025-12-01",
+        "type": "advance-mention",
+        "description": {
+          "hu": "Az ORF cikke előzetesen ismerteti a december 7–13. közötti Életem képe kiállítást és a húsz fotóból álló folytatást.",
+          "en": "ORF's report previews the 7–13 December exhibition and its twenty photographs; this is a preview mention, not an opening report.",
+          "de": "Der ORF-Bericht kündigt Életem képe vom 7. bis 13. Dezember mit zwanzig Fotografien an; keine Eröffnungsreportage."
+        },
+        "evidence": "ORF article section Egy helyszín két kiállítás specifically previews Életem képe"
+      },
+      {
+        "id": "rolunk-eletem-kepe-mention-2025",
+        "publication": "Rólunk.at",
+        "title": "Egyéves a BMI Fotóklub – hogyan teremt közösséget a művészet",
+        "url": "https://rolunk.at/kultura/egyeves-a-bmi-fotoklub-hogyan-teremt-kozosseget-a-muveszet/",
+        "language": "hu",
+        "date": "2025-12-11",
+        "type": "exhibition-mention",
+        "description": {
+          "hu": "A Rólunk.at beszámolója megemlíti a már megnyílt Életem képe tárlatot és a december 13-i zárást.",
+          "en": "The Rólunk.at article mentions that Életem képe had opened and was on view until 13 December.",
+          "de": "Der Artikel von Rólunk.at erwähnt die eröffnete Ausstellung Életem képe und das Ausstellungsende am 13. Dezember."
+        },
+        "evidence": "Rólunk.at article near final section references the opened Életem képe exhibition"
+      }
+    ]
+  }
 }
