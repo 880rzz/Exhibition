@@ -21,7 +21,7 @@ Run `node scripts/regenerate_exhibition_counts.mjs` (also invoked by `build-exhi
 `approvedForPublicDisplay` equals licence-verified only (currently **0**). Prior Wix appearance must never inflate that field.
 
 ## SPONTÁN live HTML media (V4.1)
-Frozen SPONTÁN pages still embed historical Wix CDN URLs (portraits / OG / brand) to preserve the live exhibition experience and artist credits. Those embeds are inventoried in `data/exhibitions/spontan-2026.json` → `liveHtmlMedia` with `publicationStatus: rights-review-required`. **Prior public appearance ≠ verified republication licence.**
+Frozen SPONTÁN pages still embed historical Wix CDN URLs (portraits / OG / brand) to preserve the live exhibition experience and artist credits. Those embeds are inventoried in `data/exhibitions/spontan-2026.json` → `liveHtmlMedia` with `publicationStatus: rights-review-required`, and fully enumerated (HU/EN/DE HTML) in `docs/IMAGE_RIGHTS_INVENTORY.json` (V4.2). **Prior public appearance ≠ verified republication licence.** Live HTML is not auto-mutated by the inventory script.
 
 `counts.licensedImageObjectsInSchema` counts schema.org ImageObject nodes only — it is not a licence-verified total.
 
