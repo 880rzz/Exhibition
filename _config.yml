@@ -1,0 +1,12 @@
+# GitHub Pages builds the committed public Exhibition site.
+# Staging source files belong to the GitHub repository, not to the served website.
+# These exclusions do NOT make files private in a public GitHub repository.
+title: VIPACH Exhibitions
+exclude:
+  - data/staging
+  - staging-preview
+  - docs
+  - scripts
+  - templates
+  - node_modules
+  - private-review
