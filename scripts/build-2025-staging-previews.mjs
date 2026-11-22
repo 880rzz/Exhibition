@@ -7,12 +7,19 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { newestFeatured, menuExhibitions, exhibitionDate } from './exhibition-chronology.mjs';
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const OUT=path.join(ROOT,'staging-preview');
 const inventory=JSON.parse(fs.readFileSync(path.join(ROOT,'data/staging/2025-two-exhibitions.json'),'utf8'));
 const editorial=JSON.parse(fs.readFileSync(path.join(ROOT,'data/staging/2025-editorial-copy.json'),'utf8'));
 const wix=JSON.parse(fs.readFileSync(path.join(ROOT,'data/staging/2025-cms-editorial-source.json'),'utf8'));
 const CMS=new Map(wix.records.map(r=>[r.id,r]));
+const publishedExhibitions=fs.readdirSync(path.join(ROOT,'data/exhibitions'))
+  .filter(f=>f.endsWith('.json'))
+  .map(f=>JSON.parse(fs.readFileSync(path.join(ROOT,'data/exhibitions',f),'utf8')));
+const currentlyFeatured=newestFeatured(publishedExhibitions);
+const navigationExhibitions=menuExhibitions(publishedExhibitions,currentlyFeatured);
+const previewSlugs=new Set(inventory.exhibitions.map(e=>e.slug));
 const locales=['en','hu','de'];
 const esc=x=>String(x??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 const norm=x=>String(x||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
@@ -29,18 +36,29 @@ const showName=(slug,lang)=>{
  return 'As I Like It Austria';
 };
 const route=(slug,lang)=> (lang==='en'?'':'/'+lang)+'/'+slug+'/';
+function exhibitionHref(exhibition,lang){
+ if(previewSlugs.has(exhibition.slug))return '../../'+lang+'/'+exhibition.slug+'/index.html';
+ return 'https://exhibition.vipach.at/'+(lang==='en'?'':lang+'/')+
+   (exhibition.slug===currentlyFeatured.slug?'':exhibition.slug+'/');
+}
+function exhibitionName(exhibition,lang){
+ return exhibition.titles?.[lang]||showName(exhibition.slug,lang);
+}
 function menuHtml(lang,slug){
  const c=copy[lang];
- const items=['spontan-2026','eletem-kepe','as-i-like-it-austria'].map((s,i)=>{
-   const year=i===0?'2026':'2025';
-   const href=s==='spontan-2026'?'https://exhibition.vipach.at/'+(lang==='en'?'':lang+'/'):'../../'+lang+'/'+s+'/index.html';
-   return '<a class="exhibition-menu-entry'+(i===0?' exhibition-menu-current':'')+'" href="'+esc(href)+'"'+(s===slug?' aria-current="page"':'')+'><span>'+esc(showName(s,lang))+'</span><small>'+year+'</small></a>';
+ const items=navigationExhibitions.map((ex,i)=>{
+   const year=exhibitionDate(ex)?.slice(0,4)||String(ex.year||'');
+   const href=exhibitionHref(ex,lang);
+   return '<a class="exhibition-menu-entry'+(i===0?' exhibition-menu-current':'')+
+     '" href="'+esc(href)+'"'+(ex.slug===slug?' aria-current="page"':'')+'><span>'+
+     esc(exhibitionName(ex,lang))+'</span><small>'+year+'</small></a>';
  });
  return '<div class="exhibition-nav-group" aria-label="'+esc(c.archive)+'">'
    +'<p class="exhibition-nav-heading">'+esc(c.archive)+'</p>'
-   +'<div class="exhibition-nav-primary"><span class="exhibition-nav-kicker">'+esc(c.latest)+'</span>'+items[0]+'</div>'
+   +'<div class="exhibition-nav-primary"><span class="exhibition-nav-kicker">'+esc(c.latest)+'</span>'+(items[0]||'')+'</div>'
    +'<div class="exhibition-nav-history"><span class="exhibition-nav-kicker">'+esc(c.past)+'</span>'+items.slice(1).join('')+'</div></div>';
 }
+
 function sourceWork(w) {
  const item=CMS.get(w.wixRecordId);
  if(!item) return '';
@@ -94,11 +112,12 @@ function page(ex,lang){
  const unmatched=ex.works.filter(w=>!ex.artistProfiles.some(p=>w.creatorStatus==='identified'&&norm(w.creator)===norm(p.name)));
  const missing=unmatched.length?'<div class="ex25-unattributed"><p class="kicker">'+esc(c.unknown)+' · '+unmatched.length+'</p>'+unmatched.map(w=>workMarkup(w,lang,false)).join('')+'</div>':'';
  const introduction=t.intro.map(p=>'<p>'+esc(p)+'</p>').join('');
- const twoShows=['spontan-2026','eletem-kepe','as-i-like-it-austria'].filter(s=>s!==ex.slug).map((s,i)=>{
-   const year=s==='spontan-2026'?'2026':'2025';
-   const link=s==='spontan-2026'?'https://exhibition.vipach.at/'+(lang==='en'?'':lang+'/'):'../../'+lang+'/'+s+'/index.html';
+ const twoShows=navigationExhibitions.filter(x=>x.slug!==ex.slug).map((item,i)=>{
+   const year=exhibitionDate(item)?.slice(0,4)||String(item.year||'');
+   const link=exhibitionHref(item,lang);
    return '<article class="history-item"><div class="history-no">'+String(i+1).padStart(2,'0')+' / '+year+'</div>'
-    +'<div><h3>'+esc(showName(s,lang))+'</h3></div><div class="history-copy"><a href="'+esc(link)+'">'+esc(showName(s,lang))+' →</a></div></article>';
+     +'<div><h3>'+esc(exhibitionName(item,lang))+'</h3></div><div class="history-copy"><a href="'+esc(link)+'">'+
+       esc(exhibitionName(item,lang))+' →</a></div></article>';
  }).join('');
  const sectionNav=[['story',c.story],['exhibitors',c.artists],['team',c.team],['history',c.past],['visit',c.visit]];
  return '<!doctype html><html lang="'+(lang==='de'?'de-AT':lang)+'"><head>'
