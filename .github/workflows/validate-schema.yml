@@ -39,6 +39,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Fail closed on unpublished 2025 image leakage and staging source access
         run: node scripts/check-2025-public-source-separation.mjs
+      - name: Assert 40 gallery images have confirmed Wix artist mapping
+        run: node scripts/check-2025-gallery-attribution.mjs
       - name: Verify committed Pages HTML has navigation BEFORE generation
         run: node scripts/test-exhibition-navigation.mjs
       - name: Build exhibition pages from data

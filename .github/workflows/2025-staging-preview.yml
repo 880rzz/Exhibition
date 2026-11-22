@@ -6,6 +6,7 @@ on:
       - 'data/staging/2025-*.json'
       - 'scripts/build-2025-staging-previews.mjs'
       - 'scripts/check-2025-publication-gate.mjs'
+      - 'scripts/check-2025-gallery-attribution.mjs'
       - 'assets/2025-exhibitions.css'
       - 'assets/styles.css'
       - 'scripts/exhibition-chronology.mjs'
@@ -25,6 +26,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Verify every Wix 2025 photo has exact gallery and artist provenance
+        run: node scripts/check-2025-gallery-attribution.mjs
       - name: Build two private-review galleries only
         run: node scripts/build-2025-staging-previews.mjs
       - name: Verify the two 2025 exhibitions remain blocked without private rights evidence

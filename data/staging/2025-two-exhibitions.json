@@ -13,7 +13,10 @@
   "readiness": {
     "contentStaging": true,
     "rightsVerifiedWorks": 0,
-    "productionReleaseApproved": false
+    "productionReleaseApproved": false,
+    "wixPhotoArtistLinksMatched": 40,
+    "wixPhotoArtistLinksUnresolved": 0,
+    "publicationRightsVerified": 0
   },
   "exhibitions": [
     {
@@ -260,8 +263,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "6633bc43-2980-4c26-b5d8-ff681a94d44c",
+            "galleryItemId": "ac92f9e5-0340-4b0a-a149-740151604583",
+            "galleryPosition": 9,
+            "imageFileId": "b0aee1_111cc949dd4f468a94dbe304ea1f097f~mv2.jpg",
+            "linkedArtistProfile": "https://www.vipach.at/artist/kmd",
+            "artistProfileId": "kmd",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "Életem képe – 9. kiállított fotó",
+            "title": null,
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "eletemkepe-7083c6460bb5",
@@ -295,8 +311,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "6633bc43-2980-4c26-b5d8-ff681a94d44c",
+            "galleryItemId": "946ac2e5-58e5-4d0b-a409-bf9129022813",
+            "galleryPosition": 17,
+            "imageFileId": "b0aee1_1f384ad1f13a48ef82cc8ca83adcb5b6~mv2.jpg",
+            "linkedArtistProfile": "https://www.vipach.at/artist/loksi67",
+            "artistProfileId": "loksi67",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "Életem képe – 17. kiállított fotó",
+            "title": null,
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "eletemkepe-e6ef2f123b3b",
@@ -330,8 +359,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "6633bc43-2980-4c26-b5d8-ff681a94d44c",
+            "galleryItemId": "fe47514e-0a52-4970-a119-6640018e6add",
+            "galleryPosition": 7,
+            "imageFileId": "b0aee1_2239212c15a74440bfa4a939d1531d5d~mv2.jpg",
+            "linkedArtistProfile": "https://www.vipach.at/artist/mariannvisual",
+            "artistProfileId": "marianna-visual",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "Életem képe – 7. kiállított fotó",
+            "title": null,
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "eletemkepe-371e50673e22",
@@ -365,8 +407,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "6633bc43-2980-4c26-b5d8-ff681a94d44c",
+            "galleryItemId": "191aafcd-0e91-42f7-a24e-02425362bf68",
+            "galleryPosition": 18,
+            "imageFileId": "b0aee1_321fc00094b44cca9bf20ed3ddf0510a~mv2.jpg",
+            "linkedArtistProfile": "https://www.vipach.at/artist/farkastamas",
+            "artistProfileId": "farkas-tamas",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "Életem képe – 18. kiállított fotó",
+            "title": null,
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "eletemkepe-f3bbb75370d8",
@@ -400,8 +455,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "6633bc43-2980-4c26-b5d8-ff681a94d44c",
+            "galleryItemId": "aff201b8-78c6-47da-bdce-1d97265393e9",
+            "galleryPosition": 5,
+            "imageFileId": "b0aee1_37f1a6b0b3d04c94aaa3ace6178c3a5c~mv2.jpg",
+            "linkedArtistProfile": "https://www.vipach.at/artist/ecaterina",
+            "artistProfileId": "ecaterina",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "Életem képe – 5. kiállított fotó",
+            "title": null,
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "eletemkepe-5ba6a68d1876",
@@ -435,8 +503,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "6633bc43-2980-4c26-b5d8-ff681a94d44c",
+            "galleryItemId": "4737e677-39a1-4555-aa83-43e2f6ec3f7d",
+            "galleryPosition": 8,
+            "imageFileId": "b0aee1_392da882c6b94ecf96f3c2e1efdbb5ff~mv2.jpg",
+            "linkedArtistProfile": "https://www.vipach.at/artist/vikiphotoart",
+            "artistProfileId": "viki-photo-art",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "Életem képe – 8. kiállított fotó",
+            "title": null,
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "eletemkepe-c90ec4d760c2",
@@ -470,14 +551,27 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "6633bc43-2980-4c26-b5d8-ff681a94d44c",
+            "galleryItemId": "b87f2a7a-7a93-436d-85bf-dba0a7d4bd25",
+            "galleryPosition": 19,
+            "imageFileId": "b0aee1_66c46500982746aa8bb5be9ab5287de5~mv2.jpg",
+            "linkedArtistProfile": "https://www.vipach.at/artist/speierviko",
+            "artistProfileId": "speier-viko",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "Életem képe – 19. kiállított fotó",
+            "title": null,
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "eletemkepe-6a0485e910a1",
           "order": 8,
-          "creator": null,
-          "creatorStatus": "unidentified",
+          "creator": "Denise Trajkovska",
+          "creatorStatus": "identified",
           "title": {
             "hu": null,
             "en": null,
@@ -489,19 +583,32 @@
           "sourceWidth": 1920,
           "sourceHeight": 1920,
           "credit": {
-            "hu": "Alkotó: azonosítás / jogi felülvizsgálat alatt — nem publikált",
-            "en": "Creator: identification / rights review pending — not published",
-            "de": "Urheber:in: Identifikation / Rechteprüfung ausstehend — nicht veröffentlicht"
+            "hu": "Alkotó: Denise Trajkovska (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Denise Trajkovska (publication licence under verification)",
+            "de": "Kunstschaffende: Denise Trajkovska (Publikationslizenz in Prüfung)"
           },
-          "originalArtistUrl": null,
+          "originalArtistUrl": "https://www.vipach.at/artist/denisetrajkovska",
           "wixRecordId": null,
           "descriptionSourceAvailable": false,
           "licenseVerificationStatus": "absent",
           "publicReleaseApproved": false,
           "sourceImageSlot": null,
           "sourceDescriptionReference": null,
-          "creditBasis": "unidentified-creator; withheld",
-          "provenanceStatus": "gallery-only; no source CMS artist match; VIPACH license assigned by owner"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "6633bc43-2980-4c26-b5d8-ff681a94d44c",
+            "galleryItemId": "b1d4bfb5-1b4e-4e84-8584-e82e1fe45590",
+            "galleryPosition": 2,
+            "imageFileId": "b0aee1_6eb5aaee2b5b42e382275ba7802881f4~mv2.jpg",
+            "linkedArtistProfile": "https://www.vipach.at/artist/denisetrajkovska",
+            "artistProfileId": "denise-trajkovska",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "Életem képe – 2. kiállított fotó",
+            "title": null,
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "eletemkepe-3b5ba24c02ef",
@@ -535,8 +642,21 @@
             "field": "secondArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "6633bc43-2980-4c26-b5d8-ff681a94d44c",
+            "galleryItemId": "3fd3dfe2-45df-4df3-baf5-6088d1e89b78",
+            "galleryPosition": 16,
+            "imageFileId": "b0aee1_79d58c3381074d6f92b0a5edfe3f2c91~mv2.jpg",
+            "linkedArtistProfile": "https://www.vipach.at/artist/hajnika",
+            "artistProfileId": "hajnika",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "Életem képe – 16. kiállított fotó",
+            "title": null,
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "eletemkepe-1692a0e34a53",
@@ -570,8 +690,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "6633bc43-2980-4c26-b5d8-ff681a94d44c",
+            "galleryItemId": "e46901ed-275b-456b-905c-3d19c2455b6d",
+            "galleryPosition": 13,
+            "imageFileId": "b0aee1_8d96c1daef8645c88b5df22a174333cc~mv2.jpg",
+            "linkedArtistProfile": "https://www.vipach.at/artist/matefidalma",
+            "artistProfileId": "matefi-dalma",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "Életem képe – 13. kiállított fotó",
+            "title": null,
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "eletemkepe-eed07d33a4a9",
@@ -605,8 +738,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "6633bc43-2980-4c26-b5d8-ff681a94d44c",
+            "galleryItemId": "c3541b65-e761-481d-89db-4377fa183c4e",
+            "galleryPosition": 6,
+            "imageFileId": "b0aee1_8ed1c9ecc7bf490e974a6ad683cb359c~mv2.jpg",
+            "linkedArtistProfile": "https://www.vipach.at/artist/lenaerdos",
+            "artistProfileId": "lena-erdos",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "Életem képe – 6. kiállított fotó",
+            "title": null,
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "eletemkepe-ba9b1dccdc28",
@@ -640,14 +786,27 @@
             "field": "secondArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "6633bc43-2980-4c26-b5d8-ff681a94d44c",
+            "galleryItemId": "1eb7d5ac-2218-46f4-a264-570d9857f115",
+            "galleryPosition": 12,
+            "imageFileId": "b0aee1_9ccb7a1b95634b2d80b25ec33e815ba1~mv2.jpg",
+            "linkedArtistProfile": "https://www.vipach.at/artist/farkastamas",
+            "artistProfileId": "farkas-tamas",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "Életem képe – 12. kiállított fotó",
+            "title": null,
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "eletemkepe-ac4f36f8a01d",
           "order": 13,
-          "creator": null,
-          "creatorStatus": "unidentified",
+          "creator": "Norbert Bánhalmi",
+          "creatorStatus": "identified",
           "title": {
             "hu": null,
             "en": null,
@@ -659,19 +818,32 @@
           "sourceWidth": 1920,
           "sourceHeight": 1920,
           "credit": {
-            "hu": "Alkotó: azonosítás / jogi felülvizsgálat alatt — nem publikált",
-            "en": "Creator: identification / rights review pending — not published",
-            "de": "Urheber:in: Identifikation / Rechteprüfung ausstehend — nicht veröffentlicht"
+            "hu": "Alkotó: Norbert Bánhalmi (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Norbert Bánhalmi (publication licence under verification)",
+            "de": "Kunstschaffende: Norbert Bánhalmi (Publikationslizenz in Prüfung)"
           },
-          "originalArtistUrl": null,
+          "originalArtistUrl": "https://www.norbertbanhalmi.com/mybest",
           "wixRecordId": null,
           "descriptionSourceAvailable": false,
           "licenseVerificationStatus": "absent",
           "publicReleaseApproved": false,
           "sourceImageSlot": null,
           "sourceDescriptionReference": null,
-          "creditBasis": "unidentified-creator; withheld",
-          "provenanceStatus": "gallery-only; no source CMS artist match; VIPACH license assigned by owner"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "6633bc43-2980-4c26-b5d8-ff681a94d44c",
+            "galleryItemId": "24b6e655-989e-4406-9876-5a4e5de585c4",
+            "galleryPosition": 20,
+            "imageFileId": "b0aee1_b0b852d43bbd4ddf894777104ff9c902~mv2.jpg",
+            "linkedArtistProfile": "https://www.norbertbanhalmi.com/mybest",
+            "artistProfileId": "norbert-banhalmi",
+            "artistMatchBasis": "wix-progallery-norbert-banhalmi-personal-portfolio",
+            "altText": "Életem képe – 20. kiállított fotó",
+            "title": null,
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "eletemkepe-5ac35f527809",
@@ -705,8 +877,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "6633bc43-2980-4c26-b5d8-ff681a94d44c",
+            "galleryItemId": "840d7990-502f-4d10-a92e-8c576a0d6dd9",
+            "galleryPosition": 14,
+            "imageFileId": "b0aee1_b44fe1d7e1e74d28a7a5af955eb42b1c~mv2.jpg",
+            "linkedArtistProfile": "https://www.vipach.at/artist/hajnika",
+            "artistProfileId": "hajnika",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "Életem képe – 14. kiállított fotó",
+            "title": null,
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "eletemkepe-c9ead27cf0d9",
@@ -740,8 +925,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "6633bc43-2980-4c26-b5d8-ff681a94d44c",
+            "galleryItemId": "d81b4af6-b02c-49bd-946b-64a542a1ac10",
+            "galleryPosition": 11,
+            "imageFileId": "b0aee1_b666757075be4b71afd6d459297f2226~mv2.jpg",
+            "linkedArtistProfile": "https://www.vipach.at/artist/bodoviktoria",
+            "artistProfileId": "bodo-viktoria",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "Életem képe – 11. kiállított fotó",
+            "title": null,
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "eletemkepe-1c7fe16a4194",
@@ -775,8 +973,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "6633bc43-2980-4c26-b5d8-ff681a94d44c",
+            "galleryItemId": "a4e9be9d-10aa-4ebb-8d1c-2c3bad856937",
+            "galleryPosition": 1,
+            "imageFileId": "b0aee1_c65a9765151a4765a80b96ec50e45363~mv2.jpg",
+            "linkedArtistProfile": "https://www.vipach.at/artist/ficho",
+            "artistProfileId": "ficho",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "Életem képe – 1. kiállított fotó",
+            "title": null,
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "eletemkepe-eac1bee30ec2",
@@ -810,8 +1021,21 @@
             "field": "secondArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "6633bc43-2980-4c26-b5d8-ff681a94d44c",
+            "galleryItemId": "b8847909-fead-4f6f-9caa-4f7a862f7a63",
+            "galleryPosition": 3,
+            "imageFileId": "b0aee1_d88b93e91d404850b3b4ad9d5322fbfd~mv2.jpg",
+            "linkedArtistProfile": "https://www.vipach.at/artist/vikiphotoart",
+            "artistProfileId": "viki-photo-art",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "Életem képe – 3. kiállított fotó",
+            "title": null,
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "eletemkepe-8479f727a9ef",
@@ -845,8 +1069,21 @@
             "field": "secondArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "6633bc43-2980-4c26-b5d8-ff681a94d44c",
+            "galleryItemId": "6333de3b-bb63-41ec-8cb1-09b9df530fcb",
+            "galleryPosition": 15,
+            "imageFileId": "b0aee1_d8f54aa97bd84d518c943c93e631350c~mv2.jpg",
+            "linkedArtistProfile": "https://www.vipach.at/artist/loksi67",
+            "artistProfileId": "loksi67",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "Életem képe – 15. kiállított fotó",
+            "title": null,
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "eletemkepe-3bbefc05118c",
@@ -880,8 +1117,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page; exhibition-cms-conflict-noted",
-          "provenanceStatus": "cross-exhibition or credit review required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "6633bc43-2980-4c26-b5d8-ff681a94d44c",
+            "galleryItemId": "e1230a1d-9281-4669-97eb-3747fff7c792",
+            "galleryPosition": 4,
+            "imageFileId": "b0aee1_de6bdf41434946b2a0b1c07d73f5069f~mv2.jpg",
+            "linkedArtistProfile": "https://www.vipach.at/artist/editgaertner",
+            "artistProfileId": "edit-gartner",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "Életem képe – 4. kiállított fotó",
+            "title": null,
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "eletemkepe-003afe8992fd",
@@ -915,11 +1165,24 @@
             "field": "secondArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "6633bc43-2980-4c26-b5d8-ff681a94d44c",
+            "galleryItemId": "76c2535d-32dd-446b-a537-ff22c8b9f863",
+            "galleryPosition": 10,
+            "imageFileId": "b0aee1_e3261a5ab7d84511b5348ea82ed49f79~mv2.jpg",
+            "linkedArtistProfile": "https://www.vipach.at/artist/lenaerdos",
+            "artistProfileId": "lena-erdos",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "Életem képe – 10. kiállított fotó",
+            "title": null,
+            "checkedOn": "2026-11-22"
+          }
         }
       ],
-      "unresolvedWorkCount": 2
+      "unresolvedWorkCount": 0
     },
     {
       "slug": "as-i-like-it-austria",
@@ -1199,7 +1462,7 @@
             "en": "Artist: Tamás Pfundt (publication licence under verification)",
             "de": "Kunstschaffende: Tamás Pfundt (Publikationslizenz in Prüfung)"
           },
-          "originalArtistUrl": "https://www.vipach.at/artist/tamaspfundt",
+          "originalArtistUrl": "https://www.bmifotoklub.at/artist/tamaspfundt",
           "wixRecordId": "a15eb83b-4358-446a-a772-427b26d0f131",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
@@ -1211,8 +1474,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "adbad2f0-6faf-45ab-84a8-131723699615",
+            "galleryItemId": "262d46f7-6a4f-4718-ac34-7cce8cb4b6b2",
+            "galleryPosition": 2,
+            "imageFileId": "b0aee1_0fd6add270b9489484999cad09297aba~mv2.jpg",
+            "linkedArtistProfile": "https://www.bmifotoklub.at/artist/tamaspfundt",
+            "artistProfileId": "tamas-pfundt",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "As I Like It Austria – kiállított fotó, alkotó: TAMÁS PFUNDT",
+            "title": "TAMÁS PFUNDT",
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "asilikeit-ce5b826f4ae3",
@@ -1234,7 +1510,7 @@
             "en": "Artist: Nina (publication licence under verification)",
             "de": "Kunstschaffende: Nina (Publikationslizenz in Prüfung)"
           },
-          "originalArtistUrl": "https://www.vipach.at/artist/nina",
+          "originalArtistUrl": "https://www.bmifotoklub.at/artist/nina",
           "wixRecordId": "0e891812-1b50-4352-8327-4c0ac911ce53",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
@@ -1246,8 +1522,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "adbad2f0-6faf-45ab-84a8-131723699615",
+            "galleryItemId": "53c3661b-f1e2-4709-98d6-11947becd56a",
+            "galleryPosition": 13,
+            "imageFileId": "b0aee1_217fff58dd934de18aba6e4804fbdbde~mv2.jpg",
+            "linkedArtistProfile": "https://www.bmifotoklub.at/artist/nina",
+            "artistProfileId": "nina",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "As I Like It Austria – kiállított fotó, alkotó: NINA",
+            "title": "NINA",
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "asilikeit-e863ff3082b8",
@@ -1269,7 +1558,7 @@
             "en": "Artist: Zoltan Kondits (publication licence under verification)",
             "de": "Kunstschaffende: Zoltan Kondits (Publikationslizenz in Prüfung)"
           },
-          "originalArtistUrl": "https://www.vipach.at/artist/zoltankondits",
+          "originalArtistUrl": "https://www.bmifotoklub.at/artist/zoltankondits",
           "wixRecordId": "15ed1153-d7d2-48fd-afd6-e5a74651af50",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
@@ -1281,8 +1570,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "adbad2f0-6faf-45ab-84a8-131723699615",
+            "galleryItemId": "2c573486-081b-47b6-89fd-3620548c1bcb",
+            "galleryPosition": 14,
+            "imageFileId": "b0aee1_239eecdcc97a4736a089563bc1c74c96~mv2.jpg",
+            "linkedArtistProfile": "https://www.bmifotoklub.at/artist/zoltankondits",
+            "artistProfileId": "zoltan-kondits",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "As I Like It Austria – kiállított fotó, alkotó: ZOLTAN KONDITS",
+            "title": "ZOLTAN KONDITS",
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "asilikeit-844936de3dd5",
@@ -1304,7 +1606,7 @@
             "en": "Artist: Jupiter (publication licence under verification)",
             "de": "Kunstschaffende: Jupiter (Publikationslizenz in Prüfung)"
           },
-          "originalArtistUrl": "https://www.vipach.at/artist/jupiter",
+          "originalArtistUrl": "https://www.bmifotoklub.at/artist/jupiter",
           "wixRecordId": "68d4d8b6-3469-4e4b-af71-1d1caa6c4ff4",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
@@ -1316,8 +1618,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "adbad2f0-6faf-45ab-84a8-131723699615",
+            "galleryItemId": "1d5e84d0-a6ea-46a4-90fe-c944426f6e90",
+            "galleryPosition": 6,
+            "imageFileId": "b0aee1_24467de4b7a94976b1ca297f853884ce~mv2.jpg",
+            "linkedArtistProfile": "https://www.bmifotoklub.at/artist/jupiter",
+            "artistProfileId": "jupiter",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "As I Like It Austria – kiállított fotó, alkotó: JUPITER",
+            "title": "JUPITER",
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "asilikeit-4789a7c2c1f0",
@@ -1339,7 +1654,7 @@
             "en": "Artist: AndreaWettstein (publication licence under verification)",
             "de": "Kunstschaffende: AndreaWettstein (Publikationslizenz in Prüfung)"
           },
-          "originalArtistUrl": "https://www.vipach.at/artist/andreawettstein",
+          "originalArtistUrl": "https://www.bmifotoklub.at/artist/andreawettstein",
           "wixRecordId": "391a95cf-c7e4-4d07-8aed-ed7beb73151a",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
@@ -1351,8 +1666,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "adbad2f0-6faf-45ab-84a8-131723699615",
+            "galleryItemId": "da2e0ab6-b038-4d15-af4f-4416123cc796",
+            "galleryPosition": 17,
+            "imageFileId": "b0aee1_244c80992b324e5d920744869d1f3478~mv2.jpg",
+            "linkedArtistProfile": "https://www.bmifotoklub.at/artist/andreawettstein",
+            "artistProfileId": "andreawettstein",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "As I Like It Austria – kiállított fotó, alkotó: ANDREA WETTSTEIN",
+            "title": "ANDREA WETTSTEIN",
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "asilikeit-5020371540fb",
@@ -1374,7 +1702,7 @@
             "en": "Artist: ZZ (publication licence under verification)",
             "de": "Kunstschaffende: ZZ (Publikationslizenz in Prüfung)"
           },
-          "originalArtistUrl": "https://www.vipach.at/artist/zz",
+          "originalArtistUrl": "https://www.bmifotoklub.at/artist/zz",
           "wixRecordId": "6ca63939-6a2b-4368-8ec1-64590a5b3526",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
@@ -1386,8 +1714,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "adbad2f0-6faf-45ab-84a8-131723699615",
+            "galleryItemId": "b4dd17ba-72ea-4539-86dc-bf6a5f313764",
+            "galleryPosition": 15,
+            "imageFileId": "b0aee1_392fc272831f4b158ea4908fe640319b~mv2.jpg",
+            "linkedArtistProfile": "https://www.bmifotoklub.at/artist/zz",
+            "artistProfileId": "zz",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "As I Like It Austria – kiállított fotó, alkotó: ZZ",
+            "title": "ZZ",
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "asilikeit-a1e2cb005f07",
@@ -1409,7 +1750,7 @@
             "en": "Artist: Eszter (publication licence under verification)",
             "de": "Kunstschaffende: Eszter (Publikationslizenz in Prüfung)"
           },
-          "originalArtistUrl": "https://www.vipach.at/artist/eszter",
+          "originalArtistUrl": "https://www.bmifotoklub.at/artist/eszter",
           "wixRecordId": "b46adf2e-c651-412d-bcbf-46fc2e65c905",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
@@ -1421,8 +1762,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "adbad2f0-6faf-45ab-84a8-131723699615",
+            "galleryItemId": "ff754919-44c0-49b1-9a73-7e1b67382b38",
+            "galleryPosition": 3,
+            "imageFileId": "b0aee1_5cc2486649384838b674c5c0198e7f07~mv2.jpg",
+            "linkedArtistProfile": "https://www.bmifotoklub.at/artist/eszter",
+            "artistProfileId": "eszter",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "As I Like It Austria – kiállított fotó, alkotó: ESZTER",
+            "title": "ESZTER",
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "asilikeit-8e955fa88e16",
@@ -1444,7 +1798,7 @@
             "en": "Artist: Denise Trajkovska (publication licence under verification)",
             "de": "Kunstschaffende: Denise Trajkovska (Publikationslizenz in Prüfung)"
           },
-          "originalArtistUrl": "https://www.vipach.at/artist/denisetrajkovska",
+          "originalArtistUrl": "https://www.bmifotoklub.at/artist/denisetrajkovska",
           "wixRecordId": "04cd99c4-1704-4ee6-a350-097e5c4b2dbb",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
@@ -1456,14 +1810,27 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "adbad2f0-6faf-45ab-84a8-131723699615",
+            "galleryItemId": "32edb861-951f-418d-8ae0-b4516fb893e8",
+            "galleryPosition": 8,
+            "imageFileId": "b0aee1_62e9deaf34154e71a8eb9bc11143fd79~mv2.jpg",
+            "linkedArtistProfile": "https://www.bmifotoklub.at/artist/denisetrajkovska",
+            "artistProfileId": "denise-trajkovska",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "As I Like It Austria – kiállított fotó, alkotó: DENISE TRAJKOVSKA",
+            "title": "DENISE TRAJKOVSKA",
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "asilikeit-3c51b19aa027",
           "order": 9,
-          "creator": null,
-          "creatorStatus": "unidentified",
+          "creator": "NaylivArt",
+          "creatorStatus": "identified",
           "title": {
             "hu": null,
             "en": null,
@@ -1475,19 +1842,32 @@
           "sourceWidth": 1920,
           "sourceHeight": 1920,
           "credit": {
-            "hu": "Alkotó: azonosítás / jogi felülvizsgálat alatt — nem publikált",
-            "en": "Creator: identification / rights review pending — not published",
-            "de": "Urheber:in: Identifikation / Rechteprüfung ausstehend — nicht veröffentlicht"
+            "hu": "Alkotó: NaylivArt (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: NaylivArt (publication licence under verification)",
+            "de": "Kunstschaffende: NaylivArt (Publikationslizenz in Prüfung)"
           },
-          "originalArtistUrl": null,
+          "originalArtistUrl": "https://www.bmifotoklub.at/artist/naylivart",
           "wixRecordId": null,
           "descriptionSourceAvailable": false,
           "licenseVerificationStatus": "absent",
           "publicReleaseApproved": false,
           "sourceImageSlot": null,
           "sourceDescriptionReference": null,
-          "creditBasis": "unidentified-creator; withheld",
-          "provenanceStatus": "gallery-only; no source CMS artist match; VIPACH license assigned by owner"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "adbad2f0-6faf-45ab-84a8-131723699615",
+            "galleryItemId": "b1d01b3a-b3db-4215-8507-fae1a3802c63",
+            "galleryPosition": 20,
+            "imageFileId": "b0aee1_6b9be3441587481f9a2d9419ac006d23~mv2.jpg",
+            "linkedArtistProfile": "https://www.bmifotoklub.at/artist/naylivart",
+            "artistProfileId": "naylivart",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "As I Like It Austria – kiállított fotó, alkotó: NAYLIVART",
+            "title": "NAYLIVART",
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "asilikeit-f5ce80663718",
@@ -1509,7 +1889,7 @@
             "en": "Artist: Nagy Márton (publication licence under verification)",
             "de": "Kunstschaffende: Nagy Márton (Publikationslizenz in Prüfung)"
           },
-          "originalArtistUrl": "https://www.vipach.at/artist/nagymarton",
+          "originalArtistUrl": "https://www.bmifotoklub.at/artist/nagymarton",
           "wixRecordId": "0cc463bd-9a69-480d-b7a8-79b9705e7650",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
@@ -1521,8 +1901,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "adbad2f0-6faf-45ab-84a8-131723699615",
+            "galleryItemId": "2ee67b68-9635-4d88-a423-0af81b30ff47",
+            "galleryPosition": 5,
+            "imageFileId": "b0aee1_7a70cc7b022148fcb95323f68e0f2f88~mv2.jpg",
+            "linkedArtistProfile": "https://www.bmifotoklub.at/artist/nagymarton",
+            "artistProfileId": "nagy-marton",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "As I Like It Austria – kiállított fotó, alkotó: NAGY MÁRTON",
+            "title": "NAGY MÁRTON",
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "asilikeit-7f10b8f48731",
@@ -1544,7 +1937,7 @@
             "en": "Artist: NaylivArt (publication licence under verification)",
             "de": "Kunstschaffende: NaylivArt (Publikationslizenz in Prüfung)"
           },
-          "originalArtistUrl": "https://www.vipach.at/artist/naylivart",
+          "originalArtistUrl": "https://www.bmifotoklub.at/artist/naylivart",
           "wixRecordId": "bd5fe81e-baef-495f-abde-41e359807c32",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
@@ -1556,8 +1949,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "adbad2f0-6faf-45ab-84a8-131723699615",
+            "galleryItemId": "e27c6559-ac7d-4609-b988-de8662f0d283",
+            "galleryPosition": 9,
+            "imageFileId": "b0aee1_7cfbc41107f34f05b49d24f8d7516389~mv2.jpg",
+            "linkedArtistProfile": "https://www.bmifotoklub.at/artist/naylivart",
+            "artistProfileId": "naylivart",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "As I Like It Austria – kiállított fotó, alkotó: NAYLIVART",
+            "title": "NAYLIVART",
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "asilikeit-89a64ca4313e",
@@ -1579,7 +1985,7 @@
             "en": "Artist: B.ella (publication licence under verification)",
             "de": "Kunstschaffende: B.ella (Publikationslizenz in Prüfung)"
           },
-          "originalArtistUrl": "https://www.vipach.at/artist/bella",
+          "originalArtistUrl": "https://www.bmifotoklub.at/artist/bella",
           "wixRecordId": "0b9cca44-6041-48f5-9861-2bbb856d47f8",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
@@ -1591,8 +1997,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "adbad2f0-6faf-45ab-84a8-131723699615",
+            "galleryItemId": "9092ff89-b59f-4b08-8496-abb34431dd20",
+            "galleryPosition": 12,
+            "imageFileId": "b0aee1_89e63d8e9ef34eb6963a2219503c0aed~mv2.jpg",
+            "linkedArtistProfile": "https://www.bmifotoklub.at/artist/bella",
+            "artistProfileId": "b-ella",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "As I Like It Austria – kiállított fotó, alkotó: B.ELLA",
+            "title": "B.ELLA",
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "asilikeit-accee5c39590",
@@ -1614,7 +2033,7 @@
             "en": "Artist: Norbert Bánhalmi (publication licence under verification)",
             "de": "Kunstschaffende: Norbert Bánhalmi (Publikationslizenz in Prüfung)"
           },
-          "originalArtistUrl": "https://www.vipach.at/artist/norbertbanhalmi",
+          "originalArtistUrl": "https://www.bmifotoklub.at/artist/norbertbanhalmi",
           "wixRecordId": "d19aff1f-5a3c-43a1-9130-d48c34cddd16",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
@@ -1626,8 +2045,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "adbad2f0-6faf-45ab-84a8-131723699615",
+            "galleryItemId": "7ac2a662-c4d8-4c76-99ee-22008ebdebf2",
+            "galleryPosition": 19,
+            "imageFileId": "b0aee1_9980840cbc604f648e14c4d2fbd60b7c~mv2.jpg",
+            "linkedArtistProfile": "https://www.bmifotoklub.at/artist/norbertbanhalmi",
+            "artistProfileId": "norbert-banhalmi",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "As I Like It Austria – kiállított fotó, alkotó: NORBERT BANHALMI",
+            "title": "NORBERT BANHALMI",
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "asilikeit-844abe713397",
@@ -1649,7 +2081,7 @@
             "en": "Artist: Adamski (publication licence under verification)",
             "de": "Kunstschaffende: Adamski (Publikationslizenz in Prüfung)"
           },
-          "originalArtistUrl": "https://www.vipach.at/artist/adamski",
+          "originalArtistUrl": "https://www.bmifotoklub.at/artist/adamski",
           "wixRecordId": "42d9cca4-1831-4a5d-b3e1-822f5b224605",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
@@ -1661,8 +2093,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "adbad2f0-6faf-45ab-84a8-131723699615",
+            "galleryItemId": "6f7d8a5d-4414-4f2a-a0df-f219f15f3557",
+            "galleryPosition": 10,
+            "imageFileId": "b0aee1_9fb0a5b7b8a946748e367cdf42bf6b08~mv2.jpg",
+            "linkedArtistProfile": "https://www.bmifotoklub.at/artist/adamski",
+            "artistProfileId": "adamski",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "As I Like It Austria – kiállított fotó, alkotó: ADAMSKI",
+            "title": "ADAMSKI",
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "asilikeit-f34e5c36d713",
@@ -1684,7 +2129,7 @@
             "en": "Artist: Isa (publication licence under verification)",
             "de": "Kunstschaffende: Isa (Publikationslizenz in Prüfung)"
           },
-          "originalArtistUrl": "https://www.vipach.at/artist/isa",
+          "originalArtistUrl": "https://www.bmifotoklub.at/artist/isa",
           "wixRecordId": "15679777-257d-4ea8-82b8-1c949256cecd",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
@@ -1696,8 +2141,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "adbad2f0-6faf-45ab-84a8-131723699615",
+            "galleryItemId": "8d4daf95-e2bb-427f-9cd9-3c29e7d5ec92",
+            "galleryPosition": 11,
+            "imageFileId": "b0aee1_ad91877f287b4f9594ecf0e1776b38fb~mv2.jpg",
+            "linkedArtistProfile": "https://www.bmifotoklub.at/artist/isa",
+            "artistProfileId": "isa",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "As I Like It Austria – kiállított fotó, alkotó: ISA",
+            "title": "ISA",
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "asilikeit-c90dce593fd2",
@@ -1719,7 +2177,7 @@
             "en": "Artist: Jowan Trajkovski (publication licence under verification)",
             "de": "Kunstschaffende: Jowan Trajkovski (Publikationslizenz in Prüfung)"
           },
-          "originalArtistUrl": "https://www.vipach.at/artist/jowantrajkovski",
+          "originalArtistUrl": "https://www.bmifotoklub.at/artist/jowantrajkovski",
           "wixRecordId": "6e727e27-0fc8-41ec-920a-a848cd8fb19d",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
@@ -1731,8 +2189,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "adbad2f0-6faf-45ab-84a8-131723699615",
+            "galleryItemId": "41e9aa49-fd34-46e8-8f38-1895a0211143",
+            "galleryPosition": 7,
+            "imageFileId": "b0aee1_b3d53d44dca24d05a2d03e64293c7d30~mv2.jpg",
+            "linkedArtistProfile": "https://www.bmifotoklub.at/artist/jowantrajkovski",
+            "artistProfileId": "jowan-trajkovski",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "As I Like It Austria – kiállított fotó, alkotó: JOWAN TRAJKOVSKI",
+            "title": "JOWAN TRAJKOVSKI",
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "asilikeit-474a405f62e0",
@@ -1754,7 +2225,7 @@
             "en": "Artist: Tóth Manó (publication licence under verification)",
             "de": "Kunstschaffende: Tóth Manó (Publikationslizenz in Prüfung)"
           },
-          "originalArtistUrl": "https://www.vipach.at/artist/manototh",
+          "originalArtistUrl": "https://www.bmifotoklub.at/artist/manototh",
           "wixRecordId": "b4115f24-7a26-4bc2-b987-66d23672335a",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
@@ -1766,8 +2237,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "adbad2f0-6faf-45ab-84a8-131723699615",
+            "galleryItemId": "fd32ca17-298d-48c3-84b2-0a746231e8e7",
+            "galleryPosition": 16,
+            "imageFileId": "b0aee1_cddbc9bb66db45db9bac607823523667~mv2.jpg",
+            "linkedArtistProfile": "https://www.bmifotoklub.at/artist/manototh",
+            "artistProfileId": "toth-mano",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "As I Like It Austria – kiállított fotó, alkotó: TÓTH MANÓ",
+            "title": "TÓTH MANÓ",
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "asilikeit-e4aba83b9917",
@@ -1789,7 +2273,7 @@
             "en": "Artist: Anett Elek (publication licence under verification)",
             "de": "Kunstschaffende: Anett Elek (Publikationslizenz in Prüfung)"
           },
-          "originalArtistUrl": "https://www.vipach.at/artist/anettelek",
+          "originalArtistUrl": "https://www.bmifotoklub.at/artist/anettelek",
           "wixRecordId": "44a0bd7f-5ab4-4710-90fc-ed08fc02e35f",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
@@ -1801,8 +2285,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "adbad2f0-6faf-45ab-84a8-131723699615",
+            "galleryItemId": "a91673f8-a6b1-4a27-85b6-6e51846014b5",
+            "galleryPosition": 1,
+            "imageFileId": "b0aee1_e8ede06599fb4bbdbf0939b5c396c5f8~mv2.jpg",
+            "linkedArtistProfile": "https://www.bmifotoklub.at/artist/anettelek",
+            "artistProfileId": "anett-elek",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "As I Like It Austria – kiállított fotó, alkotó: ANETT ELEK",
+            "title": "ANETT ELEK",
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "asilikeit-1ad77d482128",
@@ -1824,7 +2321,7 @@
             "en": "Artist: native pictures (publication licence under verification)",
             "de": "Kunstschaffende: native pictures (Publikationslizenz in Prüfung)"
           },
-          "originalArtistUrl": "https://www.vipach.at/artist/nativepictures",
+          "originalArtistUrl": "https://www.bmifotoklub.at/artist/nativepictures",
           "wixRecordId": "a64b57c9-3201-46b3-95a3-990e927329d7",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
@@ -1836,8 +2333,21 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "adbad2f0-6faf-45ab-84a8-131723699615",
+            "galleryItemId": "c0aff41f-d693-431f-92ce-1d870d4de319",
+            "galleryPosition": 4,
+            "imageFileId": "b0aee1_eaf81ebd967844528fb1c2ef2231269e~mv2.jpg",
+            "linkedArtistProfile": "https://www.bmifotoklub.at/artist/nativepictures",
+            "artistProfileId": "native-pictures",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "As I Like It Austria – kiállított fotó, alkotó: NATIVE PICTURES",
+            "title": "NATIVE PICTURES",
+            "checkedOn": "2026-11-22"
+          }
         },
         {
           "id": "asilikeit-ad326a449763",
@@ -1859,7 +2369,7 @@
             "en": "Artist: Liz (publication licence under verification)",
             "de": "Kunstschaffende: Liz (Publikationslizenz in Prüfung)"
           },
-          "originalArtistUrl": "https://www.vipach.at/artist/liz",
+          "originalArtistUrl": "https://www.bmifotoklub.at/artist/liz",
           "wixRecordId": "80357add-64d3-4e8d-84a6-277b4565ca94",
           "descriptionSourceAvailable": true,
           "licenseVerificationStatus": "license-verification-required",
@@ -1871,11 +2381,24 @@
             "field": "firstArtworkDescription",
             "available": true
           },
-          "creditBasis": "matched-original-Wix-artist-page",
-          "provenanceStatus": "source-id-match; curator approval required"
+          "creditBasis": "source-gallery-exact-image-id-and-artist-link",
+          "provenanceStatus": "Wix-gallery-exact-photo-to-artist-profile; usage-license-unverified",
+          "galleryEvidence": {
+            "sourceSystem": "VIPACH Wix Pro Gallery",
+            "galleryId": "adbad2f0-6faf-45ab-84a8-131723699615",
+            "galleryItemId": "2da2f1c2-f412-44bc-b8b7-d40d4bafceb2",
+            "galleryPosition": 18,
+            "imageFileId": "b0aee1_f70a80a44f164556b6b5c8820738cc27~mv2.jpg",
+            "linkedArtistProfile": "https://www.bmifotoklub.at/artist/liz",
+            "artistProfileId": "liz",
+            "artistMatchBasis": "wix-progallery-direct-artist-slug",
+            "altText": "As I Like It Austria – kiállított fotó, alkotó: LIZ",
+            "title": "LIZ",
+            "checkedOn": "2026-11-22"
+          }
         }
       ],
-      "unresolvedWorkCount": 1
+      "unresolvedWorkCount": 0
     }
   ]
 }
