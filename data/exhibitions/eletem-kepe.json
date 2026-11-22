@@ -479,5 +479,11 @@
       "unresolvedAttributions": 3
     }
   },
-  "migrationCompleteness": "partial-historical-archive"
+  "migrationCompleteness": "partial-historical-archive",
+  "navigation": {
+    "showInHamburger": true,
+    "preservePermanentUrl": true,
+    "chronologyStart": "2025-12-07",
+    "releaseNote": "Historical archive is navigable; 40 artworks remain withheld until licence verification."
+  }
 }
