@@ -5,6 +5,7 @@ on:
     paths:
       - 'data/staging/2025-*.json'
       - 'scripts/build-2025-staging-previews.mjs'
+      - 'scripts/check-2025-publication-gate.mjs'
       - 'assets/2025-exhibitions.css'
       - 'assets/styles.css'
       - 'scripts/exhibition-chronology.mjs'
@@ -26,6 +27,8 @@ jobs:
           node-version: '22'
       - name: Build two private-review galleries only
         run: node scripts/build-2025-staging-previews.mjs
+      - name: Verify the two 2025 exhibitions remain blocked without private rights evidence
+        run: node scripts/check-2025-publication-gate.mjs --expect-blocked
       - name: Assert page coverage and publication lock
         run: |
           python3 - <<'PY'
