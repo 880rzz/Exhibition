@@ -1,0 +1,72 @@
+{
+  "slug": "en-a-no",
+  "status": "historical",
+  "featured": false,
+  "render": "archive",
+  "organizationContext": "Listed on VIPACH exhibition history as Én a NŐ (Vienna, 2024). Community roots may predate or overlap the VIPACH naming; do not invent VIPACH-only branding claims beyond the listing source.",
+  "titles": {
+    "hu": "Én a NŐ",
+    "en": "Én a NŐ",
+    "de": "Én a NŐ"
+  },
+  "subtitle": {
+    "hu": "Bewusst Sein Im Fokus · Wien · 2024",
+    "en": "Bewusst Sein Im Fokus · Vienna · 2024",
+    "de": "Bewusst Sein Im Fokus · Wien · 2024"
+  },
+  "year": 2024,
+  "venue": {
+    "name": "Bewusst Sein Im Fokus",
+    "nameVariantsNoted": [
+      "VIPACH fotokiallitasok page currently shows typo-like spelling 'Bewusst Seim in Fokus'"
+    ],
+    "addressLocality": "Wien",
+    "addressCountry": "AT",
+    "streetAddress": "missing",
+    "postalCode": "missing"
+  },
+  "dates": {
+    "publicVisit": "missing — year 2024 only on VIPACH fotokiallitasok listing",
+    "relatedExternalNotes": [
+      {
+        "source": "https://www.banhalmi.art/hu/exhibitions/enano.html",
+        "claim": "External archive page for Én a Nő (2024) at Bewusst Sein Im Fokus, Wien. Not used here as a complete VIPACH exhibition record.",
+        "rights": "missing"
+      }
+    ]
+  },
+  "team": {
+    "curator": "missing",
+    "organizers": "missing",
+    "patron": "missing"
+  },
+  "artists": [],
+  "works": [],
+  "cover": {
+    "url": "missing",
+    "rights": "missing"
+  },
+  "supporters": {
+    "featuredEventOnly": []
+  },
+  "external": {
+    "vipachHistoryListing": "https://www.vipach.at/fotokiallitasok"
+  },
+  "missing": [
+    "Exact public visit dates",
+    "Street address / postal code",
+    "Curator / organizers / patron",
+    "Artist roster",
+    "Artwork list and image files",
+    "Image rights",
+    "Localized long-form copy",
+    "Canonical English/German translated titles if any were published"
+  ],
+  "routes": {
+    "permanentSlug": {
+      "en": "/en-a-no/",
+      "hu": "/hu/en-a-no/",
+      "de": "/de/en-a-no/"
+    }
+  }
+}

@@ -3,17 +3,29 @@ on:
   pull_request:
     paths:
       - 'index.html'
-      - 'hu/index.html'
-      - 'de/index.html'
-      - 'scripts/validate-schema.mjs'
+      - 'hu/**'
+      - 'de/**'
+      - 'spontan-2026/**'
+      - 'data/**'
+      - 'templates/**'
+      - 'scripts/**'
+      - 'sitemap.xml'
+      - 'robots.txt'
+      - 'llms.txt'
       - '.github/workflows/validate-schema.yml'
   push:
     branches: [main]
     paths:
       - 'index.html'
-      - 'hu/index.html'
-      - 'de/index.html'
-      - 'scripts/validate-schema.mjs'
+      - 'hu/**'
+      - 'de/**'
+      - 'spontan-2026/**'
+      - 'data/**'
+      - 'templates/**'
+      - 'scripts/**'
+      - 'sitemap.xml'
+      - 'robots.txt'
+      - 'llms.txt'
       - '.github/workflows/validate-schema.yml'
   workflow_dispatch:
 permissions:
@@ -23,5 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Validate canonical schema for all three languages
+      - name: Build exhibition pages from data
+        run: node scripts/build-exhibitions.mjs
+      - name: Validate multi-exhibition schema (featured + archives)
         run: node scripts/validate-schema.mjs

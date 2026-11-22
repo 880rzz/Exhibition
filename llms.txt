@@ -1,69 +1,61 @@
-# SPONTÁN / SPONTANEOUS / SPONTAN — VIPACH Photo Exhibition 2026
+# VIPACH Exhibition engine
 
-Official multilingual microsite for the third major Vienna group exhibition of VIPACH — Vienna Photo Art & Creative Hub.
+Multilingual static exhibition site for VIPACH — Vienna Photo Art & Creative Hub.
 
-## Event facts
-- Hungarian title: SPONTÁN
-- English title: SPONTANEOUS
-- German title: SPONTAN
-- Exhibition dates: 15–22 November 2026
-- Guest reception: 15 November 2026 from 16:00 (Europe/Vienna)
-- Official opening: 15 November 2026 at 17:00 (Europe/Vienna)
-- Admission: free
-- Advance registration: not required
-- Venue: CITYgalleryVIENNA by publicartists
-- Address: Mahlerstraße 11, 1010 Wien, Austria
-- Organizer: VIPACH — Vienna Photo Art & Creative Hub
-- Contact: office@vipach.at
-- WhatsApp / phone: +43 677 616 55592
-- VIPACH event page: https://www.vipach.at/event-details/spontan-vipach-fotokiallitas-2026
-- Official VIPACH website: https://www.vipach.at/
+## Architecture
+- Featured landing (EN/HU/DE): `/`, `/hu/`, `/de/` → currently SPONTANEOUS
+- Permanent exhibition URLs: `/{slug}/`, `/hu/{slug}/`, `/de/{slug}/`
+- Source data: `data/exhibitions/*.json`
+- Build: `node scripts/build-exhibitions.mjs`
 
-On the opening evening, several exhibition openings take place at the venue at the same time, so multiple artistic disciplines are represented alongside photography.
+## Exhibitions
+- As I Like It Austria (`as-i-like-it-austria`) — status: historical
+  - EN: https://exhibition.vipach.at/as-i-like-it-austria/
+  - HU: https://exhibition.vipach.at/hu/as-i-like-it-austria/
+  - DE: https://exhibition.vipach.at/de/as-i-like-it-austria/
+- Picture of My Life (`eletem-kepe`) — status: historical
+  - EN: https://exhibition.vipach.at/eletem-kepe/
+  - HU: https://exhibition.vipach.at/hu/eletem-kepe/
+  - DE: https://exhibition.vipach.at/de/eletem-kepe/
+- Picture of My Life 2.0 (`eletem-kepe-2-0`) — status: planned, not realised
+  - EN: https://exhibition.vipach.at/eletem-kepe-2-0/
+  - HU: https://exhibition.vipach.at/hu/eletem-kepe-2-0/
+  - DE: https://exhibition.vipach.at/de/eletem-kepe-2-0/
+- Én a NŐ (`en-a-no`) — status: historical
+  - EN: https://exhibition.vipach.at/en-a-no/
+  - HU: https://exhibition.vipach.at/hu/en-a-no/
+  - DE: https://exhibition.vipach.at/de/en-a-no/
+- Famme Fatale (`famme-fatale`) — status: historical
+  - EN: https://exhibition.vipach.at/famme-fatale/
+  - HU: https://exhibition.vipach.at/hu/famme-fatale/
+  - DE: https://exhibition.vipach.at/de/famme-fatale/
+- Famme Fatale 2.0 (`famme-fatale-2-0`) — status: planned, not realised
+  - EN: https://exhibition.vipach.at/famme-fatale-2-0/
+  - HU: https://exhibition.vipach.at/hu/famme-fatale-2-0/
+  - DE: https://exhibition.vipach.at/de/famme-fatale-2-0/
+- SPONTANEOUS (`spontan-2026`) — status: closed
+  - EN: https://exhibition.vipach.at/spontan-2026/
+  - HU: https://exhibition.vipach.at/hu/spontan-2026/
+  - DE: https://exhibition.vipach.at/de/spontan-2026/
+- Touch 2.0 (`touch-2-0`) — status: historical
+  - EN: https://exhibition.vipach.at/touch-2-0/
+  - HU: https://exhibition.vipach.at/hu/touch-2-0/
+  - DE: https://exhibition.vipach.at/de/touch-2-0/
 
-## Language pages
-- English: https://exhibition.vipach.at/
-- German (Austria): https://exhibition.vipach.at/de/
-- Hungarian: https://exhibition.vipach.at/hu/
+## SPONTÁN 2026 date sources
+- Opening: 2026-11-15 17:00 (doorTime 16:00), Europe/Vienna
+- Public visit on live microsite/schema: 15–21 November 2026
+- README / some public copy: 15–22 November 2026
+- VIPACH Wix event page: through 2026-11-22 23:59
 
-## Photography History evidence network
-The exhibition microsite links only to subjects that have a published Photography History article in all three languages.
-- Hungarian category: https://blog.banhalmi.art/blog/categories/fototortenelem
-- English category: https://blog.banhalmi.art/en/blog/categories/photography-history
-- German category: https://blog.banhalmi.art/de/blog/categories/fotogeschichte
-- 19 verified multilingual articles are linked directly from the exhibition pages.
+## SPONTÁN team
+- Curator: Balogh Dávid
+- Organizers: Hölcz Eszter & Ayadi Lívia
+- Patron: Bánhalmi Norbert
+- Featured event supporter: OM SYSTEM Shop (SPONTÁN-only; brand partnership lives on vipach.at)
+- 16 photographers · 20 works (VisualArtwork graph)
 
-## Previous group exhibitions
-1. As I Like It Austria — 30 November–6 December 2025, CITYgalleryVIENNA, Vienna
-   - HU: https://www.vipach.at/asilikeit
-   - EN: https://www.vipach.at/asilikeit?lang=en-GB
-   - DE: https://www.vipach.at/asilikeit?lang=de
-2. Életem képe / Picture of My Life — 7–13 December 2025, CITYgalleryVIENNA, Vienna
-   - HU: https://www.vipach.at/eletemkepe
-   - EN: https://www.vipach.at/eletemkepe?lang=en-GB
-   - DE: https://www.vipach.at/eletemkepe?lang=de
-
-## Machine-readable identity
-The microsite exposes a consistent Schema.org graph for:
-- WebSite
-- WebPage
-- Organization
-- Place
-- ExhibitionEvent
-
-The ExhibitionEvent uses a stable @id of https://exhibition.vipach.at/#event and links to the VIPACH event page as supporting sameAs evidence. The organizer entity links to VIPACH official social profiles. The event is marked free, offline, scheduled, with doorTime 16:00 and official startDate 17:00.
-
-
-## Exhibition team
-- Curator: Balogh Dávid — art historian and museologist
-- Organizers: Hölcz Eszter and Ayadi Lívia
-- Patron: Bánhalmi Norbert — photographic artist
-- Works on view: 20 photographs
-
-## Independent third-party references
-- Public Artists Online VIPACH search results: https://publicartists.online/hu/?s=vipach&trp-form-language=hu
-  - Independent third-party discovery/reference page for public VIPACH-related listings.
-- Public Artists Online BMI Fotóklub event listing: https://publicartists.online/hu/esemeny/bmi-fotoclub-301125/
-  - Independent third-party event reference for a VIPACH/BMI Photography Club context.
-
-These links support external discoverability and event context. They do not by themselves establish ownership, employment, exclusivity, legal partnership, endorsement or guaranteed organizational relationships.
+## Contact
+- office@vipach.at
+- +43 677 616 55592
+- https://www.vipach.at/

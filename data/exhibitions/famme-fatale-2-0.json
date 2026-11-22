@@ -1,0 +1,62 @@
+{
+  "slug": "famme-fatale-2-0",
+  "status": "planned",
+  "featured": false,
+  "render": "archive",
+  "realized": false,
+  "organizationContext": "Planned VIPACH follow-up exhibition. Not realised. Slug retains VIPACH 'Famme' spelling used for the 2025 listing.",
+  "titles": {
+    "hu": "Famme Fatale 2.0",
+    "en": "Famme Fatale 2.0",
+    "de": "Famme Fatale 2.0"
+  },
+  "subtitle": {
+    "hu": "Tervezett kiállítás · 2027 április",
+    "en": "Planned exhibition · April 2027",
+    "de": "Geplante Ausstellung · April 2027"
+  },
+  "year": 2027,
+  "dates": {
+    "publicVisit": {
+      "month": "2027-04",
+      "exactDays": "missing",
+      "status": "planned — not realised"
+    }
+  },
+  "venue": {
+    "name": "missing",
+    "addressLocality": "missing",
+    "addressCountry": "missing"
+  },
+  "team": {
+    "curator": "missing",
+    "organizers": "missing",
+    "patron": "missing"
+  },
+  "artists": [],
+  "works": [],
+  "cover": {
+    "url": "missing",
+    "rights": "missing"
+  },
+  "supporters": {
+    "featuredEventOnly": []
+  },
+  "missing": [
+    "Exact dates in April 2027",
+    "Venue",
+    "Team",
+    "Artists",
+    "Works",
+    "Images and rights",
+    "Confirmed public announcement URL",
+    "Editorial decision on Famme vs Femme spelling for the sequel title"
+  ],
+  "routes": {
+    "permanentSlug": {
+      "en": "/famme-fatale-2-0/",
+      "hu": "/hu/famme-fatale-2-0/",
+      "de": "/de/famme-fatale-2-0/"
+    }
+  }
+}

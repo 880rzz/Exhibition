@@ -1,0 +1,104 @@
+{
+  "slug": "as-i-like-it-austria",
+  "status": "historical",
+  "featured": false,
+  "render": "archive",
+  "organizationContext": "VIPACH community group exhibition (BMI Fotoklub / VIPACH lineage). Source pages: vipach.at/asilikeit and exhibition.vipach.at history block.",
+  "titles": {
+    "hu": "As I Like It Austria",
+    "en": "As I Like It Austria",
+    "de": "As I Like It Austria"
+  },
+  "subtitle": {
+    "hu": "Közösségi fotókiállítás · 2025",
+    "en": "Community photo exhibition · 2025",
+    "de": "Gemeinschaftliche Fotoausstellung · 2025"
+  },
+  "year": 2025,
+  "venue": {
+    "name": "CITYgalleryVIENNA by publicartists",
+    "addressLocality": "Wien",
+    "addressCountry": "AT",
+    "districtNote": "1. kerület / 1st district (VIPACH page)",
+    "streetAddress": "missing on asilikeit page body (not copied as Mahlerstraße 11 without confirmation)",
+    "postalCode": "missing"
+  },
+  "dates": {
+    "publicVisit": {
+      "start": "2025-11-30",
+      "end": "2025-12-06",
+      "sources": [
+        "https://www.vipach.at/asilikeit",
+        "https://exhibition.vipach.at/ llms.txt / history block",
+        "https://www.vipach.at/event-list opening listing"
+      ]
+    },
+    "opening": {
+      "source": "https://www.vipach.at/event-list",
+      "claim": "Opening event listed 2025-11-30 16:00–19:00 at CITYgalleryVIENNA",
+      "officialStart": "missing — exact ceremonial minute not isolated beyond the event-list window"
+    }
+  },
+  "team": {
+    "curator": {
+      "name": "Balogh Dávid",
+      "title": "művészettörténész és muzeológus",
+      "source": "https://www.vipach.at/asilikeit"
+    },
+    "organizers": [
+      {
+        "name": "Bánhalmi Norbert",
+        "with": "Bécsi Magyar Iskola (BMI) Fotoklubjának csapata",
+        "source": "https://www.vipach.at/asilikeit"
+      }
+    ],
+    "patron": "missing as a separate role on the source page"
+  },
+  "artists": [],
+  "artistNamesSeenOnSourcePageIncomplete": [
+    "native pictures",
+    "AndreaWettstein"
+  ],
+  "artistRosterNote": "VIPACH asilikeit page lists artists; scrape/export incomplete in this stub — do not invent a full roster. Marked missing.",
+  "works": [],
+  "counts": {
+    "photographers": "missing",
+    "works": "missing"
+  },
+  "cover": {
+    "url": "https://static.wixstatic.com/media/b0aee1_479cfc4cc3644a22a3008fe3cd580fc3~mv2.jpg",
+    "source": "og/page image observed on vipach.at/asilikeit",
+    "rights": "missing — confirm before embedding"
+  },
+  "admission": {
+    "free": true,
+    "registrationRequired": true,
+    "source": "https://www.vipach.at/asilikeit"
+  },
+  "supporters": {
+    "featuredEventOnly": [],
+    "printPartner": "missing — page mentions Nyomdai partnerünk without extracting the name here",
+    "professionalPartner": "missing — page mentions Szakmai partnerünk without extracting the name here"
+  },
+  "external": {
+    "vipachPage": {
+      "hu": "https://www.vipach.at/asilikeit",
+      "en": "https://www.vipach.at/asilikeit?lang=en-GB",
+      "de": "https://www.vipach.at/asilikeit?lang=de"
+    }
+  },
+  "missing": [
+    "Complete artist roster with rights-cleared portraits",
+    "Artwork list, filenames, credits",
+    "Confirmed street address for this edition",
+    "Print / professional partner names",
+    "Full localized body copy for EN/DE archive pages"
+  ],
+  "routes": {
+    "permanentSlug": {
+      "en": "/as-i-like-it-austria/",
+      "hu": "/hu/as-i-like-it-austria/",
+      "de": "/de/as-i-like-it-austria/"
+    }
+  }
+}

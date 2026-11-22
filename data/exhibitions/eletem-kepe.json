@@ -1,0 +1,116 @@
+{
+  "slug": "eletem-kepe",
+  "status": "historical",
+  "featured": false,
+  "render": "archive",
+  "organizationContext": "VIPACH / BMI Fotoklub community group exhibition.",
+  "titles": {
+    "hu": "Életem képe",
+    "en": "Picture of My Life",
+    "de": "Picture of My Life"
+  },
+  "germanTitleNote": "Official German title beyond the English loan used on exhibition.vipach.at history block is missing — not invented.",
+  "subtitle": {
+    "hu": "Közösségi fotókiállítás · 2025",
+    "en": "Community photo exhibition · 2025",
+    "de": "Gemeinschaftliche Fotoausstellung · 2025"
+  },
+  "year": 2025,
+  "venue": {
+    "name": "CITYgalleryVIENNA by publicartists",
+    "addressLocality": "Wien",
+    "addressCountry": "AT",
+    "districtNote": "1. kerület / 1st district (VIPACH page)",
+    "streetAddress": "missing on eletemkepe page body",
+    "postalCode": "missing"
+  },
+  "dates": {
+    "publicVisit": {
+      "start": "2025-12-07",
+      "end": "2025-12-13",
+      "sources": [
+        "https://www.vipach.at/eletemkepe",
+        "https://exhibition.vipach.at/ history block / llms.txt",
+        "https://www.vipach.at/event-list"
+      ]
+    },
+    "opening": {
+      "source": "https://www.vipach.at/event-list",
+      "claim": "Opening event listed 2025-12-07 16:00–19:00 at CITYgalleryVIENNA",
+      "officialStart": "missing — exact ceremonial minute not isolated beyond the event-list window"
+    }
+  },
+  "team": {
+    "curator": {
+      "name": "Balogh Dávid",
+      "title": "művészettörténész és muzeológus",
+      "source": "https://www.vipach.at/eletemkepe"
+    },
+    "organizers": [
+      {
+        "name": "Bánhalmi Norbert",
+        "with": "Bécsi Magyar Iskola (BMI) Fotoklubjának csapata",
+        "source": "https://www.vipach.at/eletemkepe"
+      }
+    ],
+    "patron": "missing as a separate role on the source page"
+  },
+  "counts": {
+    "photographers": 15,
+    "works": 20,
+    "sources": [
+      "https://www.vipach.at/eletemkepe (15 Hungarian photographers / 20 works)",
+      "https://exhibition.vipach.at/ history copy"
+    ]
+  },
+  "artists": [],
+  "artistNamesSeenOnSourcePageIncomplete": [
+    "Loksi67",
+    "HajNika",
+    "Léna Erdős",
+    "Bödő Viktória",
+    "KMD",
+    "Viki Photo Art",
+    "Farkas Tamás",
+    "Speier Vikó",
+    "Ecaterina",
+    "Marianna Visual",
+    "Norbert Bánhalmi"
+  ],
+  "artistRosterNote": "Partial names observed on vipach.at/eletemkepe; list may be incomplete — do not treat as authoritative full roster until verified.",
+  "works": [],
+  "cover": {
+    "url": "missing",
+    "rights": "missing"
+  },
+  "admission": {
+    "free": true,
+    "registrationRequired": true,
+    "source": "https://www.vipach.at/eletemkepe"
+  },
+  "supporters": {
+    "featuredEventOnly": []
+  },
+  "external": {
+    "vipachPage": {
+      "hu": "https://www.vipach.at/eletemkepe",
+      "en": "https://www.vipach.at/eletemkepe?lang=en-GB",
+      "de": "https://www.vipach.at/eletemkepe?lang=de"
+    }
+  },
+  "missing": [
+    "Complete verified artist roster with contacts/rights",
+    "Artwork list, filenames, credits",
+    "Cover image and rights",
+    "Confirmed street address",
+    "Full localized EN/DE archive body copy",
+    "Confirmed German title"
+  ],
+  "routes": {
+    "permanentSlug": {
+      "en": "/eletem-kepe/",
+      "hu": "/hu/eletem-kepe/",
+      "de": "/de/eletem-kepe/"
+    }
+  }
+}

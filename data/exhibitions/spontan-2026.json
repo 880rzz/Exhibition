@@ -1,0 +1,453 @@
+{
+  "slug": "spontan-2026",
+  "status": "closed",
+  "statusNotes": [
+    "Live site schema endDate is 2026-11-21T20:00:00+01:00 (EventScheduled at time of extraction).",
+    "README and public visit copy historically said 15–22 November 2026.",
+    "VIPACH Wix event page lists 2026-11-15 16:00 – 2026-11-22 23:59.",
+    "Hero/visit/contact dock on the live microsite use 15–21 November 2026.",
+    "As of 2026-11-22 extraction day, treated as closed relative to the live-site endDate (21 Nov); Wix still listed through 22 Nov — both sources documented."
+  ],
+  "featured": true,
+  "render": "full-html",
+  "templateDir": "templates/exhibitions/spontan-2026",
+  "organizationContext": "VIPACH — Vienna Photo Art & Creative Hub",
+  "titles": {
+    "hu": "SPONTÁN",
+    "en": "SPONTANEOUS",
+    "de": "SPONTAN"
+  },
+  "subtitle": {
+    "en": "VIPACH Photo Exhibition 2026, Vienna",
+    "hu": "VIPACH fotókiállítás 2026, Bécs",
+    "de": "VIPACH Fotoausstellung 2026, Wien"
+  },
+  "cover": {
+    "url": "https://static.wixstatic.com/media/b0aee1_4a059d3770694e2f9ba4effb0a39905e~mv2.png",
+    "source": "VIPACH Wix Media Manager / og:image on exhibition.vipach.at",
+    "rights": "missing — confirm reuse rights for archive pages"
+  },
+  "dates": {
+    "opening": {
+      "doorTime": "2026-11-15T16:00:00+01:00",
+      "officialStart": "2026-11-15T17:00:00+01:00",
+      "timezone": "Europe/Vienna",
+      "sources": [
+        "live microsite schema",
+        "VIPACH Wix event page",
+        "README"
+      ]
+    },
+    "publicVisit": {
+      "sources": {
+        "readme": "15–22 November 2026",
+        "liveMicrositeHeroVisitContact": "15–21 November 2026",
+        "liveMicrositeSchemaEndDate": "2026-11-21T20:00:00+01:00",
+        "wixEventPage": "2026-11-15T16:00 – 2026-11-22T23:59"
+      },
+      "canonicalForLivePages": {
+        "start": "2026-11-15",
+        "end": "2026-11-21",
+        "note": "Matches current index.html / schema / contact dock. Do not silently overwrite with Wix 22 Nov without an editorial decision."
+      },
+      "alternateWixClose": "2026-11-22"
+    },
+    "visitingHours": {
+      "daily": "14:00–20:00",
+      "source": "live microsite contact dock"
+    }
+  },
+  "venue": {
+    "name": "CITYgalleryVIENNA by publicartists",
+    "address": {
+      "streetAddress": "Mahlerstraße 11",
+      "postalCode": "1010",
+      "addressLocality": "Wien",
+      "addressCountry": "AT"
+    },
+    "mapQuery": "Mahlerstraße 11, 1010 Wien"
+  },
+  "team": {
+    "curator": {
+      "name": "Balogh Dávid",
+      "title": {
+        "en": "art historian and museologist",
+        "hu": "művészettörténész és muzeológus",
+        "de": "Kunsthistoriker und Museologe"
+      },
+      "personId": "david-balogh"
+    },
+    "organizers": [
+      {
+        "name": "Hölcz Eszter",
+        "personId": "eszter-holcz"
+      },
+      {
+        "name": "Ayadi Lívia",
+        "personId": "livia-ayadi"
+      }
+    ],
+    "patron": {
+      "name": "Bánhalmi Norbert",
+      "title": {
+        "en": "photographic artist",
+        "hu": "fotóművész",
+        "de": "Fotografischer Künstler"
+      },
+      "personId": "norbert-banhalmi"
+    }
+  },
+  "supporters": {
+    "featuredEventOnly": [
+      {
+        "name": "OM SYSTEM Shop",
+        "url": "https://www.omsystemshop.hu",
+        "logo": "/assets/om-system-supporter.svg",
+        "scope": "event-level only for SPONTÁN / SPONTANEOUS",
+        "note": "OM SYSTEM brand partnership belongs on the VIPACH main site, not as a permanent engine-wide sponsor."
+      }
+    ],
+    "brandPartnerships": []
+  },
+  "counts": {
+    "photographers": 16,
+    "worksClaimed": 20,
+    "visualArtworksInSchema": 20,
+    "licensedImageObjectsInSchema": 21
+  },
+  "artists": [
+    {
+      "id": "gartner-edit",
+      "name": "Gärtner Edit",
+      "image": "https://static.wixstatic.com/media/b0aee1_4c81e95737a3461bb9f985919ea1d3b5~mv2.jpg",
+      "schemaId": "https://exhibition.vipach.at/#gartner-edit",
+      "role": "photographer",
+      "works": [
+        {
+          "id": "legies-muveszet",
+          "title": "Légies művészet",
+          "image": "/gallery/gartner-edit-legies-muveszet.webp"
+        }
+      ]
+    },
+    {
+      "id": "loksi67",
+      "name": "loksi67",
+      "url": "https://www.loksi67.com",
+      "image": [
+        "https://static.wixstatic.com/media/1250bf_0903c8551f1c44bb8d474da973d24540~mv2.jpg",
+        "https://static.wixstatic.com/media/8e6c1c_9e4f62d8a1d14ea59eed9ef3116b9249~mv2.jpg"
+      ],
+      "schemaId": "https://exhibition.vipach.at/#loksi67",
+      "role": "photographer",
+      "works": [
+        {
+          "id": "tallinn-connection-loksi67",
+          "title": "Tallinn Connection",
+          "image": "/gallery/loksi67-tallinn-connection.webp"
+        },
+        {
+          "id": "kitzbueheler-horn-loksi67",
+          "title": "Kitzbüheler Horn",
+          "image": "/gallery/loksi67-kitzbueheler-horn.webp"
+        }
+      ]
+    },
+    {
+      "id": "adrian-ferenczik",
+      "name": "Adrian Ferenczik",
+      "url": "https://ferenczik.photography",
+      "sameAs": [
+        "https://www.instagram.com/adrianfotografie/"
+      ],
+      "image": [
+        "https://static.wixstatic.com/media/6b76d2_105c180eb2294723b4154b606b06979e~mv2.jpg",
+        "https://static.wixstatic.com/media/d70691_00a3513693314015aa32b139ff754acd~mv2.jpg"
+      ],
+      "schemaId": "https://exhibition.vipach.at/#adrian-ferenczik",
+      "role": "photographer",
+      "works": [
+        {
+          "id": "the-art-of-the-unseen-adrian-ferenczik",
+          "title": "The Art of the Unseen",
+          "image": "/gallery/adrian-ferenczik-the-art-of-the-unseen.webp"
+        },
+        {
+          "id": "between-serenity-and-chaos-adrian-ferenczik",
+          "title": "Between Serenity and Chaos",
+          "image": "/gallery/adrian-ferenczik-between-serenity-and-chaos.webp"
+        }
+      ]
+    },
+    {
+      "id": "kanya-judit",
+      "name": "Kanya Judit",
+      "sameAs": [
+        "https://www.instagram.com/kanyajudit/"
+      ],
+      "image": "https://static.wixstatic.com/media/b9ad66_ea5fdc48a5ee435d80609fdc04085553~mv2.jpg",
+      "schemaId": "https://exhibition.vipach.at/#kanya-judit",
+      "role": "photographer",
+      "works": [
+        {
+          "id": "kakasmandiko-kanya-judit",
+          "title": "Kakasmandikó (Erythonium dens-canis)",
+          "image": "/gallery/kanya-judit-kakasmandiko.webp"
+        }
+      ]
+    },
+    {
+      "id": "eszter-holcz",
+      "name": "Eszter Hölcz",
+      "sameAs": [
+        "https://www.instagram.com/holczeszter/"
+      ],
+      "image": "https://static.wixstatic.com/media/cc56a5_e80d4dbe53fa4e8a9affead277f735e5~mv2.png",
+      "schemaId": "https://exhibition.vipach.at/#eszter-holcz",
+      "role": "photographer",
+      "works": [
+        {
+          "id": "cold-and-blue-eszter-holcz",
+          "title": "Cold and Blue",
+          "image": "/gallery/eszter-holcz-cold-and-blue.webp"
+        }
+      ]
+    },
+    {
+      "id": "sardi-peter-krisztina",
+      "name": "Sárdi-Péter Krisztina",
+      "image": "https://static.wixstatic.com/media/ac1493_ebc3dabe49e94b10a85d51c2e09f6761~mv2.jpg",
+      "schemaId": "https://exhibition.vipach.at/#sardi-peter-krisztina",
+      "role": "photographer",
+      "works": [
+        {
+          "id": "a-vegtelen-peremen-sardi-peter-krisztina",
+          "title": "A végtelen peremén",
+          "image": "/gallery/sardi-peter-krisztina-a-vegtelen-peremen.webp"
+        },
+        {
+          "id": "az-ido-csendje-sardi-peter-krisztina",
+          "title": "Az idő csendje",
+          "image": "/gallery/sardi-peter-krisztina-az-ido-csendje.webp"
+        }
+      ]
+    },
+    {
+      "id": "denise-trajkovska",
+      "name": "Denise Trajkovska",
+      "sameAs": [
+        "https://www.instagram.com/denisetrajkovska/"
+      ],
+      "image": "https://static.wixstatic.com/media/cc69dd_fa8a2bfb1d28446b89afccc2901a353a~mv2.jpg",
+      "schemaId": "https://exhibition.vipach.at/#denise-trajkovska",
+      "role": "photographer",
+      "works": [
+        {
+          "id": "kika-kristina-denise-trajkovska",
+          "title": "Kika Kristína",
+          "image": "/gallery/denise-trajkovska-kika-kristina.webp"
+        }
+      ]
+    },
+    {
+      "id": "janos-klotz",
+      "name": "Janos Klotz",
+      "image": "https://static.wixstatic.com/media/6e3df2_909106ffee1c4a85b61b3ec518afd3c9~mv2.jpeg",
+      "schemaId": "https://exhibition.vipach.at/#janos-klotz",
+      "role": "photographer",
+      "works": [
+        {
+          "id": "romeo-und-julia-janos-klotz",
+          "title": "Romeo und Julia",
+          "image": "/gallery/klotz-janos.webp"
+        }
+      ]
+    },
+    {
+      "id": "david-balogh",
+      "name": "Balogh Dávid",
+      "jobTitle": "Art historian and museologist",
+      "image": "https://static.wixstatic.com/media/801e9e_840e2d9264694d9ba08f09250faeace6~mv2.jpg",
+      "schemaId": "https://exhibition.vipach.at/#david-balogh",
+      "role": "photographer",
+      "works": [
+        {
+          "id": "idotlen-elegancia-balogh-david",
+          "title": "Időtlen elegancia – hommage à Edward Steichen",
+          "image": "/gallery/balogh-david.webp"
+        }
+      ]
+    },
+    {
+      "id": "katifoto",
+      "name": "KatiFoto",
+      "url": "https://katalinbognar.com",
+      "image": "https://static.wixstatic.com/media/b0aee1_990f5013314844adba702761a5b1871d~mv2.jpg",
+      "schemaId": "https://exhibition.vipach.at/#katifoto",
+      "role": "photographer",
+      "works": [
+        {
+          "id": "noi-baj-katifoto",
+          "title": "Női báj",
+          "image": "/gallery/bognar-katalin.webp"
+        }
+      ]
+    },
+    {
+      "id": "toth-mano",
+      "name": "Tóth Manó",
+      "url": "https://manototh.com/",
+      "sameAs": [
+        "https://www.instagram.com/mano.toth/"
+      ],
+      "image": "https://static.wixstatic.com/media/ca97d5_c9f5149e2f274218996a736c166d3dad~mv2.jpg",
+      "schemaId": "https://exhibition.vipach.at/#toth-mano",
+      "role": "photographer",
+      "works": [
+        {
+          "id": "pier-on-the-prairie-toth-mano",
+          "title": "Pier on the Prairie",
+          "image": "/gallery/mano-toth.webp"
+        }
+      ]
+    },
+    {
+      "id": "gabor",
+      "name": "Gábor",
+      "url": "https://www.flickr.com/photos/gyorigabor/",
+      "sameAs": [
+        "https://www.instagram.com/gyorigabor"
+      ],
+      "image": "https://static.wixstatic.com/media/9b428e_76527761eda94ec48a8c0db5d57f6eaa~mv2.jpg",
+      "schemaId": "https://exhibition.vipach.at/#gabor",
+      "role": "photographer",
+      "works": [
+        {
+          "id": "a-tale-of-two-parts-gabor",
+          "title": "A tale of two parts",
+          "image": "/gallery/gyori-gabor-2.webp"
+        },
+        {
+          "id": "a-dance-of-stillness-and-motion-gabor",
+          "title": "A Dance of Stillness and Motion",
+          "image": "/gallery/gyori-gabor-1.webp"
+        }
+      ]
+    },
+    {
+      "id": "naylivart",
+      "name": "Naylivart",
+      "sameAs": [
+        "https://www.instagram.com/naylivart?psln=NzE5ZWF6Z3E2Nnhq"
+      ],
+      "image": "https://static.wixstatic.com/media/771ca8_5170f5420be84a6982ae42566f010516~mv2.jpg",
+      "schemaId": "https://exhibition.vipach.at/#naylivart",
+      "role": "photographer",
+      "works": [
+        {
+          "id": "femme-fatale-naylivart",
+          "title": "Femme fatale",
+          "image": "/gallery/IMG_6974.jpeg"
+        }
+      ]
+    },
+    {
+      "id": "adamszki",
+      "name": "Adamszki",
+      "image": "https://static.wixstatic.com/media/91227b_80ee9209f1644649b1aa67c48dba077a~mv2.jpeg",
+      "schemaId": "https://exhibition.vipach.at/#adamszki",
+      "role": "photographer",
+      "works": [
+        {
+          "id": "ket-vilag-kozott-adamszki",
+          "title": "Két világ között",
+          "image": "/gallery/adam-ayadi.webp"
+        }
+      ]
+    },
+    {
+      "id": "lena-banhalmi",
+      "name": "Léna Bánhalmi",
+      "image": "https://static.wixstatic.com/media/e7570f_ce9cd0abcdce4ab0b75339de2df33bd4~mv2.jpeg",
+      "schemaId": "https://exhibition.vipach.at/#lena-banhalmi",
+      "role": "photographer",
+      "works": [
+        {
+          "id": "csillig-villog",
+          "title": "Csillog - Villog",
+          "image": "/gallery/lena-banhalmi-csillig-villog.webp"
+        }
+      ]
+    },
+    {
+      "id": "norbert-banhalmi",
+      "name": "Bánhalmi Norbert",
+      "jobTitle": "Photographic artist",
+      "url": "https://www.banhalmi.art/",
+      "sameAs": [
+        "https://www.banhalmi.art/",
+        "https://www.banhalmiphotography.com/",
+        "https://www.wikidata.org/wiki/Q56391118",
+        "https://commons.wikimedia.org/wiki/File:Norbert-Banhalmi-self-portrait.jpg"
+      ],
+      "image": "https://static.wixstatic.com/media/b0aee1_b78663b208cd4e0ba20ff6b02880a6fe~mv2.jpg",
+      "schemaId": "https://exhibition.vipach.at/#norbert-banhalmi",
+      "role": "photographer",
+      "works": [
+        {
+          "id": "ebredes-az-uj-kezdet-norbert-banhalmi",
+          "title": "Ébredés – az új kezdet",
+          "image": "/gallery/banhalmi-norbert-ebredes-az-uj-kezdet.webp"
+        }
+      ]
+    }
+  ],
+  "organizerPersonWithoutExhibitedWorkInSchema": {
+    "id": "livia-ayadi",
+    "name": "Ayadi Lívia",
+    "note": "Present in schema as organizer Person; no VisualArtwork creator link in the extracted graph."
+  },
+  "additionalPageImages": [
+    {
+      "id": "friends-bresson-denise-trajkovska",
+      "title": "Friends & Bresson",
+      "artistId": "denise-trajkovska",
+      "image": "/gallery/IMG_6989.jpeg",
+      "schemaId": "https://exhibition.vipach.at/#licensed-image-denise-second",
+      "note": "Present on page and in ImageObject graph; not listed among the 20 VisualArtwork nodes.",
+      "dateCreated": "2025-09-19",
+      "rights": {
+        "copyrightNotice": "© Denise Trajkovska. No use without permission.",
+        "creditText": "Denise Trajkovska"
+      }
+    }
+  ],
+  "external": {
+    "vipachEventPage": "https://www.vipach.at/event-details/spontan-vipach-fotokiallitas-2026",
+    "vipachSite": "https://www.vipach.at/"
+  },
+  "seo": {
+    "eventSchemaIdRoot": "https://exhibition.vipach.at/#event",
+    "eventSchemaIdSlug": "https://exhibition.vipach.at/spontan-2026/#event",
+    "admission": "free",
+    "registrationRequired": false
+  },
+  "missing": [
+    "Per-artwork price/date/body copy not duplicated into JSON yet (still lives in frozen HTML templates).",
+    "Artist intro paragraphs not duplicated into JSON yet.",
+    "Cover image reuse rights confirmation.",
+    "Editorial resolution of public visit end date (21 vs 22 November 2026)."
+  ],
+  "routes": {
+    "featuredLanding": {
+      "en": "/",
+      "hu": "/hu/",
+      "de": "/de/"
+    },
+    "permanentSlug": {
+      "en": "/spontan-2026/",
+      "hu": "/hu/spontan-2026/",
+      "de": "/de/spontan-2026/"
+    }
+  }
+}
