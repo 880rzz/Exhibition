@@ -1,51 +1,18 @@
-/* VIPACH 2025 two-exhibition preview — inherits Exhibition/SPONTÁN design system.
-   PREPUBLICATION ONLY. Not loaded by the live SPONTÁN route. */
-.ex25-body{background:#f2f2ef;color:#252522}
-.ex25-main{overflow:clip}
-.ex25-hero{min-height:72vh;display:grid;place-items:end start;padding:clamp(7rem,16vw,13rem) max(5vw,calc((100vw - 1280px)/2)) clamp(3rem,7vw,6rem);background:#1e1f1f;color:#f3f1eb;position:relative}
-.ex25-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(125deg,rgba(183,156,68,.19),transparent 60%),repeating-linear-gradient(90deg,transparent 0 20%,rgba(255,255,255,.022) 20% calc(20% + 1px));pointer-events:none}
-.ex25-hero-inner{position:relative;max-width:1100px}
-.ex25-hero .kicker{color:#c6ad69}
-.ex25-hero h1{font-size:clamp(3.15rem,8.8vw,9rem);font-weight:360;letter-spacing:-.075em;line-height:.99;margin:.35em 0 .24em}
-.ex25-lede{font-size:clamp(1.05rem,1.8vw,1.6rem);color:#cfcfc9;letter-spacing:.035em}
-.ex25-meta{display:flex;gap:1rem 2.2rem;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.32);padding-top:1.3rem;margin-top:2.4rem;font-size:.82rem;color:#d8d5cb;letter-spacing:.06em}
-.ex25-prepublication{background:#f4ebd5;border-bottom:1px solid #b79c44;padding:1rem max(5vw,calc((100vw - 1280px)/2));font-size:.85rem}
-.ex25-prepublication strong{font-size:.7rem;letter-spacing:.16em;color:#6b542c}
-.ex25-prepublication p{margin:.35rem 0 0}
-.ex25-artists-section,.ex25-works-section{padding-block:clamp(2.5rem,6vw,6rem)}
-.ex25-artists-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.6rem 1.7rem;margin-top:3rem}
-.ex25-artist{min-width:0}
-.ex25-portrait{aspect-ratio:4/4.4;background:#dfdfd7;overflow:hidden;display:grid;place-items:center}
-.ex25-portrait-img{display:block;width:100%;height:100%;object-fit:cover}
-.ex25-artist-body{padding:.85rem .1rem 1rem;display:flex;flex-direction:column;align-items:start;gap:.2rem}
-.ex25-artist-body h3{font-size:clamp(1.2rem,2.2vw,1.9rem);font-weight:450;letter-spacing:-.035em;line-height:1.2;overflow-wrap:anywhere;margin:.15rem 0}
-.ex25-artist-body a{text-decoration:underline;text-underline-offset:.25em;font-size:.85rem;color:#8e733b}
-.ex25-number{font-size:.73rem;letter-spacing:.18em;text-transform:uppercase;opacity:.65}
-.ex25-works-section{background:#16191a;color:#f1eee8}
-.ex25-gallery-note{max-width:42rem;color:#d4cab9;font-size:.88rem;margin:1rem 0 2.5rem}
-.ex25-works-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3rem 2rem}
-.ex25-work{margin:0;min-width:0}
-.ex25-work-media{background:#292929;aspect-ratio:1/1;display:grid;place-items:center;overflow:hidden}
-.ex25-work-img{height:100%;width:100%;object-fit:contain;display:block}
-.ex25-work figcaption{display:flex;flex-direction:column;align-items:flex-start;gap:.3rem;padding:1rem .05rem 0}
-.ex25-work figcaption strong{font-size:clamp(1.03rem,1.6vw,1.45rem);font-weight:450;letter-spacing:-.025em}
-.ex25-work figcaption span+span{color:#cfc9bb}
-.ex25-work figcaption small{color:#bcb5a6;font-size:.73rem}
-.ex25-credits{display:grid;grid-template-columns:minmax(7rem,35%) 1fr;gap:.8rem 1.2rem}
-.ex25-credits dt{font-size:.78rem;text-transform:uppercase;letter-spacing:.11em;color:#766c57}
-.ex25-credits dd{margin:0}
-.ex25-body a:focus-visible,.ex25-body button:focus-visible{outline:2px solid #b79c44;outline-offset:4px}
-@media(max-width:920px){.ex25-artists-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:640px){.ex25-hero{min-height:66vh;padding:8rem 6vw 3rem}.ex25-hero h1{font-size:clamp(3rem,14vw,5rem)}.ex25-hero .ex25-meta{flex-direction:column;gap:.65rem}.ex25-artists-grid{gap:1.35rem .7rem}.ex25-artists-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ex25-works-grid{grid-template-columns:minmax(0,1fr);gap:2.7rem}.ex25-credits{grid-template-columns:1fr;gap:.15rem}.ex25-credits dd{margin:0 0 .8rem}}
-
-/* Source-only artist statements and work descriptions: visible by choice, not clipped. */
-.ex25-original{margin:1.05rem 0 .1rem;width:100%;border-top:1px solid currentColor;padding-top:.65rem;opacity:.97}
-.ex25-original summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-size:.85rem;font-weight:500;line-height:1.4;list-style:revert;color:inherit;text-decoration:underline;text-decoration-color:#b79c44;text-underline-offset:.27em}
-.ex25-original summary:focus-visible{outline:2px solid #b79c44;outline-offset:4px}
-.ex25-original-prose{font-size:.91rem;line-height:1.75;max-width:65ch;overflow-wrap:anywhere}
-.ex25-original-prose p{margin:1rem 0 1.4rem}
-.ex25-original-prose p:first-child{margin-top:0}
-.ex25-artist .ex25-original-prose{font-size:.87rem}
-.ex25-work .ex25-original{color:#ede9de}
-.ex25-portrait .no-portrait{color:#9e8651;font-size:clamp(1.5rem,4vw,4rem);letter-spacing:-.07em}
-@media(max-width:640px){.ex25-original-prose{font-size:.86rem}}
+/* Historical pages share the SPONTAN / Exhibition components and base stylesheet.
+   These small rules are only for source-text length and explicit preview state. */
+.ex25-body .ex25-prepublication{padding:18px var(--gutter);background:#f1e6cd;border-top:1px solid #b79c44;border-bottom:1px solid #b79c44;font-size:.83rem;line-height:1.55}
+.ex25-prepublication strong{font-weight:650;letter-spacing:.08em;font-size:.73rem}
+.ex25-prepublication p{margin:.2rem 0 0}
+.ex25-body .ex25-theme{background:#1e2022;color:#f2efeb}
+.ex25-body .ex25-theme .prose{color:#e2dfd8}
+.ex25-body .exhibitor-content .ex25-source-text{line-height:1.65;font-size:clamp(.94rem,1.1vw,1.05rem);overflow-wrap:anywhere;hyphens:auto}
+.ex25-source-text p{margin:.65rem 0 1.25rem}
+.ex25-source-text p:first-child{margin-top:0}
+.ex25-primary-work{margin:clamp(20px,3vw,30px) 0 clamp(28px,4vw,44px)}
+.ex25-primary-work .exhibitor-extra-title{font-size:var(--fs-h3);line-height:1.2;letter-spacing:var(--tracking-heading);margin:10px 0 16px;text-transform:none}
+.ex25-unattributed{margin:clamp(48px,8vw,96px) 0 0;border-top:1px solid var(--ink);padding:24px 0}
+.ex25-unattributed .exhibitor-work-image{max-width:740px}
+.ex25-body .exhibitor-portrait img{object-fit:cover}
+.ex25-body .artwork-copyright{display:block;line-height:1.5}
+@media(max-width:760px){.ex25-body .exhibitor-content{max-width:none}.ex25-body .exhibitor-card{grid-template-columns:minmax(0,1fr)}.ex25-body .visit-grid{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-reduced-motion:reduce){.ex25-body .reveal{opacity:1;transform:none}}
