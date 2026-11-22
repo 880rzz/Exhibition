@@ -47,6 +47,10 @@ jobs:
         run: node scripts/test-exhibition-navigation.mjs
       - name: Build exhibition pages from data
         run: node scripts/build-exhibitions.mjs
+      - name: Regenerate current published-image rights inventory
+        run: |
+          node scripts/inventory_published_images.mjs
+          node -e 'const x=require("./docs/IMAGE_RIGHTS_INVENTORY.json"); if(x.totals.uniqueImageRefs<20||x.separation.historical2025Works.eletemKepeWorks!==20||x.separation.historical2025Works.asILikeItWorks!==20||x.separation.historical2025Works.licenceVerifiedApprovedForPublicDisplay!==0) process.exit(1); console.log("Image rights inventory PASS", x.totals)'
       - name: Validate multi-exhibition schema (featured + archives)
         run: node scripts/validate-schema.mjs
       - name: Verify latest published homepage and historical hamburger menu
