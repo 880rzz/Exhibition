@@ -6,6 +6,10 @@ on:
       - 'data/staging/2025-*.json'
       - 'scripts/build-2025-staging-previews.mjs'
       - 'assets/2025-exhibitions.css'
+      - 'assets/styles.css'
+      - 'scripts/exhibition-chronology.mjs'
+      - 'scripts/build-exhibitions.mjs'
+      - 'templates/exhibition-archive.html'
       - '.github/workflows/2025-staging-preview.yml'
   workflow_dispatch:
 
@@ -60,11 +64,14 @@ jobs:
                   s=p.read_text(encoding='utf-8')
                   assert 'noindex,nofollow,noimageindex' in s,p
                   assert 'PREPUBLICATION-REVIEW-NOT-LICENSED' in s,p
-                  assert s.count('class="ex25-work reveal"')==20,(p,'works')
-                  assert s.count('class="ex25-artist reveal"')==artist_count,(p,'artists')
-                  assert s.count('class="ex25-work-img"')==20,(p,'work images')
-                  assert s.count('class="ex25-portrait-img"')==artist_count,(p,'artist portraits')
-                  assert s.count('class="ex25-original"')==expected_original_details[slug],(p,'original Wix bios and work narratives',s.count('class="ex25-original"'),expected_original_details[slug])
+                  assert s.count('class="exhibitor-card"')==artist_count,(p,'SPONTAN exhibitor layout')
+                  assert s.count('class="exhibitor-work-image"')==20,(p,'artwork images')
+                  assert s.count('class="exhibitor-portrait"')==artist_count,(p,'artist portrait layout')
+                  assert s.count('class="prose ex25-source-text"')==expected_original_details[slug],(p,'original Wix biographies and artwork narratives',s.count('class="prose ex25-source-text"'),expected_original_details[slug])
+                  for cls in ('hero ex25-exhibition-hero','section exhibitor-section','credits','history','visit','section image-rights'):
+                      assert 'class="'+cls+'"' in s,(p,'shared design section',cls)
+                  assert 'class="site-menu"' in s and 'class="exhibition-nav-group"' in s
+                  assert 'id="hero-title"' in s and 'id="exhibitors-title"' in s
                   assert '../../assets/styles.css' in s and '../../assets/2025-exhibitions.css' in s
                   assert 'noindex,nofollow,noimageindex' in s
           print('PASS six staged gallery pages; 40 Wix media references, 34 artists; no production authorization')
