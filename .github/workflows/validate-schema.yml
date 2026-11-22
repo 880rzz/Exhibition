@@ -41,6 +41,8 @@ jobs:
         run: node scripts/check-2025-public-source-separation.mjs
       - name: Assert 40 gallery images have confirmed Wix artist mapping
         run: node scripts/check-2025-gallery-attribution.mjs
+      - name: Verify committed multilingual press coverage before build
+        run: node scripts/check-exhibition-press.mjs
       - name: Verify committed Pages HTML has navigation BEFORE generation
         run: node scripts/test-exhibition-navigation.mjs
       - name: Build exhibition pages from data
@@ -49,6 +51,8 @@ jobs:
         run: node scripts/validate-schema.mjs
       - name: Verify latest published homepage and historical hamburger menu
         run: node scripts/test-exhibition-navigation.mjs
+      - name: Verify generated press coverage after exhibition build
+        run: node scripts/check-exhibition-press.mjs
       - name: Build public GitHub Pages output with Jekyll
         uses: actions/jekyll-build-pages@v1
       - name: Assert staging JSON and source code are not in published Jekyll artifact
