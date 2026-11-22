@@ -39,3 +39,5 @@ jobs:
         run: node scripts/build-exhibitions.mjs
       - name: Validate multi-exhibition schema (featured + archives)
         run: node scripts/validate-schema.mjs
+      - name: Verify latest published homepage and historical hamburger menu
+        run: node scripts/test-exhibition-navigation.mjs
