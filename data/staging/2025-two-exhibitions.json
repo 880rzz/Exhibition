@@ -1,0 +1,1394 @@
+{
+  "schemaVersion": "2025-two-exhibitions-staging-1",
+  "created": "2026-11-22",
+  "sourceRepo": "880rzz/VIPACH",
+  "sourceCommit": "497948eca6d85d1a54eaf55c566d38a42ec83b0d",
+  "sourceFiles": [
+    "private-build/staging/exhibition-works-2025.json",
+    "private-build/staging/artist-roster-2025.json",
+    "private-build/staging/wix-2025-artworks-staging.json"
+  ],
+  "privacy": "No personal emails, phone numbers or CMS owner details.",
+  "publicationPolicy": "SOURCE-ONLY. URLs are Wix-provenance and preview references; artist images and works must not enter production HTML/OG or be copied to public CDN before rights clearance.",
+  "readiness": {
+    "contentStaging": true,
+    "rightsVerifiedWorks": 0,
+    "productionReleaseApproved": false
+  },
+  "exhibitions": [
+    {
+      "slug": "eletem-kepe",
+      "wixExhibitionId": "eletemkepe",
+      "sourceUrl": "https://www.vipach.at/eletemkepe",
+      "sourceGalleryUrl": "https://www.vipach.at/eletemkepe-gallery",
+      "status": "staged-private-preview-only",
+      "originalArtistCount": 15,
+      "artistProfiles": [
+        {
+          "id": "loksi67",
+          "name": "Loksi67",
+          "order": 1,
+          "legacyProfileUrl": "https://www.vipach.at/artist/loksi67",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_39666890bdf14e63a631282afec56b5e~mv2.jpg",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/loksi67"
+        },
+        {
+          "id": "hajnika",
+          "name": "HajNika",
+          "order": 2,
+          "legacyProfileUrl": "https://www.vipach.at/artist/hajnika",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_1c207ac1a73841199a3b161ff6c04e0e~mv2.jpg",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/hajnika"
+        },
+        {
+          "id": "lena-erdos",
+          "name": "Léna Erdős",
+          "order": 3,
+          "legacyProfileUrl": "https://www.vipach.at/artist/lenaerdos",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_61d0997c34cb4b5e837c2b05d5b6463f~mv2.jpg",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/lenaerdos"
+        },
+        {
+          "id": "bodo-viktoria",
+          "name": "Bödő Viktória",
+          "order": 4,
+          "legacyProfileUrl": "https://www.vipach.at/artist/bodoviktoria",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_b78e0312209f43be8bbe5e224040c177~mv2.jpg",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/bodoviktoria"
+        },
+        {
+          "id": "kmd",
+          "name": "KMD",
+          "order": 5,
+          "legacyProfileUrl": "https://www.vipach.at/artist/kmd",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_8b3ed3fee3b34b5b8ef810043796757f~mv2.png",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/kmd"
+        },
+        {
+          "id": "viki-photo-art",
+          "name": "Viki Photo Art",
+          "order": 6,
+          "legacyProfileUrl": "https://www.vipach.at/artist/vikiphotoart",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_2549cd77613749a48b120389408514ab~mv2.jpg",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/vikiphotoart"
+        },
+        {
+          "id": "farkas-tamas",
+          "name": "Farkas Tamás",
+          "order": 7,
+          "legacyProfileUrl": "https://www.vipach.at/artist/farkastamas",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_68beca266986455182c3fd8889a3a9f1~mv2.jpg",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/farkastamas"
+        },
+        {
+          "id": "speier-viko",
+          "name": "Speier Vikó",
+          "order": 8,
+          "legacyProfileUrl": "https://www.vipach.at/artist/speierviko",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_514011b67ae3450e870bc7b404aae8a5~mv2.jpg",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/speierviko"
+        },
+        {
+          "id": "ecaterina",
+          "name": "Ecaterina",
+          "order": 9,
+          "legacyProfileUrl": "https://www.vipach.at/artist/ecaterina",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_88b3e30f28c64798a99ba73d0decdc05~mv2.jpg",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/ecaterina"
+        },
+        {
+          "id": "marianna-visual",
+          "name": "Marianna Visual",
+          "order": 10,
+          "legacyProfileUrl": "https://www.vipach.at/artist/mariannvisual",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_e81d4f35908b4a708995e5e774b0d4a1~mv2.jpg",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/mariannvisual"
+        },
+        {
+          "id": "matefi-dalma",
+          "name": "Mátéfi Dalma",
+          "order": 11,
+          "legacyProfileUrl": "https://www.vipach.at/artist/matefidalma",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_3e85916c187c4f9a952ee43e96d31bd7~mv2.jpg",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/matefidalma"
+        },
+        {
+          "id": "ficho",
+          "name": "Ficho",
+          "order": 12,
+          "legacyProfileUrl": "https://www.vipach.at/artist/ficho",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_7f4ba3034c9941dc82d88952e93a1116~mv2.jpg",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/ficho"
+        },
+        {
+          "id": "norbert-banhalmi",
+          "name": "Norbert Bánhalmi",
+          "order": 13,
+          "legacyProfileUrl": "https://www.vipach.at/artist/norbertbanhalmi",
+          "personalWebsite": "https://norbertbanhalmi.com",
+          "portraitSourceUrl": null,
+          "portraitStatus": "not-retrieved",
+          "bioSourceUrl": "https://www.vipach.at/artist/norbertbanhalmi"
+        },
+        {
+          "id": "edit-gartner",
+          "name": "Edit Gärtner",
+          "order": 14,
+          "legacyProfileUrl": "https://www.vipach.at/artist/editgaertner",
+          "portraitSourceUrl": null,
+          "portraitStatus": "not-retrieved",
+          "bioSourceUrl": "https://www.vipach.at/artist/editgaertner"
+        },
+        {
+          "id": "denise-trajkovska",
+          "name": "Denise Trajkovska",
+          "order": 15,
+          "legacyProfileUrl": "https://www.vipach.at/artist/denisetrajkovska",
+          "portraitSourceUrl": null,
+          "portraitStatus": "not-retrieved",
+          "bioSourceUrl": "https://www.vipach.at/artist/denisetrajkovska"
+        }
+      ],
+      "works": [
+        {
+          "id": "eletemkepe-719c1f37ef39",
+          "order": 1,
+          "creator": "KMD",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_111cc949dd4f468a94dbe304ea1f097f~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_111cc949dd4f468a94dbe304ea1f097f-mv2-1cbe188c8d.webp",
+          "sourceSha256": "719c1f37ef39f5f7d533ba1d4cd951990d5db125e924d2b67776845085281bcd",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: KMD (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: KMD (publication licence under verification)",
+            "de": "Kunstschaffende: KMD (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/kmd",
+          "wixRecordId": "57492be2-49b0-4b70-be4d-3f8564823a59",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "eletemkepe-7083c6460bb5",
+          "order": 2,
+          "creator": "Loksi67",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_1f384ad1f13a48ef82cc8ca83adcb5b6~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_1f384ad1f13a48ef82cc8ca83adcb5b6-mv2-6f1f273e75.webp",
+          "sourceSha256": "7083c6460bb5885103a8706d2c2366ba39d41e28c1faf57fd903118361a8a6db",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Loksi67 (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Loksi67 (publication licence under verification)",
+            "de": "Kunstschaffende: Loksi67 (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/loksi67",
+          "wixRecordId": "db723f2c-02e0-4b42-94b7-62b9a4ae58d7",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "eletemkepe-e6ef2f123b3b",
+          "order": 3,
+          "creator": "Marianna Visual",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_2239212c15a74440bfa4a939d1531d5d~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_2239212c15a74440bfa4a939d1531d5d-mv2-d0ef48a6a4.webp",
+          "sourceSha256": "e6ef2f123b3bf7af42cf581d2e721aaef7c2ca0aa00f9c6ce9177d82d1d1fa14",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Marianna Visual (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Marianna Visual (publication licence under verification)",
+            "de": "Kunstschaffende: Marianna Visual (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/mariannvisual",
+          "wixRecordId": "471fcddd-4b38-4113-9112-47af1d0294c0",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "eletemkepe-371e50673e22",
+          "order": 4,
+          "creator": "Farkas Tamás",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_321fc00094b44cca9bf20ed3ddf0510a~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_321fc00094b44cca9bf20ed3ddf0510a-mv2-76cb6a6002.webp",
+          "sourceSha256": "371e50673e2254a2bf527b7dd6ce44d48f90f1c096e620df890d92fbb6a93ace",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Farkas Tamás (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Farkas Tamás (publication licence under verification)",
+            "de": "Kunstschaffende: Farkas Tamás (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/farkastamas",
+          "wixRecordId": "26bf46aa-80fc-4de9-a112-054eea1eda26",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "eletemkepe-f3bbb75370d8",
+          "order": 5,
+          "creator": "Ecaterina",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_37f1a6b0b3d04c94aaa3ace6178c3a5c~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_37f1a6b0b3d04c94aaa3ace6178c3a5c-mv2-c9929efb4c.webp",
+          "sourceSha256": "f3bbb75370d85118ddd420a68804f961e3ee0199df5a9cc9aa1a0c1bf08343d5",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Ecaterina (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Ecaterina (publication licence under verification)",
+            "de": "Kunstschaffende: Ecaterina (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/ecaterina",
+          "wixRecordId": "e857f201-2214-4fde-91bb-6fa61d2d9306",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "eletemkepe-5ba6a68d1876",
+          "order": 6,
+          "creator": "Viki Photo Art",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_392da882c6b94ecf96f3c2e1efdbb5ff~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_392da882c6b94ecf96f3c2e1efdbb5ff-mv2-4c963c6c3f.webp",
+          "sourceSha256": "5ba6a68d187631374c12a1cc0cd55786aa02748b896847011af4e26b0ed77e81",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Viki Photo Art (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Viki Photo Art (publication licence under verification)",
+            "de": "Kunstschaffende: Viki Photo Art (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/vikiphotoart",
+          "wixRecordId": "94bc9eb6-6c48-4559-aaa6-bc149cddbf6f",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "eletemkepe-c90ec4d760c2",
+          "order": 7,
+          "creator": "Speier Vikó",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_66c46500982746aa8bb5be9ab5287de5~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_66c46500982746aa8bb5be9ab5287de5-mv2-369227d016.webp",
+          "sourceSha256": "c90ec4d760c2562663244177d16159cdc3251e9060c77b8731df38297f9bd837",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Speier Vikó (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Speier Vikó (publication licence under verification)",
+            "de": "Kunstschaffende: Speier Vikó (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/speierviko",
+          "wixRecordId": "dffd1e1a-1410-4722-9652-8f001932c614",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "eletemkepe-6a0485e910a1",
+          "order": 8,
+          "creator": null,
+          "creatorStatus": "unidentified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_6eb5aaee2b5b42e382275ba7802881f4~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_6eb5aaee2b5b42e382275ba7802881f4-mv2-cdbf60a5a6.webp",
+          "sourceSha256": "6a0485e910a1e166a8de569998a348589c4c90e40cbdfd750b78b1ee043d1a4f",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: azonosítás / jogi felülvizsgálat alatt — nem publikált",
+            "en": "Creator: identification / rights review pending — not published",
+            "de": "Urheber:in: Identifikation / Rechteprüfung ausstehend — nicht veröffentlicht"
+          },
+          "originalArtistUrl": null,
+          "wixRecordId": null,
+          "descriptionSourceAvailable": false,
+          "licenseVerificationStatus": "absent",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "eletemkepe-3b5ba24c02ef",
+          "order": 9,
+          "creator": "HajNika",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_79d58c3381074d6f92b0a5edfe3f2c91~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_79d58c3381074d6f92b0a5edfe3f2c91-mv2-4257cbdc32.webp",
+          "sourceSha256": "3b5ba24c02efe6e350f96d76ae09bea7a30de253d95d20b3cf52bde38908578f",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: HajNika (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: HajNika (publication licence under verification)",
+            "de": "Kunstschaffende: HajNika (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/hajnika",
+          "wixRecordId": "b07ea181-e937-4b7d-8851-292f689b7de0",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "eletemkepe-1692a0e34a53",
+          "order": 10,
+          "creator": "Mátéfi Dalma",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_8d96c1daef8645c88b5df22a174333cc~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_8d96c1daef8645c88b5df22a174333cc-mv2-25421c1851.webp",
+          "sourceSha256": "1692a0e34a539fe433bf8c88d59d5d80995e0df0ef8bf8f0b4393327333935e2",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Mátéfi Dalma (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Mátéfi Dalma (publication licence under verification)",
+            "de": "Kunstschaffende: Mátéfi Dalma (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/matefidalma",
+          "wixRecordId": "92d4fe6d-862f-403e-a208-c74e729d16ea",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "eletemkepe-eed07d33a4a9",
+          "order": 11,
+          "creator": "Léna Erdős",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_8ed1c9ecc7bf490e974a6ad683cb359c~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_8ed1c9ecc7bf490e974a6ad683cb359c-mv2-6df159633c.webp",
+          "sourceSha256": "eed07d33a4a9e89174b74d518913a0d04754d6be63875c5bccdd54ac2f7e9aad",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Léna Erdős (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Léna Erdős (publication licence under verification)",
+            "de": "Kunstschaffende: Léna Erdős (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/lenaerdos",
+          "wixRecordId": "29c74b22-14fd-4b6c-b03a-79bcf53cbd03",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "eletemkepe-ba9b1dccdc28",
+          "order": 12,
+          "creator": "Farkas Tamás",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_9ccb7a1b95634b2d80b25ec33e815ba1~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_9ccb7a1b95634b2d80b25ec33e815ba1-mv2-a25fbb9e13.webp",
+          "sourceSha256": "ba9b1dccdc28eab1daa53339b43f78eea216d6a79f42534afe82bb37e9731324",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Farkas Tamás (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Farkas Tamás (publication licence under verification)",
+            "de": "Kunstschaffende: Farkas Tamás (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/farkastamas",
+          "wixRecordId": "26bf46aa-80fc-4de9-a112-054eea1eda26",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "eletemkepe-ac4f36f8a01d",
+          "order": 13,
+          "creator": null,
+          "creatorStatus": "unidentified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_b0b852d43bbd4ddf894777104ff9c902~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_b0b852d43bbd4ddf894777104ff9c902-mv2-130a3ffd3b.webp",
+          "sourceSha256": "ac4f36f8a01da9f6b94f89c24f471d8e5c7a7071a7f3b6516d5d7dc97c65fac7",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: azonosítás / jogi felülvizsgálat alatt — nem publikált",
+            "en": "Creator: identification / rights review pending — not published",
+            "de": "Urheber:in: Identifikation / Rechteprüfung ausstehend — nicht veröffentlicht"
+          },
+          "originalArtistUrl": null,
+          "wixRecordId": null,
+          "descriptionSourceAvailable": false,
+          "licenseVerificationStatus": "absent",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "eletemkepe-5ac35f527809",
+          "order": 14,
+          "creator": "HajNika",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_b44fe1d7e1e74d28a7a5af955eb42b1c~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_b44fe1d7e1e74d28a7a5af955eb42b1c-mv2-34c2c74818.webp",
+          "sourceSha256": "5ac35f5278097b5af314d8520a11657e66d2763aa7dc44a35204b8025123d5a2",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: HajNika (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: HajNika (publication licence under verification)",
+            "de": "Kunstschaffende: HajNika (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/hajnika",
+          "wixRecordId": "b07ea181-e937-4b7d-8851-292f689b7de0",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "eletemkepe-c9ead27cf0d9",
+          "order": 15,
+          "creator": "Bödő Viktória",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_b666757075be4b71afd6d459297f2226~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_b666757075be4b71afd6d459297f2226-mv2-cde8f36c37.webp",
+          "sourceSha256": "c9ead27cf0d9b55f25d8d48565a0bb587d7a1514f47e3cd0f6c71eb3a983f831",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Bödő Viktória (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Bödő Viktória (publication licence under verification)",
+            "de": "Kunstschaffende: Bödő Viktória (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/bodoviktoria",
+          "wixRecordId": "d923de72-88ad-4e56-b6a7-33bf991a5025",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "eletemkepe-1c7fe16a4194",
+          "order": 16,
+          "creator": "Ficho",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_c65a9765151a4765a80b96ec50e45363~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_c65a9765151a4765a80b96ec50e45363-mv2-f38538304c.webp",
+          "sourceSha256": "1c7fe16a4194c483504190d14245acd33b31a399f7711d12cc310deacd82e221",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Ficho (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Ficho (publication licence under verification)",
+            "de": "Kunstschaffende: Ficho (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/ficho",
+          "wixRecordId": "17b3c8fd-ed18-4795-ba04-2e6dee7d21d9",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "eletemkepe-eac1bee30ec2",
+          "order": 17,
+          "creator": "Viki Photo Art",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_d88b93e91d404850b3b4ad9d5322fbfd~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_d88b93e91d404850b3b4ad9d5322fbfd-mv2-a2f47eea92.webp",
+          "sourceSha256": "eac1bee30ec299427f010f1cd0132b7f407cbc08b549067028de268d2ff2216c",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Viki Photo Art (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Viki Photo Art (publication licence under verification)",
+            "de": "Kunstschaffende: Viki Photo Art (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/vikiphotoart",
+          "wixRecordId": "94bc9eb6-6c48-4559-aaa6-bc149cddbf6f",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "eletemkepe-8479f727a9ef",
+          "order": 18,
+          "creator": "Loksi67",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_d8f54aa97bd84d518c943c93e631350c~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_d8f54aa97bd84d518c943c93e631350c-mv2-e7ebd9cdcf.webp",
+          "sourceSha256": "8479f727a9efaff3e13678563b1822a56fce1f430c599594eaea3516aeb847fb",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Loksi67 (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Loksi67 (publication licence under verification)",
+            "de": "Kunstschaffende: Loksi67 (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/loksi67",
+          "wixRecordId": "db723f2c-02e0-4b42-94b7-62b9a4ae58d7",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "eletemkepe-3bbefc05118c",
+          "order": 19,
+          "creator": "Edit Gärtner",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_de6bdf41434946b2a0b1c07d73f5069f~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_de6bdf41434946b2a0b1c07d73f5069f-mv2-f2d92f933d.webp",
+          "sourceSha256": "3bbefc05118c0d952afa8e92649f7ec7fd9b4598578e9ed773704d8e8245308e",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Edit Gärtner (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Edit Gärtner (publication licence under verification)",
+            "de": "Kunstschaffende: Edit Gärtner (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/editgaertner",
+          "wixRecordId": "a2414bc4-8fb3-401a-bb3f-e920f5d4e239",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "eletemkepe-003afe8992fd",
+          "order": 20,
+          "creator": "Léna Erdős",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_e3261a5ab7d84511b5348ea82ed49f79~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_e3261a5ab7d84511b5348ea82ed49f79-mv2-e0f4bc9cca.webp",
+          "sourceSha256": "003afe8992fd6f06adb66d5891ef7ecb7cf3eaf7f285fa0b46fec3a0ca1d68af",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Léna Erdős (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Léna Erdős (publication licence under verification)",
+            "de": "Kunstschaffende: Léna Erdős (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/lenaerdos",
+          "wixRecordId": "29c74b22-14fd-4b6c-b03a-79bcf53cbd03",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        }
+      ],
+      "unresolvedWorkCount": 2
+    },
+    {
+      "slug": "as-i-like-it-austria",
+      "wixExhibitionId": "asilikeit",
+      "sourceUrl": "https://www.vipach.at/asilikeit",
+      "sourceGalleryUrl": "https://www.vipach.at/asilikeit-gallery",
+      "status": "staged-private-preview-only",
+      "originalArtistCount": 19,
+      "artistProfiles": [
+        {
+          "id": "native-pictures",
+          "name": "native pictures",
+          "order": 1,
+          "legacyProfileUrl": "https://www.vipach.at/artist/nativepictures",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_9e4d7f731383486c83bd4f844cf6147b~mv2.jpg",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/nativepictures"
+        },
+        {
+          "id": "liz",
+          "name": "Liz",
+          "order": 2,
+          "legacyProfileUrl": "https://www.vipach.at/artist/liz",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_21639ffd310d4f1baf85e7c98fa3e780~mv2.jpg",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/liz"
+        },
+        {
+          "id": "andreawettstein",
+          "name": "AndreaWettstein",
+          "order": 3,
+          "legacyProfileUrl": "https://www.vipach.at/artist/andreawettstein",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_21cf5cf8b14b4d03b8a596365bd8416f~mv2.png",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/andreawettstein"
+        },
+        {
+          "id": "toth-mano",
+          "name": "Tóth Manó",
+          "order": 4,
+          "legacyProfileUrl": "https://www.vipach.at/artist/manototh",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_0d637ce927d84c29825ba6a914025064~mv2.png",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/manototh"
+        },
+        {
+          "id": "zz",
+          "name": "ZZ",
+          "order": 5,
+          "legacyProfileUrl": "https://www.vipach.at/artist/zz",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_9e5e0dda785e4ea690c54da00c83bb1e~mv2.jpg",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/zz"
+        },
+        {
+          "id": "zoltan-kondits",
+          "name": "Zoltan Kondits",
+          "order": 6,
+          "legacyProfileUrl": "https://www.vipach.at/artist/zoltankondits",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_2a714c68794e427b9b92b1f4e6dfd779~mv2.jpeg",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/zoltankondits"
+        },
+        {
+          "id": "nina",
+          "name": "Nina",
+          "order": 7,
+          "legacyProfileUrl": "https://www.vipach.at/artist/nina",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_2f5a75fb0a39477f8010df220dfefd50~mv2.png",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/nina"
+        },
+        {
+          "id": "b-ella",
+          "name": "B.ella",
+          "order": 8,
+          "legacyProfileUrl": "https://www.vipach.at/artist/bella",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_f2acc2778b5d4c6a9993b38798ecf0a7~mv2.png",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/bella"
+        },
+        {
+          "id": "isa",
+          "name": "Isa",
+          "order": 9,
+          "legacyProfileUrl": "https://www.vipach.at/artist/isa",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_da1d56d486b14031bdaf7573b2826062~mv2.png",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/isa"
+        },
+        {
+          "id": "naylivart",
+          "name": "NaylivArt",
+          "order": 10,
+          "legacyProfileUrl": "https://www.vipach.at/artist/naylivart",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_f997f59788f24bb7898d1377e25b1b0a~mv2.jpg",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/naylivart"
+        },
+        {
+          "id": "adamski",
+          "name": "Adamski",
+          "order": 11,
+          "legacyProfileUrl": "https://www.vipach.at/artist/adamski",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_9d22cfc2731f41c9b67a7bde4415319b~mv2.jpg",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/adamski"
+        },
+        {
+          "id": "denise-trajkovska",
+          "name": "Denise Trajkovska",
+          "order": 12,
+          "legacyProfileUrl": "https://www.vipach.at/artist/denisetrajkovska",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_03473af450e34cd690c79ffb05038392~mv2.png",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/denisetrajkovska"
+        },
+        {
+          "id": "jowan-trajkovski",
+          "name": "Jowan Trajkovski",
+          "order": 13,
+          "legacyProfileUrl": "https://www.vipach.at/artist/jowantrajkovski",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_b282bc8649ba43fda0401e3bd0bf6d81~mv2.jpg",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/jowantrajkovski"
+        },
+        {
+          "id": "nagy-marton",
+          "name": "Nagy Márton",
+          "order": 14,
+          "legacyProfileUrl": "https://www.vipach.at/artist/nagymarton",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_d962eea6d5bc491298260cda2a0f3735~mv2.jpg",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/nagymarton"
+        },
+        {
+          "id": "jupiter",
+          "name": "Jupiter",
+          "order": 15,
+          "legacyProfileUrl": "https://www.vipach.at/artist/jupiter",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_cdb09b4108c64c3bbb884a83654e8d29~mv2.png",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/jupiter"
+        },
+        {
+          "id": "anett-elek",
+          "name": "Anett Elek",
+          "order": 16,
+          "legacyProfileUrl": "https://www.vipach.at/artist/anettelek",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_51ba8e980dfd4f81b75f75792f771dbb~mv2.jpg",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/anettelek"
+        },
+        {
+          "id": "eszter",
+          "name": "Eszter",
+          "order": 17,
+          "legacyProfileUrl": "https://www.vipach.at/artist/eszter",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_2560b40a4d0d4dda9eedcaaee3ef3f0b~mv2.jpg",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/eszter"
+        },
+        {
+          "id": "tamas-pfundt",
+          "name": "Tamás Pfundt",
+          "order": 18,
+          "legacyProfileUrl": "https://www.vipach.at/artist/tamaspfundt",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_587915ec45ce4ce7b50c8c4214a4aec3~mv2.jpg",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/tamaspfundt"
+        },
+        {
+          "id": "norbert-banhalmi",
+          "name": "Norbert Bánhalmi",
+          "order": 19,
+          "legacyProfileUrl": "https://www.vipach.at/artist/norbertbanhalmi",
+          "personalWebsite": "https://norbertbanhalmi.com",
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_387d12aa16a64c6aa69f894dd6bba257~mv2.jpg",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/norbertbanhalmi"
+        }
+      ],
+      "works": [
+        {
+          "id": "asilikeit-da0aa75aab64",
+          "order": 1,
+          "creator": "Tamás Pfundt",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_0fd6add270b9489484999cad09297aba~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_0fd6add270b9489484999cad09297aba-mv2-ebb1085e6c.webp",
+          "sourceSha256": "da0aa75aab64f63c2784e8f93fb66d1e01ada50a29e91b8b3db6542eac49c5d6",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Tamás Pfundt (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Tamás Pfundt (publication licence under verification)",
+            "de": "Kunstschaffende: Tamás Pfundt (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/tamaspfundt",
+          "wixRecordId": "a15eb83b-4358-446a-a772-427b26d0f131",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "asilikeit-ce5b826f4ae3",
+          "order": 2,
+          "creator": "Nina",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_217fff58dd934de18aba6e4804fbdbde~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_217fff58dd934de18aba6e4804fbdbde-mv2-324af8435e.webp",
+          "sourceSha256": "ce5b826f4ae3ac942874e03c8e8f473d46f3ea8d4c3be09b4fa30f3293dd1bd4",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Nina (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Nina (publication licence under verification)",
+            "de": "Kunstschaffende: Nina (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/nina",
+          "wixRecordId": "0e891812-1b50-4352-8327-4c0ac911ce53",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "asilikeit-e863ff3082b8",
+          "order": 3,
+          "creator": "Zoltan Kondits",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_239eecdcc97a4736a089563bc1c74c96~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_239eecdcc97a4736a089563bc1c74c96-mv2-3cf345c97c.webp",
+          "sourceSha256": "e863ff3082b8a32666166b999c30a1d848a2c8ab5e5a4a9c2c05771876466d56",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Zoltan Kondits (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Zoltan Kondits (publication licence under verification)",
+            "de": "Kunstschaffende: Zoltan Kondits (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/zoltankondits",
+          "wixRecordId": "15ed1153-d7d2-48fd-afd6-e5a74651af50",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "asilikeit-844936de3dd5",
+          "order": 4,
+          "creator": "Jupiter",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_24467de4b7a94976b1ca297f853884ce~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_24467de4b7a94976b1ca297f853884ce-mv2-695bc13331.webp",
+          "sourceSha256": "844936de3dd5cef41d79c573622f6f42f5a98f8c8d271f812833920a94bb092d",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Jupiter (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Jupiter (publication licence under verification)",
+            "de": "Kunstschaffende: Jupiter (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/jupiter",
+          "wixRecordId": "68d4d8b6-3469-4e4b-af71-1d1caa6c4ff4",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "asilikeit-4789a7c2c1f0",
+          "order": 5,
+          "creator": "AndreaWettstein",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_244c80992b324e5d920744869d1f3478~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_244c80992b324e5d920744869d1f3478-mv2-059bfe362f.webp",
+          "sourceSha256": "4789a7c2c1f09f59f823e8fb818481d96a1b78d1bdd900cbdebcc91ede503c59",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: AndreaWettstein (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: AndreaWettstein (publication licence under verification)",
+            "de": "Kunstschaffende: AndreaWettstein (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/andreawettstein",
+          "wixRecordId": "391a95cf-c7e4-4d07-8aed-ed7beb73151a",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "asilikeit-5020371540fb",
+          "order": 6,
+          "creator": "ZZ",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_392fc272831f4b158ea4908fe640319b~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_392fc272831f4b158ea4908fe640319b-mv2-f65999bc32.webp",
+          "sourceSha256": "5020371540fb414eaa930a4cf37ff7adcd290ea582d62d7e19cab1e64fb7c4df",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: ZZ (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: ZZ (publication licence under verification)",
+            "de": "Kunstschaffende: ZZ (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/zz",
+          "wixRecordId": "6ca63939-6a2b-4368-8ec1-64590a5b3526",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "asilikeit-a1e2cb005f07",
+          "order": 7,
+          "creator": "Eszter",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_5cc2486649384838b674c5c0198e7f07~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_5cc2486649384838b674c5c0198e7f07-mv2-f64a356809.webp",
+          "sourceSha256": "a1e2cb005f07f2df9db790908fba489c02f043930a8da3d0fed8f85c14e58d9c",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Eszter (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Eszter (publication licence under verification)",
+            "de": "Kunstschaffende: Eszter (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/eszter",
+          "wixRecordId": "b46adf2e-c651-412d-bcbf-46fc2e65c905",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "asilikeit-8e955fa88e16",
+          "order": 8,
+          "creator": "Denise Trajkovska",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_62e9deaf34154e71a8eb9bc11143fd79~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_62e9deaf34154e71a8eb9bc11143fd79-mv2-2f339884bd.webp",
+          "sourceSha256": "8e955fa88e160de261e2adc85939cd03f08038ccc6b367c9a4319bf2b6bd79ad",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Denise Trajkovska (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Denise Trajkovska (publication licence under verification)",
+            "de": "Kunstschaffende: Denise Trajkovska (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/denisetrajkovska",
+          "wixRecordId": "04cd99c4-1704-4ee6-a350-097e5c4b2dbb",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "asilikeit-3c51b19aa027",
+          "order": 9,
+          "creator": null,
+          "creatorStatus": "unidentified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_6b9be3441587481f9a2d9419ac006d23~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_6b9be3441587481f9a2d9419ac006d23-mv2-89c7b4b7c9.webp",
+          "sourceSha256": "3c51b19aa027a2833ec4be7a070d9da45c693414c3ee9b1e2ae500840d5a0d96",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: azonosítás / jogi felülvizsgálat alatt — nem publikált",
+            "en": "Creator: identification / rights review pending — not published",
+            "de": "Urheber:in: Identifikation / Rechteprüfung ausstehend — nicht veröffentlicht"
+          },
+          "originalArtistUrl": null,
+          "wixRecordId": null,
+          "descriptionSourceAvailable": false,
+          "licenseVerificationStatus": "absent",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "asilikeit-f5ce80663718",
+          "order": 10,
+          "creator": "Nagy Márton",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_7a70cc7b022148fcb95323f68e0f2f88~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_7a70cc7b022148fcb95323f68e0f2f88-mv2-c7d3ef2e4d.webp",
+          "sourceSha256": "f5ce806637187ea3b4187d5ad763ce62321c18072011d24b2ffc03b8a729df21",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Nagy Márton (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Nagy Márton (publication licence under verification)",
+            "de": "Kunstschaffende: Nagy Márton (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/nagymarton",
+          "wixRecordId": "0cc463bd-9a69-480d-b7a8-79b9705e7650",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "asilikeit-7f10b8f48731",
+          "order": 11,
+          "creator": "NaylivArt",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_7cfbc41107f34f05b49d24f8d7516389~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_7cfbc41107f34f05b49d24f8d7516389-mv2-dec2c45ed0.webp",
+          "sourceSha256": "7f10b8f4873107db996b1a0ac86fc5edb36c10ac0a95bb6a7ee05ec51a3d7b47",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: NaylivArt (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: NaylivArt (publication licence under verification)",
+            "de": "Kunstschaffende: NaylivArt (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/naylivart",
+          "wixRecordId": "bd5fe81e-baef-495f-abde-41e359807c32",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "asilikeit-89a64ca4313e",
+          "order": 12,
+          "creator": "B.ella",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_89e63d8e9ef34eb6963a2219503c0aed~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_89e63d8e9ef34eb6963a2219503c0aed-mv2-35f632777b.webp",
+          "sourceSha256": "89a64ca4313e1e8c7a0fd8ebc9c9c19b95a1db2cf13c181b80fc72b78b658ed0",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: B.ella (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: B.ella (publication licence under verification)",
+            "de": "Kunstschaffende: B.ella (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/bella",
+          "wixRecordId": "0b9cca44-6041-48f5-9861-2bbb856d47f8",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "asilikeit-accee5c39590",
+          "order": 13,
+          "creator": "Norbert Bánhalmi",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_9980840cbc604f648e14c4d2fbd60b7c~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_9980840cbc604f648e14c4d2fbd60b7c-mv2-cf7488234c.webp",
+          "sourceSha256": "accee5c39590c5174c7177d6954d1713bf7b9a182919c1171486559ec63b2b96",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Norbert Bánhalmi (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Norbert Bánhalmi (publication licence under verification)",
+            "de": "Kunstschaffende: Norbert Bánhalmi (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/norbertbanhalmi",
+          "wixRecordId": "d19aff1f-5a3c-43a1-9130-d48c34cddd16",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "asilikeit-844abe713397",
+          "order": 14,
+          "creator": "Adamski",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_9fb0a5b7b8a946748e367cdf42bf6b08~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_9fb0a5b7b8a946748e367cdf42bf6b08-mv2-45ea2615b7.webp",
+          "sourceSha256": "844abe713397f0b45bda1e4760476160e17984b58ddd12e10a8b3cc64a524eb8",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Adamski (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Adamski (publication licence under verification)",
+            "de": "Kunstschaffende: Adamski (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/adamski",
+          "wixRecordId": "42d9cca4-1831-4a5d-b3e1-822f5b224605",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "asilikeit-f34e5c36d713",
+          "order": 15,
+          "creator": "Isa",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_ad91877f287b4f9594ecf0e1776b38fb~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_ad91877f287b4f9594ecf0e1776b38fb-mv2-3417768d05.webp",
+          "sourceSha256": "f34e5c36d713d2f26cfd093467be7a8e391181e14d839ecabd2202385c16a618",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Isa (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Isa (publication licence under verification)",
+            "de": "Kunstschaffende: Isa (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/isa",
+          "wixRecordId": "15679777-257d-4ea8-82b8-1c949256cecd",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "asilikeit-c90dce593fd2",
+          "order": 16,
+          "creator": "Jowan Trajkovski",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_b3d53d44dca24d05a2d03e64293c7d30~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_b3d53d44dca24d05a2d03e64293c7d30-mv2-19086f1f80.webp",
+          "sourceSha256": "c90dce593fd21ab0028c978a57189e2927e960617059f0b6b4d5242994d55fff",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Jowan Trajkovski (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Jowan Trajkovski (publication licence under verification)",
+            "de": "Kunstschaffende: Jowan Trajkovski (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/jowantrajkovski",
+          "wixRecordId": "6e727e27-0fc8-41ec-920a-a848cd8fb19d",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "asilikeit-474a405f62e0",
+          "order": 17,
+          "creator": "Tóth Manó",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_cddbc9bb66db45db9bac607823523667~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_cddbc9bb66db45db9bac607823523667-mv2-b06314905e.webp",
+          "sourceSha256": "474a405f62e099fc77b933c146cc52268ba92fd9fd6b2d57f7c44b65a800191f",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Tóth Manó (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Tóth Manó (publication licence under verification)",
+            "de": "Kunstschaffende: Tóth Manó (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/manototh",
+          "wixRecordId": "b4115f24-7a26-4bc2-b987-66d23672335a",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "asilikeit-e4aba83b9917",
+          "order": 18,
+          "creator": "Anett Elek",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_e8ede06599fb4bbdbf0939b5c396c5f8~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_e8ede06599fb4bbdbf0939b5c396c5f8-mv2-320b7f8102.webp",
+          "sourceSha256": "e4aba83b9917a3c4ddfdfa1bb25c6f248c8136f8d0dd922152ed70e085f8866b",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Anett Elek (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Anett Elek (publication licence under verification)",
+            "de": "Kunstschaffende: Anett Elek (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/anettelek",
+          "wixRecordId": "44a0bd7f-5ab4-4710-90fc-ed08fc02e35f",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "asilikeit-1ad77d482128",
+          "order": 19,
+          "creator": "native pictures",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_eaf81ebd967844528fb1c2ef2231269e~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_eaf81ebd967844528fb1c2ef2231269e-mv2-d038d7af48.webp",
+          "sourceSha256": "1ad77d482128fe1f1588906bf3272c97de55b05097fa83158e0ed7841dcb3d34",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: native pictures (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: native pictures (publication licence under verification)",
+            "de": "Kunstschaffende: native pictures (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/nativepictures",
+          "wixRecordId": "a64b57c9-3201-46b3-95a3-990e927329d7",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        },
+        {
+          "id": "asilikeit-ad326a449763",
+          "order": 20,
+          "creator": "Liz",
+          "creatorStatus": "identified",
+          "title": {
+            "hu": null,
+            "en": null,
+            "de": null
+          },
+          "imageSourceUrl": "https://static.wixstatic.com/media/b0aee1_f70a80a44f164556b6b5c8820738cc27~mv2.jpg",
+          "imageMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_f70a80a44f164556b6b5c8820738cc27-mv2-bdab60cfbb.webp",
+          "sourceSha256": "ad326a449763eb7a9ba26397c970af16f1ae463c48c49bcc44a1f359db17f89a",
+          "sourceWidth": 1920,
+          "sourceHeight": 1920,
+          "credit": {
+            "hu": "Alkotó: Liz (publikációs licenc ellenőrzés alatt)",
+            "en": "Artist: Liz (publication licence under verification)",
+            "de": "Kunstschaffende: Liz (Publikationslizenz in Prüfung)"
+          },
+          "originalArtistUrl": "https://www.vipach.at/artist/liz",
+          "wixRecordId": "80357add-64d3-4e8d-84a6-277b4565ca94",
+          "descriptionSourceAvailable": true,
+          "licenseVerificationStatus": "license-verification-required",
+          "publicReleaseApproved": false
+        }
+      ],
+      "unresolvedWorkCount": 1
+    }
+  ]
+}
