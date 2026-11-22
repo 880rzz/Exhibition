@@ -48,3 +48,42 @@ All full original biographies and artwork descriptions are imported directly fro
 5. Convert the reviewed staging pages into production `full-html` templates only after rights and content sign-off, then run CI and exact-live verification.
 
 **No DNS, no automatic merge, no rights inference, no production deployment.**
+
+
+## Central Exhibition repository — confirmed delivery architecture
+
+- The **Exhibition** repository owns the public exhibition directory, permanent slug pages, shared SPONTÁN visual structure, three-language navigation and archive chronology.
+- `main` already contains the live central Exhibition navigation (#81, #82). The current featured exhibition is SPONTÁN (2026); the two 2025 shows are listed in its menu.
+- This PR's additional material is **prepublication staging** only: editorial originals, album references, SPONTÁN-component six-page renderer and review CI. It does not modify `index.html` or publish withheld works.
+- The private **VIPACH** repository temporarily retains the rights-unverified binary mirror. A read-only PR #6 workflow builds an **internal, self-contained photo review artifact** by copying the 40 works and 34 portrait uses (72 distinct files) and checking every SHA-256 against the private mirror. It does not push those images into public Exhibition.
+- Once the actual permissions and copy signoff are recorded, the permanent **Exhibition** repository will hold the publication-approved binaries in exhibition-specific public galleries, and the corresponding `data/exhibitions/*.json` records will become the canonical source of public pages.
+
+### Rights and editorial release preflight
+
+Run locally without any rights manifest:
+
+```sh
+node scripts/check-2025-publication-gate.mjs --expect-blocked
+```
+
+For a genuine release review, supply **outside this public repository** both a trusted private evidence directory and a separate JSON manifest:
+
+```sh
+VIPACH_PRIVATE_EVIDENCE_DIR=/secure/rights-documents \
+VIPACH_RIGHTS_MANIFEST=/secure/2025-rights.json \
+node scripts/check-2025-publication-gate.mjs --require-go
+```
+
+Private JSON schema: `schemaVersion: "vipach-2025-rights-v1"`; `usageApprovals` contains 74 per-use approvals, keyed `<exhibition-slug>/work/<work-id>` or `<exhibition-slug>/portrait/<artist-id>`. Each record must carry `key`, exact matching image `sha256`, `approved:true`, `scope:"VIPACH Exhibition website archive"`, `copyrightHolder`, `licensee`, `approvedBy`, `approvalDate`, a relative `evidenceFile` under the trusted private directory, and the evidence document's `evidenceSha256`. Expired permissions and absent/mismatched files fail.
+
+**This automated validation does not replace a human legal review of the evidence and its scope.** No manifest currently exists, and the current preflight is NO-GO. Three work attributions also remain unresolved, independently blocking publication.
+
+### No production promotion without new reviewed PR
+
+After rights sign-off, prepare exact `full-html` publication templates for both exhibitions using the SPONTÁN classes and same canonical asset/design authority. Move only approved original media into corresponding public gallery paths. Set `render:"full-html"` and `publicationState:"published"` / `publicReleaseApproved:true` only after separate CI, legal and editorial checks.
+
+`node scripts/build-exhibitions.mjs` must then generate updated permanent HTML routes in all three languages, sitemap, and chronology. Review the committed generated HTML before Pages deploy; CI-only build output does **not** prove Pages will serve it. Verify the live custom domain, images, menu links, mobile layout and exact deployed SHA. No DNS change is part of this exhibition release.
+
+### Lingual and historical editorial gaps
+
+The 32 original Wix CMS biographies and 37 matched work narratives are **Hungarian originals**, not EN/DE translations. The six page structures and exhibition introductions are localized, but full individual biography/artwork translation requires a separate factual translation pass. The two shows contain **3 remaining creator attribution gaps** and 3 source descriptions with no verified matching CMS record; neither attribution nor description may be guessed.
