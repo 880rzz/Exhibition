@@ -35,6 +35,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Verify committed Pages HTML has navigation BEFORE generation
+        run: node scripts/test-exhibition-navigation.mjs
       - name: Build exhibition pages from data
         run: node scripts/build-exhibitions.mjs
       - name: Validate multi-exhibition schema (featured + archives)
