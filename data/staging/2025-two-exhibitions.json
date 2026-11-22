@@ -32,7 +32,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_39666890bdf14e63a631282afec56b5e~mv2.jpg",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/loksi67",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_39666890bdf14e63a631282afec56b5e-mv2-18b05ae3a9.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_39666890bdf14e63a631282afec56b5e-mv2-18b05ae3a9.webp",
+          "portraitSha256": "88770d90827a039958c2b8c254a4afd3066d6d5585108e76420c789a81d35287",
+          "portraitWidth": 1270,
+          "portraitHeight": 1270
         },
         {
           "id": "hajnika",
@@ -42,7 +45,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_1c207ac1a73841199a3b161ff6c04e0e~mv2.jpg",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/hajnika",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_1c207ac1a73841199a3b161ff6c04e0e-mv2-38741cbb8c.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_1c207ac1a73841199a3b161ff6c04e0e-mv2-38741cbb8c.webp",
+          "portraitSha256": "e4c8eb833a8ec7af022940dfb07edba500757740dd9d30808015ea04c94a175a",
+          "portraitWidth": 1920,
+          "portraitHeight": 1920
         },
         {
           "id": "lena-erdos",
@@ -52,7 +58,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_61d0997c34cb4b5e837c2b05d5b6463f~mv2.jpg",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/lenaerdos",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_61d0997c34cb4b5e837c2b05d5b6463f-mv2-88f2c91a65.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_61d0997c34cb4b5e837c2b05d5b6463f-mv2-88f2c91a65.webp",
+          "portraitSha256": "439c0aa157831e14eb46d5ab42b09add1c63dcdbc0fad9c5c6cf7bfe2037f722",
+          "portraitWidth": 1920,
+          "portraitHeight": 1920
         },
         {
           "id": "bodo-viktoria",
@@ -62,7 +71,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_b78e0312209f43be8bbe5e224040c177~mv2.jpg",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/bodoviktoria",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_b78e0312209f43be8bbe5e224040c177-mv2-9609166895.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_b78e0312209f43be8bbe5e224040c177-mv2-9609166895.webp",
+          "portraitSha256": "b3ac062609330cf5219d4ea7df6c0641e67efa8ee021c328fa8f7041f48c9567",
+          "portraitWidth": 1920,
+          "portraitHeight": 1920
         },
         {
           "id": "kmd",
@@ -72,7 +84,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_8b3ed3fee3b34b5b8ef810043796757f~mv2.png",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/kmd",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_8b3ed3fee3b34b5b8ef810043796757f-mv2-f7be938d73.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_8b3ed3fee3b34b5b8ef810043796757f-mv2-f7be938d73.webp",
+          "portraitSha256": "2522becd01c1aa4176ab16b004e53d4f51d813520f19091dc7b11474039911c7",
+          "portraitWidth": 1512,
+          "portraitHeight": 1512
         },
         {
           "id": "viki-photo-art",
@@ -82,7 +97,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_2549cd77613749a48b120389408514ab~mv2.jpg",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/vikiphotoart",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_2549cd77613749a48b120389408514ab-mv2-6591bc601d.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_2549cd77613749a48b120389408514ab-mv2-6591bc601d.webp",
+          "portraitSha256": "56cada855967c23889d9142e45114b3167ed66add59a432b7568eee5d5d25bb2",
+          "portraitWidth": 1920,
+          "portraitHeight": 1920
         },
         {
           "id": "farkas-tamas",
@@ -92,7 +110,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_68beca266986455182c3fd8889a3a9f1~mv2.jpg",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/farkastamas",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_68beca266986455182c3fd8889a3a9f1-mv2-69c820ce95.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_68beca266986455182c3fd8889a3a9f1-mv2-69c820ce95.webp",
+          "portraitSha256": "a54e96ee91b9dfebf4662961029c28b4e0828425347966a9cd30c83350ee84d4",
+          "portraitWidth": 1666,
+          "portraitHeight": 1666
         },
         {
           "id": "speier-viko",
@@ -102,7 +123,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_514011b67ae3450e870bc7b404aae8a5~mv2.jpg",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/speierviko",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_514011b67ae3450e870bc7b404aae8a5-mv2-3352056d46.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_514011b67ae3450e870bc7b404aae8a5-mv2-3352056d46.webp",
+          "portraitSha256": "0992d531753628feec097815448c59316f54fa65482e826222e837ca2c10273f",
+          "portraitWidth": 1914,
+          "portraitHeight": 1914
         },
         {
           "id": "ecaterina",
@@ -112,7 +136,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_88b3e30f28c64798a99ba73d0decdc05~mv2.jpg",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/ecaterina",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_88b3e30f28c64798a99ba73d0decdc05-mv2-f3f72ee45f.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_88b3e30f28c64798a99ba73d0decdc05-mv2-f3f72ee45f.webp",
+          "portraitSha256": "50f1484ad03af14036c2c479939bfe9551e2ad6aef1522c0fba3685ef3a72d20",
+          "portraitWidth": 1200,
+          "portraitHeight": 1200
         },
         {
           "id": "marianna-visual",
@@ -122,7 +149,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_e81d4f35908b4a708995e5e774b0d4a1~mv2.jpg",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/mariannvisual",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_e81d4f35908b4a708995e5e774b0d4a1-mv2-95cd5d5534.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_e81d4f35908b4a708995e5e774b0d4a1-mv2-95cd5d5534.webp",
+          "portraitSha256": "71af23799bdf8ad4c79eb2094d161677caa2e43b4efe5670126a3146a7c42218",
+          "portraitWidth": 960,
+          "portraitHeight": 960
         },
         {
           "id": "matefi-dalma",
@@ -132,7 +162,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_3e85916c187c4f9a952ee43e96d31bd7~mv2.jpg",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/matefidalma",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_3e85916c187c4f9a952ee43e96d31bd7-mv2-fc27a82673.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_3e85916c187c4f9a952ee43e96d31bd7-mv2-fc27a82673.webp",
+          "portraitSha256": "c59170f414ca6fb4ef65c7f98d36e2366884e3517ed993b03045a7a774f8f352",
+          "portraitWidth": 1920,
+          "portraitHeight": 1920
         },
         {
           "id": "ficho",
@@ -142,7 +175,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_7f4ba3034c9941dc82d88952e93a1116~mv2.jpg",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/ficho",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_7f4ba3034c9941dc82d88952e93a1116-mv2-2d33d33bc1.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_7f4ba3034c9941dc82d88952e93a1116-mv2-2d33d33bc1.webp",
+          "portraitSha256": "909be28c33e61112c6d8b5d304c34af045c2be71f159a20080f4210b33dd0f39",
+          "portraitWidth": 1920,
+          "portraitHeight": 1796
         },
         {
           "id": "norbert-banhalmi",
@@ -155,7 +191,10 @@
           "bioSourceUrl": "https://www.vipach.at/artist/norbertbanhalmi",
           "portraitProvenanceExhibition": "asilikeit",
           "portraitFromDifferentExhibition": true,
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_387d12aa16a64c6aa69f894dd6bba257-mv2-d8cb562973.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_387d12aa16a64c6aa69f894dd6bba257-mv2-d8cb562973.webp",
+          "portraitSha256": "7c55f9a1d986ada0c624292209b05c8eb9eade899d4c4b5599f02af3734fddbd",
+          "portraitWidth": 1024,
+          "portraitHeight": 1024
         },
         {
           "id": "edit-gartner",
@@ -167,7 +206,10 @@
           "bioSourceUrl": "https://www.vipach.at/artist/editgaertner",
           "portraitProvenanceExhibition": "asilikeit",
           "portraitFromDifferentExhibition": true,
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_e26330a222f142fe9ef93dcf0b3da68a-mv2-9e4f446654.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_e26330a222f142fe9ef93dcf0b3da68a-mv2-9e4f446654.webp",
+          "portraitSha256": "8fe35540191f77c5e4e476f9b49ed55fbaf88ec072880d4d13db14ee368e6b35",
+          "portraitWidth": 1512,
+          "portraitHeight": 1512
         },
         {
           "id": "denise-trajkovska",
@@ -179,7 +221,10 @@
           "bioSourceUrl": "https://www.vipach.at/artist/denisetrajkovska",
           "portraitProvenanceExhibition": "asilikeit",
           "portraitFromDifferentExhibition": true,
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_03473af450e34cd690c79ffb05038392-mv2-ea698f4285.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_03473af450e34cd690c79ffb05038392-mv2-ea698f4285.webp",
+          "portraitSha256": "479c3bac7081705456c2efa51fc95eef094617975c8f38f1837324f41c99be0b",
+          "portraitWidth": 1512,
+          "portraitHeight": 1512
         }
       ],
       "works": [
@@ -892,7 +937,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_9e4d7f731383486c83bd4f844cf6147b~mv2.jpg",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/nativepictures",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_9e4d7f731383486c83bd4f844cf6147b-mv2-98768b794b.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_9e4d7f731383486c83bd4f844cf6147b-mv2-98768b794b.webp",
+          "portraitSha256": "5c447dda41cc183087c3275fc60fc367b1f27a7b2fab9761db6c9dce342ed44e",
+          "portraitWidth": 1920,
+          "portraitHeight": 1920
         },
         {
           "id": "liz",
@@ -902,7 +950,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_21639ffd310d4f1baf85e7c98fa3e780~mv2.jpg",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/liz",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_21639ffd310d4f1baf85e7c98fa3e780-mv2-c6be10657d.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_21639ffd310d4f1baf85e7c98fa3e780-mv2-c6be10657d.webp",
+          "portraitSha256": "0f2a5841afc4f192f3060ab21232ef107bf466ef3c3788935fa9a30ac1ffa79e",
+          "portraitWidth": 1920,
+          "portraitHeight": 1920
         },
         {
           "id": "andreawettstein",
@@ -912,7 +963,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_21cf5cf8b14b4d03b8a596365bd8416f~mv2.png",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/andreawettstein",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_21cf5cf8b14b4d03b8a596365bd8416f-mv2-735e3101a5.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_21cf5cf8b14b4d03b8a596365bd8416f-mv2-735e3101a5.webp",
+          "portraitSha256": "f27c96bf08bdb41e94ac1b93df730b4b77babca594b1967ca9d81e58395f5a00",
+          "portraitWidth": 1080,
+          "portraitHeight": 1080
         },
         {
           "id": "toth-mano",
@@ -922,7 +976,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_0d637ce927d84c29825ba6a914025064~mv2.png",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/manototh",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_0d637ce927d84c29825ba6a914025064-mv2-078d072bb1.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_0d637ce927d84c29825ba6a914025064-mv2-078d072bb1.webp",
+          "portraitSha256": "f7b35986054b634dcaa999f1ec2dd7537c0ed282cfec26bbc788d4ca05ccd123",
+          "portraitWidth": 1488,
+          "portraitHeight": 1494
         },
         {
           "id": "zz",
@@ -932,7 +989,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_9e5e0dda785e4ea690c54da00c83bb1e~mv2.jpg",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/zz",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_9e5e0dda785e4ea690c54da00c83bb1e-mv2-28a98dc8b7.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_9e5e0dda785e4ea690c54da00c83bb1e-mv2-28a98dc8b7.webp",
+          "portraitSha256": "17a450e7aba9c68558713596bc2b5040e03d000c054a46b2c041afb1cc030e2d",
+          "portraitWidth": 1920,
+          "portraitHeight": 1920
         },
         {
           "id": "zoltan-kondits",
@@ -942,7 +1002,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_2a714c68794e427b9b92b1f4e6dfd779~mv2.jpeg",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/zoltankondits",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_2a714c68794e427b9b92b1f4e6dfd779-mv2-da68c9b202.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_2a714c68794e427b9b92b1f4e6dfd779-mv2-da68c9b202.webp",
+          "portraitSha256": "19afe3fdd7cb8e36f9781c5720ba32fe3c098261756e2709dc0bbf56c9b9836f",
+          "portraitWidth": 1080,
+          "portraitHeight": 1080
         },
         {
           "id": "nina",
@@ -952,7 +1015,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_2f5a75fb0a39477f8010df220dfefd50~mv2.png",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/nina",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_2f5a75fb0a39477f8010df220dfefd50-mv2-b1ab7a024d.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_2f5a75fb0a39477f8010df220dfefd50-mv2-b1ab7a024d.webp",
+          "portraitSha256": "1b4b1d1f2080f46b5973f6f5320d1e87a4cce2135b90b8c0e4415d74175f88ec",
+          "portraitWidth": 1512,
+          "portraitHeight": 1512
         },
         {
           "id": "b-ella",
@@ -962,7 +1028,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_f2acc2778b5d4c6a9993b38798ecf0a7~mv2.png",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/bella",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_f2acc2778b5d4c6a9993b38798ecf0a7-mv2-e26ec112aa.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_f2acc2778b5d4c6a9993b38798ecf0a7-mv2-e26ec112aa.webp",
+          "portraitSha256": "5ba8158d4277e77d45176799fccce86352fdc0a8d3bca168a051e0ca86943ab7",
+          "portraitWidth": 1512,
+          "portraitHeight": 1512
         },
         {
           "id": "isa",
@@ -972,7 +1041,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_da1d56d486b14031bdaf7573b2826062~mv2.png",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/isa",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_da1d56d486b14031bdaf7573b2826062-mv2-9d328d8fe2.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_da1d56d486b14031bdaf7573b2826062-mv2-9d328d8fe2.webp",
+          "portraitSha256": "6978a5cce003c7a7e42931641b796aacf4c03a26f93f5cc30701a07d74d3b8c5",
+          "portraitWidth": 1512,
+          "portraitHeight": 1512
         },
         {
           "id": "naylivart",
@@ -982,7 +1054,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_f997f59788f24bb7898d1377e25b1b0a~mv2.jpg",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/naylivart",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_f997f59788f24bb7898d1377e25b1b0a-mv2-30a6becf06.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_f997f59788f24bb7898d1377e25b1b0a-mv2-30a6becf06.webp",
+          "portraitSha256": "0be8af946137674cc25684526642e382dc2bb73a035873f21623dc7be1781da8",
+          "portraitWidth": 1806,
+          "portraitHeight": 1920
         },
         {
           "id": "adamski",
@@ -992,7 +1067,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_9d22cfc2731f41c9b67a7bde4415319b~mv2.jpg",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/adamski",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_9d22cfc2731f41c9b67a7bde4415319b-mv2-d7f2017c21.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_9d22cfc2731f41c9b67a7bde4415319b-mv2-d7f2017c21.webp",
+          "portraitSha256": "d72791576c66188418bbfcfb00ce241a5eebf2bb556c8094213e87365c8d530d",
+          "portraitWidth": 1083,
+          "portraitHeight": 1094
         },
         {
           "id": "denise-trajkovska",
@@ -1002,7 +1080,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_03473af450e34cd690c79ffb05038392~mv2.png",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/denisetrajkovska",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_03473af450e34cd690c79ffb05038392-mv2-ea698f4285.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_03473af450e34cd690c79ffb05038392-mv2-ea698f4285.webp",
+          "portraitSha256": "479c3bac7081705456c2efa51fc95eef094617975c8f38f1837324f41c99be0b",
+          "portraitWidth": 1512,
+          "portraitHeight": 1512
         },
         {
           "id": "jowan-trajkovski",
@@ -1012,7 +1093,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_b282bc8649ba43fda0401e3bd0bf6d81~mv2.jpg",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/jowantrajkovski",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_b282bc8649ba43fda0401e3bd0bf6d81-mv2-963075eed0.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_b282bc8649ba43fda0401e3bd0bf6d81-mv2-963075eed0.webp",
+          "portraitSha256": "c9f54044aae0830c4a9fbcb4cfd9cbb96ad5b8ecf1aa9e39928f4801210c3cf4",
+          "portraitWidth": 1920,
+          "portraitHeight": 1920
         },
         {
           "id": "nagy-marton",
@@ -1022,7 +1106,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_d962eea6d5bc491298260cda2a0f3735~mv2.jpg",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/nagymarton",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_d962eea6d5bc491298260cda2a0f3735-mv2-4d188c9041.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_d962eea6d5bc491298260cda2a0f3735-mv2-4d188c9041.webp",
+          "portraitSha256": "a33bb4fb38358eaf56eff9df3edfd9760c971f45f6b63e1473fa6a706957b335",
+          "portraitWidth": 1920,
+          "portraitHeight": 1920
         },
         {
           "id": "jupiter",
@@ -1032,7 +1119,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_cdb09b4108c64c3bbb884a83654e8d29~mv2.png",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/jupiter",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_cdb09b4108c64c3bbb884a83654e8d29-mv2-5411bc2e74.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_cdb09b4108c64c3bbb884a83654e8d29-mv2-5411bc2e74.webp",
+          "portraitSha256": "6868c854c8aa1e010e6d5ebcb565164754b3a466f490a7826fff2d4a96e5d5af",
+          "portraitWidth": 1512,
+          "portraitHeight": 1512
         },
         {
           "id": "anett-elek",
@@ -1042,7 +1132,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_51ba8e980dfd4f81b75f75792f771dbb~mv2.jpg",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/anettelek",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_51ba8e980dfd4f81b75f75792f771dbb-mv2-56c43ccbf1.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_51ba8e980dfd4f81b75f75792f771dbb-mv2-56c43ccbf1.webp",
+          "portraitSha256": "02cc3c6ccae824de8c21e189ff675d68dbfffef4d26d4dafb3c1b5fba060adf2",
+          "portraitWidth": 1920,
+          "portraitHeight": 1920
         },
         {
           "id": "eszter",
@@ -1052,7 +1145,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_2560b40a4d0d4dda9eedcaaee3ef3f0b~mv2.jpg",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/eszter",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_2560b40a4d0d4dda9eedcaaee3ef3f0b-mv2-5ca8560bd3.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_2560b40a4d0d4dda9eedcaaee3ef3f0b-mv2-5ca8560bd3.webp",
+          "portraitSha256": "224850b21fc874c6a4a3254cbb1ef78ca6603619f724cf64f8bf059d140bd3e0",
+          "portraitWidth": 1512,
+          "portraitHeight": 1512
         },
         {
           "id": "tamas-pfundt",
@@ -1062,7 +1158,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_587915ec45ce4ce7b50c8c4214a4aec3~mv2.jpg",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/tamaspfundt",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_587915ec45ce4ce7b50c8c4214a4aec3-mv2-688aa542a1.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_587915ec45ce4ce7b50c8c4214a4aec3-mv2-688aa542a1.webp",
+          "portraitSha256": "80e711319a226c2149fcc052262bcce0809e678dc236f29bf49cb97af5ec6669",
+          "portraitWidth": 1920,
+          "portraitHeight": 1920
         },
         {
           "id": "norbert-banhalmi",
@@ -1073,7 +1172,10 @@
           "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_387d12aa16a64c6aa69f894dd6bba257~mv2.jpg",
           "portraitStatus": "rights-review-required",
           "bioSourceUrl": "https://www.vipach.at/artist/norbertbanhalmi",
-          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_387d12aa16a64c6aa69f894dd6bba257-mv2-d8cb562973.webp"
+          "portraitPrivateMirrorRef": "VIPACH:/images/wix-mirror/b0aee1_387d12aa16a64c6aa69f894dd6bba257-mv2-d8cb562973.webp",
+          "portraitSha256": "7c55f9a1d986ada0c624292209b05c8eb9eade899d4c4b5599f02af3734fddbd",
+          "portraitWidth": 1024,
+          "portraitHeight": 1024
         }
       ],
       "works": [
