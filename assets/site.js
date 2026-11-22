@@ -51,6 +51,8 @@ if(mapButton){
 }
 
 (function(){
+  // The frozen SPONTAN contact dock contains 2026 dates. Never show those dates on historical archive pages.
+  if(document.body.classList.contains('ex25-body') || document.body.classList.contains('exhibition-archive')) return;
   if(document.querySelector('.vipach-contact-dock')) return;
   const lang=(document.documentElement.lang||'en').toLowerCase();
   const locale=lang.startsWith('hu')?'hu':lang.startsWith('de')?'de':'en';
