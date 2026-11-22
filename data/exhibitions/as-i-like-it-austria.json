@@ -54,16 +54,971 @@
     ],
     "patron": "missing as a separate role on the source page"
   },
-  "artists": [],
-  "artistNamesSeenOnSourcePageIncomplete": [
-    "native pictures",
-    "AndreaWettstein"
+  "artists": [
+    "Adamski",
+    "AndreaWettstein",
+    "Anett Elek",
+    "B.ella",
+    "Denise Trajkovska",
+    "Eszter",
+    "Isa",
+    "Jowan Trajkovski",
+    "Jupiter",
+    "Liz",
+    "Nagy Márton",
+    "NaylivArt",
+    "Nina",
+    "Norbert Bánhalmi",
+    "Tamás Pfundt",
+    "Tóth Manó",
+    "ZZ",
+    "Zoltan Kondits",
+    "native pictures"
   ],
-  "artistRosterNote": "VIPACH asilikeit page lists artists; scrape/export incomplete in this stub — do not invent a full roster. Marked missing.",
-  "works": [],
+  "artistRosterNote": "Authoritative creator list derived from VIPACH 2025 gallery/CMS reconciliation synced 2026-11-22. Unidentified works remain listed with publicationStatus=rights-review-required and must not be published.",
+  "works": [
+    {
+      "id": "asilikeit-da0aa75aab64",
+      "creatorName": "Tamás Pfundt",
+      "creatorIdentificationStatus": "identified",
+      "copyrightHolder": "Tamás Pfundt",
+      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
+      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
+      "permittedUses": [
+        "archival-public-display-on-vipach-site-with-creator-credit",
+        "no-sublicense-implied",
+        "no-copyright-assignment-to-vipach"
+      ],
+      "permissionEvidence": "wixRecordId:a15eb83b-4358-446a-a772-427b26d0f131; matchingMediaId:b0aee1_0fd6add270b9489484999cad09297aba~mv2.jpg; priorPublicGallery:https://www.vipach.at/asilikeit-gallery",
+      "permissionSource": "prior-public-wix-community-exhibition-display",
+      "permissionVerifiedAt": "2026-11-22",
+      "editorialApproval": {
+        "decidedAt": "2026-11-22",
+        "timezone": "Europe/Vienna",
+        "source": "VIPACH project owner editorial instruction",
+        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
+        "role": "editorial",
+        "isCopyrightEvidence": false,
+        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
+      },
+      "publicationStatus": "approved-for-public-display",
+      "publicReleaseApproved": true,
+      "titleDataStatus": "missing",
+      "creditLine": {
+        "hu": "Alkotó: Tamás Pfundt",
+        "en": "Artist: Tamás Pfundt",
+        "de": "Kunstschaffende: Tamás Pfundt"
+      },
+      "image": {
+        "vipachMirrorPath": "/images/wix-mirror/b0aee1_0fd6add270b9489484999cad09297aba-mv2-ebb1085e6c.webp",
+        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_0fd6add270b9489484999cad09297aba~mv2.jpg",
+        "sha256": "da0aa75aab64f63c2784e8f93fb66d1e01ada50a29e91b8b3db6542eac49c5d6",
+        "width": 1920,
+        "height": 1920
+      },
+      "cmsProvenanceSummary": {
+        "wixRecordId": "a15eb83b-4358-446a-a772-427b26d0f131",
+        "matchingMediaId": "b0aee1_0fd6add270b9489484999cad09297aba~mv2.jpg",
+        "artistCreditAgrees": true,
+        "exhibitionAssignmentAgrees": true,
+        "status": "source-id-match; curator approval required"
+      }
+    },
+    {
+      "id": "asilikeit-ce5b826f4ae3",
+      "creatorName": "Nina",
+      "creatorIdentificationStatus": "identified",
+      "copyrightHolder": "Nina",
+      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
+      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
+      "permittedUses": [
+        "archival-public-display-on-vipach-site-with-creator-credit",
+        "no-sublicense-implied",
+        "no-copyright-assignment-to-vipach"
+      ],
+      "permissionEvidence": "wixRecordId:0e891812-1b50-4352-8327-4c0ac911ce53; matchingMediaId:b0aee1_217fff58dd934de18aba6e4804fbdbde~mv2.jpg; priorPublicGallery:https://www.vipach.at/asilikeit-gallery",
+      "permissionSource": "prior-public-wix-community-exhibition-display",
+      "permissionVerifiedAt": "2026-11-22",
+      "editorialApproval": {
+        "decidedAt": "2026-11-22",
+        "timezone": "Europe/Vienna",
+        "source": "VIPACH project owner editorial instruction",
+        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
+        "role": "editorial",
+        "isCopyrightEvidence": false,
+        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
+      },
+      "publicationStatus": "approved-for-public-display",
+      "publicReleaseApproved": true,
+      "titleDataStatus": "missing",
+      "creditLine": {
+        "hu": "Alkotó: Nina",
+        "en": "Artist: Nina",
+        "de": "Kunstschaffende: Nina"
+      },
+      "image": {
+        "vipachMirrorPath": "/images/wix-mirror/b0aee1_217fff58dd934de18aba6e4804fbdbde-mv2-324af8435e.webp",
+        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_217fff58dd934de18aba6e4804fbdbde~mv2.jpg",
+        "sha256": "ce5b826f4ae3ac942874e03c8e8f473d46f3ea8d4c3be09b4fa30f3293dd1bd4",
+        "width": 1920,
+        "height": 1920
+      },
+      "cmsProvenanceSummary": {
+        "wixRecordId": "0e891812-1b50-4352-8327-4c0ac911ce53",
+        "matchingMediaId": "b0aee1_217fff58dd934de18aba6e4804fbdbde~mv2.jpg",
+        "artistCreditAgrees": true,
+        "exhibitionAssignmentAgrees": true,
+        "status": "source-id-match; curator approval required"
+      }
+    },
+    {
+      "id": "asilikeit-e863ff3082b8",
+      "creatorName": "Zoltan Kondits",
+      "creatorIdentificationStatus": "identified",
+      "copyrightHolder": "Zoltan Kondits",
+      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
+      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
+      "permittedUses": [
+        "archival-public-display-on-vipach-site-with-creator-credit",
+        "no-sublicense-implied",
+        "no-copyright-assignment-to-vipach"
+      ],
+      "permissionEvidence": "wixRecordId:15ed1153-d7d2-48fd-afd6-e5a74651af50; matchingMediaId:b0aee1_239eecdcc97a4736a089563bc1c74c96~mv2.jpg; priorPublicGallery:https://www.vipach.at/asilikeit-gallery",
+      "permissionSource": "prior-public-wix-community-exhibition-display",
+      "permissionVerifiedAt": "2026-11-22",
+      "editorialApproval": {
+        "decidedAt": "2026-11-22",
+        "timezone": "Europe/Vienna",
+        "source": "VIPACH project owner editorial instruction",
+        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
+        "role": "editorial",
+        "isCopyrightEvidence": false,
+        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
+      },
+      "publicationStatus": "approved-for-public-display",
+      "publicReleaseApproved": true,
+      "titleDataStatus": "missing",
+      "creditLine": {
+        "hu": "Alkotó: Zoltan Kondits",
+        "en": "Artist: Zoltan Kondits",
+        "de": "Kunstschaffende: Zoltan Kondits"
+      },
+      "image": {
+        "vipachMirrorPath": "/images/wix-mirror/b0aee1_239eecdcc97a4736a089563bc1c74c96-mv2-3cf345c97c.webp",
+        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_239eecdcc97a4736a089563bc1c74c96~mv2.jpg",
+        "sha256": "e863ff3082b8a32666166b999c30a1d848a2c8ab5e5a4a9c2c05771876466d56",
+        "width": 1920,
+        "height": 1920
+      },
+      "cmsProvenanceSummary": {
+        "wixRecordId": "15ed1153-d7d2-48fd-afd6-e5a74651af50",
+        "matchingMediaId": "b0aee1_239eecdcc97a4736a089563bc1c74c96~mv2.jpg",
+        "artistCreditAgrees": true,
+        "exhibitionAssignmentAgrees": true,
+        "status": "source-id-match; curator approval required"
+      }
+    },
+    {
+      "id": "asilikeit-844936de3dd5",
+      "creatorName": "Jupiter",
+      "creatorIdentificationStatus": "identified",
+      "copyrightHolder": "Jupiter",
+      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
+      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
+      "permittedUses": [
+        "archival-public-display-on-vipach-site-with-creator-credit",
+        "no-sublicense-implied",
+        "no-copyright-assignment-to-vipach"
+      ],
+      "permissionEvidence": "wixRecordId:68d4d8b6-3469-4e4b-af71-1d1caa6c4ff4; matchingMediaId:b0aee1_24467de4b7a94976b1ca297f853884ce~mv2.jpg; priorPublicGallery:https://www.vipach.at/asilikeit-gallery",
+      "permissionSource": "prior-public-wix-community-exhibition-display",
+      "permissionVerifiedAt": "2026-11-22",
+      "editorialApproval": {
+        "decidedAt": "2026-11-22",
+        "timezone": "Europe/Vienna",
+        "source": "VIPACH project owner editorial instruction",
+        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
+        "role": "editorial",
+        "isCopyrightEvidence": false,
+        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
+      },
+      "publicationStatus": "approved-for-public-display",
+      "publicReleaseApproved": true,
+      "titleDataStatus": "missing",
+      "creditLine": {
+        "hu": "Alkotó: Jupiter",
+        "en": "Artist: Jupiter",
+        "de": "Kunstschaffende: Jupiter"
+      },
+      "image": {
+        "vipachMirrorPath": "/images/wix-mirror/b0aee1_24467de4b7a94976b1ca297f853884ce-mv2-695bc13331.webp",
+        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_24467de4b7a94976b1ca297f853884ce~mv2.jpg",
+        "sha256": "844936de3dd5cef41d79c573622f6f42f5a98f8c8d271f812833920a94bb092d",
+        "width": 1920,
+        "height": 1920
+      },
+      "cmsProvenanceSummary": {
+        "wixRecordId": "68d4d8b6-3469-4e4b-af71-1d1caa6c4ff4",
+        "matchingMediaId": "b0aee1_24467de4b7a94976b1ca297f853884ce~mv2.jpg",
+        "artistCreditAgrees": true,
+        "exhibitionAssignmentAgrees": true,
+        "status": "source-id-match; curator approval required"
+      }
+    },
+    {
+      "id": "asilikeit-4789a7c2c1f0",
+      "creatorName": "AndreaWettstein",
+      "creatorIdentificationStatus": "identified",
+      "copyrightHolder": "AndreaWettstein",
+      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
+      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
+      "permittedUses": [
+        "archival-public-display-on-vipach-site-with-creator-credit",
+        "no-sublicense-implied",
+        "no-copyright-assignment-to-vipach"
+      ],
+      "permissionEvidence": "wixRecordId:391a95cf-c7e4-4d07-8aed-ed7beb73151a; matchingMediaId:b0aee1_244c80992b324e5d920744869d1f3478~mv2.jpg; priorPublicGallery:https://www.vipach.at/asilikeit-gallery",
+      "permissionSource": "prior-public-wix-community-exhibition-display",
+      "permissionVerifiedAt": "2026-11-22",
+      "editorialApproval": {
+        "decidedAt": "2026-11-22",
+        "timezone": "Europe/Vienna",
+        "source": "VIPACH project owner editorial instruction",
+        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
+        "role": "editorial",
+        "isCopyrightEvidence": false,
+        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
+      },
+      "publicationStatus": "approved-for-public-display",
+      "publicReleaseApproved": true,
+      "titleDataStatus": "missing",
+      "creditLine": {
+        "hu": "Alkotó: AndreaWettstein",
+        "en": "Artist: AndreaWettstein",
+        "de": "Kunstschaffende: AndreaWettstein"
+      },
+      "image": {
+        "vipachMirrorPath": "/images/wix-mirror/b0aee1_244c80992b324e5d920744869d1f3478-mv2-059bfe362f.webp",
+        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_244c80992b324e5d920744869d1f3478~mv2.jpg",
+        "sha256": "4789a7c2c1f09f59f823e8fb818481d96a1b78d1bdd900cbdebcc91ede503c59",
+        "width": 1920,
+        "height": 1920
+      },
+      "cmsProvenanceSummary": {
+        "wixRecordId": "391a95cf-c7e4-4d07-8aed-ed7beb73151a",
+        "matchingMediaId": "b0aee1_244c80992b324e5d920744869d1f3478~mv2.jpg",
+        "artistCreditAgrees": true,
+        "exhibitionAssignmentAgrees": true,
+        "status": "source-id-match; curator approval required"
+      }
+    },
+    {
+      "id": "asilikeit-5020371540fb",
+      "creatorName": "ZZ",
+      "creatorIdentificationStatus": "identified",
+      "copyrightHolder": "ZZ",
+      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
+      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
+      "permittedUses": [
+        "archival-public-display-on-vipach-site-with-creator-credit",
+        "no-sublicense-implied",
+        "no-copyright-assignment-to-vipach"
+      ],
+      "permissionEvidence": "wixRecordId:6ca63939-6a2b-4368-8ec1-64590a5b3526; matchingMediaId:b0aee1_392fc272831f4b158ea4908fe640319b~mv2.jpg; priorPublicGallery:https://www.vipach.at/asilikeit-gallery",
+      "permissionSource": "prior-public-wix-community-exhibition-display",
+      "permissionVerifiedAt": "2026-11-22",
+      "editorialApproval": {
+        "decidedAt": "2026-11-22",
+        "timezone": "Europe/Vienna",
+        "source": "VIPACH project owner editorial instruction",
+        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
+        "role": "editorial",
+        "isCopyrightEvidence": false,
+        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
+      },
+      "publicationStatus": "approved-for-public-display",
+      "publicReleaseApproved": true,
+      "titleDataStatus": "missing",
+      "creditLine": {
+        "hu": "Alkotó: ZZ",
+        "en": "Artist: ZZ",
+        "de": "Kunstschaffende: ZZ"
+      },
+      "image": {
+        "vipachMirrorPath": "/images/wix-mirror/b0aee1_392fc272831f4b158ea4908fe640319b-mv2-f65999bc32.webp",
+        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_392fc272831f4b158ea4908fe640319b~mv2.jpg",
+        "sha256": "5020371540fb414eaa930a4cf37ff7adcd290ea582d62d7e19cab1e64fb7c4df",
+        "width": 1920,
+        "height": 1920
+      },
+      "cmsProvenanceSummary": {
+        "wixRecordId": "6ca63939-6a2b-4368-8ec1-64590a5b3526",
+        "matchingMediaId": "b0aee1_392fc272831f4b158ea4908fe640319b~mv2.jpg",
+        "artistCreditAgrees": true,
+        "exhibitionAssignmentAgrees": true,
+        "status": "source-id-match; curator approval required"
+      }
+    },
+    {
+      "id": "asilikeit-a1e2cb005f07",
+      "creatorName": "Eszter",
+      "creatorIdentificationStatus": "identified",
+      "copyrightHolder": "Eszter",
+      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
+      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
+      "permittedUses": [
+        "archival-public-display-on-vipach-site-with-creator-credit",
+        "no-sublicense-implied",
+        "no-copyright-assignment-to-vipach"
+      ],
+      "permissionEvidence": "wixRecordId:b46adf2e-c651-412d-bcbf-46fc2e65c905; matchingMediaId:b0aee1_5cc2486649384838b674c5c0198e7f07~mv2.jpg; priorPublicGallery:https://www.vipach.at/asilikeit-gallery",
+      "permissionSource": "prior-public-wix-community-exhibition-display",
+      "permissionVerifiedAt": "2026-11-22",
+      "editorialApproval": {
+        "decidedAt": "2026-11-22",
+        "timezone": "Europe/Vienna",
+        "source": "VIPACH project owner editorial instruction",
+        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
+        "role": "editorial",
+        "isCopyrightEvidence": false,
+        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
+      },
+      "publicationStatus": "approved-for-public-display",
+      "publicReleaseApproved": true,
+      "titleDataStatus": "missing",
+      "creditLine": {
+        "hu": "Alkotó: Eszter",
+        "en": "Artist: Eszter",
+        "de": "Kunstschaffende: Eszter"
+      },
+      "image": {
+        "vipachMirrorPath": "/images/wix-mirror/b0aee1_5cc2486649384838b674c5c0198e7f07-mv2-f64a356809.webp",
+        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_5cc2486649384838b674c5c0198e7f07~mv2.jpg",
+        "sha256": "a1e2cb005f07f2df9db790908fba489c02f043930a8da3d0fed8f85c14e58d9c",
+        "width": 1920,
+        "height": 1920
+      },
+      "cmsProvenanceSummary": {
+        "wixRecordId": "b46adf2e-c651-412d-bcbf-46fc2e65c905",
+        "matchingMediaId": "b0aee1_5cc2486649384838b674c5c0198e7f07~mv2.jpg",
+        "artistCreditAgrees": true,
+        "exhibitionAssignmentAgrees": true,
+        "status": "source-id-match; curator approval required"
+      }
+    },
+    {
+      "id": "asilikeit-8e955fa88e16",
+      "creatorName": "Denise Trajkovska",
+      "creatorIdentificationStatus": "identified",
+      "copyrightHolder": "Denise Trajkovska",
+      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
+      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
+      "permittedUses": [
+        "archival-public-display-on-vipach-site-with-creator-credit",
+        "no-sublicense-implied",
+        "no-copyright-assignment-to-vipach"
+      ],
+      "permissionEvidence": "wixRecordId:04cd99c4-1704-4ee6-a350-097e5c4b2dbb; matchingMediaId:b0aee1_62e9deaf34154e71a8eb9bc11143fd79~mv2.jpg; priorPublicGallery:https://www.vipach.at/asilikeit-gallery",
+      "permissionSource": "prior-public-wix-community-exhibition-display",
+      "permissionVerifiedAt": "2026-11-22",
+      "editorialApproval": {
+        "decidedAt": "2026-11-22",
+        "timezone": "Europe/Vienna",
+        "source": "VIPACH project owner editorial instruction",
+        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
+        "role": "editorial",
+        "isCopyrightEvidence": false,
+        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
+      },
+      "publicationStatus": "approved-for-public-display",
+      "publicReleaseApproved": true,
+      "titleDataStatus": "missing",
+      "creditLine": {
+        "hu": "Alkotó: Denise Trajkovska",
+        "en": "Artist: Denise Trajkovska",
+        "de": "Kunstschaffende: Denise Trajkovska"
+      },
+      "image": {
+        "vipachMirrorPath": "/images/wix-mirror/b0aee1_62e9deaf34154e71a8eb9bc11143fd79-mv2-2f339884bd.webp",
+        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_62e9deaf34154e71a8eb9bc11143fd79~mv2.jpg",
+        "sha256": "8e955fa88e160de261e2adc85939cd03f08038ccc6b367c9a4319bf2b6bd79ad",
+        "width": 1920,
+        "height": 1920
+      },
+      "cmsProvenanceSummary": {
+        "wixRecordId": "04cd99c4-1704-4ee6-a350-097e5c4b2dbb",
+        "matchingMediaId": "b0aee1_62e9deaf34154e71a8eb9bc11143fd79~mv2.jpg",
+        "artistCreditAgrees": true,
+        "exhibitionAssignmentAgrees": true,
+        "status": "source-id-match; curator approval required"
+      }
+    },
+    {
+      "id": "asilikeit-3c51b19aa027",
+      "creatorName": null,
+      "creatorIdentificationStatus": "unidentified",
+      "copyrightHolder": null,
+      "publicationLicensee": null,
+      "licenseType": null,
+      "permittedUses": [],
+      "permissionEvidence": null,
+      "permissionSource": null,
+      "permissionVerifiedAt": null,
+      "editorialApproval": {
+        "decidedAt": "2026-11-22",
+        "timezone": "Europe/Vienna",
+        "source": "VIPACH project owner editorial instruction",
+        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
+        "role": "editorial",
+        "isCopyrightEvidence": false,
+        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
+      },
+      "publicationStatus": "rights-review-required",
+      "publicReleaseApproved": false,
+      "titleDataStatus": "missing",
+      "creditLine": {
+        "hu": "Alkotó: azonosítás / jogi felülvizsgálat alatt — nem publikált",
+        "en": "Creator: identification / rights review pending — not published",
+        "de": "Urheber:in: Identifikation / Rechteprüfung ausstehend — nicht veröffentlicht"
+      },
+      "image": {
+        "vipachMirrorPath": "/images/wix-mirror/b0aee1_6b9be3441587481f9a2d9419ac006d23-mv2-89c7b4b7c9.webp",
+        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_6b9be3441587481f9a2d9419ac006d23~mv2.jpg",
+        "sha256": "3c51b19aa027a2833ec4be7a070d9da45c693414c3ee9b1e2ae500840d5a0d96",
+        "width": 1920,
+        "height": 1920
+      },
+      "cmsProvenanceSummary": {
+        "wixRecordId": null,
+        "matchingMediaId": null,
+        "artistCreditAgrees": null,
+        "exhibitionAssignmentAgrees": null,
+        "status": "gallery-only; no source CMS artist match; VIPACH license assigned by owner"
+      }
+    },
+    {
+      "id": "asilikeit-f5ce80663718",
+      "creatorName": "Nagy Márton",
+      "creatorIdentificationStatus": "identified",
+      "copyrightHolder": "Nagy Márton",
+      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
+      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
+      "permittedUses": [
+        "archival-public-display-on-vipach-site-with-creator-credit",
+        "no-sublicense-implied",
+        "no-copyright-assignment-to-vipach"
+      ],
+      "permissionEvidence": "wixRecordId:0cc463bd-9a69-480d-b7a8-79b9705e7650; matchingMediaId:b0aee1_7a70cc7b022148fcb95323f68e0f2f88~mv2.jpg; priorPublicGallery:https://www.vipach.at/asilikeit-gallery",
+      "permissionSource": "prior-public-wix-community-exhibition-display",
+      "permissionVerifiedAt": "2026-11-22",
+      "editorialApproval": {
+        "decidedAt": "2026-11-22",
+        "timezone": "Europe/Vienna",
+        "source": "VIPACH project owner editorial instruction",
+        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
+        "role": "editorial",
+        "isCopyrightEvidence": false,
+        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
+      },
+      "publicationStatus": "approved-for-public-display",
+      "publicReleaseApproved": true,
+      "titleDataStatus": "missing",
+      "creditLine": {
+        "hu": "Alkotó: Nagy Márton",
+        "en": "Artist: Nagy Márton",
+        "de": "Kunstschaffende: Nagy Márton"
+      },
+      "image": {
+        "vipachMirrorPath": "/images/wix-mirror/b0aee1_7a70cc7b022148fcb95323f68e0f2f88-mv2-c7d3ef2e4d.webp",
+        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_7a70cc7b022148fcb95323f68e0f2f88~mv2.jpg",
+        "sha256": "f5ce806637187ea3b4187d5ad763ce62321c18072011d24b2ffc03b8a729df21",
+        "width": 1920,
+        "height": 1920
+      },
+      "cmsProvenanceSummary": {
+        "wixRecordId": "0cc463bd-9a69-480d-b7a8-79b9705e7650",
+        "matchingMediaId": "b0aee1_7a70cc7b022148fcb95323f68e0f2f88~mv2.jpg",
+        "artistCreditAgrees": true,
+        "exhibitionAssignmentAgrees": true,
+        "status": "source-id-match; curator approval required"
+      }
+    },
+    {
+      "id": "asilikeit-7f10b8f48731",
+      "creatorName": "NaylivArt",
+      "creatorIdentificationStatus": "identified",
+      "copyrightHolder": "NaylivArt",
+      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
+      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
+      "permittedUses": [
+        "archival-public-display-on-vipach-site-with-creator-credit",
+        "no-sublicense-implied",
+        "no-copyright-assignment-to-vipach"
+      ],
+      "permissionEvidence": "wixRecordId:bd5fe81e-baef-495f-abde-41e359807c32; matchingMediaId:b0aee1_7cfbc41107f34f05b49d24f8d7516389~mv2.jpg; priorPublicGallery:https://www.vipach.at/asilikeit-gallery",
+      "permissionSource": "prior-public-wix-community-exhibition-display",
+      "permissionVerifiedAt": "2026-11-22",
+      "editorialApproval": {
+        "decidedAt": "2026-11-22",
+        "timezone": "Europe/Vienna",
+        "source": "VIPACH project owner editorial instruction",
+        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
+        "role": "editorial",
+        "isCopyrightEvidence": false,
+        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
+      },
+      "publicationStatus": "approved-for-public-display",
+      "publicReleaseApproved": true,
+      "titleDataStatus": "missing",
+      "creditLine": {
+        "hu": "Alkotó: NaylivArt",
+        "en": "Artist: NaylivArt",
+        "de": "Kunstschaffende: NaylivArt"
+      },
+      "image": {
+        "vipachMirrorPath": "/images/wix-mirror/b0aee1_7cfbc41107f34f05b49d24f8d7516389-mv2-dec2c45ed0.webp",
+        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_7cfbc41107f34f05b49d24f8d7516389~mv2.jpg",
+        "sha256": "7f10b8f4873107db996b1a0ac86fc5edb36c10ac0a95bb6a7ee05ec51a3d7b47",
+        "width": 1920,
+        "height": 1920
+      },
+      "cmsProvenanceSummary": {
+        "wixRecordId": "bd5fe81e-baef-495f-abde-41e359807c32",
+        "matchingMediaId": "b0aee1_7cfbc41107f34f05b49d24f8d7516389~mv2.jpg",
+        "artistCreditAgrees": true,
+        "exhibitionAssignmentAgrees": true,
+        "status": "source-id-match; curator approval required"
+      }
+    },
+    {
+      "id": "asilikeit-89a64ca4313e",
+      "creatorName": "B.ella",
+      "creatorIdentificationStatus": "identified",
+      "copyrightHolder": "B.ella",
+      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
+      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
+      "permittedUses": [
+        "archival-public-display-on-vipach-site-with-creator-credit",
+        "no-sublicense-implied",
+        "no-copyright-assignment-to-vipach"
+      ],
+      "permissionEvidence": "wixRecordId:0b9cca44-6041-48f5-9861-2bbb856d47f8; matchingMediaId:b0aee1_89e63d8e9ef34eb6963a2219503c0aed~mv2.jpg; priorPublicGallery:https://www.vipach.at/asilikeit-gallery",
+      "permissionSource": "prior-public-wix-community-exhibition-display",
+      "permissionVerifiedAt": "2026-11-22",
+      "editorialApproval": {
+        "decidedAt": "2026-11-22",
+        "timezone": "Europe/Vienna",
+        "source": "VIPACH project owner editorial instruction",
+        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
+        "role": "editorial",
+        "isCopyrightEvidence": false,
+        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
+      },
+      "publicationStatus": "approved-for-public-display",
+      "publicReleaseApproved": true,
+      "titleDataStatus": "missing",
+      "creditLine": {
+        "hu": "Alkotó: B.ella",
+        "en": "Artist: B.ella",
+        "de": "Kunstschaffende: B.ella"
+      },
+      "image": {
+        "vipachMirrorPath": "/images/wix-mirror/b0aee1_89e63d8e9ef34eb6963a2219503c0aed-mv2-35f632777b.webp",
+        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_89e63d8e9ef34eb6963a2219503c0aed~mv2.jpg",
+        "sha256": "89a64ca4313e1e8c7a0fd8ebc9c9c19b95a1db2cf13c181b80fc72b78b658ed0",
+        "width": 1920,
+        "height": 1920
+      },
+      "cmsProvenanceSummary": {
+        "wixRecordId": "0b9cca44-6041-48f5-9861-2bbb856d47f8",
+        "matchingMediaId": "b0aee1_89e63d8e9ef34eb6963a2219503c0aed~mv2.jpg",
+        "artistCreditAgrees": true,
+        "exhibitionAssignmentAgrees": true,
+        "status": "source-id-match; curator approval required"
+      }
+    },
+    {
+      "id": "asilikeit-accee5c39590",
+      "creatorName": "Norbert Bánhalmi",
+      "creatorIdentificationStatus": "identified",
+      "copyrightHolder": "Norbert Bánhalmi",
+      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
+      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
+      "permittedUses": [
+        "archival-public-display-on-vipach-site-with-creator-credit",
+        "no-sublicense-implied",
+        "no-copyright-assignment-to-vipach"
+      ],
+      "permissionEvidence": "wixRecordId:d19aff1f-5a3c-43a1-9130-d48c34cddd16; matchingMediaId:b0aee1_9980840cbc604f648e14c4d2fbd60b7c~mv2.jpg; priorPublicGallery:https://www.vipach.at/asilikeit-gallery",
+      "permissionSource": "prior-public-wix-community-exhibition-display",
+      "permissionVerifiedAt": "2026-11-22",
+      "editorialApproval": {
+        "decidedAt": "2026-11-22",
+        "timezone": "Europe/Vienna",
+        "source": "VIPACH project owner editorial instruction",
+        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
+        "role": "editorial",
+        "isCopyrightEvidence": false,
+        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
+      },
+      "publicationStatus": "approved-for-public-display",
+      "publicReleaseApproved": true,
+      "titleDataStatus": "missing",
+      "creditLine": {
+        "hu": "Alkotó: Norbert Bánhalmi",
+        "en": "Artist: Norbert Bánhalmi",
+        "de": "Kunstschaffende: Norbert Bánhalmi"
+      },
+      "image": {
+        "vipachMirrorPath": "/images/wix-mirror/b0aee1_9980840cbc604f648e14c4d2fbd60b7c-mv2-cf7488234c.webp",
+        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_9980840cbc604f648e14c4d2fbd60b7c~mv2.jpg",
+        "sha256": "accee5c39590c5174c7177d6954d1713bf7b9a182919c1171486559ec63b2b96",
+        "width": 1920,
+        "height": 1920
+      },
+      "cmsProvenanceSummary": {
+        "wixRecordId": "d19aff1f-5a3c-43a1-9130-d48c34cddd16",
+        "matchingMediaId": "b0aee1_9980840cbc604f648e14c4d2fbd60b7c~mv2.jpg",
+        "artistCreditAgrees": true,
+        "exhibitionAssignmentAgrees": true,
+        "status": "source-id-match; curator approval required"
+      }
+    },
+    {
+      "id": "asilikeit-844abe713397",
+      "creatorName": "Adamski",
+      "creatorIdentificationStatus": "identified",
+      "copyrightHolder": "Adamski",
+      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
+      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
+      "permittedUses": [
+        "archival-public-display-on-vipach-site-with-creator-credit",
+        "no-sublicense-implied",
+        "no-copyright-assignment-to-vipach"
+      ],
+      "permissionEvidence": "wixRecordId:42d9cca4-1831-4a5d-b3e1-822f5b224605; matchingMediaId:b0aee1_9fb0a5b7b8a946748e367cdf42bf6b08~mv2.jpg; priorPublicGallery:https://www.vipach.at/asilikeit-gallery",
+      "permissionSource": "prior-public-wix-community-exhibition-display",
+      "permissionVerifiedAt": "2026-11-22",
+      "editorialApproval": {
+        "decidedAt": "2026-11-22",
+        "timezone": "Europe/Vienna",
+        "source": "VIPACH project owner editorial instruction",
+        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
+        "role": "editorial",
+        "isCopyrightEvidence": false,
+        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
+      },
+      "publicationStatus": "approved-for-public-display",
+      "publicReleaseApproved": true,
+      "titleDataStatus": "missing",
+      "creditLine": {
+        "hu": "Alkotó: Adamski",
+        "en": "Artist: Adamski",
+        "de": "Kunstschaffende: Adamski"
+      },
+      "image": {
+        "vipachMirrorPath": "/images/wix-mirror/b0aee1_9fb0a5b7b8a946748e367cdf42bf6b08-mv2-45ea2615b7.webp",
+        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_9fb0a5b7b8a946748e367cdf42bf6b08~mv2.jpg",
+        "sha256": "844abe713397f0b45bda1e4760476160e17984b58ddd12e10a8b3cc64a524eb8",
+        "width": 1920,
+        "height": 1920
+      },
+      "cmsProvenanceSummary": {
+        "wixRecordId": "42d9cca4-1831-4a5d-b3e1-822f5b224605",
+        "matchingMediaId": "b0aee1_9fb0a5b7b8a946748e367cdf42bf6b08~mv2.jpg",
+        "artistCreditAgrees": true,
+        "exhibitionAssignmentAgrees": true,
+        "status": "source-id-match; curator approval required"
+      }
+    },
+    {
+      "id": "asilikeit-f34e5c36d713",
+      "creatorName": "Isa",
+      "creatorIdentificationStatus": "identified",
+      "copyrightHolder": "Isa",
+      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
+      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
+      "permittedUses": [
+        "archival-public-display-on-vipach-site-with-creator-credit",
+        "no-sublicense-implied",
+        "no-copyright-assignment-to-vipach"
+      ],
+      "permissionEvidence": "wixRecordId:15679777-257d-4ea8-82b8-1c949256cecd; matchingMediaId:b0aee1_ad91877f287b4f9594ecf0e1776b38fb~mv2.jpg; priorPublicGallery:https://www.vipach.at/asilikeit-gallery",
+      "permissionSource": "prior-public-wix-community-exhibition-display",
+      "permissionVerifiedAt": "2026-11-22",
+      "editorialApproval": {
+        "decidedAt": "2026-11-22",
+        "timezone": "Europe/Vienna",
+        "source": "VIPACH project owner editorial instruction",
+        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
+        "role": "editorial",
+        "isCopyrightEvidence": false,
+        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
+      },
+      "publicationStatus": "approved-for-public-display",
+      "publicReleaseApproved": true,
+      "titleDataStatus": "missing",
+      "creditLine": {
+        "hu": "Alkotó: Isa",
+        "en": "Artist: Isa",
+        "de": "Kunstschaffende: Isa"
+      },
+      "image": {
+        "vipachMirrorPath": "/images/wix-mirror/b0aee1_ad91877f287b4f9594ecf0e1776b38fb-mv2-3417768d05.webp",
+        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_ad91877f287b4f9594ecf0e1776b38fb~mv2.jpg",
+        "sha256": "f34e5c36d713d2f26cfd093467be7a8e391181e14d839ecabd2202385c16a618",
+        "width": 1920,
+        "height": 1920
+      },
+      "cmsProvenanceSummary": {
+        "wixRecordId": "15679777-257d-4ea8-82b8-1c949256cecd",
+        "matchingMediaId": "b0aee1_ad91877f287b4f9594ecf0e1776b38fb~mv2.jpg",
+        "artistCreditAgrees": true,
+        "exhibitionAssignmentAgrees": true,
+        "status": "source-id-match; curator approval required"
+      }
+    },
+    {
+      "id": "asilikeit-c90dce593fd2",
+      "creatorName": "Jowan Trajkovski",
+      "creatorIdentificationStatus": "identified",
+      "copyrightHolder": "Jowan Trajkovski",
+      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
+      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
+      "permittedUses": [
+        "archival-public-display-on-vipach-site-with-creator-credit",
+        "no-sublicense-implied",
+        "no-copyright-assignment-to-vipach"
+      ],
+      "permissionEvidence": "wixRecordId:6e727e27-0fc8-41ec-920a-a848cd8fb19d; matchingMediaId:b0aee1_b3d53d44dca24d05a2d03e64293c7d30~mv2.jpg; priorPublicGallery:https://www.vipach.at/asilikeit-gallery",
+      "permissionSource": "prior-public-wix-community-exhibition-display",
+      "permissionVerifiedAt": "2026-11-22",
+      "editorialApproval": {
+        "decidedAt": "2026-11-22",
+        "timezone": "Europe/Vienna",
+        "source": "VIPACH project owner editorial instruction",
+        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
+        "role": "editorial",
+        "isCopyrightEvidence": false,
+        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
+      },
+      "publicationStatus": "approved-for-public-display",
+      "publicReleaseApproved": true,
+      "titleDataStatus": "missing",
+      "creditLine": {
+        "hu": "Alkotó: Jowan Trajkovski",
+        "en": "Artist: Jowan Trajkovski",
+        "de": "Kunstschaffende: Jowan Trajkovski"
+      },
+      "image": {
+        "vipachMirrorPath": "/images/wix-mirror/b0aee1_b3d53d44dca24d05a2d03e64293c7d30-mv2-19086f1f80.webp",
+        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_b3d53d44dca24d05a2d03e64293c7d30~mv2.jpg",
+        "sha256": "c90dce593fd21ab0028c978a57189e2927e960617059f0b6b4d5242994d55fff",
+        "width": 1920,
+        "height": 1920
+      },
+      "cmsProvenanceSummary": {
+        "wixRecordId": "6e727e27-0fc8-41ec-920a-a848cd8fb19d",
+        "matchingMediaId": "b0aee1_b3d53d44dca24d05a2d03e64293c7d30~mv2.jpg",
+        "artistCreditAgrees": true,
+        "exhibitionAssignmentAgrees": true,
+        "status": "source-id-match; curator approval required"
+      }
+    },
+    {
+      "id": "asilikeit-474a405f62e0",
+      "creatorName": "Tóth Manó",
+      "creatorIdentificationStatus": "identified",
+      "copyrightHolder": "Tóth Manó",
+      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
+      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
+      "permittedUses": [
+        "archival-public-display-on-vipach-site-with-creator-credit",
+        "no-sublicense-implied",
+        "no-copyright-assignment-to-vipach"
+      ],
+      "permissionEvidence": "wixRecordId:b4115f24-7a26-4bc2-b987-66d23672335a; matchingMediaId:b0aee1_cddbc9bb66db45db9bac607823523667~mv2.jpg; priorPublicGallery:https://www.vipach.at/asilikeit-gallery",
+      "permissionSource": "prior-public-wix-community-exhibition-display",
+      "permissionVerifiedAt": "2026-11-22",
+      "editorialApproval": {
+        "decidedAt": "2026-11-22",
+        "timezone": "Europe/Vienna",
+        "source": "VIPACH project owner editorial instruction",
+        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
+        "role": "editorial",
+        "isCopyrightEvidence": false,
+        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
+      },
+      "publicationStatus": "approved-for-public-display",
+      "publicReleaseApproved": true,
+      "titleDataStatus": "missing",
+      "creditLine": {
+        "hu": "Alkotó: Tóth Manó",
+        "en": "Artist: Tóth Manó",
+        "de": "Kunstschaffende: Tóth Manó"
+      },
+      "image": {
+        "vipachMirrorPath": "/images/wix-mirror/b0aee1_cddbc9bb66db45db9bac607823523667-mv2-b06314905e.webp",
+        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_cddbc9bb66db45db9bac607823523667~mv2.jpg",
+        "sha256": "474a405f62e099fc77b933c146cc52268ba92fd9fd6b2d57f7c44b65a800191f",
+        "width": 1920,
+        "height": 1920
+      },
+      "cmsProvenanceSummary": {
+        "wixRecordId": "b4115f24-7a26-4bc2-b987-66d23672335a",
+        "matchingMediaId": "b0aee1_cddbc9bb66db45db9bac607823523667~mv2.jpg",
+        "artistCreditAgrees": true,
+        "exhibitionAssignmentAgrees": true,
+        "status": "source-id-match; curator approval required"
+      }
+    },
+    {
+      "id": "asilikeit-e4aba83b9917",
+      "creatorName": "Anett Elek",
+      "creatorIdentificationStatus": "identified",
+      "copyrightHolder": "Anett Elek",
+      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
+      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
+      "permittedUses": [
+        "archival-public-display-on-vipach-site-with-creator-credit",
+        "no-sublicense-implied",
+        "no-copyright-assignment-to-vipach"
+      ],
+      "permissionEvidence": "wixRecordId:44a0bd7f-5ab4-4710-90fc-ed08fc02e35f; matchingMediaId:b0aee1_e8ede06599fb4bbdbf0939b5c396c5f8~mv2.jpg; priorPublicGallery:https://www.vipach.at/asilikeit-gallery",
+      "permissionSource": "prior-public-wix-community-exhibition-display",
+      "permissionVerifiedAt": "2026-11-22",
+      "editorialApproval": {
+        "decidedAt": "2026-11-22",
+        "timezone": "Europe/Vienna",
+        "source": "VIPACH project owner editorial instruction",
+        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
+        "role": "editorial",
+        "isCopyrightEvidence": false,
+        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
+      },
+      "publicationStatus": "approved-for-public-display",
+      "publicReleaseApproved": true,
+      "titleDataStatus": "missing",
+      "creditLine": {
+        "hu": "Alkotó: Anett Elek",
+        "en": "Artist: Anett Elek",
+        "de": "Kunstschaffende: Anett Elek"
+      },
+      "image": {
+        "vipachMirrorPath": "/images/wix-mirror/b0aee1_e8ede06599fb4bbdbf0939b5c396c5f8-mv2-320b7f8102.webp",
+        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_e8ede06599fb4bbdbf0939b5c396c5f8~mv2.jpg",
+        "sha256": "e4aba83b9917a3c4ddfdfa1bb25c6f248c8136f8d0dd922152ed70e085f8866b",
+        "width": 1920,
+        "height": 1920
+      },
+      "cmsProvenanceSummary": {
+        "wixRecordId": "44a0bd7f-5ab4-4710-90fc-ed08fc02e35f",
+        "matchingMediaId": "b0aee1_e8ede06599fb4bbdbf0939b5c396c5f8~mv2.jpg",
+        "artistCreditAgrees": true,
+        "exhibitionAssignmentAgrees": true,
+        "status": "source-id-match; curator approval required"
+      }
+    },
+    {
+      "id": "asilikeit-1ad77d482128",
+      "creatorName": "native pictures",
+      "creatorIdentificationStatus": "identified",
+      "copyrightHolder": "native pictures",
+      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
+      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
+      "permittedUses": [
+        "archival-public-display-on-vipach-site-with-creator-credit",
+        "no-sublicense-implied",
+        "no-copyright-assignment-to-vipach"
+      ],
+      "permissionEvidence": "wixRecordId:a64b57c9-3201-46b3-95a3-990e927329d7; matchingMediaId:b0aee1_eaf81ebd967844528fb1c2ef2231269e~mv2.jpg; priorPublicGallery:https://www.vipach.at/asilikeit-gallery",
+      "permissionSource": "prior-public-wix-community-exhibition-display",
+      "permissionVerifiedAt": "2026-11-22",
+      "editorialApproval": {
+        "decidedAt": "2026-11-22",
+        "timezone": "Europe/Vienna",
+        "source": "VIPACH project owner editorial instruction",
+        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
+        "role": "editorial",
+        "isCopyrightEvidence": false,
+        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
+      },
+      "publicationStatus": "approved-for-public-display",
+      "publicReleaseApproved": true,
+      "titleDataStatus": "missing",
+      "creditLine": {
+        "hu": "Alkotó: native pictures",
+        "en": "Artist: native pictures",
+        "de": "Kunstschaffende: native pictures"
+      },
+      "image": {
+        "vipachMirrorPath": "/images/wix-mirror/b0aee1_eaf81ebd967844528fb1c2ef2231269e-mv2-d038d7af48.webp",
+        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_eaf81ebd967844528fb1c2ef2231269e~mv2.jpg",
+        "sha256": "1ad77d482128fe1f1588906bf3272c97de55b05097fa83158e0ed7841dcb3d34",
+        "width": 1920,
+        "height": 1920
+      },
+      "cmsProvenanceSummary": {
+        "wixRecordId": "a64b57c9-3201-46b3-95a3-990e927329d7",
+        "matchingMediaId": "b0aee1_eaf81ebd967844528fb1c2ef2231269e~mv2.jpg",
+        "artistCreditAgrees": true,
+        "exhibitionAssignmentAgrees": true,
+        "status": "source-id-match; curator approval required"
+      }
+    },
+    {
+      "id": "asilikeit-ad326a449763",
+      "creatorName": "Liz",
+      "creatorIdentificationStatus": "identified",
+      "copyrightHolder": "Liz",
+      "publicationLicensee": "VIPACH – Vienna Photo Art & Creative Hub",
+      "licenseType": "all-rights-reserved-by-identified-creator; archival-republication-of-prior-public-community-exhibition-display",
+      "permittedUses": [
+        "archival-public-display-on-vipach-site-with-creator-credit",
+        "no-sublicense-implied",
+        "no-copyright-assignment-to-vipach"
+      ],
+      "permissionEvidence": "wixRecordId:80357add-64d3-4e8d-84a6-277b4565ca94; matchingMediaId:b0aee1_f70a80a44f164556b6b5c8820738cc27~mv2.jpg; priorPublicGallery:https://www.vipach.at/asilikeit-gallery",
+      "permissionSource": "prior-public-wix-community-exhibition-display",
+      "permissionVerifiedAt": "2026-11-22",
+      "editorialApproval": {
+        "decidedAt": "2026-11-22",
+        "timezone": "Europe/Vienna",
+        "source": "VIPACH project owner editorial instruction",
+        "decision": "Attach documented creators to images. Where no creator can be identified, do not invent VIPACH copyright ownership; keep the work in rights review.",
+        "role": "editorial",
+        "isCopyrightEvidence": false,
+        "note": "Preserved as editorial direction only. It must not be treated as proof of copyright ownership, assignment, or publication licence by itself."
+      },
+      "publicationStatus": "approved-for-public-display",
+      "publicReleaseApproved": true,
+      "titleDataStatus": "missing",
+      "creditLine": {
+        "hu": "Alkotó: Liz",
+        "en": "Artist: Liz",
+        "de": "Kunstschaffende: Liz"
+      },
+      "image": {
+        "vipachMirrorPath": "/images/wix-mirror/b0aee1_f70a80a44f164556b6b5c8820738cc27-mv2-bdab60cfbb.webp",
+        "sourceUrl": "https://static.wixstatic.com/media/b0aee1_f70a80a44f164556b6b5c8820738cc27~mv2.jpg",
+        "sha256": "ad326a449763eb7a9ba26397c970af16f1ae463c48c49bcc44a1f359db17f89a",
+        "width": 1920,
+        "height": 1920
+      },
+      "cmsProvenanceSummary": {
+        "wixRecordId": "80357add-64d3-4e8d-84a6-277b4565ca94",
+        "matchingMediaId": "b0aee1_f70a80a44f164556b6b5c8820738cc27~mv2.jpg",
+        "artistCreditAgrees": true,
+        "exhibitionAssignmentAgrees": true,
+        "status": "source-id-match; curator approval required"
+      }
+    }
+  ],
   "counts": {
-    "photographers": "missing",
-    "works": "missing"
+    "photographers": 19,
+    "works": 20,
+    "approvedForPublicDisplay": 19,
+    "withheldRightsReviewRequired": 1
   },
   "cover": {
     "url": "https://static.wixstatic.com/media/b0aee1_479cfc4cc3644a22a3008fe3cd580fc3~mv2.jpg",
@@ -92,7 +1047,9 @@
     "Artwork list, filenames, credits",
     "Confirmed street address for this edition",
     "Print / professional partner names",
-    "Full localized body copy for EN/DE archive pages"
+    "Full localized body copy for EN/DE archive pages",
+    "verified artwork titles for many works",
+    "public HTML artwork gallery on exhibition.vipach.at archive pages pending approved cutover copy"
   ],
   "routes": {
     "permanentSlug": {
@@ -100,5 +1057,17 @@
       "hu": "/hu/as-i-like-it-austria/",
       "de": "/de/as-i-like-it-austria/"
     }
-  }
+  },
+  "rightsInventory": {
+    "schema": "separated-publication-rights-v2",
+    "sourcePrivateBuild": "880rzz/VIPACH private-build/staging/exhibition-works-2025.json",
+    "publicConsumer": "https://www.vipach.at/ (approved works only on detail pages)",
+    "canonicalHost": "https://exhibition.vipach.at/",
+    "preserve": {
+      "archiveImages": 40,
+      "cmsMatches": 37,
+      "unresolvedAttributions": 3
+    }
+  },
+  "migrationCompleteness": "partial-historical-archive"
 }
