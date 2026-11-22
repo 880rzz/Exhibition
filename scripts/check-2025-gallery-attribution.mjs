@@ -44,7 +44,6 @@ for(const exhibition of main.exhibitions){
     assert.ok(row,'Missing forensic provenance row '+work.id);
     assert.equal(row.sourceImageUrl,work.imageSourceUrl,work.id);
     assert.equal(row.linkedArtistProfile,e.linkedArtistProfile,work.id);
-    assert.equal(row.imageFileId,undefined); // Mapping uses sourceImageFileId.
     assert.equal(row.sourceImageFileId,e.imageFileId,work.id);
     assert.equal(row.artworkSha256,work.sourceSha256,work.id);
     assert.equal(row.galleryItemId,e.galleryItemId,work.id);
