@@ -138,27 +138,33 @@
           "order": 13,
           "legacyProfileUrl": "https://www.vipach.at/artist/norbertbanhalmi",
           "personalWebsite": "https://norbertbanhalmi.com",
-          "portraitSourceUrl": null,
-          "portraitStatus": "not-retrieved",
-          "bioSourceUrl": "https://www.vipach.at/artist/norbertbanhalmi"
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_387d12aa16a64c6aa69f894dd6bba257~mv2.jpg",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/norbertbanhalmi",
+          "portraitProvenanceExhibition": "asilikeit",
+          "portraitFromDifferentExhibition": true
         },
         {
           "id": "edit-gartner",
           "name": "Edit Gärtner",
           "order": 14,
           "legacyProfileUrl": "https://www.vipach.at/artist/editgaertner",
-          "portraitSourceUrl": null,
-          "portraitStatus": "not-retrieved",
-          "bioSourceUrl": "https://www.vipach.at/artist/editgaertner"
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_e26330a222f142fe9ef93dcf0b3da68a~mv2.png",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/editgaertner",
+          "portraitProvenanceExhibition": "asilikeit",
+          "portraitFromDifferentExhibition": true
         },
         {
           "id": "denise-trajkovska",
           "name": "Denise Trajkovska",
           "order": 15,
           "legacyProfileUrl": "https://www.vipach.at/artist/denisetrajkovska",
-          "portraitSourceUrl": null,
-          "portraitStatus": "not-retrieved",
-          "bioSourceUrl": "https://www.vipach.at/artist/denisetrajkovska"
+          "portraitSourceUrl": "https://static.wixstatic.com/media/b0aee1_03473af450e34cd690c79ffb05038392~mv2.png",
+          "portraitStatus": "rights-review-required",
+          "bioSourceUrl": "https://www.vipach.at/artist/denisetrajkovska",
+          "portraitProvenanceExhibition": "asilikeit",
+          "portraitFromDifferentExhibition": true
         }
       ],
       "works": [
