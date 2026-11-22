@@ -1,6 +1,6 @@
 # Exhibition image rights — V4.2 inventory (no invented licences)
 
-**Generated inventory:** `docs/IMAGE_RIGHTS_INVENTORY.json` via `node scripts/inventory_published_images.mjs`  
+**Historical inventory snapshot:** `docs/IMAGE_RIGHTS_INVENTORY.json` (generated 2026-11-22 12:21 UTC from an earlier Exhibition HEAD) via `node scripts/inventory_published_images.mjs`. Re-run the script against the latest branch before using the counts for a release decision.  
 **Policy:** Prior Wix publication is provenance only. Live Exhibition HTML is **not** auto-mutated by this workstream.
 
 ## Separation
@@ -11,6 +11,8 @@
 | First-party `/gallery/` refs | 22 | Tracked; clearance still required per work |
 | First-party `/assets/` | 1 | Brand/UI — separate from exhibitor photos |
 | 2025 Életem képe + As I Like It works | 40 catalogue works in Exhibition JSON | `licenceVerifiedApprovedForPublicDisplay` = **0** |
+
+The counts above describe the **dated scan only**, not a fresh assertion about all image sources after subsequent feature changes. The updated 2025 Wix gallery mapping (`data/staging/2025-progallery-artist-mapping.json`) identifies **all 40 artworks and their artists**. The 74 new public image uses (40 artworks + 34 portrait uses) still require real permission evidence; no licence can be inferred from Wix appearance.
 
 ## Licence search (in-repo)
 Searched: `docs/**`, `data/exhibitions/*.json`, README, llms, companion VIPACH `private-build/staging`.  
