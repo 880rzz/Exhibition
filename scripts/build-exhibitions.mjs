@@ -149,6 +149,36 @@ function archiveNavigationHtml(exhibitions, featured, localeId, currentSlug, mod
       escapeHtml(copy.history) + '</p>' + links.join('') + '</div>' : '') + '</div>';
 }
 
+function renderPressSection(exhibition, localeId) {
+  const press = exhibition.pressCoverage?.items || [];
+  if (!Array.isArray(press) || press.length === 0) return '';
+  const copy = {
+    en: { kicker: 'In the press', title: 'Press coverage', read: 'Read original article', type: { 'exhibition-report': 'Exhibition report', 'opening-report': 'Opening report', 'advance-mention': 'Exhibition preview', 'exhibition-mention': 'Exhibition mention' } },
+    hu: { kicker: 'Sajtómegjelenések', title: 'A kiállítás a sajtóban', read: 'Eredeti cikk megnyitása', type: { 'exhibition-report': 'Kiállítási riport', 'opening-report': 'Megnyitóbeszámoló', 'advance-mention': 'Előzetes sajtóemlítés', 'exhibition-mention': 'Kiállítási sajtóemlítés' } },
+    de: { kicker: 'Presse', title: 'Die Ausstellung in den Medien', read: 'Originalartikel öffnen', type: { 'exhibition-report': 'Ausstellungsbericht', 'opening-report': 'Eröffnungsbericht', 'advance-mention': 'Vorbericht', 'exhibition-mention': 'Erwähnung der Ausstellung' } },
+  }[localeId];
+  const esc = escapeHtml;
+  const items = press.map((item) => {
+    if (!/^https:\/\//.test(item.url || '')) throw new Error('Non-HTTPS press source: ' + exhibition.slug);
+    const lang = item.language === 'de' ? 'de' : item.language === 'hu' ? 'hu' : 'en';
+    const published = /^\d{4}-\d{2}-\d{2}$/.test(item.date || '') ? item.date : '';
+    const type = copy.type[item.type];
+    if (!type || !item.title || !item.publication || !item.description?.[localeId]) throw new Error('Incomplete press source: ' + exhibition.slug + '/' + item.id);
+    return '<article class="ex-press-item">' +
+      '<div class="ex-press-meta"><span>' + esc(item.publication) + '</span><span>' + esc(type) + '</span>' +
+      (published ? '<time datetime="' + published + '">' + published + '</time>' : '') + '</div>' +
+      '<h3><a href="' + esc(item.url) + '" hreflang="' + lang + '" lang="' + lang +
+      '" target="_blank" rel="noopener noreferrer external">' + esc(item.title) + '</a></h3>' +
+      '<p lang="' + (localeId === 'de' ? 'de' : localeId) + '">' + esc(item.description[localeId]) + '</p>' +
+      '<a class="ex-press-read" href="' + esc(item.url) + '" target="_blank" rel="noopener noreferrer external">' +
+      esc(copy.read) + ' ↗</a></article>';
+  });
+  return '<section class="ex-press-section" id="press" aria-labelledby="ex-press-title">' +
+    '<div class="ex-press-inner"><p class="kicker">' + esc(copy.kicker) + '</p>' +
+    '<h2 class="display-2" id="ex-press-title">' + esc(copy.title) + '</h2>' +
+    '<div class="ex-press-list">' + items.join('') + '</div></div></section>';
+}
+
 function rewriteFullHtml({ html, exhibition, localeId, mode, exhibitions, featured }) {
   const slug = exhibition.slug;
   const routes = {
@@ -216,6 +246,11 @@ function rewriteFullHtml({ html, exhibition, localeId, mode, exhibitions, featur
     out = out.replace('<body', `<body data-exhibition-slug="${slug}" data-route-mode="featured"`);
   }
 
+  const pressSection = renderPressSection(exhibition, localeId);
+  if (pressSection) {
+    if (!out.includes('</main>')) throw new Error('Full HTML missing main close for press: ' + slug);
+    out = out.replace('</main>', pressSection + '</main>');
+  }
   return out;
 }
 
@@ -379,6 +414,7 @@ function renderArchive(exhibition, localeId, exhibitions, featured) {
           : 'Text-level archive stub generated from exhibition data. Missing images and rights are marked explicitly.'
     ),
     externalLinks,
+    pressSection: renderPressSection(exhibition, localeId),
     missingTitle: t.missingTitle,
     missingItems: missing.map((item) => `<li>${escapeHtml(item)}</li>`).join('\n            '),
     footerOrg: t.footerOrg,
