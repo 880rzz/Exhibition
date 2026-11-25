@@ -11,8 +11,12 @@ const prefix=l=>l==='en'?'':'/'+l;
 const lang=l=>l==='de'?'de-AT':l;
 const route=l=>prefix(l)+'/events/';
 const home=l=>prefix(l)+'/'+(l==='en'?'?lang=en':'');
+const linkStyles='/assets/public-links.css?v=20261125-mobile';
 function decorate(s,locale,text){
- if(!s.includes('href="/assets/public-links.css"'))s=s.replace('</head>','<link rel="stylesheet" href="/assets/public-links.css"></head>');
+ if(!s.includes('href="'+linkStyles+'"')){
+  s=s.replace('<link rel="stylesheet" href="/assets/public-links.css">','');
+  s=s.replace('</head>','<link rel="stylesheet" href="'+linkStyles+'"></head>');
+ }
  s=s.replace(/(<a\b[^>]*?\bhref=["'](https?:\/\/[^"']+)["'][^>]*>)([\s\S]*?)<\/a>/gi,(raw,tag,url,body)=>isOwn(url)?raw:tag+body.replace(/<span\b[^>]*>\s*↗\s*<\/span>|\s*↗/g,'')+'</a>');
  if(!s.includes('class="vipach-wa"'))s=s.replace('</body>','<a class="vipach-wa" href="https://wa.me/4367761655592" rel="noopener noreferrer" aria-label="'+esc(text)+': +43 677 616 55592"><span>'+esc(text)+'</span><strong dir="ltr">+43 677 616 55592</strong></a></body>');
  return s;
