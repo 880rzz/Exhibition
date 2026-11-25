@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import { renderExhibitionNavigation } from './exhibition-navigation.mjs';
 import { newestFeatured, menuExhibitions } from './exhibition-chronology.mjs';
 const site=JSON.parse(fs.readFileSync('data/site.json','utf8'));
 const exhibits=fs.readdirSync('data/exhibitions').filter(f=>f.endsWith('.json'))
@@ -18,6 +19,8 @@ const approved={...notApproved,publicReleaseApproved:true};
 assert.equal(newestFeatured([...exhibits,approved],new Date('2027-01-15T12:00:00Z')).slug,'2027-test-exhibition');
 assert.equal(newestFeatured([...exhibits,approved],new Date('2026-11-22T12:00:00Z')).slug,'spontan-2026');
 assert.equal(site.featuredExhibitionSlug,'spontan-2026');
+const unknownDate=renderExhibitionNavigation([{slug:'undated',titles:{en:'Undated'},dates:{opening:{officialStart:'missing — archival source'}}}],'en',null,()=>'/undated/');
+assert.doesNotMatch(unknownDate,/<small>|miss/);
 const pages=[
   ['index.html',''],['hu/index.html','/hu'],['de/index.html','/de'],
   ['spontan-2026/index.html',''],['hu/spontan-2026/index.html','/hu'],['de/spontan-2026/index.html','/de'],
@@ -37,6 +40,7 @@ for(const [path,prefix] of pages){
   assert.deepEqual(groups.map(g=>g[1]),['spontan-2026','eletem-kepe','as-i-like-it-austria']);
   for(const [_,slug,group] of groups){
     assert.match(group,/<summary class="exhibition-menu-summary">/);
+    assert.ok(group.includes('<small>'+(slug==='spontan-2026'?'2026':'2025')+'</small>'),path+' '+slug+' verified year');
     const refs=[...group.matchAll(/href="([^"#]*)#([^"]+)"/g)];
     assert.ok(refs.length>=5,path+' '+slug);
     for(const [,route,id] of refs){

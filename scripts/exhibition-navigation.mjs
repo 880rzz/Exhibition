@@ -1,4 +1,5 @@
 /** Shared native disclosure navigation for published exhibition routes. */
+import { exhibitionDate } from "./exhibition-chronology.mjs";
 const esc=x=>String(x??"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;");
 const labels={
   "en": {
@@ -67,11 +68,11 @@ const archiveLabels={
 export function renderExhibitionNavigation(exhibitions,lang,currentSlug,hrefFor,{historicalSections=false,preview=false}={}){
  const c=labels[lang];
  return '<div class="exhibition-nav-group" aria-label="'+esc(c.heading)+'"><p class="exhibition-nav-heading">'+esc(c.heading)+'</p>'+exhibitions.map(ex=>{
-  const slug=ex.slug,href=hrefFor(ex),current=slug===currentSlug,name=ex.titles?.[lang]||ex.titles?.en||slug,year=String(ex.dates?.opening?.officialStart||ex.dates?.opening?.start||ex.dates?.publicVisit?.start||ex.year||"").slice(0,4);
+  const slug=ex.slug,href=hrefFor(ex),current=slug===currentSlug,name=ex.titles?.[lang]||ex.titles?.en||slug,year=exhibitionDate(ex)?.slice(0,4);
   let ids=[],copy=c;
   if(slug==="spontan-2026")ids=["community","name","learning","spontan","exhibitors","team","history","visit"];
   else if(historicalSections&&(slug==="eletem-kepe"||slug==="as-i-like-it-austria")){ids=["story","exhibitors","team"];copy={...c,...archiveLabels[lang]};if(slug==="eletem-kepe"||preview)ids.push("history");ids.push("visit");}
   if(ex.pressCoverage?.items?.length)ids.splice(ids.indexOf("history")>=0?ids.indexOf("history"):ids.indexOf("visit")>=0?ids.indexOf("visit"):ids.length,0,"press");
-  return '<details class="exhibition-disclosure" data-exhibition="'+esc(slug)+'"><summary class="exhibition-menu-summary"><span>'+esc(name)+'</span><small>'+esc(year)+'</small></summary><div class="exhibition-submenu"><a class="exhibition-menu-entry" href="'+esc(href)+'"'+(current?' aria-current="page"':'')+'>'+esc(c.overview)+'</a>'+ids.map(id=>'<a class="exhibition-submenu-link" href="'+esc((current?"":href)+"#"+id)+'">'+esc(copy[id])+'</a>').join("")+'</div></details>';
+  return '<details class="exhibition-disclosure" data-exhibition="'+esc(slug)+'"><summary class="exhibition-menu-summary"><span>'+esc(name)+'</span>'+(year?'<small>'+esc(year)+'</small>':'')+'</summary><div class="exhibition-submenu"><a class="exhibition-menu-entry" href="'+esc(href)+'"'+(current?' aria-current="page"':'')+'>'+esc(c.overview)+'</a>'+ids.map(id=>'<a class="exhibition-submenu-link" href="'+esc((current?"":href)+"#"+id)+'">'+esc(copy[id])+'</a>').join("")+'</div></details>';
  }).join("")+'</div>';
 }

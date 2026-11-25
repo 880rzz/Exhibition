@@ -4,6 +4,8 @@ a:is([href^="https://"],[href^="http://"]):not([href^="https://exhibition.vipach
 .vipach-wa>span{grid-column:1;grid-row:1;font-size:.75rem}
 .vipach-wa>strong{grid-column:1;grid-row:2;font-weight:700}
 .vipach-wa::after{grid-column:2;grid-row:1 / span 2}
+/* Only the direct WhatsApp link floats; keep it out of the open navigation. */
+body.menu-open .vipach-wa,.vipach-wa~.vipach-contact-dock{display:none}
 .vipach-wa:hover{background:#103f2b}
 .vipach-wa:focus-visible{outline:2px solid #fff;outline-offset:-5px}
 .site-footer{padding-bottom:max(5.25rem,env(safe-area-inset-bottom))}
