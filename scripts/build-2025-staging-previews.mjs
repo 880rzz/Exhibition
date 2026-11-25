@@ -59,6 +59,16 @@ function menuHtml(lang,slug){
    +'<div class="exhibition-nav-history"><span class="exhibition-nav-kicker">'+esc(c.past)+'</span>'+items.slice(1).join('')+'</div></div>';
 }
 
+const pressTitle={en:'Press coverage',hu:'Sajtómegjelenések',de:'Presseberichte'};
+const missingDescription={en:'No description was available in the original source.',hu:'Az eredeti forrásban nem található műleírás.',de:'Die Originalquelle enthält keine Werkbeschreibung.'};
+function pressMarkup(ex,lang){
+ const items=publishedExhibitions.find(x=>x.slug===ex.slug)?.pressCoverage?.items||[];
+ if(!items.length)return '';
+ return '<section class="ex-press-section" id="press" aria-labelledby="press-title"><div class="ex-press-inner"><h2 class="display-2" id="press-title">'+esc(pressTitle[lang])+'</h2><div class="ex-press-list">'+
+   items.map(item=>'<article class="ex-press-item" data-coverage-type="'+esc(item.type)+'"><div class="ex-press-meta">'+esc(item.publication)+' <time datetime="'+esc(item.date)+'">'+esc(item.date)+'</time></div><h3><a href="'+esc(item.url)+'" lang="'+esc(item.language)+'" rel="noopener noreferrer">'+esc(item.title)+'</a></h3><p>'+esc(item.description[lang])+'</p></article>').join('')+
+   '</div></div></section>';
+}
+
 function sourceWork(w) {
  const item=CMS.get(w.wixRecordId);
  if(!item) return '';
@@ -80,7 +90,7 @@ function workMarkup(w,lang,extra){
  return (extra?'<section class="exhibitor-additional-work" id="'+esc(w.id)+'">':'<div class="ex25-primary-work" id="'+esc(w.id)+'">')
    +'<p class="kicker">'+esc(extra?c.works:c.artworks)+'</p>'
    +'<h4 class="exhibitor-extra-title">'+esc(title)+'</h4>'
-   +(source?'<div class="prose ex25-source-text" lang="hu">'+htmlText(source)+'</div>':'<p class="ex25-unverified">'+esc(c.untitled)+'</p>')
+   +(source?'<div class="prose ex25-source-text" lang="hu">'+htmlText(source)+'</div>':'<p class="ex25-unverified">'+esc(missingDescription[lang])+'</p>')
    +'<figure class="exhibitor-work-image"><img src="'+esc(src)+'" alt="'+cap+'" width="'+(w.sourceWidth||1600)+'" height="'+(w.sourceHeight||1600)+'" loading="lazy" decoding="async">'
    +'<figcaption class="artwork-copyright">© '+esc(creator)+'. '+esc(c.review)+'.</figcaption></figure>'
    +(extra?'</section>':'</div>');
@@ -105,13 +115,15 @@ function page(ex,lang){
  const opening=ex.slug==='eletem-kepe'?'2025-12-07':'2025-11-30';
  const languageLinks=locales.map(l=>'<a lang="'+(l==='de'?'de-AT':l)+'" href="../../'+l+'/'+ex.slug+'/index.html"'+(l===lang?' aria-current="page"':'')+'>'+l.toUpperCase()+'</a>').join('');
  const artistList=ex.artistProfiles.map(p=>'<li><a href="#artist-'+esc(p.id)+'">'+esc(p.name)+'</a></li>').join('');
+ const artistIds=new Set(ex.artistProfiles.map(p=>p.id));
+ if(ex.works.some(w=>!artistIds.has(w.galleryEvidence?.artistProfileId)))throw Error('Missing verified artist profile: '+ex.slug);
  const roster=ex.artistProfiles.map((p,i)=>{
-   const matches=ex.works.filter(w=>w.creatorStatus==='identified'&&norm(w.creator)===norm(p.name));
+   const matches=ex.works.filter(w=>w.galleryEvidence.artistProfileId===p.id)
+     .sort((a,b)=>a.galleryEvidence.galleryPosition-b.galleryEvidence.galleryPosition);
    return artistCard(p,matches,i,lang,ex.wixExhibitionId);
  }).join('');
- const unmatched=ex.works.filter(w=>!ex.artistProfiles.some(p=>w.creatorStatus==='identified'&&norm(w.creator)===norm(p.name)));
- const missing=unmatched.length?'<div class="ex25-unattributed"><p class="kicker">'+esc(c.unknown)+' · '+unmatched.length+'</p>'+unmatched.map(w=>workMarkup(w,lang,false)).join('')+'</div>':'';
- const introduction=t.intro.map(p=>'<p>'+esc(p)+'</p>').join('');
+ const introBlocks=lang==='hu'?t.sourceOriginalIntro:t.intro;
+ const introduction=introBlocks.map(p=>'<p>'+esc(p)+'</p>').join('');
  const twoShows=navigationExhibitions.filter(x=>x.slug!==ex.slug).map((item,i)=>{
    const year=exhibitionDate(item)?.slice(0,4)||String(item.year||'');
    const link=exhibitionHref(item,lang);
@@ -119,7 +131,7 @@ function page(ex,lang){
      +'<div><h3>'+esc(exhibitionName(item,lang))+'</h3></div><div class="history-copy"><a href="'+esc(link)+'">'+
        esc(exhibitionName(item,lang))+' →</a></div></article>';
  }).join('');
- const sectionNav=[['story',c.story],['exhibitors',c.artists],['team',c.team],['history',c.past],['visit',c.visit]];
+ const sectionNav=[['story',c.story],['exhibitors',c.artists],['team',c.team],['press',pressTitle[lang]],['history',c.past],['visit',c.visit]];
  return '<!doctype html><html lang="'+(lang==='de'?'de-AT':lang)+'"><head>'
  +'<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
  +'<meta name="robots" content="noindex,nofollow,noimageindex"><meta name="vipach:stage" content="PREPUBLICATION-REVIEW-NOT-LICENSED">'
@@ -153,13 +165,14 @@ function page(ex,lang){
  +'<p class="kicker">'+esc(c.artists)+' · '+ex.artistProfiles.length+' / '+ex.artistProfiles.length+'</p>'
  +'<h2 class="display-2" id="exhibitors-title">'+esc(c.artists)+'</h2>'
  +'<nav class="exhibitor-jump" aria-label="'+esc(c.exhibitorJump)+'"><details class="exhibitor-jump-details"><summary>'+esc(c.exhibitorJump)+' <span aria-hidden="true">⌄</span></summary><ul>'+artistList+'</ul></details></nav>'
- +roster+missing+'</div></section>'
+ +roster+'</div></section>'
  +'<section class="credits" id="team"><div class="credits-inner"><div class="credits-head reveal"><div><p class="kicker">'+esc(c.team)+'</p><h2 class="display-2">'+esc(c.team)+'</h2></div>'
  +'<div class="prose"><p class="lead">'+esc(t.intro[0])+'</p></div></div>'
  +'<div class="credit-list reveal"><div class="credit-row"><div class="credit-role">'+esc(c.credit)+'</div><div class="credit-name">Balogh Dávid</div><div class="credit-title">'+esc(lang==='de'?'Kunsthistoriker und Museologe':lang==='hu'?'művészettörténész és muzeológus':'Art historian and museologist')+'</div></div>'
  +'<div class="credit-row"><div class="credit-role">'+esc(c.org)+'</div><div class="credit-name">Bánhalmi Norbert</div><div class="credit-title">BMI Fotoklub Wien</div></div>'
  +'<div class="credit-row"><div class="credit-role">'+esc(t.printPartnerLabel)+'</div><div class="credit-name">'+esc(t.printPartner)+'</div><div class="credit-title">'+esc(t.partnerRightsNote)+'</div></div>'
  +'<div class="credit-row"><div class="credit-role">'+esc(t.professionalPartnerLabel)+'</div><div class="credit-name">'+esc(t.professionalPartner)+'</div><div class="credit-title">'+esc(t.partnerRightsNote)+'</div></div></div></div></section>'
+ +pressMarkup(ex,lang)
  +'<section class="history" id="history" aria-labelledby="history-title"><div class="history-inner"><div class="history-head reveal"><div><p class="kicker">VIPACH Exhibition</p>'
  +'<h2 id="history-title" class="display-2">'+esc(c.past)+'</h2></div><div class="prose"><p class="lead">'+esc(c.statement)+'</p></div></div>'
  +'<div class="history-list reveal">'+twoShows+'</div></div></section>'
