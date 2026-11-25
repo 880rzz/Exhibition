@@ -56,7 +56,9 @@ for (const lang of ['en','hu','de']){
   assert.ok(html.includes(ex.slug==='eletem-kepe'?' · 16:00':' · 16:00–19:00'));
   assert.equal(count(html,'class="ex25-unverified"'),missing);
   assert.equal(count(html,'class="prose ex25-source-text" lang="hu"'),ex.artistProfiles.length+20-missing);
-  assert.equal(count(html,'referrerpolicy="no-referrer"'),ex.artistProfiles.length+20);
+  assert.equal(count(html,'referrerpolicy="no-referrer"'),ex.artistProfiles.length+21);
+  const cover=release.heroDisplay.images[ex.slug];
+  assert.ok(html.includes('<div class="hero-visual ex25-archive-cover"><img src="'+cover.url+'" width="'+cover.width+'" height="'+cover.height+'" alt="" referrerpolicy="no-referrer"'),url+' exact Wix hero');
   for (const a of ex.artistProfiles){
    const boundary=html.indexOf('id="artist-'+a.id+'"');
    assert.notEqual(boundary,-1,a.id);

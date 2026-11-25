@@ -12,7 +12,8 @@ const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 import { archive2025Release } from './exhibition-2025-release-scope.mjs';
 const release=process.argv.includes('--render-reviewed-archive');
 const candidate = release||process.argv.includes('--archive-candidate');
-if(release&&!archive2025Release())throw Error('No scope-bound organizer archive approval');
+const archiveScope=candidate?archive2025Release():null;
+if(candidate&&!archiveScope)throw Error('No scope-bound organizer archive approval');
 // This path is ignored by git and explicitly excluded by Pages/Jekyll.
 const OUT=release?ROOT:path.join(ROOT,candidate?'private-review/exhibition-candidate':'staging-preview');
 const SITE='https://exhibition.vipach.at';
@@ -145,6 +146,7 @@ function page(ex,lang){
  const sourcePage=current.external?.vipachPage?.[lang]||ex.sourceUrl;
  const theme=t.intro[t.intro.length-1];
  const first=ex.works[0],hero=img(first.imageSourceUrl);
+ const cover=archiveScope?.heroDisplay?.images?.[ex.slug];
  const pageTitle=showName(ex.slug,lang);
  const description=t.intro.join(' ').slice(0,180);
  const dateText=ex.slug==='eletem-kepe'?'07—13.12.2025':'30.11—06.12.2025';
@@ -187,7 +189,7 @@ function page(ex,lang){
  +'<h2 id="history-title" class="display-2">'+esc(candidate?local.heading:c.past)+'</h2></div><div class="prose"><p class="lead">'+esc(c.statement)+'</p></div></div>'
  +'<div class="history-list reveal">'+twoShows+'</div></div></section>':'';
  const heroVisual=candidate
-   ? '<div class="hero-visual ex25-archive-cover" aria-hidden="true"><span>VIPACH<br>2025</span></div>'
+   ? '<div class="hero-visual ex25-archive-cover"><img src="'+esc(cover.url)+'" width="'+cover.width+'" height="'+cover.height+'" alt="" referrerpolicy="no-referrer" fetchpriority="high" decoding="async"></div>'
    : '<div class="hero-visual"><img src="'+esc(hero)+'" width="1920" height="1920" alt="'+esc(c.works)+' — '+esc(c.review)+'" fetchpriority="high"></div>';
  return '<!doctype html><html lang="'+(lang==='de'?'de-AT':lang)+'"><head>'
  +'<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'

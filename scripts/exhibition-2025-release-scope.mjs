@@ -38,5 +38,18 @@ export function archive2025Release() {
  }
  assert.deepEqual(roles,{work:40,portrait:34});
  assert.equal(uses.size,74);
+ assert.equal(a.heroDisplay.scope,'archive-hero-only; not an OG, gallery or reuse licence');
+ assert.deepEqual(Object.keys(a.heroDisplay.images).sort(),[...a.slugs].sort());
+ const coverUrls=new Set();
+ for(const ex of shows){
+  const cover=a.heroDisplay.images[ex.slug];
+  assert.equal(cover.sourcePage,ex.sourceUrl,ex.slug+' Wix source page');
+  assert.match(cover.url,/^https:\/\/static\.wixstatic\.com\/media\/b0aee1_[0-9a-f]{32}~mv2\.jpg$/);
+  assert.ok(Number.isInteger(cover.width) && Number.isInteger(cover.height) && cover.width>cover.height && cover.height>0);
+  assert.ok(!shows.some(y=>y.works.some(w=>w.imageSourceUrl===cover.url)||y.artistProfiles.some(p=>p.portraitSourceUrl===cover.url)));
+  coverUrls.add(cover.url);
+ }
+ assert.equal(coverUrls.size,2);
+
  return {...a,shows};
 }
