@@ -1,0 +1,42 @@
+{
+  "url": "https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FVienna&showPrint=0&src=NzdiMGQ3ZTg1ODczNDc4NTI5NDc4N2UxNWUyMTczMjgzMjdmMmQ4NGZjYjZiYzMyMWMwOWY2MGI2NTYxM2NmZUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23616161",
+  "email": "office@vipach.at",
+  "localized": {
+    "en": {
+      "nav": "Events",
+      "title": "VIPACH events calendar",
+      "lead": "Find the club’s upcoming activities in Vienna and Budapest.",
+      "email": "Email us to sign up",
+      "privacy": "Google Calendar loads only when you choose to open it. Google then receives connection data. Event titles are shown as supplied by the organizers.",
+      "show": "Show calendar",
+      "hide": "Hide calendar",
+      "open": "Open calendar in Google",
+      "frame": "Official calendar of VIPACH events",
+      "note": "A calendar entry does not guarantee availability. Include the event name and date in your email."
+    },
+    "de": {
+      "nav": "Termine",
+      "title": "VIPACH-Veranstaltungskalender",
+      "lead": "Hier findest du die kommenden Aktivitäten des Fotoclubs in Wien und Budapest.",
+      "email": "Per E-Mail anmelden",
+      "privacy": "Google Kalender wird erst geladen, wenn du ihn öffnest. Dann erhält Google Verbindungsdaten. Veranstaltungstitel erscheinen in der Originalsprache.",
+      "show": "Kalender anzeigen",
+      "hide": "Kalender ausblenden",
+      "open": "Kalender bei Google öffnen",
+      "frame": "Offizieller VIPACH-Veranstaltungskalender",
+      "note": "Ein Kalendereintrag garantiert keinen freien Platz. Nenne in deiner E-Mail den Namen und das Datum der Veranstaltung."
+    },
+    "hu": {
+      "nav": "Programok",
+      "title": "VIPACH-programnaptár",
+      "lead": "Itt találod a fotóklub következő bécsi és budapesti programjait.",
+      "email": "Jelentkezés e-mailben",
+      "privacy": "A Google Naptár csak akkor töltődik be, ha megnyitod. Ekkor a Google kapcsolati adatokat kap. Az eseménycímek a szervezők által megadott nyelven jelennek meg.",
+      "show": "Naptár megjelenítése",
+      "hide": "Naptár elrejtése",
+      "open": "Naptár megnyitása a Google oldalán",
+      "frame": "A VIPACH hivatalos programnaptára",
+      "note": "A naptárbejegyzés nem jelent visszaigazolást. Az e-mailben írd meg a program nevét és dátumát."
+    }
+  }
+}

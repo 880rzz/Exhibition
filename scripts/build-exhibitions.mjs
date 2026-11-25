@@ -7,6 +7,7 @@
  * - archive exhibitions render templates/exhibition-archive.html from JSON
  */
 import fs from 'node:fs';
+import { updateExhibitionPublicLinks } from './exhibition-public-links.mjs';
 import { pressTitleFor } from './exhibition-press-language.mjs';
 import { venueEvidenceMarkup } from './exhibition-venue-evidence.mjs';
 import path from 'node:path';
@@ -425,6 +426,7 @@ function buildSitemap(exhibitions, featured) {
     }
   }
 
+  pushTriple((localeId) => slugPaths('events', localeId));
   if (featured) {
     pushTriple((localeId) => featuredPaths(localeId));
   }
@@ -535,6 +537,8 @@ function main() {
     const a = spawnSync(process.execPath, [path.join(root,'scripts/build-2025-staging-previews.mjs'),'--render-reviewed-archive'], {cwd:root,stdio:'inherit'});
     if (a.status !== 0) throw new Error('Scoped 2025 archive render failed');
   }
+
+  updateExhibitionPublicLinks(root,exhibitions);
 
   writeFile(path.join(root, 'sitemap.xml'), buildSitemap(exhibitions, featured));
   const facts = publicExhibitionFacts(exhibitions, scopedArchives);

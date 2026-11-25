@@ -1,0 +1,17 @@
+:root{--vip-external-arrow:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' d='M3.5 12.5l9-9m-6 .05h5.95v5.95'/%3E%3C/svg%3E")}
+a:is([href^="https://"],[href^="http://"]):not([href^="https://exhibition.vipach.at/"],[href="https://exhibition.vipach.at"])::after{content:"";display:inline-block;flex:0 0 .84em;width:.84em;height:.84em;margin-inline-start:.25em;vertical-align:-.045em;background:currentColor;-webkit-mask:var(--vip-external-arrow) center/contain no-repeat;mask:var(--vip-external-arrow) center/contain no-repeat}
+.vipach-wa{position:fixed;z-index:10;right:max(.75rem,env(safe-area-inset-right));bottom:max(.75rem,env(safe-area-inset-bottom));display:grid;grid-template-columns:auto auto;align-items:center;column-gap:.35rem;min-height:44px;max-width:calc(100vw - 1.5rem);padding:.55rem .8rem;color:#fff!important;background:#154d36;border-radius:.75rem;font:600 .81rem/1.24 system-ui,sans-serif;text-decoration:none!important;box-shadow:0 4px 18px #0003}
+.vipach-wa>span{grid-column:1;grid-row:1;font-size:.75rem}
+.vipach-wa>strong{grid-column:1;grid-row:2;font-weight:700}
+.vipach-wa::after{grid-column:2;grid-row:1 / span 2}
+.vipach-wa:hover{background:#103f2b}
+.vipach-wa:focus-visible{outline:2px solid #fff;outline-offset:-5px}
+.site-footer{padding-bottom:max(5.25rem,env(safe-area-inset-bottom))}
+.vip-calendar-frame{display:block;width:100%;height:clamp(430px,72vh,720px);border:1px solid #c4c4be;border-radius:.65rem;margin:1rem 0;background:white}
+.vip-calendar-shell{min-width:0}
+@media (max-width:540px){.vip-calendar-frame{height:clamp(420px,72svh,620px)}}
+.calendar-wrap{max-width:62rem;width:calc(100% - 2rem);margin:0 auto;padding:clamp(2rem,6vw,5rem) 0 1rem}
+.calendar-wrap header,.calendar-wrap section{padding:1.25rem 0}
+.calendar-wrap h1{font-size:clamp(2rem,6vw,4.5rem);line-height:1.05;margin:.45em 0}
+.calendar-wrap button{min-height:44px;padding:.45rem .85rem;margin:0 .45rem .45rem 0;font:inherit}
+.calendar-wrap a{text-decoration:underline;text-underline-offset:.2em}
