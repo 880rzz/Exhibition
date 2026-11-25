@@ -68,6 +68,7 @@ for (const ex of src.exhibitions) for (const lang of ['en','hu','de']) {
   ...ex.artistProfiles.map(p=>[p.portraitSourceUrl,'exhibitor-portrait'])
  ]);
 }
+const heroCovers=Object.entries(scope?.heroDisplay?.images||{});
 const allUrls=new Set(urls);
 const nonPublic=new Set(['.git','.github','staging-preview','private-review','docs','scripts','templates','node_modules','_site']);
 function scan(dir='.') {
@@ -83,6 +84,11 @@ function scan(dir='.') {
   for(const [,role,url] of attrs)if(uniqueMedia.has(url+'|'+role))uniqueMedia.set(url+'|'+role,uniqueMedia.get(url+'|'+role)+1);
   for(const [url,role] of expected)assert.equal(uniqueMedia.get(url+'|'+role),1,file+' missing/duplicate media in '+role+': '+url);
   for(const url of allUrls)assert.equal(html.split(url).length-1,expected.filter(([u])=>u===url).length,file+' has out-of-scope art/portrait URL: '+url);
+  for(const [slug,cover] of heroCovers){
+   const isShow=permitted.has(file)&&path.basename(path.dirname(file))===slug;
+   assert.equal(html.split(cover.url).length-1,isShow?1:0,file+' Wix cover scope: '+slug);
+   if(isShow)assert.ok(html.includes('<div class="hero-visual ex25-archive-cover"><img src="'+cover.url+'"'),file+' Wix image must only be the hero');
+  }
   if(expected.length)assert(!/rel="license"|license-url|<meta[^>]+(?:og:image|twitter:image)|creativecommons\.org\/licenses/i.test(html),file+' unauthorized cover or reuse licence');
  }
 }

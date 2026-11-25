@@ -10,5 +10,22 @@
     "eletem-kepe",
     "as-i-like-it-austria"
   ],
-  "exactSourceInventorySha256": "60693db64033d3d443d57bae4ef7102244f99cb37e5031570e1ff4cbb76d61d8"
+  "exactSourceInventorySha256": "60693db64033d3d443d57bae4ef7102244f99cb37e5031570e1ff4cbb76d61d8",
+  "heroDisplay": {
+    "scope": "archive-hero-only; not an OG, gallery or reuse licence",
+    "images": {
+      "eletem-kepe": {
+        "sourcePage": "https://www.vipach.at/eletemkepe",
+        "url": "https://static.wixstatic.com/media/b0aee1_a7b71a456e114666bda150d1a580e71c~mv2.jpg",
+        "width": 1851,
+        "height": 754
+      },
+      "as-i-like-it-austria": {
+        "sourcePage": "https://www.vipach.at/asilikeit",
+        "url": "https://static.wixstatic.com/media/b0aee1_479cfc4cc3644a22a3008fe3cd580fc3~mv2.jpg",
+        "width": 3840,
+        "height": 2160
+      }
+    }
+  }
 }
