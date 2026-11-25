@@ -7,6 +7,7 @@
  * - archive exhibitions render templates/exhibition-archive.html from JSON
  */
 import fs from 'node:fs';
+import { pressTitleFor } from './exhibition-press-language.mjs';
 import { venueEvidenceMarkup } from './exhibition-venue-evidence.mjs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -27,54 +28,51 @@ const scopedArchives=archive2025Release();
 
 const copy = {
   en: {
-    navHome: 'Current exhibition',
-    labelWhen: 'When',
-    labelWhere: 'Where',
-    labelContext: 'Context',
-    sectionTitle: 'Archive record',
-    missingTitle: 'Missing / not yet migrated',
-    footerOrg: 'VIPACH — Vienna Photo Art & Creative Hub',
-    footerLegal: 'ZVR 079797621 · Text-level archive stub. Images and rights are not asserted here.',
+    navHome: 'Current exhibition', skip: 'Skip to content', language: 'Language',
+    openMenu: 'Open exhibitions menu', navigation: 'Exhibition navigation',
+    exhibition: 'Exhibition', brand: 'VIPACH Exhibition', archive: 'VIPACH Exhibition Archive',
+    labelWhen: 'Date', labelWhere: 'Venue', sectionTitle: 'About this entry',
+    dateUnconfirmed: 'The exact dates are not confirmed.',
+    venueUnconfirmed: 'The venue is not confirmed.',
+    historyLink: 'VIPACH exhibition history (in Hungarian)', sourceLink: 'VIPACH exhibition page',
+    eventLink: 'VIPACH event page', privacy: 'Legal notice and privacy',
+    historicalSummary: 'This exhibition appears in the VIPACH exhibition history. The listing gives the year and venue but does not specify the exact visiting dates.',
+    plannedSummary: 'This exhibition is planned. Exact dates, venue and participants have not been announced here.',
     status: {
-      historical: 'Historical archive',
-      planned: 'Planned — not realised',
-      closed: 'Closed exhibition',
-      active: 'Open exhibition',
-      open: 'Open exhibition',
+      historical: 'Exhibition archive', planned: 'Planned exhibition',
+      closed: 'Closed exhibition', active: 'Open exhibition', open: 'Open exhibition',
     },
   },
   hu: {
-    navHome: 'Aktuális kiállítás',
-    labelWhen: 'Időpont',
-    labelWhere: 'Helyszín',
-    labelContext: 'Kontextus',
-    sectionTitle: 'Archív bejegyzés',
-    missingTitle: 'Hiányzó / még nem migrált adatok',
-    footerOrg: 'VIPACH — Vienna Photo Art & Creative Hub',
-    footerLegal: 'ZVR 079797621 · Szöveges archív stub. Képek és jogok itt nem kerülnek állításra.',
+    navHome: 'Aktuális kiállítás', skip: 'Ugrás a tartalomra', language: 'Nyelv',
+    openMenu: 'A kiállítási menü megnyitása', navigation: 'Kiállítási navigáció',
+    exhibition: 'Kiállítás', brand: 'VIPACH kiállítás', archive: 'VIPACH kiállítási archívum',
+    labelWhen: 'Időpont', labelWhere: 'Helyszín', sectionTitle: 'Az archív bejegyzésről',
+    dateUnconfirmed: 'A pontos időpont még nem ismert.',
+    venueUnconfirmed: 'A helyszín még nem ismert.',
+    historyLink: 'A VIPACH korábbi kiállításai', sourceLink: 'A kiállítás a VIPACH oldalán',
+    eventLink: 'A VIPACH eseményoldala', privacy: 'Impresszum és adatvédelem',
+    historicalSummary: 'A kiállítás szerepel a VIPACH kiállítási összefoglalójában. A forrás az évet és a helyszínt közli, a látogatás pontos időpontját nem.',
+    plannedSummary: 'A kiállítás tervezés alatt áll. A pontos időpontot, a helyszínt és a résztvevőket itt még nem tettük közzé.',
     status: {
-      historical: 'Történelmi archívum',
-      planned: 'Tervezett — nem valósult meg',
-      closed: 'Lezárt kiállítás',
-      active: 'Nyitott kiállítás',
-      open: 'Nyitott kiállítás',
+      historical: 'Kiállítási archívum', planned: 'Tervezett kiállítás',
+      closed: 'Lezárt kiállítás', active: 'Látogatható kiállítás', open: 'Látogatható kiállítás',
     },
   },
   de: {
-    navHome: 'Aktuelle Ausstellung',
-    labelWhen: 'Wann',
-    labelWhere: 'Wo',
-    labelContext: 'Kontext',
-    sectionTitle: 'Archiv-Eintrag',
-    missingTitle: 'Fehlend / noch nicht migriert',
-    footerOrg: 'VIPACH — Vienna Photo Art & Creative Hub',
-    footerLegal: 'ZVR 079797621 · Textarchiv-Stub. Bilder und Rechte werden hier nicht behauptet.',
+    navHome: 'Aktuelle Ausstellung', skip: 'Zum Inhalt springen', language: 'Sprache',
+    openMenu: 'Ausstellungsmenü öffnen', navigation: 'Ausstellungsnavigation',
+    exhibition: 'Ausstellung', brand: 'VIPACH-Ausstellung', archive: 'VIPACH-Ausstellungsarchiv',
+    labelWhen: 'Zeitraum', labelWhere: 'Ort', sectionTitle: 'Zu diesem Archiveintrag',
+    dateUnconfirmed: 'Die genauen Termine stehen noch nicht fest.',
+    venueUnconfirmed: 'Der Veranstaltungsort steht noch nicht fest.',
+    historyLink: 'Bisherige VIPACH-Ausstellungen (auf Ungarisch)', sourceLink: 'Ausstellungsseite von VIPACH',
+    eventLink: 'Veranstaltungsseite von VIPACH', privacy: 'Impressum und Datenschutz',
+    historicalSummary: 'Die Ausstellung ist in der VIPACH-Ausstellungsübersicht verzeichnet. Die Quelle nennt das Jahr und den Veranstaltungsort, aber keine genauen Besuchstermine.',
+    plannedSummary: 'Die Ausstellung ist geplant. Genaue Termine, Veranstaltungsort und Mitwirkende wurden hier noch nicht bekannt gegeben.',
     status: {
-      historical: 'Historisches Archiv',
-      planned: 'Geplant — nicht realisiert',
-      closed: 'Beendete Ausstellung',
-      active: 'Laufende Ausstellung',
-      open: 'Laufende Ausstellung',
+      historical: 'Ausstellungsarchiv', planned: 'Geplante Ausstellung',
+      closed: 'Beendete Ausstellung', active: 'Laufende Ausstellung', open: 'Laufende Ausstellung',
     },
   },
 };
@@ -155,8 +153,7 @@ function renderPressSection(exhibition, localeId) {
     return '<article class="ex-press-item">' +
       '<div class="ex-press-meta"><span>' + esc(item.publication) + '</span><span>' + esc(type) + '</span>' +
       (published ? '<time datetime="' + published + '">' + published + '</time>' : '') + '</div>' +
-      '<h3><a href="' + esc(item.url) + '" hreflang="' + lang + '" lang="' + lang +
-      '" target="_blank" rel="noopener noreferrer external">' + esc(item.title) + '</a></h3>' +
+      '<h3><a href="' + esc(item.url) + '" hreflang="' + lang + '" target="_blank" rel="noopener noreferrer external">' + esc(pressTitleFor(item,localeId)) + '</a></h3>' +
       '<p lang="' + (localeId === 'de' ? 'de' : localeId) + '">' + esc(item.description[localeId]) + '</p>' +
       '<a class="ex-press-read" href="' + esc(item.url) + '" target="_blank" rel="noopener noreferrer external">' +
       esc(copy.read) + ' ↗</a></article>';
@@ -233,24 +230,40 @@ function rewriteFullHtml({ html, exhibition, localeId, mode, exhibitions, featur
   return out.replace(/^[ \t]+$/gm, '');
 }
 
-function whenText(exhibition, localeId) {
-  const d = exhibition.dates || {};
-  if (typeof d.publicVisit === 'string') return d.publicVisit;
-  if (d.publicVisit?.start && d.publicVisit?.end) {
-    return `${d.publicVisit.start} – ${d.publicVisit.end}`;
-  }
-  if (d.publicVisit?.month) {
-    return `${d.publicVisit.month}${d.publicVisit.exactDays && d.publicVisit.exactDays !== 'missing' ? ` (${d.publicVisit.exactDays})` : ''} — ${d.publicVisit.status || exhibition.status}`;
-  }
-  if (exhibition.year) return String(exhibition.year);
-  return 'missing';
+// Generic public entries render only known structured values, never source TODO strings.
+const archivedCityNames = {
+  Wien: { en: 'Vienna', hu: 'Bécs', de: 'Wien' },
+  München: { en: 'Munich', hu: 'München', de: 'München' },
+};
+
+function verifiedText(value) {
+  return typeof value === 'string' && value.trim() && !/^missing\b/i.test(value) ? value.trim() : undefined;
 }
 
-function whereText(exhibition) {
+function whenText(exhibition, localeId) {
+  const d = exhibition.dates?.publicVisit;
+  const lang = localeMeta(localeId).htmlLang;
+  if (/^\d{4}-\d{2}-\d{2}$/.test(d?.start || '') && /^\d{4}-\d{2}-\d{2}$/.test(d?.end || '')) {
+    const range = new Intl.DateTimeFormat(lang, { dateStyle: 'long', timeZone: 'UTC' });
+    return range.formatRange(new Date(d.start), new Date(d.end));
+  }
+  if (/^\d{4}-\d{2}$/.test(d?.month || '')) {
+    return new Intl.DateTimeFormat(lang, { year: 'numeric', month: 'long', timeZone: 'UTC' }).format(new Date(d.month + '-01'));
+  }
+  return Number.isInteger(exhibition.year) ? String(exhibition.year) : copy[localeId].dateUnconfirmed;
+}
+
+function whereText(exhibition, localeId) {
   const v = exhibition.venue || {};
-  const parts = [v.name, v.streetAddress, v.postalCode, v.addressLocality, v.addressCountry]
-    .filter((p) => p && p !== 'missing' && !String(p).startsWith('missing'));
-  return parts.length ? parts.join(', ') : 'missing';
+  const city = verifiedText(v.addressLocality);
+  const country = verifiedText(v.addressCountry);
+  const lang = localeMeta(localeId).htmlLang;
+  const parts = [
+    verifiedText(v.name), verifiedText(v.streetAddress), verifiedText(v.postalCode),
+    archivedCityNames[city]?.[localeId] || city,
+    /^[A-Z]{2}$/.test(country || '') ? new Intl.DisplayNames(lang, { type: 'region' }).of(country) : undefined,
+  ].filter(Boolean);
+  return parts.length ? parts.join(', ') : copy[localeId].venueUnconfirmed;
 }
 
 function renderArchive(exhibition, localeId, exhibitions, featured) {
@@ -260,19 +273,12 @@ function renderArchive(exhibition, localeId, exhibitions, featured) {
   const pathName = slugPaths(exhibition.slug, localeId);
   const canonical = absoluteUrl(pathName);
   const loc = localeMeta(localeId);
-  const robots = exhibition.status === 'planned' ? 'noindex,follow' : 'index,follow';
-  const missing = Array.isArray(exhibition.missing) ? [...exhibition.missing] : ['missing field list not provided'];
-  const counts = exhibition.counts || {};
-  if (Array.isArray(exhibition.works) && exhibition.works.length) {
-    missing.unshift(
-      `Licence-verified approved for public display: ${counts.licenceVerifiedApprovedForPublicDisplay ?? 0} (must be regenerated from works[])`,
-      `Identified catalogue creators: ${counts.identifiedCatalogueCreators ?? counts.photographers ?? 0}` +
-        (counts.sourceClaimedPhotographers != null
-          ? ` · source-claimed participants: ${counts.sourceClaimedPhotographers}`
-          : ''),
-      `Cover/OG: ${exhibition.cover?.publicationStatus || 'rights-review-required'} — not embedded as cleared media`
-    );
-  }
+  const planned = exhibition.status === 'planned';
+  const robots = planned ? 'noindex,follow' : 'index,follow';
+  const summary = planned ? t.plannedSummary : t.historicalSummary;
+  const venueName = verifiedText(exhibition.venue?.name);
+  const homeHref = localeId === 'en' ? '/?lang=en' : featuredPaths(localeId);
+  const privacyHref = `${loc.pathPrefix}/privacy/`;
   const hreflangLinks = site.locales
     .map((l) => {
       const href = absoluteUrl(slugPaths(exhibition.slug, l.id));
@@ -293,14 +299,14 @@ function renderArchive(exhibition, localeId, exhibitions, featured) {
   const external = exhibition.external || {};
   const linkItems = [];
   if (external.vipachHistoryListing) {
-    linkItems.push(`<a href="${external.vipachHistoryListing}" rel="noopener">VIPACH exhibition history</a>`);
+    linkItems.push(`<a href="${escapeHtml(external.vipachHistoryListing)}" hreflang="hu" rel="noopener">${t.historyLink}</a>`);
   }
   if (external.vipachPage) {
     const page = external.vipachPage[localeId] || external.vipachPage.en || external.vipachPage.hu;
-    if (page) linkItems.push(`<a href="${page}" rel="noopener">VIPACH page</a>`);
+    if (page) linkItems.push(`<a href="${escapeHtml(page)}" rel="noopener">${t.sourceLink}</a>`);
   }
   if (external.vipachEventPage) {
-    linkItems.push(`<a href="${external.vipachEventPage}" rel="noopener">VIPACH event page</a>`);
+    linkItems.push(`<a href="${escapeHtml(external.vipachEventPage)}" rel="noopener">${t.eventLink}</a>`);
   }
   const externalLinks = linkItems.length
     ? `<div class="archive-links">${linkItems.join('')}</div>`
@@ -313,8 +319,9 @@ function renderArchive(exhibition, localeId, exhibitions, featured) {
         '@type': 'WebPage',
         '@id': `${canonical}#webpage`,
         url: canonical,
-        name: `${title} — VIPACH Exhibition archive`,
-        inLanguage: loc.htmlLang === 'de-AT' ? 'de-AT' : localeId,
+        name: `${title} — ${t.archive}`,
+        description: subtitle || summary,
+        inLanguage: loc.htmlLang,
         isPartOf: { '@id': `${baseUrl}/#website` },
         about: { '@id': `${canonical}#exhibition` },
         publisher: { '@id': site.organization.url },
@@ -324,21 +331,14 @@ function renderArchive(exhibition, localeId, exhibitions, featured) {
         '@id': `${canonical}#exhibition`,
         name: title,
         description: subtitle || undefined,
-        eventStatus:
-          exhibition.status === 'planned'
-            ? 'https://schema.org/EventScheduled'
-            : exhibition.status === 'historical' || exhibition.status === 'closed'
-              ? 'https://schema.org/EventScheduled'
-              : 'https://schema.org/EventScheduled',
-        organizer: { '@id': site.organization.url },
-        location: exhibition.venue?.name
+        location: venueName
           ? {
               '@type': 'Place',
-              name: exhibition.venue.name,
+              name: venueName,
               address: {
                 '@type': 'PostalAddress',
-                addressLocality: exhibition.venue.addressLocality || undefined,
-                addressCountry: exhibition.venue.addressCountry || undefined,
+                addressLocality: verifiedText(exhibition.venue.addressLocality),
+                addressCountry: verifiedText(exhibition.venue.addressCountry),
               },
             }
           : undefined,
@@ -363,47 +363,37 @@ function renderArchive(exhibition, localeId, exhibitions, featured) {
   let template = fs.readFileSync(path.join(root, 'templates/exhibition-archive.html'), 'utf8');
   const replacements = {
     htmlLang: loc.htmlLang,
-    docTitle: `${title} — VIPACH Exhibition`,
-    description: subtitle || `${title} archive record.`,
+    docTitle: escapeHtml(`${title} — ${t.brand}`),
+    description: escapeHtml(subtitle || summary),
     robots,
     canonical,
     hreflangLinks,
     ogLocale: localeId === 'de' ? 'de_AT' : localeId === 'hu' ? 'hu_HU' : 'en_US',
     jsonLd: JSON.stringify(clean(jsonLd), null, 2),
-    homeHref: featuredPaths(localeId),
-    langNav,
+    homeHref, privacyHref, langNav,
     archiveMenu: archiveNavigationHtml(exhibitions, featured, localeId, exhibition.slug, 'slug'),
-    navHome: t.navHome,
-    statusLabel: t.status[exhibition.status] || exhibition.status,
-    kicker: 'VIPACH Exhibition archive',
+    navHome: t.navHome, skip: t.skip, brand: t.brand, exhibition: t.exhibition,
+    language: t.language, openMenu: t.openMenu, navigation: t.navigation, privacy: t.privacy,
+    statusLabel: t.status[exhibition.status] || t.status.historical,
+    kicker: t.archive,
     title: escapeHtml(title),
-    lede: escapeHtml(subtitle || exhibition.organizationContext || ''),
+    lede: escapeHtml(subtitle || ''),
     labelWhen: t.labelWhen,
     labelWhere: t.labelWhere,
-    labelContext: t.labelContext,
     whenText: escapeHtml(whenText(exhibition, localeId)),
-    whereText: escapeHtml(whereText(exhibition)),
-    contextText: escapeHtml(exhibition.organizationContext || 'missing'),
+    whereText: escapeHtml(whereText(exhibition, localeId)),
     sectionTitle: t.sectionTitle,
-    sectionBody: escapeHtml(
-      exhibition.status === 'planned'
-        ? 'This exhibition is planned and not realised. No artists, artworks or image rights are claimed on this stub.'
-        : Array.isArray(exhibition.works) && exhibition.works.length
-          ? `Text-level archive stub. Catalogue works: ${counts.works ?? exhibition.works.length}. Licence-verified public artworks: ${counts.licenceVerifiedApprovedForPublicDisplay ?? 0}. Cover/OG is not rights-cleared.`
-          : 'Text-level archive stub generated from exhibition data. Missing images and rights are marked explicitly.'
-    ),
+    sectionBody: escapeHtml(summary),
     externalLinks,
     pressSection: renderPressSection(exhibition, localeId),
-    missingTitle: t.missingTitle,
-    missingItems: missing.map((item) => `<li>${escapeHtml(item)}</li>`).join('\n            '),
-    footerOrg: t.footerOrg,
-    footerLegal: t.footerLegal,
+    footerOrg: escapeHtml(site.organization.name),
+    footerLegal: `ZVR ${escapeHtml(site.organization.zvr)}`,
   };
 
   for (const [key, value] of Object.entries(replacements)) {
     template = template.replaceAll(`{{${key}}}`, String(value));
   }
-  return template;
+  return template.replace(/^[ \t]+$/gm, '');
 }
 
 function outputPathFor(localeId, slug, mode) {

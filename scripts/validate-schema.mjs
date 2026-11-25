@@ -112,8 +112,8 @@ for (const exhibition of exhibitions.filter((e) => e.render === 'archive')) {
     assert.equal(page?.publisher?.['@id'], orgUrl, `${rel}: archive publisher`);
     const event = doc['@graph'].find((x) => x['@type'] === 'ExhibitionEvent');
     assert.ok(event, `${rel}: ExhibitionEvent missing`);
-    assert.equal(event?.organizer?.['@id'], orgUrl, `${rel}: archive organizer`);
     if (reviewedArchives?.slugs.includes(exhibition.slug)) {
+      assert.equal(event?.organizer?.['@id'], orgUrl, `${rel}: reviewed archive organizer`);
       assert.match(source, /data-route-mode="slug"/, rel);
       assert.match(source, /content="index,follow"/, rel);
       const graph = doc['@graph'];
@@ -138,19 +138,26 @@ for (const exhibition of exhibitions.filter((e) => e.render === 'archive')) {
       assert.doesNotMatch(source, /<meta[^>]+(?:og:image|twitter:image)/, rel);
 
     } else {
-      assert.match(source, /Missing|Hiányzó|Fehlend/, `${rel}: missing-fields callout required`);
+      const expected = {
+        en: { brand: 'VIPACH Exhibition', archive: 'VIPACH Exhibition Archive', language: 'Language', privacy: 'Legal notice and privacy', planned: 'This exhibition is planned.', historical: 'This exhibition appears in the VIPACH exhibition history.' },
+        hu: { brand: 'VIPACH kiállítás', archive: 'VIPACH kiállítási archívum', language: 'Nyelv', privacy: 'Impresszum és adatvédelem', planned: 'A kiállítás tervezés alatt áll.', historical: 'A kiállítás szerepel a VIPACH kiállítási összefoglalójában.' },
+        de: { brand: 'VIPACH-Ausstellung', archive: 'VIPACH-Ausstellungsarchiv', language: 'Sprache', privacy: 'Impressum und Datenschutz', planned: 'Die Ausstellung ist geplant.', historical: 'Die Ausstellung ist in der VIPACH-Ausstellungsübersicht verzeichnet.' },
+      }[localeId];
+      assert.match(source, new RegExp(`<title>[^<]+ — ${expected.brand}</title>`), `${rel}: localized title`);
+      assert.ok(page.name.endsWith(` — ${expected.archive}`), `${rel}: localized WebPage name`);
+      assert.ok(source.includes(`class="lang-nav" aria-label="${expected.language}"`), `${rel}: localized accessible label`);
+      assert.ok(source.includes(`>${expected.privacy}</a>`), `${rel}: localized privacy link`);
+      assert.ok(source.includes(expected[exhibition.status]), `${rel}: localized source qualification`);
+      assert.doesNotMatch(source, /not yet migrated|Text-level archive stub|missing —|>missing<|VIPACH-only/i, `${rel}: no internal build notes`);
+      assert.ok(!event.organizer && !event.eventStatus && !event.startDate && !event.endDate, `${rel}: no unsupported event details`);
+      assert.ok(exhibition.status !== 'planned' || !event.location, `${rel}: no placeholder planned venue`);
+      assert.ok(exhibition.status !== 'historical' || event.location?.name === exhibition.venue.name, `${rel}: keep sourced venue`);
     }
     if (exhibition.status === 'planned') {
       assert.match(source, /noindex/i, `${rel}: planned pages should noindex`);
       assert.equal(exhibition.realized, false, `${exhibition.slug} must remain unrealised`);
     }
-    if (exhibition.slug === 'touch-2-0') {
-      assert.match(
-        source,
-        /predate|Historical|történelmi|Historisch|VIPACH-only|organizational/i,
-        `${rel}: touch-2-0 must not read as VIPACH-only rebrand`
-      );
-    }
+
   }
 }
 

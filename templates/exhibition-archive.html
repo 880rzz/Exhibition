@@ -27,26 +27,24 @@
     .archive-body{padding:clamp(36px,7vw,72px) 0}
     .archive-body h2{margin:0 0 14px;font-size:clamp(22px,3vw,30px)}
     .archive-body p,.archive-body li{line-height:1.6}
-    .missing-box{margin:28px 0 0;padding:18px 20px;border:1px dashed var(--ink,#111);background:rgba(255,255,255,.45)}
-    .missing-box ul{margin:10px 0 0;padding-left:1.2rem}
     .archive-links{margin:24px 0 0;display:flex;flex-wrap:wrap;gap:14px}
     .archive-links a{color:inherit}
     .site-header .brand-mark{font-weight:600}
   </style>
 </head>
 <body class="exhibition-archive">
-  <a class="skip-link" href="#content">Skip to content</a>
+  <a class="skip-link" href="#content">{{skip}}</a>
   <header class="site-header">
-    <a class="brand" href="{{homeHref}}" aria-label="VIPACH Exhibition">
-      <strong>VIPACH</strong><span> / Exhibition</span>
+    <a class="brand" href="{{homeHref}}" aria-label="{{brand}}">
+      <strong>VIPACH</strong><span> / {{exhibition}}</span>
     </a>
     <div class="header-tools">
-      <nav class="lang-nav" aria-label="Language">
+      <nav class="lang-nav" aria-label="{{language}}">
         {{langNav}}
       </nav>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open exhibitions menu"><span></span><span></span></button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="{{openMenu}}"><span></span><span></span></button>
     </div>
-    <nav class="site-menu" id="site-menu" aria-label="Exhibition navigation">
+    <nav class="site-menu" id="site-menu" aria-label="{{navigation}}">
       <a href="{{homeHref}}">{{navHome}}</a>
       <a href="https://www.vipach.at/" rel="noopener">VIPACH</a>
       {{archiveMenu}}
@@ -62,7 +60,6 @@
         <ul class="archive-meta">
           <li><strong>{{labelWhen}}</strong><span>{{whenText}}</span></li>
           <li><strong>{{labelWhere}}</strong><span>{{whereText}}</span></li>
-          <li><strong>{{labelContext}}</strong><span>{{contextText}}</span></li>
         </ul>
       </div>
     </section>
@@ -71,12 +68,6 @@
         <h2>{{sectionTitle}}</h2>
         <p>{{sectionBody}}</p>
         {{externalLinks}}
-        <div class="missing-box">
-          <strong>{{missingTitle}}</strong>
-          <ul>
-            {{missingItems}}
-          </ul>
-        </div>
       </div>
     </section>
     {{pressSection}}
@@ -85,7 +76,7 @@
     <div class="wrap">
       <p>{{footerOrg}}</p>
       <p><a href="mailto:office@vipach.at">office@vipach.at</a> · <a href="https://www.vipach.at/" rel="noopener">vipach.at</a></p>
-      <p>{{footerLegal}}</p>
+      <p>{{footerLegal}} · <a href="{{privacyHref}}">{{privacy}}</a></p>
     </div>
   </footer>
   <script src="/assets/site.js" defer></script>
