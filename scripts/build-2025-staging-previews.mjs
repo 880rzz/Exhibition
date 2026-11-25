@@ -30,7 +30,7 @@ const publishedExhibitions=fs.readdirSync(path.join(ROOT,'data/exhibitions'))
 const currentlyFeatured=newestFeatured(publishedExhibitions);
 const navigationExhibitions=menuExhibitions(publishedExhibitions,currentlyFeatured);
 const previewSlugs=new Set(inventory.exhibitions.map(e=>e.slug));
-const locales=['en','hu','de'];
+const locales=['en','de','hu'];
 const esc=x=>String(x??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 const norm=x=>String(x||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
 const img=u=>/^https:\/\/static\.wixstatic\.com\/media\/[^\s"'<>]+$/.test(u||'')?u:'';
@@ -233,7 +233,7 @@ function page(ex,lang){
  +(release?metadata.meta:'')
  +'<link rel="stylesheet" href="'+asset+'styles.css"><link rel="stylesheet" href="'+asset+'2025-exhibitions.css"><link rel="stylesheet" href="'+asset+'exhibition-harmonization.css">'
  +'</head><body class="ex25-body"'+(candidate?' data-exhibition-slug="'+ex.slug+'" data-route-mode="slug"':'')+'><a class="skip-link" href="#content">'+esc(c.skip)+'</a>'
- +'<header class="site-header"><a class="brand" href="'+(candidate?(lang==='en'?'/':'/'+lang+'/'):'https://www.vipach.at/')+'" aria-label="VIPACH Exhibition"><img class="brand-logo" src="https://static.wixstatic.com/media/b0aee1_3ddaf3156e154fc0bda2ffe5cb999a5c~mv2.png" width="30" height="30" alt="" referrerpolicy="no-referrer"><span><strong>VIPACH</strong> / '+esc({en:'Exhibition',hu:'Kiállítás',de:'Ausstellung'}[lang])+'</span></a>'
+ +'<header class="site-header"><a class="brand" href="'+(candidate?(lang==='en'?'/?lang=en':'/'+lang+'/'):'https://www.vipach.at/')+'" aria-label="VIPACH Exhibition"><img class="brand-logo" src="https://static.wixstatic.com/media/b0aee1_3ddaf3156e154fc0bda2ffe5cb999a5c~mv2.png" width="30" height="30" alt="" referrerpolicy="no-referrer"><span><strong>VIPACH</strong> / '+esc({en:'Exhibition',hu:'Kiállítás',de:'Ausstellung'}[lang])+'</span></a>'
  +'<div class="header-tools"><nav class="lang-nav" aria-label="Language">'+languageLinks+'</nav>'
  +'<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="'+esc(c.archive)+'"><span></span><span></span></button></div>'
  +'<nav id="site-menu" class="site-menu" aria-label="'+esc(c.archive)+'">'
@@ -319,7 +319,7 @@ if(candidate){
        }
        return section;
      });
-     html=html.replace(/(<a class="brand" href=")https:\/\/www\.vipach\.at\//, (_m,open)=>open+(lang==='en'?'/':'/'+lang+'/'));
+     html=html.replace(/(<a class="brand" href=")https:\/\/www\.vipach\.at\//, (_m,open)=>open+(lang==='en'?'/?lang=en':'/'+lang+'/'));
      // Any accidentally provided URL still tells robots not to index this review.
      if(!release){
      html=html.replace(/<meta\s+name="robots"[^>]*>/i,'<meta name="robots" content="noindex,nofollow,noimageindex">');

@@ -25,7 +25,7 @@ for (const lang of ['en','hu','de']){
   assert.ok(menu,url);
   const menuUrls=[...menu.matchAll(/<a class="exhibition-menu-entry[^"]*" href="([^"]+)"/g)].map(m=>m[1]);
   assert.deepEqual(menuUrls,urls,url+' permanent dropdown order');
-  assert.ok(html.includes('<a class="brand" href="'+prefix+'/"'),url+' distinct latest home');
+  assert.ok(html.includes('<a class="brand" href="'+prefix+'/'+(lang==='en'?'?lang=en':'')+'"'),url+' distinct latest home');
   const history=section(html,'history');
   if(url===urls[2])assert.equal(history,undefined,url+' earliest has no predecessor section');
   else {

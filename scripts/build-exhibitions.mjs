@@ -198,12 +198,12 @@ function rewriteFullHtml({ html, exhibition, localeId, mode, exhibitions, featur
     `<link rel="canonical" href="${absoluteUrl(routes[localeId])}">`
   );
 
-  // Browser language redirect should only auto-bounce the featured EN root
-  if (!(mode === 'featured' && localeId === 'en')) {
-    out = out.replace(
-      /<script>\/\* BROWSER-LANGUAGE-V1 \*\/[\s\S]*?<\/script>/,
-      '<!-- browser-language redirect disabled on non-featured or non-EN routes -->'
-    );
+  if (localeId === 'en') out = out.replace('<a class="brand" href="/"', '<a class="brand" href="/?lang=en"');
+  // Only the root is locale-neutral. Manual English links bypass detection, without storage.
+  if (mode === 'featured') {
+    out = out.replace(/(<nav class="lang-nav"[^>]*>)([\s\S]*?)(<\/nav>)/,
+      (_all, start, links, end) => start + links.replace('href="/"', 'href="/?lang=en"') + end);
+    if (localeId === 'en') out = out.replace('</head>', '<script src="/assets/entry-language.js"></script>\n</head>');
   }
 
   if (mode === 'slug') {

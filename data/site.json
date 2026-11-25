@@ -10,16 +10,16 @@
       "pathPrefix": ""
     },
     {
-      "id": "hu",
-      "htmlLang": "hu",
-      "hreflang": "hu",
-      "pathPrefix": "/hu"
-    },
-    {
       "id": "de",
       "htmlLang": "de-AT",
       "hreflang": "de-AT",
       "pathPrefix": "/de"
+    },
+    {
+      "id": "hu",
+      "htmlLang": "hu",
+      "hreflang": "hu",
+      "pathPrefix": "/hu"
     }
   ],
   "organization": {
