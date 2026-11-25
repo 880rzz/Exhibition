@@ -37,16 +37,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Fail closed on unpublished 2025 image leakage and staging source access
+      - name: Verify exact owner-attested 2025 archive uses and prevent all other publication
         run: node scripts/check-2025-public-source-separation.mjs
       - name: Assert 40 gallery images have confirmed Wix artist mapping
         run: node scripts/check-2025-gallery-attribution.mjs
+      - name: Verify committed 2025 archive content and 3L permanent navigation
+        run: node scripts/test-2025-archive-release.mjs
       - name: Verify committed multilingual press coverage before build
         run: node scripts/check-exhibition-press.mjs
       - name: Verify committed Pages HTML has navigation BEFORE generation
         run: node scripts/test-exhibition-navigation.mjs
       - name: Build exhibition pages from data
         run: node scripts/build-exhibitions.mjs
+      - name: Verify rebuilt 2025 archive content and 3L permanent navigation
+        run: node scripts/test-2025-archive-release.mjs
       - name: Regenerate current published-image rights inventory
         run: |
           node scripts/inventory_published_images.mjs
@@ -66,4 +70,5 @@ jobs:
           test ! -e _site/scripts
           test ! -e _site/docs
           test ! -e _site/staging-preview
+          test ! -e _site/private-review
           echo 'PASS: exhibition staging sources absent from site artifact'

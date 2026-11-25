@@ -20,8 +20,9 @@
     "addressLocality": "Wien",
     "addressCountry": "AT",
     "districtNote": "1. kerület / 1st district (VIPACH page)",
-    "streetAddress": "missing on asilikeit page body (not copied as Mahlerstraße 11 without confirmation)",
-    "postalCode": "missing"
+    "streetAddress": "Mahlerstraße 11",
+    "postalCode": "1010",
+    "addressSource": "https://www.vipach.at/event-details/asilikeit"
   },
   "dates": {
     "publicVisit": {
@@ -34,9 +35,11 @@
       ]
     },
     "opening": {
-      "source": "https://www.vipach.at/event-list",
-      "claim": "Opening event listed 2025-11-30 16:00–19:00 at CITYgalleryVIENNA",
-      "officialStart": "missing — exact ceremonial minute not isolated beyond the event-list window"
+      "source": "https://www.vipach.at/event-details/asilikeit",
+      "claim": "Organiser lists the opening programme from 16:00 to 19:00 on 30 November.",
+      "officialStart": "missing — exact ceremonial minute not isolated beyond the event-list window",
+      "listedStart": "2025-11-30T16:00:00+01:00",
+      "listedEnd": "2025-11-30T19:00:00+01:00"
     }
   },
   "team": {
@@ -428,7 +431,7 @@
     "licenceVerifiedApprovedForPublicDisplay": 0,
     "priorWixPublicationOnlyLicenseVerificationRequired": 19,
     "rightsReviewRequiredUnidentified": 1,
-    "derivedFromWorksAt": "2026-11-22",
+    "derivedFromWorksAt": "2026-11-25",
     "derivation": "scripts/regenerate_exhibition_counts.mjs — counts must match works[]"
   },
   "cover": {
@@ -527,6 +530,20 @@
           "de": "Ein Jubiläumsbericht über As I Like It Austria mit Beiträgen der Ausstellenden und des Kurators."
         },
         "evidence": "Wikipedia VIPACH reference 3; Rólunk article specifically documents As I Like It Austria"
+      },
+      {
+        "id": "horizont-as-i-like-it-austria-report",
+        "publication": "Nyugat-európai Horizont",
+        "title": "Amikor a fotográfia közösséget teremt",
+        "url": "https://www.stihon.eu/wp-content/uploads/2026/01/Horizont.03.Web_.pdf#page=7",
+        "language": "hu",
+        "issue": "2026/3 · 12–13",
+        "type": "exhibition-report",
+        "description": {
+          "hu": "Az eredeti beszámoló az As I Like It Austria kiállításról és a BMI Fotoklub közösségéről is ír.",
+          "en": "The signed feature discusses As I Like It Austria and the photo club community behind the exhibition.",
+          "de": "Der namentlich gezeichnete Beitrag behandelt As I Like It Austria und die Fotoclub-Gemeinschaft hinter der Ausstellung."
+        }
       }
     ]
   }

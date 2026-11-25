@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
+import { archive2025Release } from './exhibition-2025-release-scope.mjs';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -10,6 +11,7 @@ const orgUrl = 'https://www.vipach.at/#organization';
 const wd = 'https://www.wikidata.org/wiki/Q138416887';
 const profile = 'https://okoszisztema.kozpontiszovetseg.at/intezmenyek/vipach/';
 const base = 'https://exhibition.vipach.at';
+const reviewedArchives=archive2025Release();
 
 const site = JSON.parse(fs.readFileSync(path.join(root, 'data/site.json'), 'utf8'));
 const exhibitions = fs
@@ -103,7 +105,12 @@ for (const exhibition of exhibitions.filter((e) => e.render === 'archive')) {
     const event = doc['@graph'].find((x) => x['@type'] === 'ExhibitionEvent');
     assert.ok(event, `${rel}: ExhibitionEvent missing`);
     assert.equal(event?.organizer?.['@id'], orgUrl, `${rel}: archive organizer`);
-    assert.match(source, /Missing|Hiányzó|Fehlend/, `${rel}: missing-fields callout required`);
+    if (reviewedArchives?.slugs.includes(exhibition.slug)) {
+      assert.match(source, /data-route-mode="slug"/, rel);
+      assert.match(source, /content="index,follow"/, rel);
+    } else {
+      assert.match(source, /Missing|Hiányzó|Fehlend/, `${rel}: missing-fields callout required`);
+    }
     if (exhibition.status === 'planned') {
       assert.match(source, /noindex/i, `${rel}: planned pages should noindex`);
       assert.equal(exhibition.realized, false, `${exhibition.slug} must remain unrealised`);

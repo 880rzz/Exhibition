@@ -30,7 +30,11 @@ jobs:
         run: node scripts/check-2025-gallery-attribution.mjs
       - name: Build two private-review galleries only
         run: node scripts/build-2025-staging-previews.mjs
-      - name: Verify the two 2025 exhibitions remain blocked without private rights evidence
+      - name: Verify permanent routes in the noindex review build
+        run: |
+          node scripts/build-2025-staging-previews.mjs --archive-candidate
+          node scripts/test-2025-archive-release.mjs --candidate
+      - name: Preserve independent written-evidence preflight without instruments
         run: node scripts/check-2025-publication-gate.mjs --expect-blocked
       - name: Assert page coverage and publication lock
         run: |
@@ -52,7 +56,11 @@ jobs:
           assert r['wixFullBiographies']==32
           assert r['wixArtworkDescriptions']==32
           cms_by_id={a['id']:a for a in cms['records']}
+          crosswalk=json.loads(Path('data/staging/2025-editorial-copy.json').read_text())['workDescriptionCrosswalk']
           def source_description(w):
+              if w['id'] in crosswalk:
+                  link=crosswalk[w['id']]
+                  return cms_by_id[link['sourceRecordId']][link['field']]
               item=cms_by_id.get(w.get('wixRecordId'))
               if not item: return ''
               if w.get('sourceImageSlot')=='artwork-1': return item.get('firstArtworkDescription','')

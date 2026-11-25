@@ -21,8 +21,9 @@
     "addressLocality": "Wien",
     "addressCountry": "AT",
     "districtNote": "1. kerület / 1st district (VIPACH page)",
-    "streetAddress": "missing on eletemkepe page body",
-    "postalCode": "missing"
+    "streetAddress": "Mahlerstraße 11",
+    "postalCode": "1010",
+    "addressSource": "https://publicartists.online/en/event/eletem-kepe-071225/"
   },
   "dates": {
     "publicVisit": {
@@ -35,9 +36,10 @@
       ]
     },
     "opening": {
-      "source": "https://www.vipach.at/event-list",
-      "claim": "Opening event listed 2025-12-07 16:00–19:00 at CITYgalleryVIENNA",
-      "officialStart": "missing — exact ceremonial minute not isolated beyond the event-list window"
+      "source": "https://publicartists.online/en/event/eletem-kepe-071225/",
+      "claim": "Venue event listing states 16:00 on 7 December.",
+      "officialStart": "missing — exact ceremonial minute not isolated beyond the event-list window",
+      "listedStart": "2025-12-07T16:00:00+01:00"
     }
   },
   "team": {
@@ -78,7 +80,7 @@
     "licenceVerifiedApprovedForPublicDisplay": 0,
     "priorWixPublicationOnlyLicenseVerificationRequired": 18,
     "rightsReviewRequiredUnidentified": 2,
-    "derivedFromWorksAt": "2026-11-22",
+    "derivedFromWorksAt": "2026-11-25",
     "derivation": "scripts/regenerate_exhibition_counts.mjs — counts must match works[]",
     "sourceClaimedPhotographers": 15,
     "photographers": 13,
@@ -520,6 +522,20 @@
           "de": "Der Artikel von Rólunk.at erwähnt die eröffnete Ausstellung Életem képe und das Ausstellungsende am 13. Dezember."
         },
         "evidence": "Rólunk.at article near final section references the opened Életem képe exhibition"
+      },
+      {
+        "id": "horizont-eletem-kepe-report",
+        "publication": "Nyugat-európai Horizont",
+        "title": "Amikor a fotográfia közösséget teremt",
+        "url": "https://www.stihon.eu/wp-content/uploads/2026/01/Horizont.03.Web_.pdf#page=7",
+        "language": "hu",
+        "issue": "2026/3 · 12–13",
+        "type": "exhibition-report",
+        "description": {
+          "hu": "Az eredeti beszámoló a BMI Fotoklub közösségének történetében tárgyalja az Életem képe kiállítást.",
+          "en": "The signed feature discusses The Image of My Life in its account of the BMI photo club community.",
+          "de": "Der namentlich gezeichnete Beitrag behandelt Das Bild meines Lebens im Zusammenhang mit der Gemeinschaft des BMI-Fotoclubs."
+        }
       }
     ]
   }
