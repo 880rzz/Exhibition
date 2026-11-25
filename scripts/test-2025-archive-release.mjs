@@ -63,8 +63,13 @@ for (const lang of ['en','hu','de']){
   assert.equal(records.length,ex.artistProfiles.length+20-missing);
   assert.equal(withheld.length,ex.slug==='eletem-kepe'?2:7);
   assert.equal(count(html,'class="ex25-editorial-withheld"'),withheld.length);
-  assert.equal(count(html,'class="prose ex25-source-text" lang="hu"'),reviewed.length);
-  assert.equal(count(html,'class="ex25-original-text"'),lang==='hu'?0:reviewed.length);
+  assert.equal(count(html,'class="prose ex25-source-text" lang="hu"'),lang==='hu'?reviewed.length:0);
+  assert.equal(count(html,'class="ex25-original-link"'),lang==='hu'?0:reviewed.length);
+  for(const [,anchor] of html.matchAll(/class="ex25-original-link" hreflang="hu" href="([^"]+)"/g)){
+    const [target,id]=anchor.split('#');
+    assert.equal(target,'/hu/'+ex.slug+'/');
+    if(!candidateMode)assert.ok(text(target).includes('id="'+id+'"'),url+' missing source anchor: '+anchor);
+  }
   assert.equal(count(html,'class="prose ex25-translated-text" lang="'+langCodes[lang]+'"'),lang==='hu'?0:reviewed.length);
   for(const row of withheld)assert.deepEqual(Object.keys(row).sort(),['sourceSha256','status']);
   for(const row of reviewed){

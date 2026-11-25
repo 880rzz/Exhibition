@@ -5,6 +5,7 @@
  * Images are original Wix media references, mirrored privately under VIPACH.
  */
 import fs from 'node:fs';
+import { pressTitleFor } from './exhibition-press-language.mjs';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -81,6 +82,8 @@ const exhibitionSummary={
  de:'Zwanzig Fotografien waren vom 30. November bis 6. Dezember 2025 in der CITYgalleryVIENNA, Mahlerstraße 11, 1010 Wien, zu sehen. Die ursprüngliche VIPACH-Galerie nennt 19 Kunstschaffende; die zeitgenössische Berichterstattung nannte 18.'
  }
 };
+const archiveBrand={en:'Exhibition',de:'Ausstellung',hu:'Kiállítás'};
+const archiveLanguage={en:'Language',de:'Sprache',hu:'Nyelv'};
 const pressTitle={en:'Press coverage',hu:'Sajtómegjelenések',de:'Presseberichte'};
 const predecessorCopy={
  en:{heading:'Previous exhibition',source:'Original VIPACH exhibition page',official:'Historical exhibition',imageFrom:'Photography by',open:'Explore the exhibition',historical:'This 2025 exhibition has ended.',number:'Exhibited photograph',review:'Prepublication review only. This archive has not been released.'},
@@ -92,7 +95,7 @@ function pressMarkup(ex,lang){
  const items=publishedExhibitions.find(x=>x.slug===ex.slug)?.pressCoverage?.items||[];
  if(!items.length)return '';
  return '<section class="ex-press-section" id="press" aria-labelledby="ex-press-title"><div class="ex-press-inner"><h2 class="display-2" id="ex-press-title">'+esc(pressTitle[lang])+'</h2><div class="ex-press-list">'+
-   items.map(item=>'<article class="ex-press-item"><div class="ex-press-meta">'+esc(item.publication)+' '+(item.date?'<time datetime="'+esc(item.date)+'">'+esc(item.date)+'</time>':'<span>'+esc(item.issue)+'</span>')+'</div><h3><a href="'+esc(item.url)+'" lang="'+esc(item.language)+'" rel="noopener noreferrer">'+esc(item.title)+'</a></h3><p>'+esc(item.description[lang])+'</p></article>').join('')+
+   items.map(item=>'<article class="ex-press-item"><div class="ex-press-meta">'+esc(item.publication)+' '+(item.date?'<time datetime="'+esc(item.date)+'">'+esc(item.date)+'</time>':'<span>'+esc(item.issue)+'</span>')+'</div><h3><a href="'+esc(item.url)+'" hreflang="'+esc(item.language)+'" rel="noopener noreferrer">'+esc(pressTitleFor(item,lang))+'</a></h3><p>'+esc(item.description[lang])+'</p></article>').join('')+
    '</div></div></section>';
 }
 
@@ -140,7 +143,7 @@ function sourceMarkup(raw,lang,slug,kind,id){
  if(lang==='hu')return priceNotice+original;
  return priceNotice+note(c.translation)
   +'<div class="prose ex25-translated-text" lang="'+(lang==='de'?'de-AT':lang)+'">'+htmlText(entry[lang])+'</div>'
-  +'<details class="ex25-original-text"><summary>'+esc(c.original)+'</summary>'+original+'</details>';
+  +'<a class="ex25-original-link" hreflang="hu" href="'+route(slug,'hu')+'#'+esc(kind==='artists'?'artist-'+id:id)+'">'+esc(c.original)+'</a>';
 }
 function workName(w,lang){
  const local=predecessorCopy[lang],c=copy[lang],note=editorial.workDescriptionCrosswalk?.[w.id];
@@ -220,7 +223,7 @@ function page(ex,lang){
  const schema=candidate?archiveGraph({ex,current,lang,name:pageTitle,description:metadata.description,sourcePage,
    workName:w=>workName(w,lang),canonical}):null;
  const asset=candidate?'/assets/':'../../assets/';
- const history=twoShows?'<section class="history" id="history" aria-labelledby="history-title"><div class="history-inner"><div class="history-head reveal"><div><p class="kicker">VIPACH Exhibition</p>'
+ const history=twoShows?'<section class="history" id="history" aria-labelledby="history-title"><div class="history-inner"><div class="history-head reveal"><div><p class="kicker">VIPACH · '+esc(archiveBrand[lang])+'</p>'
  +'<h2 id="history-title" class="display-2">'+esc(candidate?local.heading:c.past)+'</h2></div><div class="prose"><p class="lead">'+esc(c.statement)+'</p></div></div>'
  +'<div class="history-list reveal">'+twoShows+'</div></div></section>':'';
  const heroVisual=candidate
@@ -235,8 +238,8 @@ function page(ex,lang){
  +(release?metadata.meta:'')
  +'<link rel="stylesheet" href="'+asset+'styles.css"><link rel="stylesheet" href="'+asset+'2025-exhibitions.css"><link rel="stylesheet" href="'+asset+'exhibition-harmonization.css">'
  +'</head><body class="ex25-body"'+(candidate?' data-exhibition-slug="'+ex.slug+'" data-route-mode="slug"':'')+'><a class="skip-link" href="#content">'+esc(c.skip)+'</a>'
- +'<header class="site-header"><a class="brand" href="'+(candidate?(lang==='en'?'/?lang=en':'/'+lang+'/'):'https://www.vipach.at/')+'" aria-label="VIPACH Exhibition"><img class="brand-logo" src="https://static.wixstatic.com/media/b0aee1_3ddaf3156e154fc0bda2ffe5cb999a5c~mv2.png" width="30" height="30" alt="" referrerpolicy="no-referrer"><span><strong>VIPACH</strong> / '+esc({en:'Exhibition',hu:'Kiállítás',de:'Ausstellung'}[lang])+'</span></a>'
- +'<div class="header-tools"><nav class="lang-nav" aria-label="Language">'+languageLinks+'</nav>'
+ +'<header class="site-header"><a class="brand" href="'+(candidate?(lang==='en'?'/?lang=en':'/'+lang+'/'):'https://www.vipach.at/')+'" aria-label="VIPACH '+esc(archiveBrand[lang])+'"><img class="brand-logo" src="https://static.wixstatic.com/media/b0aee1_3ddaf3156e154fc0bda2ffe5cb999a5c~mv2.png" width="30" height="30" alt="" referrerpolicy="no-referrer"><span><strong>VIPACH</strong> / '+esc({en:'Exhibition',hu:'Kiállítás',de:'Ausstellung'}[lang])+'</span></a>'
+ +'<div class="header-tools"><nav class="lang-nav" aria-label="'+esc(archiveLanguage[lang])+'">'+languageLinks+'</nav>'
  +'<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="'+esc(c.archive)+'"><span></span><span></span></button></div>'
  +'<nav id="site-menu" class="site-menu" aria-label="'+esc(c.archive)+'">'
  +menuHtml(lang,ex.slug)+'</nav></header>'
