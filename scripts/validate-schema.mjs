@@ -5,6 +5,8 @@ import assert from 'node:assert/strict';
 import { archive2025Release } from './exhibition-2025-release-scope.mjs';
 import { fileURLToPath } from 'node:url';
 
+import { gallerySources } from './exhibition-seo.mjs';
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const orgUrl = 'https://www.vipach.at/#organization';
@@ -52,7 +54,7 @@ for (const mode of ['featured', 'slug']) {
     const rel = pagePath(localeId, featured.slug, mode);
     const filePath = path.join(root, rel);
     assert.ok(fs.existsSync(filePath), `missing ${rel}`);
-    const { doc } = readLdJson(filePath);
+    const { doc, source } = readLdJson(filePath);
     assert.equal(doc['@context'], 'https://schema.org', rel);
     assert(Array.isArray(doc['@graph']) && doc['@graph'].length >= 64, `${rel}: art/artist graph missing`);
     const graph = doc['@graph'];
@@ -62,10 +64,7 @@ for (const mode of ['featured', 'slug']) {
     assert(org?.sameAs?.includes(wd), `${rel}: canonical VIPACH identity`);
     assert.equal(org.subjectOf?.['@id'], profile, `${rel}: federation source profile`);
 
-    const eventId =
-      mode === 'featured'
-        ? `${base}/#event`
-        : `${base}/${featured.slug}/#event`;
+    const eventId = base + '/' + featured.slug + '/#event';
     const event = graph.find((x) => x['@id'] === eventId);
     assert.ok(event, `${rel}: exhibition event @id ${eventId}`);
     assert.equal(event?.organizer?.['@id'], orgUrl, `${rel}: event organizer`);
@@ -73,6 +72,15 @@ for (const mode of ['featured', 'slug']) {
     const mainPage = graph.find(
       (x) => x['@type'] === 'WebPage' && String(x.url || '').startsWith(base)
     );
+    const canonical = source.match(/<link rel="canonical" href="([^"]+)">/)?.[1];
+    assert.equal(mainPage?.['@id'], canonical + '#webpage', rel);
+    assert.equal(mainPage?.url, canonical, rel);
+    assert.equal(mainPage?.mainEntity?.['@id'], eventId, rel);
+    assert.equal(event.url, base + '/' + featured.slug + '/', rel);
+    assert.equal(event.endDate, '2026-11-21T20:00:00+01:00', rel);
+    assert.ok(!event.offers, rel + ': do not claim current availability for a past show');
+    assert.ok(!event.image, rel + ': do not publish reviewed-only poster as metadata');
+    assert.ok(source.includes('<meta property="og:url" content="' + canonical + '">'), rel);
     assert.equal(mainPage?.inLanguage, localeCode(localeId), `${rel}: page language`);
     assert.equal(mainPage?.publisher?.['@id'], orgUrl, `${rel}: page publisher`);
 
@@ -108,6 +116,27 @@ for (const exhibition of exhibitions.filter((e) => e.render === 'archive')) {
     if (reviewedArchives?.slugs.includes(exhibition.slug)) {
       assert.match(source, /data-route-mode="slug"/, rel);
       assert.match(source, /content="index,follow"/, rel);
+      const graph = doc['@graph'];
+      const show = reviewedArchives.shows.find(x => x.slug === exhibition.slug);
+      const eventId = base + '/' + exhibition.slug + '/#event';
+      assert.equal(page?.mainEntity?.['@id'], eventId, rel);
+      assert.equal(event['@id'], eventId, rel);
+      assert.equal(event.url, base + '/' + exhibition.slug + '/', rel);
+      const location = graph.find(x => x['@id'] === event.location['@id']);
+      assert.equal(location?.address?.streetAddress, 'Mahlerstraße 11', rel);
+      assert.ok(page.citation.includes(gallerySources[exhibition.slug]), rel);
+      assert.ok(event.subjectOf.some(x=>x.url===gallerySources[exhibition.slug]), rel);
+      assert.equal(location?.address?.postalCode, '1010', rel);
+      const works = graph.filter(x=>x['@type']==='VisualArtwork');
+      const people = new Set(graph.filter(x=>x['@type']==='Person').map(x=>x['@id']));
+      assert.equal(works.length, 20, rel);
+      assert.equal(people.size, show.artistProfiles.length, rel);
+      assert.deepEqual(event.workFeatured.map(x=>x['@id']), works.map(x=>x['@id']), rel);
+      assert.ok(works.every(w => people.has(w.creator['@id']) && !w.image && !w.license), rel);
+      assert.match(page.description, /[.!?]$/, rel + ': use a complete description');
+      assert.ok(source.includes('<meta property="og:url" content="' + page.url + '">'), rel);
+      assert.doesNotMatch(source, /<meta[^>]+(?:og:image|twitter:image)/, rel);
+
     } else {
       assert.match(source, /Missing|Hiányzó|Fehlend/, `${rel}: missing-fields callout required`);
     }

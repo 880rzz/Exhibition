@@ -43,6 +43,8 @@ jobs:
         run: node scripts/check-2025-gallery-attribution.mjs
       - name: Verify committed 2025 archive content and 3L permanent navigation
         run: node scripts/test-2025-archive-release.mjs
+      - name: Verify venue evidence, privacy and independent press sections
+        run: node scripts/test-exhibition-venue-evidence.mjs
       - name: Verify committed multilingual press coverage before build
         run: node scripts/check-exhibition-press.mjs
       - name: Verify committed Pages HTML has navigation BEFORE generation
@@ -61,11 +63,17 @@ jobs:
         run: node scripts/test-exhibition-navigation.mjs
       - name: Verify generated press coverage after exhibition build
         run: node scripts/check-exhibition-press.mjs
+      - name: Validate the machine-readable public exhibition facts
+        run: node scripts/check-exhibition-public-data.mjs
       - name: Build public GitHub Pages output with Jekyll
         uses: actions/jekyll-build-pages@v1
       - name: Assert staging JSON and source code are not in published Jekyll artifact
         run: |
           test -f _site/index.html
+          test -f _site/data/public/exhibitions.json
+          test ! -e _site/data/exhibitions/eletem-kepe.json
+          test ! -e _site/data/exhibitions/as-i-like-it-austria.json
+          test ! -e _site/data/exhibitions/spontan-2026.json
           test ! -e _site/data/staging
           test ! -e _site/scripts
           test ! -e _site/docs

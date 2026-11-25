@@ -46,14 +46,16 @@
         "readme": "15–22 November 2026",
         "liveMicrositeHeroVisitContact": "15–21 November 2026",
         "liveMicrositeSchemaEndDate": "2026-11-21T20:00:00+01:00",
-        "wixEventPage": "2026-11-15T16:00 – 2026-11-22T23:59"
+        "wixEventPage": "2026-11-15T16:00 – 2026-11-22T23:59",
+        "venueListing": "https://publicartists.online/event/vipach-151126/"
       },
       "canonicalForLivePages": {
         "start": "2026-11-15",
         "end": "2026-11-21",
-        "note": "Matches current index.html / schema / contact dock. Do not silently overwrite with Wix 22 Nov without an editorial decision."
+        "note": "CITYgalleryVIENNA confirms 15–21 November 2026, closing at 20:00 Europe/Vienna on 21 November. The older calendar entry ends 22 November; do not treat it as the public visit range."
       },
-      "alternateWixClose": "2026-11-22"
+      "alternateWixClose": "2026-11-22",
+      "verifiedClosingTime": "2026-11-21T20:00:00+01:00"
     },
     "visitingHours": {
       "daily": "14:00–20:00",
