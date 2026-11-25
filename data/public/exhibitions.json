@@ -1,6 +1,14 @@
 {
   "version": "vipach-exhibition-facts-1",
   "publisher": "VIPACH — Vienna Photo Art & Creative Hub",
+  "context": {
+    "role": "Community photography exhibition archive",
+    "website": "https://exhibition.vipach.at/",
+    "communityClub": "https://www.vipach.at/",
+    "professionalPhotography": "https://www.banhalmiphotography.com/",
+    "commercialDigitalAdvertising": "https://business.vipach.at/",
+    "note": "VIPACH for Business is a separate commercial service of Banhalmi Norbert e.U.; not part of the community club or archive."
+  },
   "languages": [
     "en",
     "hu",

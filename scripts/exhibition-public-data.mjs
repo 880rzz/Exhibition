@@ -90,6 +90,14 @@ export function publicExhibitionFacts(exhibitions, scope) {
   return {
     version: 'vipach-exhibition-facts-1',
     publisher: 'VIPACH — Vienna Photo Art & Creative Hub',
+    context: {
+      role: 'Community photography exhibition archive',
+      website: base+'/',
+      communityClub: 'https://www.vipach.at/',
+      professionalPhotography: 'https://www.banhalmiphotography.com/',
+      commercialDigitalAdvertising: 'https://business.vipach.at/',
+      note: 'VIPACH for Business is a separate commercial service of Banhalmi Norbert e.U.; not part of the community club or archive.',
+    },
     languages: ['en', 'hu', 'de-AT'],
     summary: 'Public exhibition facts, not a media feed, current price list or licence granted to readers.',
     exhibitions: [
