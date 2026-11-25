@@ -20,6 +20,7 @@ assert.equal(newestFeatured([...exhibits,approved],new Date('2026-11-22T12:00:00
 assert.equal(site.featuredExhibitionSlug,'spontan-2026');
 const pages=[
   ['index.html',''],['hu/index.html','/hu'],['de/index.html','/de'],
+  ['spontan-2026/index.html',''],['hu/spontan-2026/index.html','/hu'],['de/spontan-2026/index.html','/de'],
   ['eletem-kepe/index.html',''],['hu/eletem-kepe/index.html','/hu'],['de/eletem-kepe/index.html','/de'],
   ['as-i-like-it-austria/index.html',''],['hu/as-i-like-it-austria/index.html','/hu'],['de/as-i-like-it-austria/index.html','/de']
 ];
@@ -30,5 +31,19 @@ for(const [path,prefix] of pages){
     assert.ok(html.includes('href="'+prefix+'/'+slug+'/'),path+' missing historical exhibition '+slug);
   }
   assert.match(html,/id="site-menu"/,path+' missing menu');
+  const nav=html.match(/<nav\b[^>]*id="site-menu"[^>]*>([\s\S]*?)<\/nav>/)[1];
+  assert.ok(!/^\s*<a\b/.test(nav),path+' no standalone section navigation');
+  const groups=[...nav.matchAll(/<details class="exhibition-disclosure" data-exhibition="([^"]+)">([\s\S]*?)<\/details>/g)];
+  assert.deepEqual(groups.map(g=>g[1]),['spontan-2026','eletem-kepe','as-i-like-it-austria']);
+  for(const [_,slug,group] of groups){
+    assert.match(group,/<summary class="exhibition-menu-summary">/);
+    const refs=[...group.matchAll(/href="([^"#]*)#([^"]+)"/g)];
+    assert.ok(refs.length>=5,path+' '+slug);
+    for(const [,route,id] of refs){
+      const target=route?route.slice(1)+'index.html':path;
+      assert.ok(fs.readFileSync(target,'utf8').includes('id="'+id+'"'),path+' broken section '+route+'#'+id);
+    }
+    if(slug==='as-i-like-it-austria')assert.ok(!group.includes('#history'),path+' earliest exhibition has no history section');
+  }
 }
 console.log('PASS: newest released show on homepage, two archive entries in HU/EN/DE, future-dated/unapproved content excluded');

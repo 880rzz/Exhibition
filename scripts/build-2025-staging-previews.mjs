@@ -8,6 +8,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { newestFeatured, menuExhibitions, exhibitionDate } from './exhibition-chronology.mjs';
+import { renderExhibitionNavigation } from './exhibition-navigation.mjs';
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 import { archive2025Release } from './exhibition-2025-release-scope.mjs';
 const release=process.argv.includes('--render-reviewed-archive');
@@ -53,18 +54,8 @@ function exhibitionName(exhibition,lang){
  return exhibition.titles?.[lang]||showName(exhibition.slug,lang);
 }
 function menuHtml(lang,slug){
- const c=copy[lang];
- const items=navigationExhibitions.map((ex,i)=>{
-   const year=exhibitionDate(ex)?.slice(0,4)||String(ex.year||'');
-   const href=exhibitionHref(ex,lang);
-   return '<a class="exhibition-menu-entry'+(i===0?' exhibition-menu-current':'')+
-     '" href="'+esc(href)+'"'+(ex.slug===slug?' aria-current="page"':'')+'><span>'+
-     esc(exhibitionName(ex,lang))+'</span><small>'+year+'</small></a>';
- });
- return '<div class="exhibition-nav-group" aria-label="'+esc(c.archive)+'">'
-   +'<p class="exhibition-nav-heading">'+esc(c.archive)+'</p>'
-   +'<div class="exhibition-nav-primary"><span class="exhibition-nav-kicker">'+esc(c.latest)+'</span>'+(items[0]||'')+'</div>'
-   +'<div class="exhibition-nav-history"><span class="exhibition-nav-kicker">'+esc(c.past)+'</span>'+items.slice(1).join('')+'</div></div>';
+ return renderExhibitionNavigation(navigationExhibitions,lang,slug,ex=>exhibitionHref(ex,lang),
+   {historicalSections:true,preview:!candidate});
 }
 
 const releaseRights={
@@ -176,7 +167,6 @@ function page(ex,lang){
      +'<div><h3>'+esc(exhibitionName(item,lang))+'</h3></div><div class="history-copy"><a href="'+esc(link)+'"'+(candidate?' rel="prev"':'')+'>'+
        esc(exhibitionName(item,lang))+' →</a></div></article>';
  }).join('');
- const sectionNav=[['story',c.story],['exhibitors',c.artists],['team',c.team],['press',pressTitle[lang]],...(twoShows?[['history',candidate?local.heading:c.past]]:[]),['visit',c.visit]];
  const canonical=SITE+route(ex.slug,lang);
  const alternate=locales.map(l=>'<link rel="alternate" hreflang="'+locale(l)+'" href="'+SITE+route(ex.slug,l)+'">').concat(['<link rel="alternate" hreflang="x-default" href="'+SITE+route(ex.slug,'en')+'">']).join('');
  const schema={'@context':'https://schema.org','@graph':[
@@ -203,7 +193,6 @@ function page(ex,lang){
  +'<div class="header-tools"><nav class="lang-nav" aria-label="Language">'+languageLinks+'</nav>'
  +'<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="'+esc(c.archive)+'"><span></span><span></span></button></div>'
  +'<nav id="site-menu" class="site-menu" aria-label="'+esc(c.archive)+'">'
- +sectionNav.map(([id,label])=>'<a href="#'+id+'">'+esc(label)+'</a>').join('')
  +menuHtml(lang,ex.slug)+'</nav></header>'
  +'<main id="content">'
  +'<section class="hero ex25-exhibition-hero" aria-labelledby="hero-title">'

@@ -12,6 +12,7 @@ import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { archive2025Release } from './exhibition-2025-release-scope.mjs';
 import { newestFeatured, menuExhibitions, exhibitionDate } from './exhibition-chronology.mjs';
+import { renderExhibitionNavigation } from './exhibition-navigation.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -128,27 +129,9 @@ function subtitleFor(exhibition, localeId) {
 
 
 function archiveNavigationHtml(exhibitions, featured, localeId, currentSlug, mode) {
-  const copy = {
-    en: { heading: 'Exhibitions', current: 'Latest exhibition', history: 'Previous exhibitions', hint: '2025 photo exhibitions' },
-    hu: { heading: 'Kiállítások', current: 'Legújabb kiállítás', history: 'Korábbi kiállítások', hint: 'Fotókiállítások archívuma' },
-    de: { heading: 'Ausstellungen', current: 'Neueste Ausstellung', history: 'Frühere Ausstellungen', hint: 'Fotoausstellungen im Archiv' },
-  }[localeId];
-  const links = menuExhibitions(exhibitions, featured).map((ex) => {
-    const isFeatured = ex.slug === featured.slug;
-    const target = isFeatured && !scopedArchives ? featuredPaths(localeId) : slugPaths(ex.slug,localeId);
-    const isCurrent = isFeatured ? currentSlug===featured.slug && mode===(scopedArchives?'slug':'featured') : currentSlug===ex.slug;
-    const year = exhibitionDate(ex)?.slice(0,4) || ex.year || '';
-    const label = titleFor(ex,localeId);
-    return '<a class="exhibition-menu-entry' + (isFeatured ? ' exhibition-menu-current' : '') +
-      '" href="' + target + '"' + (isCurrent?' aria-current="page"':'') + '>' +
-      '<span>' + escapeHtml(label) + '</span><small>' + escapeHtml(year) + '</small></a>';
-  });
-  const first = links.shift() || '';
-  return '<div class="exhibition-nav-group" aria-label="' + escapeHtml(copy.heading) + '">' +
-    '<p class="exhibition-nav-heading">' + escapeHtml(copy.heading) + '</p>' +
-    '<div class="exhibition-nav-primary"><span class="exhibition-nav-kicker">' + escapeHtml(copy.current) + '</span>' + first + '</div>' +
-    (links.length ? '<div class="exhibition-nav-history"><p class="exhibition-nav-kicker">' +
-      escapeHtml(copy.history) + '</p>' + links.join('') + '</div>' : '') + '</div>';
+  return renderExhibitionNavigation(menuExhibitions(exhibitions, featured), localeId, currentSlug,
+    ex => ex.slug === featured.slug && !scopedArchives ? featuredPaths(localeId) : slugPaths(ex.slug,localeId),
+    {historicalSections: Boolean(scopedArchives)});
 }
 
 function renderPressSection(exhibition, localeId) {
@@ -192,7 +175,7 @@ function rewriteFullHtml({ html, exhibition, localeId, mode, exhibitions, featur
   const menu = archiveNavigationHtml(exhibitions, featured, localeId, slug, mode);
   const siteMenu = /(<nav\b[^>]*\bid="site-menu"[^>]*>)([\s\S]*?)(<\/nav>)/i;
   if (!siteMenu.test(out)) throw new Error('Missing hamburger site-menu in full HTML template: ' + slug + '/' + localeId);
-  out = out.replace(siteMenu, (_whole, open, inner, close) => open + inner + menu + close);
+  out = out.replace(siteMenu, (_whole, open, inner, close) => open + menu + close);
 
   // Language switcher + hreflang + canonical
   out = out
