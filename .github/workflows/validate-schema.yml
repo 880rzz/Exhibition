@@ -13,6 +13,8 @@ on:
       - 'robots.txt'
       - '_config.yml'
       - 'llms.txt'
+      - 'assets/entry-language.js'
+      - 'privacy/**'
       - '.github/workflows/validate-schema.yml'
   push:
     branches: [main]
@@ -28,6 +30,8 @@ on:
       - 'robots.txt'
       - '_config.yml'
       - 'llms.txt'
+      - 'assets/entry-language.js'
+      - 'privacy/**'
       - '.github/workflows/validate-schema.yml'
   workflow_dispatch:
 permissions:
@@ -43,6 +47,8 @@ jobs:
         run: node scripts/check-2025-gallery-attribution.mjs
       - name: Verify committed 2025 archive content and 3L permanent navigation
         run: node scripts/test-2025-archive-release.mjs
+      - name: Verify browser language selection and stable locale links
+        run: node scripts/test-exhibition-entry-language.mjs
       - name: Verify venue evidence, privacy and independent press sections
         run: node scripts/test-exhibition-venue-evidence.mjs
       - name: Verify committed multilingual press coverage before build
