@@ -31,7 +31,13 @@
         "professionalPartner": "OM SYSTEM",
         "printPartnerLabel": "Nyomdai partner",
         "professionalPartnerLabel": "Szakmai partner",
-        "partnerRightsNote": "A partnerkapcsolat megnevezése nem jelent automatikus logóhasználati engedélyt."
+        "partnerRightsNote": "A partnerkapcsolat megnevezése nem jelent automatikus logóhasználati engedélyt.",
+        "sourceOriginalIntro": [
+          "Mi történik, ha egy fotóművésznek fel kell tennie a kérdést: melyik az az egyetlen kép, ami leginkább meghatározza őt? Melyik az az alkotás, ami egy egész életutat, egy sorsfordító pillanatot, vagy egy örök érvényű felismerést sűrít magába?",
+          "A Bécsi Magyar Iskola (BMI) Fotoklubja bemutatja 15, a világ különböző pontjain élő magyar fotóművész legszemélyesebb vallomását. A bécsi CITYgalleryVIENNA by publicartists falain megelevenedő 20 alkotás nem csupán kép a falon, hanem egy-egy ablak a művészek lelkére. Mindegyik fotó egyedi és megismételhetetlen történetet mesél el – az alkotó \"életének képét\".",
+          "Ez a tárlat egy híd, amelyet a művészet teremt. Híd, amely összeköti a különböző országokban élő alkotókat, és híd, amely a képeken keresztül a szemlélőhöz vezet, párbeszédre hívva őt a legmélyebb emberi érzelmekről és tapasztalatokról.",
+          "Szeretettel várjuk egy különleges utazásra, ahol a képek ereje által fedezhetjük fel, mi tesz egy pillanatot felejthetetlenné."
+        ]
       },
       "en": {
         "title": "The Image of My Life",
@@ -123,7 +129,19 @@
         "professionalPartner": "OM SYSTEM",
         "printPartnerLabel": "Nyomdai partner",
         "professionalPartnerLabel": "Szakmai partner",
-        "partnerRightsNote": "A partnerkapcsolat megnevezése nem jelent automatikus logóhasználati engedélyt."
+        "partnerRightsNote": "A partnerkapcsolat megnevezése nem jelent automatikus logóhasználati engedélyt.",
+        "sourceOriginalIntro": [
+          "A „As I Like It Austria” fotókiállítás nem csupán Ausztria és Bécs látványos pillanatait örökíti meg, hanem egy mélyebb, spirituális utazásra invitál: a találkozás, az önismeret és az életigenlés útjára. A Bécsi Magyar Iskola Fotóklubjának tagjai, Bánhalmi Norbert fotóművész inspiráló vezetésével, magyar szívvel és osztrák harmóniával látták meg a mindennapok rejtett szépségeit.",
+          "A Képek Üzenete:",
+          "Ez a tárlat a két kultúra összeolvadásának ünnepét mutatja be, ahol a magyar szenvedély nem ütközik, hanem eggyé válik az osztrák hagyománytisztelettel és eleganciával. A fotók arról tanúskodnak, hogy miként lehet itthon lenni, megőrizve a saját kulturális gyökereinket, miközben nyitott szívvel befogadjuk a befogadó ország gazdagságát. A képeken keresztül a néző megtapasztalhatja, hogy ez a találkozás nem vesz el, hanem többé, gazdagabbá és nyitottabbá tesz.",
+          "A Látásmód Filozófiája:",
+          "Bánhalmi Norbert hitvallása szerint a fotózás több, mint a pillanat puszta megörökítése; egy eszköz az elmélyülésre. A kiállítás arra tanít, hogy megálljunk a rohanásban, félretegyük a mindennapi zajt, és nézzünk, hogy lássunk is. Lássuk a fényt, a csendet, az emberi mosolyt – a létezés apró, törékeny csodáit. Amikor a kamera lencséjén keresztül sikerül elkapni ezt az időtlen pillanatot, az egyben az élet szeretetének, a létigenlésnek a megerősítése is.",
+          "Mély Mondanivaló:",
+          "Az „As I Like It Austria” egy vizuális esszé arról, hogy a szépség a mindennapok apró részleteiben rejlik, és a művészet mindannyiunkban ott van. Ez a tárlat arra invitálja a látogatót, hogy ne csak Bécs épületeit, hanem a pillanat múló varázsát is megörökítse a saját belső kamerájával.",
+          "Lépjen be, engedje, hogy a képek megszólítsák. Nevessen, gondolkodjon el, vagy egyszerűen csak élvezze azt a pillanatot, amit a fotósok megállítottak Önnek.",
+          "„Az élet szép – ahogy mi szeretjük. As we like it.”",
+          "A kiállítás célja, hogy elgondolkodtassa a látogatót a saját, személyes „látásmódjáról”, és arról, hogy hogyan teszi őt gazdagabbá a kultúrák közötti híd."
+        ]
       },
       "en": {
         "title": "As I Like It Austria",
@@ -185,6 +203,25 @@
         "professionalPartnerLabel": "Fachpartner",
         "partnerRightsNote": "Die Nennung einer Partnerschaft ist keine automatische Genehmigung zur Wiedergabe eines Markenlogos."
       }
+    }
+  },
+  "workDescriptionCrosswalk": {
+    "eletemkepe-6a0485e910a1": {
+      "galleryImageFileId": "b0aee1_6eb5aaee2b5b42e382275ba7802881f4~mv2.jpg",
+      "sourceRecordId": "04cd99c4-1704-4ee6-a350-097e5c4b2dbb",
+      "sourceImageFileId": "b0aee1_29341e20e89a487283c319e04c5ffb16~mv2.jpg",
+      "artistProfileId": "denise-trajkovska",
+      "field": "secondArtworkDescription",
+      "basis": "same-underlying-exposure-cross-exhibition-alternate-treatment"
+    },
+    "asilikeit-3c51b19aa027": {
+      "galleryImageFileId": "b0aee1_6b9be3441587481f9a2d9419ac006d23~mv2.jpg",
+      "sourceRecordId": "bd5fe81e-baef-495f-abde-41e359807c32",
+      "sourceImageFileId": "b0aee1_430d6ce0e7f748dd8eabc9497c3a0779~mv2.jpg",
+      "artistProfileId": "naylivart",
+      "field": "secondArtworkDescription",
+      "basis": "same-show-visually-verified-derivative",
+      "verifiedSourceTitle": "Megtévesztően Hasonló"
     }
   }
 }

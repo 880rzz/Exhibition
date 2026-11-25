@@ -1,5 +1,16 @@
 # VIPACH — Two 2025 exhibitions: content-first migration handoff
 
+## Release candidate dated 2026-11-25
+
+This update supersedes the staging-only release status below, which is retained as a dated migration record. The VIPACH organizer attested that rights-holder permission covers the **40 catalogue work display uses and 34 portrait display uses** in these two official archives on `exhibition.vipach.at`. This attestation is recorded without private correspondence or named licence instruments in the repository. No individual instrument was independently verified; the separate instrument-verification preflight still reports zero. Public re-use, third-party licensing, other websites, extra cover/OG uses and photo downloads are not authorized by this release.
+
+- `data/staging/2025-archive-release-scope.json` binds the exact attested inventory to SHA-256. Substitution, additional scopes or a mismatched hash fails closed. The scope is organizer-attested, not a claim of ownership or open rights.
+- The reviewed renderer uses 72 distinct existing Wix CDN originals for 74 uses, with a no-referrer image policy and no new asset copies, hero reuse or public license markup. The existing private VIPACH mirror is preserved for continuity, not exposed.
+- The permanent routes use SPONTÁN’s layout in three languages with the exact existing Hungarian Wix biographies and 39 source-based work descriptions (37 direct plus two explicitly attributed variants), properly language-tagged. One description remains explicitly unavailable. No unsupported titles are fabricated: missing titles use original gallery position.
+- The six production-format archive routes, six SPONTÁN home/permanent pages, direct predecessors, stable language switchers and confirmed press items are tested. No Wix, DNS, price, menu data for later events, or unverified stronger rights changes.
+- Reviewer-only output: `node scripts/build-2025-staging-previews.mjs --archive-candidate` creates `private-review/exhibition-candidate/` with 12 local routes and noindex/disallow. Normal regeneration, once this draft is reviewed and merged, is `node scripts/build-exhibitions.mjs`. Production deployment must still be checked separately; a PR or an artifact does not mean live.
+
+
 **Scope:** Only **Életem képe** and **As I Like It Austria**. All other historical shows remain untouched.  
 **Target:** `880rzz/Exhibition`, same editorial design system as SPONTÁN, three-language layouts.
 

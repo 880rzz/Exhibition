@@ -10,6 +10,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { archive2025Release } from './exhibition-2025-release-scope.mjs';
 import { newestFeatured, menuExhibitions, exhibitionDate } from './exhibition-chronology.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -18,6 +19,7 @@ const dataDir = path.join(root, 'data');
 const exhibitionsDir = path.join(dataDir, 'exhibitions');
 const site = JSON.parse(fs.readFileSync(path.join(dataDir, 'site.json'), 'utf8'));
 const baseUrl = site.baseUrl.replace(/\/$/, '');
+const scopedArchives=archive2025Release();
 
 const copy = {
   en: {
@@ -133,8 +135,8 @@ function archiveNavigationHtml(exhibitions, featured, localeId, currentSlug, mod
   }[localeId];
   const links = menuExhibitions(exhibitions, featured).map((ex) => {
     const isFeatured = ex.slug === featured.slug;
-    const target = isFeatured ? featuredPaths(localeId) : slugPaths(ex.slug,localeId);
-    const isCurrent = isFeatured ? currentSlug===featured.slug && mode==='featured' : currentSlug===ex.slug;
+    const target = isFeatured && !scopedArchives ? featuredPaths(localeId) : slugPaths(ex.slug,localeId);
+    const isCurrent = isFeatured ? currentSlug===featured.slug && mode===(scopedArchives?'slug':'featured') : currentSlug===ex.slug;
     const year = exhibitionDate(ex)?.slice(0,4) || ex.year || '';
     const label = titleFor(ex,localeId);
     return '<a class="exhibition-menu-entry' + (isFeatured ? ' exhibition-menu-current' : '') +
@@ -575,6 +577,11 @@ function main() {
         writeFile(outputPathFor(localeId, exhibition.slug, 'slug'), html);
       }
     }
+  }
+
+  if (scopedArchives) {
+    const a = spawnSync(process.execPath, [path.join(root,'scripts/build-2025-staging-previews.mjs'),'--render-reviewed-archive'], {cwd:root,stdio:'inherit'});
+    if (a.status !== 0) throw new Error('Scoped 2025 archive render failed');
   }
 
   writeFile(path.join(root, 'sitemap.xml'), buildSitemap(exhibitions, featured));

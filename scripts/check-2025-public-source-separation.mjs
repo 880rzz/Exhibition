@@ -10,6 +10,8 @@
  *  - no unapproved 2025 work/portrait source URL is embedded in public pages
  * The Jekyll build output is separately inspected by the workflow.
  */
+import assert from 'node:assert/strict';
+import { archive2025Release } from './exhibition-2025-release-scope.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -53,19 +55,45 @@ function walk(folder){
  }
 }
 for(const folder of roots)walk(path.join(root,folder));
-for(const ex of src.exhibitions){
- for(const lang of ['en','hu','de']){
-  const file=path.join(root,...(lang==='en'?[]:[lang]),ex.slug,'index.html');
-  if(!fs.existsSync(file))throw new Error('Missing existing historical archive route: '+file);
-  const content=fs.readFileSync(file,'utf8');
-  for(const media of urls)if(content.includes(media))throw new Error('Unapproved art embedded in served page: '+file);
+// Strictly match each approved use on its own show route and in the
+// designated gallery role. Duplicate hero, teaser, metadata and other
+// route embeddings remain unauthorized even when the organizer gate is on.
+const scope=archive2025Release();
+const permitted=new Map();
+for (const ex of src.exhibitions) for (const lang of ['en','hu','de']) {
+ const rel=path.join(...(lang==='en'?[]:[lang]),ex.slug,'index.html');
+ assert(fs.existsSync(rel),rel);
+ if(scope)permitted.set(rel,[
+  ...ex.works.map(w=>[w.imageSourceUrl,'exhibitor-work-image']),
+  ...ex.artistProfiles.map(p=>[p.portraitSourceUrl,'exhibitor-portrait'])
+ ]);
+}
+const allUrls=new Set(urls);
+const nonPublic=new Set(['.git','.github','staging-preview','private-review','docs','scripts','templates','node_modules','_site']);
+function scan(dir='.') {
+ for(const entry of fs.readdirSync(dir,{withFileTypes:true})){
+  if(nonPublic.has(entry.name))continue;
+  const file=path.join(dir,entry.name);
+  if(entry.isDirectory()){scan(file);continue;}
+  if(!entry.isFile() || !entry.name.endsWith('.html'))continue;
+  const html=fs.readFileSync(file,'utf8');
+  const expected=permitted.get(file)||[];
+  const attrs=[...html.matchAll(/<figure class="(exhibitor-work-image|exhibitor-portrait)"><img src="([^"]+)"[^>]*referrerpolicy="no-referrer"/g)];
+  const uniqueMedia=new Map(expected.map(([url,role])=>[url+'|'+role,0]));
+  for(const [,role,url] of attrs)if(uniqueMedia.has(url+'|'+role))uniqueMedia.set(url+'|'+role,uniqueMedia.get(url+'|'+role)+1);
+  for(const [url,role] of expected)assert.equal(uniqueMedia.get(url+'|'+role),1,file+' missing/duplicate media in '+role+': '+url);
+  for(const url of allUrls)assert.equal(html.split(url).length-1,expected.filter(([u])=>u===url).length,file+' has out-of-scope art/portrait URL: '+url);
+  if(expected.length)assert(!/rel="license"|license-url|<meta[^>]+(?:og:image|twitter:image)|creativecommons\.org\/licenses/i.test(html),file+' unauthorized cover or reuse licence');
  }
 }
+scan();
 console.log(JSON.stringify({
- state:'PASS_SOURCE_ONLY',
+ state:scope?'PASS_OWNER_ATTESTED_ARCHIVE_USES':'PASS_SOURCE_ONLY',
  pages:6,
  reviewedMediaUses:urls.length,
+ independentlyVerifiedUseCount:0,
  checkedPublicAssets:visited,
- jekyllExclusion:'data/staging',
- imagesAddedToPublicPages:false
+ jekyllExclusion:'data/staging,private-review',
+ imagesCopiedIntoPublicAssets:false,
+ ownerAttestedArchiveUses:scope?74:0
 }));

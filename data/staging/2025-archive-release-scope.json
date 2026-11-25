@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "vipach-2025-organizer-archive-attestation-v1",
+  "approvedOn": "2026-11-25",
+  "authority": "VIPACH organizer attestation; independent permissions not reviewed",
+  "permittedUse": "display-on-exhibition.vipach.at-archive-only",
+  "mediaHosting": "existing-public-wix-source-no-copy",
+  "publicReuseAuthorized": false,
+  "independentlyVerifiedUseCount": 0,
+  "slugs": [
+    "eletem-kepe",
+    "as-i-like-it-austria"
+  ],
+  "exactSourceInventorySha256": "60693db64033d3d443d57bae4ef7102244f99cb37e5031570e1ff4cbb76d61d8"
+}
