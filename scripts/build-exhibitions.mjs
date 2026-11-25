@@ -451,7 +451,10 @@ function buildLlms(facts, featured) {
     '> Official directory of past VIPACH photography exhibitions in Vienna, Austria. Exhibitions are offered in Hungarian, English and Austrian German.',
     '',
     '- [Exhibition facts (JSON)](' + baseUrl + publicExhibitionsPath + '): source-linked exhibition dates, venue, catalogue counts and display status.',
-    '- [VIPACH](https://www.vipach.at/): Vienna Photo Art & Creative Hub, an initiative within the Vienna Hungarian School and its supporting federation.',
+    '- [VIPACH](https://www.vipach.at/): the community photography club in Vienna and Budapest; it grew from the Vienna Hungarian School photo club within the Central Federation.',
+    '- This domain is the VIPACH cultural exhibition archive, not a separate organization or a commercial service.',
+    '- [BANHALMI Photography](https://www.banhalmiphotography.com/) is the photography practice of Banhalmi Norbert e.U. [VIPACH for Business](https://business.vipach.at/) is a separate commercial digital-advertising service of that practice, not an activity of the association or this archive.',
+    '- Use the privacy notice of the site visited. Shared names and links do not imply common legal control, consent or reuse permission.',
     '',
     '## Published exhibitions',
   ];
