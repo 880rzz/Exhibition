@@ -5,6 +5,7 @@
  * Images are original Wix media references, mirrored privately under VIPACH.
  */
 import fs from 'node:fs';
+import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { venueEvidenceMarkup, venueSources } from './exhibition-venue-evidence.mjs';
@@ -115,30 +116,31 @@ function artistBiography(name,show){
    ||wix.records.find(r=>norm(r.artistName)===norm(name));
  return person?.biography||'';
 }
-const translationFile=path.join(ROOT,'data/staging/2025-archive-translations.json');
-const translationData=fs.existsSync(translationFile)?JSON.parse(fs.readFileSync(translationFile,'utf8')):null;
-if(translationData&&translationData.publicationStatus!=='editorially-approved')throw Error('Archive translations require editorial approval');
-const translations=translationData?.exhibitions||{};
-const editorialLabels={
- en:{original:'Original Hungarian text',missing:'Available in the original Hungarian. A reviewed translation is not yet published.',translated:'Editorial translation from Hungarian.',past:'Any amount in the original below is an archival 2025 price, not a current offer.',limited:'The historical text has been edited here to omit third-party personal data.',claims:'The source is the artist’s own account; personal or promotional claims are not independently verified.'},
- hu:{original:'Eredeti magyar szöveg',missing:'Az eredeti magyar szöveg olvasható.',translated:'Szerkesztői fordítás magyarból.',past:'Az eredeti szövegben megadott összeg 2025-ös archív ár, nem aktuális ajánlat.',limited:'A történeti szöveg itt harmadik személy személyes adatai nélkül olvasható.',claims:'Az alkotó saját bemutatkozása; személyes vagy promóciós állításait az archívum nem igazolja függetlenül.'},
- de:{original:'Ungarischer Originaltext',missing:'Der ungarische Originaltext ist verfügbar. Eine geprüfte Übersetzung ist noch nicht veröffentlicht.',translated:'Redaktionelle Übersetzung aus dem Ungarischen.',past:'Beträge im Original sind historische Preisangaben von 2025, kein aktuelles Angebot.',limited:'Der historische Text wird hier ohne personenbezogene Angaben Dritter gezeigt.',claims:'Der Text ist die Selbstdarstellung der Künstlerin bzw. des Künstlers; persönliche oder werbliche Aussagen wurden nicht unabhängig bestätigt.'}
+const archiveTranslations=JSON.parse(fs.readFileSync(path.join(ROOT,'data/staging/2025-archive-translations.json'),'utf8')).exhibitions;
+const copyNote={
+ en:{original:'Read the Hungarian original',translation:'Editorial translation of the submitted 2025 text',held:'The original text is not reproduced here.',price:'Prices in the submitted 2025 text are archival, not current offers.'},
+ de:{original:'Ungarischen Originaltext lesen',translation:'Redaktionelle Übersetzung des eingereichten Textes von 2025',held:'Der Originaltext wird hier nicht wiedergegeben.',price:'Preise im eingereichten Text von 2025 sind historische Angaben, keine aktuellen Angebote.'},
+ hu:{original:'Eredeti magyar szöveg',translation:'Szerkesztői fordítás',held:'Az eredeti szöveget itt nem közöljük.',price:'A 2025-ös szövegben szereplő árak archív adatok, nem aktuális ajánlatok.'}
 };
-function sourceMarkup(raw,locale,show,kind,id){
- if(!raw)return '';
- const original=t=>'<div class="prose ex25-source-text" lang="hu">'+htmlText(t)+'</div>';
- if(!release)return original(raw);
- const l=editorialLabels[locale];
- const lang=locale==='de'?'de-AT':locale;
- const sensitive=id==='eletemkepe-c90ec4d760c2';
- const displayRaw=sensitive?raw.replace(/^A kép ára:[^\n]*(?:\n+|$)/u,'A kép 2025-ös ára: 400 €. A bevétel jótékony célra szolgált.\n\n'):raw;
+function sourceMarkup(raw,lang,slug,kind,id){
+ const original='<div class="prose ex25-source-text" lang="hu">'+htmlText(raw)+'</div>';
+ const entry=archiveTranslations[slug]?.[kind]?.[id];
+ const srcHash=createHash('sha256').update(raw).digest('hex');
+ if(!entry||entry.sourceSha256!==srcHash)throw Error('Archive source text changed: '+slug+'/'+kind+'/'+id);
+ const c=copyNote[lang];
+ const note=(message)=>'<p class="ex25-translation-note">'+esc(message)+'</p>';
+ if(entry.status==='withheld'){
+   if(entry.en||entry.de)throw Error('Held text must not contain translations: '+id);
+   return '<p class="ex25-editorial-withheld">'+esc(c.held)+'</p>';
+ }
+ if(entry.status!=='reviewed'||!entry.en?.trim()||!entry.de?.trim())throw Error('Reviewed translation pair missing: '+id);
+ if(!candidate)return original;
  const price=kind==='works'&&/(?:kép ára|ár\s*:|\d\s*(?:€|euró|eur\b))/iu.test(raw);
- const note=(t)=>'<p class="ex25-translation-note">'+esc(t)+'</p>';
- const notices=(price?note(l.past):'')+(sensitive?note(l.limited):'')+(kind==='artists'&&/Google|#1/u.test(raw)?note(l.claims):'');
- if(locale==='hu')return notices+original(displayRaw);
- const translation=translations?.[show]?.[kind]?.[id]?.[locale];
- const toggle='<details class="ex25-original-text"><summary>'+esc(l.original)+'</summary>'+original(displayRaw)+'</details>';
- return notices+(translation?note(l.translated)+'<div class="prose ex25-translated-text" lang="'+lang+'">'+htmlText(translation)+'</div>':note(l.missing))+toggle;
+ const priceNotice=price?note(c.price):'';
+ if(lang==='hu')return priceNotice+original;
+ return priceNotice+note(c.translation)
+  +'<div class="prose ex25-translated-text" lang="'+(lang==='de'?'de-AT':lang)+'">'+htmlText(entry[lang])+'</div>'
+  +'<details class="ex25-original-text"><summary>'+esc(c.original)+'</summary>'+original+'</details>';
 }
 function workName(w,lang){
  const local=predecessorCopy[lang],c=copy[lang],note=editorial.workDescriptionCrosswalk?.[w.id];
@@ -165,14 +167,14 @@ function workMarkup(w,lang,extra,show){
    +'<figcaption class="artwork-copyright">'+(candidate?esc(local.imageFrom+': '+creator):'© '+esc(creator)+'. '+esc(c.review)+'.')+'</figcaption></figure>'
    +(extra?'</section>':'</div>');
 }
-function artistCard(p,works,i,lang,show){
+function artistCard(p,works,i,lang,show,slug){
  const c=copy[lang],bio=artistBiography(p.name,show);
- const images=works.map((w,n)=>workMarkup(w,lang,n>0,show)).join('');
+ const images=works.map((w,n)=>workMarkup(w,lang,n>0,slug)).join('');
  return '<article class="exhibitor-card" id="artist-'+esc(p.id)+'">'
    +'<figure class="exhibitor-portrait"><img src="'+esc(img(p.portraitSourceUrl))+'" alt="'+esc(p.name)+'" width="'+esc(p.portraitWidth||700)+'" height="'+esc(p.portraitHeight||900)+'" referrerpolicy="no-referrer" loading="lazy" decoding="async"></figure>'
    +'<div class="exhibitor-content"><p class="kicker">'+esc(c.artists)+' · '+String(i+1).padStart(2,'0')+'</p>'
    +'<h3>'+esc(p.name)+'</h3>'+images
-   +(bio?'<h4>'+esc(c.artist)+'</h4>'+sourceMarkup(bio,lang,show,'artists',p.id):'')
+   +(bio?'<h4>'+esc(c.artist)+'</h4>'+sourceMarkup(bio,lang,slug,'artists',p.id):'')
    +'<p class="artist-contact"><span>'+esc(c.source)+'</span><a href="'+esc(p.legacyProfileUrl==='https://www.norbertbanhalmi.com/mybest'?({en:'https://www.banhalmi.art/#about',hu:'https://www.banhalmi.art/hu/#about',de:'https://www.banhalmi.art/de-at/#about'}[lang]):p.legacyProfileUrl)+'" target="_blank" rel="noopener noreferrer">'+esc(p.name)+'</a></p>'
    +'</div></article>';
 }
@@ -198,7 +200,7 @@ function page(ex,lang){
  const roster=ex.artistProfiles.map((p,i)=>{
    const matches=ex.works.filter(w=>w.galleryEvidence.artistProfileId===p.id)
      .sort((a,b)=>a.galleryEvidence.galleryPosition-b.galleryEvidence.galleryPosition);
-   return artistCard(p,matches,i,lang,ex.wixExhibitionId);
+   return artistCard(p,matches,i,lang,ex.wixExhibitionId,ex.slug);
  }).join('');
  const introBlocks=lang==='hu'?t.sourceOriginalIntro:t.intro;
  const introduction=introBlocks.map(p=>'<p>'+esc(p)+'</p>').join('');
