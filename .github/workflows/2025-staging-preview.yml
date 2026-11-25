@@ -66,10 +66,13 @@ jobs:
               if w.get('sourceImageSlot')=='artwork-1': return item.get('firstArtworkDescription','')
               if w.get('sourceImageSlot')=='artwork-2': return item.get('secondArtworkDescription','')
               return ''
+          translations=json.loads(Path('data/staging/2025-archive-translations.json').read_text())['exhibitions']
           expected_original_details={}
           for ex in source['exhibitions']:
               originals=sum(bool(source_description(w)) for w in ex['works'])
-              expected_original_details[ex['slug']]=len(ex['artistProfiles'])+originals
+              records=[v for group in translations[ex['slug']].values() for v in group.values()]
+              assert len(records)==len(ex['artistProfiles'])+originals
+              expected_original_details[ex['slug']]=sum(row['status']=='reviewed' for row in records)
           assert sorted((x['artists'],x['works']) for x in r['exhibitions'])==[(15,20),(19,20)]
           for slug,artist_count in [('eletem-kepe',15),('as-i-like-it-austria',19)]:
               for lang in ('hu','en','de'):

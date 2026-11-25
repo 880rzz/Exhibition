@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 import path from 'node:path';
 import { archive2025Release } from './exhibition-2025-release-scope.mjs';
@@ -10,6 +11,7 @@ const cms=JSON.parse(fs.readFileSync('data/staging/2025-cms-editorial-source.jso
 const cmsById=new Map(cms.map(x=>[x.id,x]));
 const editorial=JSON.parse(fs.readFileSync('data/staging/2025-editorial-copy.json','utf8'));
 const sourceBodies=editorial.exhibitions;
+const translations=JSON.parse(fs.readFileSync('data/staging/2025-archive-translations.json','utf8')).exhibitions;
 const slugOrder=['spontan-2026','eletem-kepe','as-i-like-it-austria'];
 const site='https://exhibition.vipach.at';
 const langCodes={en:'en',de:'de-AT',hu:'hu'};
@@ -55,7 +57,28 @@ for (const lang of ['en','hu','de']){
   assert.ok(html.includes('Mahlerstraße 11, 1010 Wien'));
   assert.ok(html.includes(ex.slug==='eletem-kepe'?' · 16:00':' · 16:00–19:00'));
   assert.equal(count(html,'class="ex25-unverified"'),missing);
-  assert.equal(count(html,'class="prose ex25-source-text" lang="hu"'),ex.artistProfiles.length+20-missing);
+  const records=Object.values(translations[ex.slug]).flatMap(group=>Object.values(group));
+  const reviewed=records.filter(row=>row.status==='reviewed');
+  const withheld=records.filter(row=>row.status==='withheld');
+  assert.equal(records.length,ex.artistProfiles.length+20-missing);
+  assert.equal(withheld.length,ex.slug==='eletem-kepe'?2:7);
+  assert.equal(count(html,'class="ex25-editorial-withheld"'),withheld.length);
+  assert.equal(count(html,'class="prose ex25-source-text" lang="hu"'),reviewed.length);
+  assert.equal(count(html,'class="ex25-original-text"'),lang==='hu'?0:reviewed.length);
+  assert.equal(count(html,'class="prose ex25-translated-text" lang="'+langCodes[lang]+'"'),lang==='hu'?0:reviewed.length);
+  for(const row of withheld)assert.deepEqual(Object.keys(row).sort(),['sourceSha256','status']);
+  for(const row of reviewed){
+   assert.ok(row.en.trim()&&row.de.trim()&&/^[a-f0-9]{64}$/.test(row.sourceSha256));
+   if(lang!=='hu')assert.ok(html.includes(escape(row[lang].trim().split('\n')[0])),url+' missing reviewed text');
+  }
+  const priorText=JSON.parse(fs.readFileSync('data/staging/2025-cms-editorial-source.json','utf8')).records;
+  for(const row of priorText){
+   for(const old of [row.biography,row.firstArtworkDescription,row.secondArtworkDescription]){
+    if(!old||!withheld.some(r=>r.sourceSha256===createHash('sha256').update(old).digest('hex')))continue;
+    const first=old.trim().split('\n')[0];
+    if(first.length>30)assert.ok(!html.includes(escape(first)),url+' re-exposed withheld content');
+   }
+  }
   assert.equal(count(html,'referrerpolicy="no-referrer"'),ex.artistProfiles.length+22);
   const cover=release.heroDisplay.images[ex.slug];
   assert.ok(html.includes('<div class="hero-visual ex25-archive-cover"><img src="'+cover.url+'" width="'+cover.width+'" height="'+cover.height+'" alt="'),url+' exact Wix hero');
@@ -77,4 +100,4 @@ for (const lang of ['en','hu','de']){
   assert.equal(count(html,'data-map-load'),0,url+' no automatically loaded map');
  }
 }
-console.log('PASS 12 localized routes, exact permanent menu and predecessor direction, 74 scoped media uses, 34 profile displays, 39 source-based work notes, one absent note and 18 archive press displays.');
+console.log('PASS 12 localized routes, exact permanent menu and predecessor direction, 74 scoped media uses, 34 profile displays, 64 approved paired translations, 9 withheld texts, one absent note and 18 archive press displays.');
