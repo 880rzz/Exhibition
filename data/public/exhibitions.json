@@ -1,0 +1,664 @@
+{
+  "version": "vipach-exhibition-facts-1",
+  "publisher": "VIPACH — Vienna Photo Art & Creative Hub",
+  "languages": [
+    "en",
+    "hu",
+    "de-AT"
+  ],
+  "summary": "Public exhibition facts, not a media feed, current price list or licence granted to readers.",
+  "exhibitions": [
+    {
+      "slug": "spontan-2026",
+      "title": {
+        "hu": "SPONTÁN",
+        "en": "SPONTANEOUS",
+        "de": "SPONTAN"
+      },
+      "status": "past-exhibition",
+      "urls": {
+        "en": "https://exhibition.vipach.at/spontan-2026/",
+        "hu": "https://exhibition.vipach.at/hu/spontan-2026/",
+        "de": "https://exhibition.vipach.at/de/spontan-2026/"
+      },
+      "publicVisit": {
+        "start": "2026-11-15",
+        "end": "2026-11-21",
+        "closesAt": "2026-11-21T20:00:00+01:00"
+      },
+      "opening": {
+        "reception": "2026-11-15T16:00:00+01:00",
+        "officialStart": "2026-11-15T17:00:00+01:00",
+        "timeZone": "Europe/Vienna"
+      },
+      "venue": {
+        "name": "CITYgalleryVIENNA by publicartists",
+        "streetAddress": "Mahlerstraße 11",
+        "postalCode": "1010",
+        "addressLocality": "Wien",
+        "addressCountry": "AT"
+      },
+      "sources": {
+        "venueExhibitionListing": "https://publicartists.online/event/vipach-151126/",
+        "historicalOrganizerCalendar": "https://www.vipach.at/event-details/spontan-vipach-fotokiallitas-2026",
+        "historicalOrganizerCalendarEnd": "2026-11-22T23:59:00+01:00",
+        "dateNote": "Historical calendar discrepancy. Use the venue-confirmed public visiting period above."
+      },
+      "curator": "Balogh Dávid",
+      "organizers": [
+        "Hölcz Eszter",
+        "Ayadi Lívia"
+      ],
+      "patron": "Bánhalmi Norbert",
+      "catalogue": {
+        "works": 20,
+        "identifiedArtists": 16,
+        "artists": [
+          {
+            "name": "Gärtner Edit"
+          },
+          {
+            "name": "loksi67"
+          },
+          {
+            "name": "Adrian Ferenczik"
+          },
+          {
+            "name": "Kanya Judit"
+          },
+          {
+            "name": "Eszter Hölcz"
+          },
+          {
+            "name": "Sárdi-Péter Krisztina"
+          },
+          {
+            "name": "Denise Trajkovska"
+          },
+          {
+            "name": "Janos Klotz"
+          },
+          {
+            "name": "Balogh Dávid"
+          },
+          {
+            "name": "KatiFoto"
+          },
+          {
+            "name": "Tóth Manó"
+          },
+          {
+            "name": "Gábor"
+          },
+          {
+            "name": "Naylivart"
+          },
+          {
+            "name": "Adamszki"
+          },
+          {
+            "name": "Léna Bánhalmi"
+          },
+          {
+            "name": "Bánhalmi Norbert"
+          }
+        ]
+      },
+      "media": {
+        "posterAndExistingWixEmbedsRightsStatus": "review-required",
+        "individuallyVerifiedDisplayPermissions": 0,
+        "publicReuseAuthorized": false
+      },
+      "press": [
+        {
+          "title": "Amikor a pillanatból kiállítás születik – megnyílt a SPONTÁN fotókiállítás Bécsben",
+          "publication": "Bécsi Szelet Magazin",
+          "date": "2026-11-18",
+          "type": "opening-report",
+          "language": "hu",
+          "url": "https://www.becsiszelet.at/post/spontan-fotokiallitas-megnyito-becs-2026"
+        },
+        {
+          "title": "Wenn aus einem Augenblick eine Ausstellung wird: SPONTÁN in Wien eröffnet",
+          "publication": "Bécsi Szelet Magazin",
+          "date": "2026-11-18",
+          "type": "opening-report",
+          "language": "de",
+          "url": "https://www.becsiszelet.at/de/post/spontan-fotoausstellung-eroeffnung-wien-2026"
+        }
+      ]
+    },
+    {
+      "slug": "eletem-kepe",
+      "title": {
+        "hu": "Életem képe",
+        "en": "The Image of My Life",
+        "de": "Das Bild meines Lebens"
+      },
+      "status": "past-exhibition",
+      "urls": {
+        "en": "https://exhibition.vipach.at/eletem-kepe/",
+        "hu": "https://exhibition.vipach.at/hu/eletem-kepe/",
+        "de": "https://exhibition.vipach.at/de/eletem-kepe/"
+      },
+      "publicVisit": {
+        "start": "2025-12-07",
+        "end": "2025-12-13"
+      },
+      "opening": {
+        "listedStart": "2025-12-07T16:00:00+01:00",
+        "timeZone": "Europe/Vienna"
+      },
+      "venue": {
+        "name": "CITYgalleryVIENNA by publicartists",
+        "streetAddress": "Mahlerstraße 11",
+        "postalCode": "1010",
+        "addressLocality": "Wien",
+        "addressCountry": "AT"
+      },
+      "sources": {
+        "organizerExhibition": "https://www.vipach.at/eletemkepe",
+        "openingListing": "https://publicartists.online/en/event/eletem-kepe-071225/",
+        "venueExhibitionListing": "https://publicartists.online/event/eletem-kepe-071225/",
+        "venueAddress": "https://publicartists.online/en/event/eletem-kepe-071225/"
+      },
+      "curator": "Balogh Dávid",
+      "catalogue": {
+        "works": 20,
+        "identifiedArtists": 15,
+        "organizerReportedArtists": 15,
+        "artists": [
+          {
+            "name": "Loksi67",
+            "anchor": "artist-loksi67"
+          },
+          {
+            "name": "HajNika",
+            "anchor": "artist-hajnika"
+          },
+          {
+            "name": "Léna Erdős",
+            "anchor": "artist-lena-erdos"
+          },
+          {
+            "name": "Bödő Viktória",
+            "anchor": "artist-bodo-viktoria"
+          },
+          {
+            "name": "KMD",
+            "anchor": "artist-kmd"
+          },
+          {
+            "name": "Viki Photo Art",
+            "anchor": "artist-viki-photo-art"
+          },
+          {
+            "name": "Farkas Tamás",
+            "anchor": "artist-farkas-tamas"
+          },
+          {
+            "name": "Speier Vikó",
+            "anchor": "artist-speier-viko"
+          },
+          {
+            "name": "Ecaterina",
+            "anchor": "artist-ecaterina"
+          },
+          {
+            "name": "Marianna Visual",
+            "anchor": "artist-marianna-visual"
+          },
+          {
+            "name": "Mátéfi Dalma",
+            "anchor": "artist-matefi-dalma"
+          },
+          {
+            "name": "Ficho",
+            "anchor": "artist-ficho"
+          },
+          {
+            "name": "Norbert Bánhalmi",
+            "anchor": "artist-norbert-banhalmi"
+          },
+          {
+            "name": "Edit Gärtner",
+            "anchor": "artist-edit-gartner"
+          },
+          {
+            "name": "Denise Trajkovska",
+            "anchor": "artist-denise-trajkovska"
+          }
+        ],
+        "workAttribution": [
+          {
+            "anchor": "eletemkepe-719c1f37ef39",
+            "galleryPosition": 9,
+            "artist": "KMD",
+            "artistAnchor": "artist-kmd"
+          },
+          {
+            "anchor": "eletemkepe-7083c6460bb5",
+            "galleryPosition": 17,
+            "artist": "Loksi67",
+            "artistAnchor": "artist-loksi67"
+          },
+          {
+            "anchor": "eletemkepe-e6ef2f123b3b",
+            "galleryPosition": 7,
+            "artist": "Marianna Visual",
+            "artistAnchor": "artist-marianna-visual"
+          },
+          {
+            "anchor": "eletemkepe-371e50673e22",
+            "galleryPosition": 18,
+            "artist": "Farkas Tamás",
+            "artistAnchor": "artist-farkas-tamas"
+          },
+          {
+            "anchor": "eletemkepe-f3bbb75370d8",
+            "galleryPosition": 5,
+            "artist": "Ecaterina",
+            "artistAnchor": "artist-ecaterina"
+          },
+          {
+            "anchor": "eletemkepe-5ba6a68d1876",
+            "galleryPosition": 8,
+            "artist": "Viki Photo Art",
+            "artistAnchor": "artist-viki-photo-art"
+          },
+          {
+            "anchor": "eletemkepe-c90ec4d760c2",
+            "galleryPosition": 19,
+            "artist": "Speier Vikó",
+            "artistAnchor": "artist-speier-viko"
+          },
+          {
+            "anchor": "eletemkepe-6a0485e910a1",
+            "galleryPosition": 2,
+            "artist": "Denise Trajkovska",
+            "artistAnchor": "artist-denise-trajkovska"
+          },
+          {
+            "anchor": "eletemkepe-3b5ba24c02ef",
+            "galleryPosition": 16,
+            "artist": "HajNika",
+            "artistAnchor": "artist-hajnika"
+          },
+          {
+            "anchor": "eletemkepe-1692a0e34a53",
+            "galleryPosition": 13,
+            "artist": "Mátéfi Dalma",
+            "artistAnchor": "artist-matefi-dalma"
+          },
+          {
+            "anchor": "eletemkepe-eed07d33a4a9",
+            "galleryPosition": 6,
+            "artist": "Léna Erdős",
+            "artistAnchor": "artist-lena-erdos"
+          },
+          {
+            "anchor": "eletemkepe-ba9b1dccdc28",
+            "galleryPosition": 12,
+            "artist": "Farkas Tamás",
+            "artistAnchor": "artist-farkas-tamas"
+          },
+          {
+            "anchor": "eletemkepe-ac4f36f8a01d",
+            "galleryPosition": 20,
+            "artist": "Norbert Bánhalmi",
+            "artistAnchor": "artist-norbert-banhalmi"
+          },
+          {
+            "anchor": "eletemkepe-5ac35f527809",
+            "galleryPosition": 14,
+            "artist": "HajNika",
+            "artistAnchor": "artist-hajnika"
+          },
+          {
+            "anchor": "eletemkepe-c9ead27cf0d9",
+            "galleryPosition": 11,
+            "artist": "Bödő Viktória",
+            "artistAnchor": "artist-bodo-viktoria"
+          },
+          {
+            "anchor": "eletemkepe-1c7fe16a4194",
+            "galleryPosition": 1,
+            "artist": "Ficho",
+            "artistAnchor": "artist-ficho"
+          },
+          {
+            "anchor": "eletemkepe-eac1bee30ec2",
+            "galleryPosition": 3,
+            "artist": "Viki Photo Art",
+            "artistAnchor": "artist-viki-photo-art"
+          },
+          {
+            "anchor": "eletemkepe-8479f727a9ef",
+            "galleryPosition": 15,
+            "artist": "Loksi67",
+            "artistAnchor": "artist-loksi67"
+          },
+          {
+            "anchor": "eletemkepe-3bbefc05118c",
+            "galleryPosition": 4,
+            "artist": "Edit Gärtner",
+            "artistAnchor": "artist-edit-gartner"
+          },
+          {
+            "anchor": "eletemkepe-003afe8992fd",
+            "galleryPosition": 10,
+            "artist": "Léna Erdős",
+            "artistAnchor": "artist-lena-erdos"
+          }
+        ]
+      },
+      "media": {
+        "archiveDisplayAuthority": "VIPACH organizer attestation for these archive uses only",
+        "workDisplaysInScope": 20,
+        "portraitDisplaysInScope": 15,
+        "individuallyVerifiedDisplayPermissions": 0,
+        "publicReuseAuthorized": false
+      },
+      "press": [
+        {
+          "title": "Fotókiállítással ünnepel a BMI Fotóklub",
+          "publication": "ORF Volksgruppen",
+          "date": "2025-12-01",
+          "type": "advance-mention",
+          "language": "hu",
+          "url": "https://volksgruppen.orf.at/magyarok/stories/3332313/"
+        },
+        {
+          "title": "Egyéves a BMI Fotóklub – hogyan teremt közösséget a művészet",
+          "publication": "Rólunk.at",
+          "date": "2025-12-11",
+          "type": "exhibition-mention",
+          "language": "hu",
+          "url": "https://rolunk.at/kultura/egyeves-a-bmi-fotoklub-hogyan-teremt-kozosseget-a-muveszet/"
+        },
+        {
+          "title": "Amikor a fotográfia közösséget teremt",
+          "publication": "Nyugat-európai Horizont",
+          "issue": "2026/3 · 12–13",
+          "type": "exhibition-report",
+          "language": "hu",
+          "url": "https://www.stihon.eu/wp-content/uploads/2026/01/Horizont.03.Web_.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "slug": "as-i-like-it-austria",
+      "title": {
+        "hu": "As I Like It Austria",
+        "en": "As I Like It Austria",
+        "de": "As I Like It Austria"
+      },
+      "status": "past-exhibition",
+      "urls": {
+        "en": "https://exhibition.vipach.at/as-i-like-it-austria/",
+        "hu": "https://exhibition.vipach.at/hu/as-i-like-it-austria/",
+        "de": "https://exhibition.vipach.at/de/as-i-like-it-austria/"
+      },
+      "publicVisit": {
+        "start": "2025-11-30",
+        "end": "2025-12-06"
+      },
+      "opening": {
+        "listedStart": "2025-11-30T16:00:00+01:00",
+        "listedEnd": "2025-11-30T19:00:00+01:00",
+        "timeZone": "Europe/Vienna"
+      },
+      "venue": {
+        "name": "CITYgalleryVIENNA by publicartists",
+        "streetAddress": "Mahlerstraße 11",
+        "postalCode": "1010",
+        "addressLocality": "Wien",
+        "addressCountry": "AT"
+      },
+      "sources": {
+        "organizerExhibition": "https://www.vipach.at/asilikeit",
+        "openingListing": "https://www.vipach.at/event-details/asilikeit",
+        "venueExhibitionListing": "https://publicartists.online/event/bmi-fotoclub-301125/",
+        "venueAddress": "https://www.vipach.at/event-details/asilikeit"
+      },
+      "curator": "Balogh Dávid",
+      "catalogue": {
+        "works": 20,
+        "identifiedArtists": 19,
+        "artists": [
+          {
+            "name": "native pictures",
+            "anchor": "artist-native-pictures"
+          },
+          {
+            "name": "Liz",
+            "anchor": "artist-liz"
+          },
+          {
+            "name": "AndreaWettstein",
+            "anchor": "artist-andreawettstein"
+          },
+          {
+            "name": "Tóth Manó",
+            "anchor": "artist-toth-mano"
+          },
+          {
+            "name": "ZZ",
+            "anchor": "artist-zz"
+          },
+          {
+            "name": "Zoltan Kondits",
+            "anchor": "artist-zoltan-kondits"
+          },
+          {
+            "name": "Nina",
+            "anchor": "artist-nina"
+          },
+          {
+            "name": "B.ella",
+            "anchor": "artist-b-ella"
+          },
+          {
+            "name": "Isa",
+            "anchor": "artist-isa"
+          },
+          {
+            "name": "NaylivArt",
+            "anchor": "artist-naylivart"
+          },
+          {
+            "name": "Adamski",
+            "anchor": "artist-adamski"
+          },
+          {
+            "name": "Denise Trajkovska",
+            "anchor": "artist-denise-trajkovska"
+          },
+          {
+            "name": "Jowan Trajkovski",
+            "anchor": "artist-jowan-trajkovski"
+          },
+          {
+            "name": "Nagy Márton",
+            "anchor": "artist-nagy-marton"
+          },
+          {
+            "name": "Jupiter",
+            "anchor": "artist-jupiter"
+          },
+          {
+            "name": "Anett Elek",
+            "anchor": "artist-anett-elek"
+          },
+          {
+            "name": "Eszter",
+            "anchor": "artist-eszter"
+          },
+          {
+            "name": "Tamás Pfundt",
+            "anchor": "artist-tamas-pfundt"
+          },
+          {
+            "name": "Norbert Bánhalmi",
+            "anchor": "artist-norbert-banhalmi"
+          }
+        ],
+        "workAttribution": [
+          {
+            "anchor": "asilikeit-da0aa75aab64",
+            "galleryPosition": 2,
+            "artist": "Tamás Pfundt",
+            "artistAnchor": "artist-tamas-pfundt"
+          },
+          {
+            "anchor": "asilikeit-ce5b826f4ae3",
+            "galleryPosition": 13,
+            "artist": "Nina",
+            "artistAnchor": "artist-nina"
+          },
+          {
+            "anchor": "asilikeit-e863ff3082b8",
+            "galleryPosition": 14,
+            "artist": "Zoltan Kondits",
+            "artistAnchor": "artist-zoltan-kondits"
+          },
+          {
+            "anchor": "asilikeit-844936de3dd5",
+            "galleryPosition": 6,
+            "artist": "Jupiter",
+            "artistAnchor": "artist-jupiter"
+          },
+          {
+            "anchor": "asilikeit-4789a7c2c1f0",
+            "galleryPosition": 17,
+            "artist": "AndreaWettstein",
+            "artistAnchor": "artist-andreawettstein"
+          },
+          {
+            "anchor": "asilikeit-5020371540fb",
+            "galleryPosition": 15,
+            "artist": "ZZ",
+            "artistAnchor": "artist-zz"
+          },
+          {
+            "anchor": "asilikeit-a1e2cb005f07",
+            "galleryPosition": 3,
+            "artist": "Eszter",
+            "artistAnchor": "artist-eszter"
+          },
+          {
+            "anchor": "asilikeit-8e955fa88e16",
+            "galleryPosition": 8,
+            "artist": "Denise Trajkovska",
+            "artistAnchor": "artist-denise-trajkovska"
+          },
+          {
+            "anchor": "asilikeit-3c51b19aa027",
+            "galleryPosition": 20,
+            "artist": "NaylivArt",
+            "artistAnchor": "artist-naylivart"
+          },
+          {
+            "anchor": "asilikeit-f5ce80663718",
+            "galleryPosition": 5,
+            "artist": "Nagy Márton",
+            "artistAnchor": "artist-nagy-marton"
+          },
+          {
+            "anchor": "asilikeit-7f10b8f48731",
+            "galleryPosition": 9,
+            "artist": "NaylivArt",
+            "artistAnchor": "artist-naylivart"
+          },
+          {
+            "anchor": "asilikeit-89a64ca4313e",
+            "galleryPosition": 12,
+            "artist": "B.ella",
+            "artistAnchor": "artist-b-ella"
+          },
+          {
+            "anchor": "asilikeit-accee5c39590",
+            "galleryPosition": 19,
+            "artist": "Norbert Bánhalmi",
+            "artistAnchor": "artist-norbert-banhalmi"
+          },
+          {
+            "anchor": "asilikeit-844abe713397",
+            "galleryPosition": 10,
+            "artist": "Adamski",
+            "artistAnchor": "artist-adamski"
+          },
+          {
+            "anchor": "asilikeit-f34e5c36d713",
+            "galleryPosition": 11,
+            "artist": "Isa",
+            "artistAnchor": "artist-isa"
+          },
+          {
+            "anchor": "asilikeit-c90dce593fd2",
+            "galleryPosition": 7,
+            "artist": "Jowan Trajkovski",
+            "artistAnchor": "artist-jowan-trajkovski"
+          },
+          {
+            "anchor": "asilikeit-474a405f62e0",
+            "galleryPosition": 16,
+            "artist": "Tóth Manó",
+            "artistAnchor": "artist-toth-mano"
+          },
+          {
+            "anchor": "asilikeit-e4aba83b9917",
+            "galleryPosition": 1,
+            "artist": "Anett Elek",
+            "artistAnchor": "artist-anett-elek"
+          },
+          {
+            "anchor": "asilikeit-1ad77d482128",
+            "galleryPosition": 4,
+            "artist": "native pictures",
+            "artistAnchor": "artist-native-pictures"
+          },
+          {
+            "anchor": "asilikeit-ad326a449763",
+            "galleryPosition": 18,
+            "artist": "Liz",
+            "artistAnchor": "artist-liz"
+          }
+        ]
+      },
+      "media": {
+        "archiveDisplayAuthority": "VIPACH organizer attestation for these archive uses only",
+        "workDisplaysInScope": 20,
+        "portraitDisplaysInScope": 19,
+        "individuallyVerifiedDisplayPermissions": 0,
+        "publicReuseAuthorized": false
+      },
+      "press": [
+        {
+          "title": "Fotókiállítással ünnepel a BMI Fotóklub",
+          "publication": "ORF Volksgruppen",
+          "date": "2025-12-01",
+          "type": "exhibition-report",
+          "language": "hu",
+          "url": "https://volksgruppen.orf.at/magyarok/stories/3332313/"
+        },
+        {
+          "title": "Egyéves a BMI Fotóklub – hogyan teremt közösséget a művészet",
+          "publication": "Rólunk.at",
+          "date": "2025-12-11",
+          "type": "exhibition-report",
+          "language": "hu",
+          "url": "https://rolunk.at/kultura/egyeves-a-bmi-fotoklub-hogyan-teremt-kozosseget-a-muveszet/"
+        },
+        {
+          "title": "Amikor a fotográfia közösséget teremt",
+          "publication": "Nyugat-európai Horizont",
+          "issue": "2026/3 · 12–13",
+          "type": "exhibition-report",
+          "language": "hu",
+          "url": "https://www.stihon.eu/wp-content/uploads/2026/01/Horizont.03.Web_.pdf#page=7"
+        }
+      ]
+    }
+  ]
+}

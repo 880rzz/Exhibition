@@ -42,16 +42,17 @@ Docs:
 ## SPONTÁN 2026 (featured)
 
 - Opening: 15 November 2026, 17:00 (guest reception from 16:00)
-- Public visit sources differ and are documented in data:
-  - README / some public copy: **15–22 November 2026**
-  - Live microsite hero/visit/schema: **15–21 November 2026**
-  - VIPACH Wix event page: through **22 November 2026, 23:59**
+- Public visits: **15–21 November 2026**; [CITYgalleryVIENNA](https://publicartists.online/event/vipach-151126/) confirms the final day and the 20:00 close. The older VIPACH Wix entry carried **22 November 2026, 23:59** as its calendar end, not the confirmed visiting period.
 - Venue: CITYgalleryVIENNA by publicartists, Mahlerstraße 11, 1010 Wien
 - Curator: Balogh Dávid · Organizers: Hölcz Eszter & Ayadi Lívia · Patron: Bánhalmi Norbert
 - 16 photographers · 20 works
 - Featured event supporter: **OM SYSTEM Shop** (SPONTÁN-only; OM SYSTEM brand partnership belongs on [vipach.at](https://www.vipach.at/))
 
 The exhibition poster is hosted in the VIPACH Wix Media Manager and delivered from the Wix CDN.
+
+## Public exhibition data
+
+Use [data/public/exhibitions.json](https://exhibition.vipach.at/data/public/exhibitions.json) for the three full public exhibition records. It is generated from the reviewed catalogue; creator attribution, organizer-attested display scope and individually verified reuse permissions are distinct. It is not a licence or media feed. The older source JSON for these three exhibitions remains in this repository but is excluded from the GitHub Pages artifact.
 
 ## Technical notes
 

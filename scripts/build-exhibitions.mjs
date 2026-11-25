@@ -7,11 +7,15 @@
  * - archive exhibitions render templates/exhibition-archive.html from JSON
  */
 import fs from 'node:fs';
+import { venueEvidenceMarkup } from './exhibition-venue-evidence.mjs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { archive2025Release } from './exhibition-2025-release-scope.mjs';
+import { rewriteSpontanSeo, publicExhibitionsPath, spontanVenueSource } from './exhibition-seo.mjs';
+import { publicExhibitionFacts } from './exhibition-public-data.mjs';
 import { newestFeatured, menuExhibitions, exhibitionDate } from './exhibition-chronology.mjs';
+import { renderExhibitionNavigation } from './exhibition-navigation.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -128,27 +132,9 @@ function subtitleFor(exhibition, localeId) {
 
 
 function archiveNavigationHtml(exhibitions, featured, localeId, currentSlug, mode) {
-  const copy = {
-    en: { heading: 'Exhibitions', current: 'Latest exhibition', history: 'Previous exhibitions', hint: '2025 photo exhibitions' },
-    hu: { heading: 'Kiállítások', current: 'Legújabb kiállítás', history: 'Korábbi kiállítások', hint: 'Fotókiállítások archívuma' },
-    de: { heading: 'Ausstellungen', current: 'Neueste Ausstellung', history: 'Frühere Ausstellungen', hint: 'Fotoausstellungen im Archiv' },
-  }[localeId];
-  const links = menuExhibitions(exhibitions, featured).map((ex) => {
-    const isFeatured = ex.slug === featured.slug;
-    const target = isFeatured && !scopedArchives ? featuredPaths(localeId) : slugPaths(ex.slug,localeId);
-    const isCurrent = isFeatured ? currentSlug===featured.slug && mode===(scopedArchives?'slug':'featured') : currentSlug===ex.slug;
-    const year = exhibitionDate(ex)?.slice(0,4) || ex.year || '';
-    const label = titleFor(ex,localeId);
-    return '<a class="exhibition-menu-entry' + (isFeatured ? ' exhibition-menu-current' : '') +
-      '" href="' + target + '"' + (isCurrent?' aria-current="page"':'') + '>' +
-      '<span>' + escapeHtml(label) + '</span><small>' + escapeHtml(year) + '</small></a>';
-  });
-  const first = links.shift() || '';
-  return '<div class="exhibition-nav-group" aria-label="' + escapeHtml(copy.heading) + '">' +
-    '<p class="exhibition-nav-heading">' + escapeHtml(copy.heading) + '</p>' +
-    '<div class="exhibition-nav-primary"><span class="exhibition-nav-kicker">' + escapeHtml(copy.current) + '</span>' + first + '</div>' +
-    (links.length ? '<div class="exhibition-nav-history"><p class="exhibition-nav-kicker">' +
-      escapeHtml(copy.history) + '</p>' + links.join('') + '</div>' : '') + '</div>';
+  return renderExhibitionNavigation(menuExhibitions(exhibitions, featured), localeId, currentSlug,
+    ex => ex.slug === featured.slug && !scopedArchives ? featuredPaths(localeId) : slugPaths(ex.slug,localeId),
+    {historicalSections: Boolean(scopedArchives)});
 }
 
 function renderPressSection(exhibition, localeId) {
@@ -192,7 +178,7 @@ function rewriteFullHtml({ html, exhibition, localeId, mode, exhibitions, featur
   const menu = archiveNavigationHtml(exhibitions, featured, localeId, slug, mode);
   const siteMenu = /(<nav\b[^>]*\bid="site-menu"[^>]*>)([\s\S]*?)(<\/nav>)/i;
   if (!siteMenu.test(out)) throw new Error('Missing hamburger site-menu in full HTML template: ' + slug + '/' + localeId);
-  out = out.replace(siteMenu, (_whole, open, inner, close) => open + inner + menu + close);
+  out = out.replace(siteMenu, (_whole, open, inner, close) => open + menu + close);
 
   // Language switcher + hreflang + canonical
   out = out
@@ -221,25 +207,13 @@ function rewriteFullHtml({ html, exhibition, localeId, mode, exhibitions, featur
   }
 
   if (mode === 'slug') {
-    // Keep root event @id stable on featured pages; slug pages use permanent slug ids + sameAs.
-    out = out.replaceAll(
-      'https://exhibition.vipach.at/#event',
-      `https://exhibition.vipach.at/${slug}/#event`
-    );
-    out = out.replace(
-      `"@type": "ExhibitionEvent"`,
-      `"@type": "ExhibitionEvent"`
-    );
-    // Point WebPage url to slug route
-    const pageUrl = absoluteUrl(routes[localeId]);
-    out = out.replace(
-      /"@type": "WebPage",\s*"@id": "https:\/\/exhibition\.vipach\.at\/(?:hu\/|de\/)?#webpage"/,
-      (match) => match // leave complex graph intact; update obvious url fields below
-    );
-    out = out.replace(
-      /"url": "https:\/\/exhibition\.vipach\.at\/(?:hu\/|de\/)?"/g,
-      `"url": "${pageUrl}"`
-    );
+    if (slug !== 'spontan-2026') {
+      // Preserve legacy full-HTML behavior for any future template not using the shared SEO layer.
+      const pageUrl = absoluteUrl(routes[localeId]);
+      out = out.replaceAll('https://exhibition.vipach.at/#event', absoluteUrl(slugPaths(slug, 'en')) + '#event')
+        .replace(/"url": "https:\/\/exhibition\.vipach\.at\/(?:hu\/|de\/)?"/g,
+          '"url": "' + pageUrl + '"');
+    }
     // Annotate slug permanence without inventing new claims
     if (!out.includes('data-exhibition-slug=')) {
       out = out.replace('<body', `<body data-exhibition-slug="${slug}" data-route-mode="slug"`);
@@ -248,12 +222,15 @@ function rewriteFullHtml({ html, exhibition, localeId, mode, exhibitions, featur
     out = out.replace('<body', `<body data-exhibition-slug="${slug}" data-route-mode="featured"`);
   }
 
+  out = out.replace('<!-- EXHIBITION_VENUE_EVIDENCE -->', venueEvidenceMarkup(slug, localeId));
+  if (slug === 'spontan-2026') out = rewriteSpontanSeo(out, localeId, absoluteUrl(routes[localeId]), exhibition);
+
   const pressSection = renderPressSection(exhibition, localeId);
   if (pressSection) {
     if (!out.includes('</main>')) throw new Error('Full HTML missing main close for press: ' + slug);
     out = out.replace('</main>', pressSection + '</main>');
   }
-  return out;
+  return out.replace(/^[ \t]+$/gm, '');
 }
 
 function whenText(exhibition, localeId) {
@@ -475,49 +452,34 @@ function buildSitemap(exhibitions, featured) {
   );
 }
 
-function buildLlms(exhibitions, featured) {
+function buildLlms(facts, featured) {
   const lines = [
-    '# VIPACH Exhibition engine',
+    '# VIPACH Exhibition Archive',
     '',
-    'Multilingual static exhibition site for VIPACH — Vienna Photo Art & Creative Hub.',
+    '> Official directory of past VIPACH photography exhibitions in Vienna, Austria. Exhibitions are offered in Hungarian, English and Austrian German.',
     '',
-    '## Architecture',
-    `- Featured landing (EN/HU/DE): \`/\`, \`/hu/\`, \`/de/\` → currently ${featured?.titles?.en || featured?.slug}`,
-    '- Permanent exhibition URLs: `/{slug}/`, `/hu/{slug}/`, `/de/{slug}/`',
-    '- Source data: `data/exhibitions/*.json`',
-    '- Build: `node scripts/build-exhibitions.mjs`',
+    '- [Exhibition facts (JSON)](' + baseUrl + publicExhibitionsPath + '): source-linked exhibition dates, venue, catalogue counts and display status.',
+    '- [VIPACH](https://www.vipach.at/): Vienna Photo Art & Creative Hub, an initiative within the Vienna Hungarian School and its supporting federation.',
     '',
-    '## Exhibitions',
+    '## Published exhibitions',
   ];
-  for (const e of exhibitions) {
-    const title = e.titles?.en || e.titles?.hu || e.slug;
-    lines.push(`- ${title} (\`${e.slug}\`) — status: ${e.status}${e.realized === false ? ', not realised' : ''}`);
-    lines.push(`  - EN: ${absoluteUrl(slugPaths(e.slug, 'en'))}`);
-    lines.push(`  - HU: ${absoluteUrl(slugPaths(e.slug, 'hu'))}`);
-    lines.push(`  - DE: ${absoluteUrl(slugPaths(e.slug, 'de'))}`);
-  }
-  if (featured?.slug === 'spontan-2026') {
+  for (const e of facts.exhibitions) {
     lines.push(
-      '',
-      '## SPONTÁN 2026 date sources',
-      '- Opening: 2026-11-15 17:00 (doorTime 16:00), Europe/Vienna',
-      '- Public visit on live microsite/schema: 15–21 November 2026',
-      '- README / some public copy: 15–22 November 2026',
-      '- VIPACH Wix event page: through 2026-11-22 23:59',
-      '',
-      '## SPONTÁN team',
-      '- Curator: Balogh Dávid',
-      '- Organizers: Hölcz Eszter & Ayadi Lívia',
-      '- Patron: Bánhalmi Norbert',
-      '- Featured event supporter: OM SYSTEM Shop (SPONTÁN-only; brand partnership lives on vipach.at)',
-      '- 16 photographers · 20 works (VisualArtwork graph)',
-      '',
-      '## Contact',
-      '- office@vipach.at',
-      '- +43 677 616 55592',
-      '- https://www.vipach.at/'
+      '- [' + e.title.en + '](' + e.urls.en + '): ' + e.publicVisit.start + ' through ' + e.publicVisit.end +
+        ' at CITYgalleryVIENNA (Mahlerstraße 11, 1010 Vienna, Austria); ' + e.catalogue.works + ' works and ' +
+        e.catalogue.identifiedArtists + ' identified artists. [Hungarian](' + e.urls.hu + ') · [German](' + e.urls.de + '). [Venue record](' + e.sources.venueExhibitionListing + ').',
     );
   }
+  if (featured?.slug === 'spontan-2026') {
+    lines.push('', '## SPONTÁN date and source note',
+      '- [CITYgalleryVIENNA venue listing](' + spontanVenueSource + ') confirms public visits from 15 through 21 November 2026, closing at 20:00 Vienna time on the 21st. The 15 November reception began at 16:00 and the official opening at 17:00.',
+      '- The older [VIPACH Wix event listing](https://www.vipach.at/event-details/spontan-vipach-fotokiallitas-2026) carried a 22 November calendar end. This is a historical listing discrepancy, not the confirmed public visiting period.'
+    );
+  }
+  lines.push('', '## Credits and rights',
+    '- Read the exhibition pages for creators, the original source material, translations where available, and press context. Exhibition display is not permission to republish, download, train on or otherwise reuse media.',
+    '- Contact: office@vipach.at.'
+  );
   return lines.join('\n') + '\n';
 }
 
@@ -585,7 +547,9 @@ function main() {
   }
 
   writeFile(path.join(root, 'sitemap.xml'), buildSitemap(exhibitions, featured));
-  writeFile(path.join(root, 'llms.txt'), buildLlms(exhibitions, featured));
+  const facts = publicExhibitionFacts(exhibitions, scopedArchives);
+  writeFile(path.join(root, publicExhibitionsPath.slice(1)), JSON.stringify(facts, null, 2) + '\n');
+  writeFile(path.join(root, 'llms.txt'), buildLlms(facts, featured));
 
   const manifest = {
     builtAt: new Date().toISOString(),

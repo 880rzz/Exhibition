@@ -7,9 +7,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { venueEvidenceMarkup, venueSources } from './exhibition-venue-evidence.mjs';
 import { newestFeatured, menuExhibitions, exhibitionDate } from './exhibition-chronology.mjs';
+import { renderExhibitionNavigation } from './exhibition-navigation.mjs';
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 import { archive2025Release } from './exhibition-2025-release-scope.mjs';
+import { exhibitionMeta, archiveGraph } from './exhibition-seo.mjs';
 const release=process.argv.includes('--render-reviewed-archive');
 const candidate = release||process.argv.includes('--archive-candidate');
 const archiveScope=candidate?archive2025Release():null;
@@ -53,24 +56,29 @@ function exhibitionName(exhibition,lang){
  return exhibition.titles?.[lang]||showName(exhibition.slug,lang);
 }
 function menuHtml(lang,slug){
- const c=copy[lang];
- const items=navigationExhibitions.map((ex,i)=>{
-   const year=exhibitionDate(ex)?.slice(0,4)||String(ex.year||'');
-   const href=exhibitionHref(ex,lang);
-   return '<a class="exhibition-menu-entry'+(i===0?' exhibition-menu-current':'')+
-     '" href="'+esc(href)+'"'+(ex.slug===slug?' aria-current="page"':'')+'><span>'+
-     esc(exhibitionName(ex,lang))+'</span><small>'+year+'</small></a>';
- });
- return '<div class="exhibition-nav-group" aria-label="'+esc(c.archive)+'">'
-   +'<p class="exhibition-nav-heading">'+esc(c.archive)+'</p>'
-   +'<div class="exhibition-nav-primary"><span class="exhibition-nav-kicker">'+esc(c.latest)+'</span>'+(items[0]||'')+'</div>'
-   +'<div class="exhibition-nav-history"><span class="exhibition-nav-kicker">'+esc(c.past)+'</span>'+items.slice(1).join('')+'</div></div>';
+ return renderExhibitionNavigation(navigationExhibitions,lang,slug,ex=>exhibitionHref(ex,lang),
+   {historicalSections:true,preview:!candidate});
 }
 
 const releaseRights={
- en:'The images are shown here in the VIPACH exhibition archive with permission. This does not give visitors permission to download, republish or otherwise reuse them. Contact the rights holder for separate permission.',
- hu:'A képek engedéllyel szerepelnek a VIPACH kiállítási archívumában. Ez nem jogosítja fel a látogatót a letöltésre, újraközlésre vagy más felhasználásra. Ehhez a jogtulajdonos külön engedélye szükséges.',
- de:'Die Bilder werden hier mit Erlaubnis im VIPACH-Ausstellungsarchiv gezeigt. Daraus ergibt sich keine Erlaubnis zum Herunterladen, zur Weiterveröffentlichung oder zu einer anderweitigen Nutzung. Dafür ist eine separate Zustimmung der Rechteinhaber erforderlich.'
+ en:'The rights holders gave the organiser permission to exhibit their works. This does not grant visitors permission to republish or otherwise reuse the works. The images are shown here in the VIPACH exhibition archive with permission. This does not give visitors permission to download, republish or otherwise reuse them. Contact the rights holder for separate permission.',
+ hu:'A jogtulajdonosok engedélyt adtak a szervezőnek a művek kiállítási bemutatására. Ez nem ad a látogatóknak újraközlési vagy más újrafelhasználási engedélyt. A képek engedéllyel szerepelnek a VIPACH kiállítási archívumában. Ez nem jogosítja fel a látogatót a letöltésre, újraközlésre vagy más felhasználásra. Ehhez a jogtulajdonos külön engedélye szükséges.',
+ de:'Die Rechteinhaber haben dem Veranstalter erlaubt, ihre Werke auszustellen. Daraus ergibt sich für Besucherinnen und Besucher keine Erlaubnis zur Weiterveröffentlichung oder anderen Nutzung. Die Bilder werden hier mit Erlaubnis im VIPACH-Ausstellungsarchiv gezeigt. Daraus ergibt sich keine Erlaubnis zum Herunterladen, zur Weiterveröffentlichung oder zu einer anderweitigen Nutzung. Dafür ist eine separate Zustimmung der Rechteinhaber erforderlich.'
+};
+const posterAlt={
+ en:'Original VIPACH exhibition cover: ',hu:'Eredeti VIPACH kiállítási borító: ',de:'Originales VIPACH-Ausstellungsmotiv: '
+};
+const exhibitionSummary={
+ 'eletem-kepe':{
+ en:'Fifteen photographers, twenty works. The exhibition was held at CITYgalleryVIENNA, Mahlerstraße 11, 1010 Vienna, from 7 to 13 December 2025.',
+ hu:'Tizenöt alkotó, húsz mű. A kiállítás 2025. december 7–13. között volt látható a CITYgalleryVIENNA galériában (Mahlerstraße 11, 1010 Bécs).',
+ de:'Fünfzehn Kunstschaffende, zwanzig Werke. Die Ausstellung war vom 7. bis 13. Dezember 2025 in der CITYgalleryVIENNA, Mahlerstraße 11, 1010 Wien, zu sehen.'
+ },
+ 'as-i-like-it-austria':{
+ en:'Twenty photographs were shown from 30 November to 6 December 2025 at CITYgalleryVIENNA, Mahlerstraße 11, 1010 Vienna. The original VIPACH gallery credits 19 photographers; contemporary coverage reported 18.',
+ hu:'Húsz fénykép szerepelt a kiállításon 2025. november 30. és december 6. között a CITYgalleryVIENNA galériában (Mahlerstraße 11, 1010 Bécs). A VIPACH eredeti galériája 19 alkotót tüntet fel, egy korabeli beszámoló 18-at.',
+ de:'Zwanzig Fotografien waren vom 30. November bis 6. Dezember 2025 in der CITYgalleryVIENNA, Mahlerstraße 11, 1010 Wien, zu sehen. Die ursprüngliche VIPACH-Galerie nennt 19 Kunstschaffende; die zeitgenössische Berichterstattung nannte 18.'
+ }
 };
 const pressTitle={en:'Press coverage',hu:'Sajtómegjelenések',de:'Presseberichte'};
 const predecessorCopy={
@@ -107,14 +115,43 @@ function artistBiography(name,show){
    ||wix.records.find(r=>norm(r.artistName)===norm(name));
  return person?.biography||'';
 }
-function workMarkup(w,lang,extra){
+const translationFile=path.join(ROOT,'data/staging/2025-archive-translations.json');
+const translationData=fs.existsSync(translationFile)?JSON.parse(fs.readFileSync(translationFile,'utf8')):null;
+if(translationData&&translationData.publicationStatus!=='editorially-approved')throw Error('Archive translations require editorial approval');
+const translations=translationData?.exhibitions||{};
+const editorialLabels={
+ en:{original:'Original Hungarian text',missing:'Available in the original Hungarian. A reviewed translation is not yet published.',translated:'Editorial translation from Hungarian.',past:'Any amount in the original below is an archival 2025 price, not a current offer.',limited:'The historical text has been edited here to omit third-party personal data.',claims:'The source is the artist’s own account; personal or promotional claims are not independently verified.'},
+ hu:{original:'Eredeti magyar szöveg',missing:'Az eredeti magyar szöveg olvasható.',translated:'Szerkesztői fordítás magyarból.',past:'Az eredeti szövegben megadott összeg 2025-ös archív ár, nem aktuális ajánlat.',limited:'A történeti szöveg itt harmadik személy személyes adatai nélkül olvasható.',claims:'Az alkotó saját bemutatkozása; személyes vagy promóciós állításait az archívum nem igazolja függetlenül.'},
+ de:{original:'Ungarischer Originaltext',missing:'Der ungarische Originaltext ist verfügbar. Eine geprüfte Übersetzung ist noch nicht veröffentlicht.',translated:'Redaktionelle Übersetzung aus dem Ungarischen.',past:'Beträge im Original sind historische Preisangaben von 2025, kein aktuelles Angebot.',limited:'Der historische Text wird hier ohne personenbezogene Angaben Dritter gezeigt.',claims:'Der Text ist die Selbstdarstellung der Künstlerin bzw. des Künstlers; persönliche oder werbliche Aussagen wurden nicht unabhängig bestätigt.'}
+};
+function sourceMarkup(raw,locale,show,kind,id){
+ if(!raw)return '';
+ const original=t=>'<div class="prose ex25-source-text" lang="hu">'+htmlText(t)+'</div>';
+ if(!release)return original(raw);
+ const l=editorialLabels[locale];
+ const lang=locale==='de'?'de-AT':locale;
+ const sensitive=id==='eletemkepe-c90ec4d760c2';
+ const displayRaw=sensitive?raw.replace(/^A kép ára:[^\n]*(?:\n+|$)/u,'A kép 2025-ös ára: 400 €. A bevétel jótékony célra szolgált.\n\n'):raw;
+ const price=kind==='works'&&/(?:kép ára|ár\s*:|\d\s*(?:€|euró|eur\b))/iu.test(raw);
+ const note=(t)=>'<p class="ex25-translation-note">'+esc(t)+'</p>';
+ const notices=(price?note(l.past):'')+(sensitive?note(l.limited):'')+(kind==='artists'&&/Google|#1/u.test(raw)?note(l.claims):'');
+ if(locale==='hu')return notices+original(displayRaw);
+ const translation=translations?.[show]?.[kind]?.[id]?.[locale];
+ const toggle='<details class="ex25-original-text"><summary>'+esc(l.original)+'</summary>'+original(displayRaw)+'</details>';
+ return notices+(translation?note(l.translated)+'<div class="prose ex25-translated-text" lang="'+lang+'">'+htmlText(translation)+'</div>':note(l.missing))+toggle;
+}
+function workName(w,lang){
+ const local=predecessorCopy[lang],c=copy[lang],note=editorial.workDescriptionCrosswalk?.[w.id];
+ return w.title?.[lang]||w.title?.hu||note?.verifiedSourceTitle||(candidate?local.number+' '+String(w.galleryEvidence.galleryPosition).padStart(2,'0'):c.untitled);
+}
+function workMarkup(w,lang,extra,show){
  const c=copy[lang], local=predecessorCopy[lang];
  const noted=editorial.workDescriptionCrosswalk?.[w.id];
  const attribution={
   'same-underlying-exposure-cross-exhibition-alternate-treatment':{en:'The artist’s note from As I Like It Austria describes the same exposure. This exhibition presented a different crop or edit.',hu:'Az alkotó As I Like It Austria-kiállításhoz írt szövege ugyanarról a felvételről szól. Itt eltérő kivágású vagy kidolgozású változat szerepelt.',de:'Der Text der Künstlerin für As I Like It Austria beschreibt dieselbe Aufnahme. Hier war ein anders beschnittenes oder bearbeitetes Bild zu sehen.'},
   'same-show-visually-verified-derivative':{en:'The artist’s original note is from this exhibition’s Wix profile; the gallery shows a derivative of the same image.',hu:'Az alkotó eredeti szövege e kiállítás Wix-profiljából származik. A galériában ugyanennek a képnek egy másik változata szerepel.',de:'Der Originaltext stammt aus dem Wix-Profil der Künstlerin zu dieser Ausstellung. Die Galerie zeigt eine Variante desselben Bildes.'}
  };
- const title=w.title?.[lang]||w.title?.hu||noted?.verifiedSourceTitle||(candidate?local.number+' '+String(w.galleryEvidence.galleryPosition).padStart(2,'0'):c.untitled);
+ const title=workName(w,lang);
  const source=sourceWork(w);
  const creator=w.creatorStatus==='identified'?w.creator:c.unknown;
  const src=img(w.imageSourceUrl);
@@ -123,20 +160,20 @@ function workMarkup(w,lang,extra){
    +'<p class="kicker">'+esc(extra?c.works:c.artworks)+'</p>'
    +'<h4 class="exhibitor-extra-title">'+esc(title)+'</h4>'
    +(noted?'<p class="ex25-description-provenance" data-description-basis="'+esc(noted.basis)+'">'+esc(attribution[noted.basis][lang])+'</p>':'')
-   +(source?'<div class="prose ex25-source-text" lang="hu">'+htmlText(source)+'</div>':'<p class="ex25-unverified">'+esc(missingDescription[lang])+'</p>')
+   +(source?sourceMarkup(source,lang,show,'works',w.id):'<p class="ex25-unverified">'+esc(missingDescription[lang])+'</p>')
    +'<figure class="exhibitor-work-image"><img src="'+esc(src)+'" alt="'+cap+'" width="'+(w.sourceWidth||1600)+'" height="'+(w.sourceHeight||1600)+'" referrerpolicy="no-referrer" loading="lazy" decoding="async">'
    +'<figcaption class="artwork-copyright">'+(candidate?esc(local.imageFrom+': '+creator):'© '+esc(creator)+'. '+esc(c.review)+'.')+'</figcaption></figure>'
    +(extra?'</section>':'</div>');
 }
 function artistCard(p,works,i,lang,show){
  const c=copy[lang],bio=artistBiography(p.name,show);
- const images=works.map((w,n)=>workMarkup(w,lang,n>0)).join('');
+ const images=works.map((w,n)=>workMarkup(w,lang,n>0,show)).join('');
  return '<article class="exhibitor-card" id="artist-'+esc(p.id)+'">'
    +'<figure class="exhibitor-portrait"><img src="'+esc(img(p.portraitSourceUrl))+'" alt="'+esc(p.name)+'" width="'+esc(p.portraitWidth||700)+'" height="'+esc(p.portraitHeight||900)+'" referrerpolicy="no-referrer" loading="lazy" decoding="async"></figure>'
    +'<div class="exhibitor-content"><p class="kicker">'+esc(c.artists)+' · '+String(i+1).padStart(2,'0')+'</p>'
    +'<h3>'+esc(p.name)+'</h3>'+images
-   +(bio?'<h4>'+esc(c.artist)+'</h4><div class="prose ex25-source-text" lang="hu">'+htmlText(bio)+'</div>':'')
-   +'<p class="artist-contact"><span>'+esc(c.source)+'</span><a href="'+esc(p.legacyProfileUrl)+'" target="_blank" rel="noopener noreferrer">'+esc(p.name)+'</a></p>'
+   +(bio?'<h4>'+esc(c.artist)+'</h4>'+sourceMarkup(bio,lang,show,'artists',p.id):'')
+   +'<p class="artist-contact"><span>'+esc(c.source)+'</span><a href="'+esc(p.legacyProfileUrl==='https://www.norbertbanhalmi.com/mybest'?({en:'https://www.banhalmi.art/#about',hu:'https://www.banhalmi.art/hu/#about',de:'https://www.banhalmi.art/de-at/#about'}[lang]):p.legacyProfileUrl)+'" target="_blank" rel="noopener noreferrer">'+esc(p.name)+'</a></p>'
    +'</div></article>';
 }
 function page(ex,lang){
@@ -148,7 +185,6 @@ function page(ex,lang){
  const first=ex.works[0],hero=img(first.imageSourceUrl);
  const cover=archiveScope?.heroDisplay?.images?.[ex.slug];
  const pageTitle=showName(ex.slug,lang);
- const description=t.intro.join(' ').slice(0,180);
  const dateText=ex.slug==='eletem-kepe'?'07—13.12.2025':'30.11—06.12.2025';
  const openSource=current.dates.opening;
  const openDay=openSource.listedStart?.slice(0,10)||current.dates.publicVisit.start;
@@ -176,34 +212,31 @@ function page(ex,lang){
      +'<div><h3>'+esc(exhibitionName(item,lang))+'</h3></div><div class="history-copy"><a href="'+esc(link)+'"'+(candidate?' rel="prev"':'')+'>'+
        esc(exhibitionName(item,lang))+' →</a></div></article>';
  }).join('');
- const sectionNav=[['story',c.story],['exhibitors',c.artists],['team',c.team],['press',pressTitle[lang]],...(twoShows?[['history',candidate?local.heading:c.past]]:[]),['visit',c.visit]];
  const canonical=SITE+route(ex.slug,lang);
  const alternate=locales.map(l=>'<link rel="alternate" hreflang="'+locale(l)+'" href="'+SITE+route(ex.slug,l)+'">').concat(['<link rel="alternate" hreflang="x-default" href="'+SITE+route(ex.slug,'en')+'">']).join('');
- const schema={'@context':'https://schema.org','@graph':[
-   {'@type':'WebPage','@id':canonical+'#webpage',url:canonical,name:pageTitle,inLanguage:locale(lang),publisher:{'@id':'https://www.vipach.at/#organization'},about:{'@id':SITE+route(ex.slug,'en')+'#event'}},
-   {'@type':'ExhibitionEvent','@id':SITE+route(ex.slug,'en')+'#event',name:pageTitle,organizer:{'@id':'https://www.vipach.at/#organization'},startDate:current.dates.publicVisit.start,endDate:current.dates.publicVisit.end,
-    location:{'@type':'Place',name:current.venue.name,address:{'@type':'PostalAddress',addressLocality:'Wien',addressCountry:'AT'}},url:canonical,subjectOf:sourcePage}
- ]};
+ const metadata=exhibitionMeta(ex.slug,lang,canonical);
+ const schema=candidate?archiveGraph({ex,current,lang,name:pageTitle,description:metadata.description,sourcePage,
+   workName:w=>workName(w,lang),canonical}):null;
  const asset=candidate?'/assets/':'../../assets/';
  const history=twoShows?'<section class="history" id="history" aria-labelledby="history-title"><div class="history-inner"><div class="history-head reveal"><div><p class="kicker">VIPACH Exhibition</p>'
  +'<h2 id="history-title" class="display-2">'+esc(candidate?local.heading:c.past)+'</h2></div><div class="prose"><p class="lead">'+esc(c.statement)+'</p></div></div>'
  +'<div class="history-list reveal">'+twoShows+'</div></div></section>':'';
  const heroVisual=candidate
-   ? '<div class="hero-visual ex25-archive-cover"><img src="'+esc(cover.url)+'" width="'+cover.width+'" height="'+cover.height+'" alt="" referrerpolicy="no-referrer" fetchpriority="high" decoding="async"></div>'
+   ? '<div class="hero-visual ex25-archive-cover"><img src="'+esc(cover.url)+'" width="'+cover.width+'" height="'+cover.height+'" alt="'+esc(posterAlt[lang]+pageTitle)+'" referrerpolicy="no-referrer" fetchpriority="high" decoding="async"></div>'
    : '<div class="hero-visual"><img src="'+esc(hero)+'" width="1920" height="1920" alt="'+esc(c.works)+' — '+esc(c.review)+'" fetchpriority="high"></div>';
  return '<!doctype html><html lang="'+(lang==='de'?'de-AT':lang)+'"><head>'
- +'<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
+ +'<meta charset="utf-8"><meta name="referrer" content="no-referrer"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
  +(release?'<meta name="robots" content="index,follow">':'<meta name="robots" content="noindex,nofollow,noimageindex"><meta name="vipach:stage" content="PREPUBLICATION-REVIEW-NOT-LICENSED">')
- +'<meta name="description" content="'+esc(description)+'"><meta name="theme-color" content="#f2f2ef">'
- +'<title>'+esc(pageTitle)+' — VIPACH Exhibition'+(candidate?'':' preview')+'</title>'
+ +'<meta name="description" content="'+esc(metadata.description)+'"><meta name="theme-color" content="#f2f2ef">'
+ +'<title>'+esc(metadata.title)+(candidate?'':' — preview')+'</title>'
  +(candidate?'<link rel="canonical" href="'+canonical+'">'+alternate+'<script type="application/ld+json">'+JSON.stringify(schema).replace(/</g,'\\u003c')+'</script>':'')
- +'<link rel="stylesheet" href="'+asset+'styles.css"><link rel="stylesheet" href="'+asset+'2025-exhibitions.css">'
+ +(release?metadata.meta:'')
+ +'<link rel="stylesheet" href="'+asset+'styles.css"><link rel="stylesheet" href="'+asset+'2025-exhibitions.css"><link rel="stylesheet" href="'+asset+'exhibition-harmonization.css">'
  +'</head><body class="ex25-body"'+(candidate?' data-exhibition-slug="'+ex.slug+'" data-route-mode="slug"':'')+'><a class="skip-link" href="#content">'+esc(c.skip)+'</a>'
- +'<header class="site-header"><a class="brand" href="'+(candidate?(lang==='en'?'/':'/'+lang+'/'):'https://www.vipach.at/')+'" aria-label="VIPACH Exhibition"><span><strong>VIPACH</strong> / Exhibition</span></a>'
+ +'<header class="site-header"><a class="brand" href="'+(candidate?(lang==='en'?'/':'/'+lang+'/'):'https://www.vipach.at/')+'" aria-label="VIPACH Exhibition"><img class="brand-logo" src="https://static.wixstatic.com/media/b0aee1_3ddaf3156e154fc0bda2ffe5cb999a5c~mv2.png" width="30" height="30" alt="" referrerpolicy="no-referrer"><span><strong>VIPACH</strong> / '+esc({en:'Exhibition',hu:'Kiállítás',de:'Ausstellung'}[lang])+'</span></a>'
  +'<div class="header-tools"><nav class="lang-nav" aria-label="Language">'+languageLinks+'</nav>'
  +'<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="'+esc(c.archive)+'"><span></span><span></span></button></div>'
  +'<nav id="site-menu" class="site-menu" aria-label="'+esc(c.archive)+'">'
- +sectionNav.map(([id,label])=>'<a href="#'+id+'">'+esc(label)+'</a>').join('')
  +menuHtml(lang,ex.slug)+'</nav></header>'
  +'<main id="content">'
  +'<section class="hero ex25-exhibition-hero" aria-labelledby="hero-title">'
@@ -215,6 +248,7 @@ function page(ex,lang){
  +'<div><strong>'+esc(c.venue)+'</strong><span>'+esc(venue)+'</span></div>'
  +'<div><strong>'+esc(c.works)+'</strong><span>'+esc(candidate?local.official:c.review)+'</span></div>'
  +'</div></div></div></section>'
+  +(release?'<section class="section ex25-context" aria-labelledby="ex25-context-title"><div class="section-inner editorial-grid"><div><p class="kicker">VIPACH · 2025</p><h2 class="display-2" id="ex25-context-title">'+esc({en:'At a glance',hu:'A kiállítás röviden',de:'Die Ausstellung auf einen Blick'}[lang])+'</h2></div><div class="prose"><p>'+esc(exhibitionSummary[ex.slug][lang])+'</p><p><a href="'+esc(venueSources[ex.slug].url)+'" rel="noreferrer">'+esc({en:'Original event listing',hu:'Eredeti eseményadatok',de:'Ursprünglicher Veranstaltungseintrag'}[lang])+'</a></p></div></div></section>':'')
  +(release?'':'<div class="ex25-prepublication" role="note"><strong>'+esc(candidate?local.review:c.review)+'</strong><p>'+esc(t.pending)+'</p></div>')
  +'<section class="section"><div class="section-inner section-index reveal"><div class="section-no">01 / '+esc(c.story)+'</div><p class="statement">'+esc(c.statement)+'</p></div></section>'
  +'<section class="section" id="story"><div class="section-inner editorial-grid"><div class="reveal"><p class="kicker">'+esc(t.eyebrow)+'</p>'
@@ -232,7 +266,6 @@ function page(ex,lang){
  +'<div class="credit-row"><div class="credit-role">'+esc(c.org)+'</div><div class="credit-name">Bánhalmi Norbert</div><div class="credit-title">BMI Fotoklub Wien</div></div>'
  +'<div class="credit-row"><div class="credit-role">'+esc(t.printPartnerLabel)+'</div><div class="credit-name">'+esc(t.printPartner)+'</div>'+(release?'':'<div class="credit-title">'+esc(t.partnerRightsNote)+'</div>')+'</div>'
  +'<div class="credit-row"><div class="credit-role">'+esc(t.professionalPartnerLabel)+'</div><div class="credit-name">'+esc(t.professionalPartner)+'</div>'+(release?'':'<div class="credit-title">'+esc(t.partnerRightsNote)+'</div>')+'</div></div></div></section>'
- +pressMarkup(ex,lang)
  +history
  +'<section class="final-statement reveal"><p>'+esc(c.statement)+'</p></section>'
  +'<section class="visit" id="visit"><div class="visit-grid"><div class="reveal"><p class="kicker">'+esc(c.visit)+'</p><h2>'+esc(c.visit)+'</h2>'
@@ -244,9 +277,11 @@ function page(ex,lang){
  +'<a class="button" href="mailto:office@vipach.at">office@vipach.at</a></div></div></div></section>'
  +'<section class="section image-rights" id="image-rights" aria-labelledby="image-rights-title"><div class="section-inner">'
  +'<h2 id="image-rights-title">'+esc(c.rights)+'</h2>'+(release?'<p>'+esc(releaseRights[lang])+'</p>':'<p>'+esc(t.pending)+'</p><p>'+esc(c.review)+'</p>')+'</div></section>'
+ +(release?venueEvidenceMarkup(ex.slug,lang):'')
+ +pressMarkup(ex,lang)
  +'</main><footer class="site-footer"><div class="footer-inner"><div><div class="footer-brand">VIPACH</div><div class="eyebrow">Vienna Photo Art &amp; Creative Hub</div></div>'
  +'<div class="footer-meta">'+esc(pageTitle)+' · 2025 · <a href="mailto:office@vipach.at">office@vipach.at</a> · '
- +'<a href="https://www.vipach.at/kapcsolat/impresszum" rel="noopener noreferrer">Impressum</a></div></div></footer>'
+ +'<a href="'+(lang==='en'?'/privacy/':'/'+lang+'/privacy/')+'">'+esc({en:'Legal notice and privacy',hu:'Impresszum és adatvédelem',de:'Impressum und Datenschutz'}[lang])+'</a></div></div></footer>'
  +'<script src="'+asset+'site.js" defer></script></body></html>\n';
 }
 if(inventory.exhibitions.length!==2 || inventory.exhibitions.some(x=>x.works.length!==20))throw Error('Expected exactly two x20 shows');
@@ -257,7 +292,7 @@ for(const ex of inventory.exhibitions)for(const lang of locales){
  fs.writeFileSync(target,page(ex,lang));
 }
 if(!release){fs.mkdirSync(path.join(OUT,'assets'),{recursive:true});
-for(const asset of ['styles.css','site.js','2025-exhibitions.css'])fs.copyFileSync(path.join(ROOT,'assets',asset),path.join(OUT,'assets',asset));}
+for(const asset of ['styles.css','site.js','2025-exhibitions.css','exhibition-harmonization.css'])fs.copyFileSync(path.join(ROOT,'assets',asset),path.join(OUT,'assets',asset));}
 if(candidate){
  if(!release){
  // Clone only already-public SPONTÁN routes and dependencies, nothing private.

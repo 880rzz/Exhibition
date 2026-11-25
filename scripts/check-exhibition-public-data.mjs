@@ -1,0 +1,30 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import { archive2025Release } from './exhibition-2025-release-scope.mjs';
+import { legacySourcePaths, publicExhibitionsPath, spontanVenueSource, gallerySources } from './exhibition-seo.mjs';
+import { publicExhibitionFacts } from './exhibition-public-data.mjs';
+const json = path => JSON.parse(fs.readFileSync(new URL(path, import.meta.url), 'utf8'));
+const sources = legacySourcePaths.map(p=>json('../'+p));
+const scope = archive2025Release();
+const publicJson = '../' + publicExhibitionsPath.slice(1);
+const facts = json(publicJson);
+assert.deepEqual(facts, JSON.parse(JSON.stringify(publicExhibitionFacts(sources, scope))), 'Public JSON is generated; do not hand-edit');
+assert.deepEqual(facts.exhibitions.map(e=>e.slug), ['spontan-2026','eletem-kepe','as-i-like-it-austria']);
+const [sp, ek, ai] = facts.exhibitions;
+assert.equal(sp.publicVisit.end, '2026-11-21');
+assert.equal(sp.sources.venueExhibitionListing, spontanVenueSource);
+assert.equal(sp.sources.historicalOrganizerCalendarEnd, '2026-11-22T23:59:00+01:00');
+for(const [e, artists] of [[ek,15],[ai,19]]){
+  assert.equal(e.sources.venueExhibitionListing, gallerySources[e.slug]);
+  assert.equal(e.catalogue.identifiedArtists, artists);
+  assert.equal(e.catalogue.workAttribution.length, 20);
+  assert.equal(e.media.workDisplaysInScope, 20);
+  assert.equal(e.media.portraitDisplaysInScope, artists);
+  assert.equal(e.media.individuallyVerifiedDisplayPermissions, 0);
+  assert.equal(e.media.publicReuseAuthorized, false);
+  assert.ok(e.catalogue.workAttribution.every(w=>e.catalogue.artists.some(a=>a.anchor===w.artistAnchor)));
+}
+assert.doesNotMatch(JSON.stringify(facts), /static\.wixstatic|wixRecordId|sha256|private-build|licenseVerificationStatus/i);
+const config=fs.readFileSync(new URL('../_config.yml',import.meta.url),'utf8').split('\n').map(l=>l.trim());
+assert.ok(legacySourcePaths.every(p=>config.includes('- '+p)), 'Stale source JSON must not be served');
+console.log('PASS: safe published facts for 3 shows; exact scoped archive counts and public dates without media URLs or reuse permissions.');

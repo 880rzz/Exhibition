@@ -4,6 +4,10 @@
 title: VIPACH Exhibitions
 exclude:
   - data/staging
+  # Keep build inputs in version control; the normalized feed is data/public/exhibitions.json.
+  - data/exhibitions/spontan-2026.json
+  - data/exhibitions/eletem-kepe.json
+  - data/exhibitions/as-i-like-it-austria.json
   - staging-preview
   - docs
   - scripts

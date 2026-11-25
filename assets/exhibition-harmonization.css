@@ -1,0 +1,24 @@
+/* Shared archive canvas: show the complete original, never crop poster text or recolour it. */
+.hero .hero-visual:is(.exhibition-poster,.ex25-archive-cover) {
+  background: #deddd7;
+  display: grid;
+  place-items: center;
+  min-height: 0;
+  aspect-ratio: auto;
+  padding: clamp(16px, 3vw, 48px);
+}
+.hero .hero-visual:is(.exhibition-poster,.ex25-archive-cover) img {
+  width: 100%;
+  height: auto;
+  max-height: calc(100svh - 175px);
+  object-fit: contain;
+  filter: none;
+  transform: none;
+}
+@media (max-width: 980px) {
+  .hero .hero-visual:is(.exhibition-poster,.ex25-archive-cover) img { max-height: none; }
+}
+.ex25-original-text { margin: .6rem 0 1.1rem; }
+.ex25-original-text summary { cursor: pointer; min-height: 44px; align-content: center; width: fit-content; }
+.ex25-original-text[open] > .prose { margin-top: .5rem; }
+.ex25-translation-note { color: var(--muted, #555); font-size: .86em; margin-block: .25rem .6rem; }

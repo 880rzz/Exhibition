@@ -1,6 +1,12 @@
 {
-  "builtAt": "2026-11-22T11:26:53.521Z",
+  "builtAt": "2026-11-25T13:12:41.400Z",
   "featuredExhibitionSlug": "spontan-2026",
+  "featuredSelection": "latest published full-html exhibition by opening date at build time",
+  "menuSlugs": [
+    "spontan-2026",
+    "eletem-kepe",
+    "as-i-like-it-austria"
+  ],
   "exhibitions": [
     {
       "slug": "as-i-like-it-austria",
