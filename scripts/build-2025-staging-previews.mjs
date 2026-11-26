@@ -231,7 +231,7 @@ function page(ex,lang){
  +'<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="'+esc(c.archive)+'"><span></span><span></span></button></div>'
  +'<nav id="site-menu" class="site-menu" aria-label="'+esc(c.archive)+'">'
  +menuHtml(lang,ex.slug)+'</nav></header>'
- +'<main id="content">'
+ +'<main id="content" tabindex="-1">'
  +'<section class="hero ex25-exhibition-hero has-editorial-cover" aria-labelledby="hero-title">'
  +heroVisual
  +'<div class="hero-copy"><div class="hero-heading"><p class="eyebrow hero-eyebrow">VIPACH · Vienna Photo Art & Creative Hub</p>'
