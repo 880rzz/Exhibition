@@ -33,6 +33,16 @@ assert.deepEqual(writes,[['--exhibition-header-size','125px']]);
 height=58;resize();
 assert.deepEqual(writes.at(-1),['--exhibition-header-size','58px']);
 
+// The native skip link must focus the destination without adding a new regular Tab stop.
+const exhibitionSlugs = fs.readdirSync('data/exhibitions').filter(f=>f.endsWith('.json')).map(f=>f.slice(0,-5)+'/');
+for (const prefix of ['', 'de/', 'hu/']) {
+  for (const slug of ['', ...exhibitionSlugs]) {
+    const file=prefix+slug+'index.html', html=read(file);
+    assert.equal([...html.matchAll(/<a class="skip-link" href="#content">/g)].length,1,file);
+    assert.equal([...html.matchAll(/<main id="content" tabindex="-1">/g)].length,1,file);
+  }
+}
+
 const localeTitles = { '':'At a glance', 'de/':'Die Ausstellung auf einen Blick', 'hu/':'A kiállítás röviden' };
 for (const [prefix,title] of Object.entries(localeTitles)) {
   for (const slug of ['','spontan-2026/','eletem-kepe/','as-i-like-it-austria/']) {
