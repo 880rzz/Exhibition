@@ -4,6 +4,7 @@
  * SOURCE-ONLY: writes review HTML to staging-preview/; production builder untouched.
  * Images are original Wix media references, mirrored privately under VIPACH.
  */
+import { catalogueTitle } from './exhibition-catalogue-titles.mjs';
 import { exhibitionEditorialMarkup } from './exhibition-editorial.mjs';
 import fs from 'node:fs';
 import { pressTitleFor } from './exhibition-press-language.mjs';
@@ -132,7 +133,7 @@ function sourceMarkup(raw,lang,slug,kind,id){
   +'<div class="prose ex25-translated-text" lang="'+(lang==='de'?'de-AT':lang)+'">'+htmlText(entry[lang])+'</div>'
   +'<a class="ex25-original-link" hreflang="hu" href="'+route(slug,'hu')+'#'+esc(kind==='artists'?'artist-'+id:id)+'">'+esc(c.original)+'</a>';
 }
-function workName(w,lang){
+function legacyWorkName(w,lang){
  const local=predecessorCopy[lang],c=copy[lang],note=editorial.workDescriptionCrosswalk?.[w.id];
  return w.title?.[lang]||w.title?.hu||note?.verifiedSourceTitle||(candidate?local.number+' '+String(w.galleryEvidence.galleryPosition).padStart(2,'0'):c.untitled);
 }
@@ -143,14 +144,17 @@ function workMarkup(w,lang,extra,show){
   'same-underlying-exposure-cross-exhibition-alternate-treatment':{en:'The artist’s note from As I Like It Austria describes the same exposure. This exhibition presented a different crop or edit.',hu:'Az alkotó As I Like It Austria-kiállításhoz írt szövege ugyanarról a felvételről szól. Itt eltérő kivágású vagy kidolgozású változat szerepelt.',de:'Der Text der Künstlerin für As I Like It Austria beschreibt dieselbe Aufnahme. Hier war ein anders beschnittenes oder bearbeitetes Bild zu sehen.'},
   'same-show-visually-verified-derivative':{en:'The artist’s original note is from this exhibition’s Wix profile; the gallery shows a derivative of the same image.',hu:'Az alkotó eredeti szövege e kiállítás Wix-profiljából származik. A galériában ugyanennek a képnek egy másik változata szerepel.',de:'Der Originaltext stammt aus dem Wix-Profil der Künstlerin zu dieser Ausstellung. Die Galerie zeigt eine Variante desselben Bildes.'}
  };
- const title=workName(w,lang);
+ const title=legacyWorkName(w,lang);
+ const catalogue=candidate?catalogueTitle(show,w,lang):null;
  const source=sourceWork(w);
  const creator=w.creatorStatus==='identified'?w.creator:c.unknown;
  const src=img(w.imageSourceUrl);
  const cap=esc(creator)+' · '+esc(title);
  return (extra?'<section class="exhibitor-additional-work" id="'+esc(w.id)+'">':'<div class="ex25-primary-work" id="'+esc(w.id)+'">')
    +'<p class="kicker">'+esc(extra?c.works:c.artworks)+'</p>'
-   +'<h4 class="exhibitor-extra-title">'+esc(title)+'</h4>'
+   +'<h4 class="exhibitor-extra-title">'+esc(catalogue?.title||title)+'</h4>'
+   +(catalogue?'<p class="ex25-title-basis">'+esc(catalogue.provenanceLabel)+'</p>':'')
+   +(catalogue?.originalTitle?'<p class="ex25-original-title">'+esc(catalogue.originalTitleLabel)+': <span lang="'+esc(catalogue.originalTitleLang)+'">'+esc(catalogue.originalTitle)+'</span></p>':'')
    +(noted?'<p class="ex25-description-provenance" data-description-basis="'+esc(noted.basis)+'">'+esc(attribution[noted.basis][lang])+'</p>':'')
    +(source?sourceMarkup(source,lang,show,'works',w.id):'<p class="ex25-unverified">'+esc(missingDescription[lang])+'</p>')
    +'<figure class="exhibitor-work-image"><img src="'+esc(src)+'" alt="'+cap+'" width="'+(w.sourceWidth||1600)+'" height="'+(w.sourceHeight||1600)+'" referrerpolicy="no-referrer" loading="lazy" decoding="async">'
@@ -209,7 +213,7 @@ function page(ex,lang){
  const alternate=locales.map(l=>'<link rel="alternate" hreflang="'+locale(l)+'" href="'+SITE+route(ex.slug,l)+'">').concat(['<link rel="alternate" hreflang="x-default" href="'+SITE+route(ex.slug,'en')+'">']).join('');
  const metadata=exhibitionMeta(ex.slug,lang,canonical);
  const schema=candidate?archiveGraph({ex,current,lang,name:pageTitle,description:metadata.description,
-   workName:w=>workName(w,lang),canonical}):null;
+   workTitle:w=>catalogueTitle(ex.slug,w,lang),canonical}):null;
  const asset=candidate?'/assets/':'../../assets/';
  const history=twoShows?'<section class="history" id="history" aria-labelledby="history-title"><div class="history-inner"><div class="history-head reveal"><div><p class="kicker">VIPACH · '+esc(archiveBrand[lang])+'</p>'
  +'<h2 id="history-title" class="display-2">'+esc(candidate?local.heading:c.past)+'</h2></div><div class="prose"><p class="lead">'+esc(c.statement)+'</p></div></div>'
@@ -224,7 +228,7 @@ function page(ex,lang){
  +'<title>'+esc(metadata.title)+(candidate?'':' — preview')+'</title>'
  +(candidate?'<link rel="canonical" href="'+canonical+'">'+alternate+'<script type="application/ld+json">'+JSON.stringify(schema).replace(/</g,'\\u003c')+'</script>':'')
  +(release?metadata.meta:'')
- +'<link rel="stylesheet" href="'+asset+'styles.css"><link rel="stylesheet" href="'+asset+'2025-exhibitions.css"><link rel="stylesheet" href="'+asset+'exhibition-harmonization.css?v=20261126-editorial">'
+ +'<link rel="stylesheet" href="'+asset+'styles.css"><link rel="stylesheet" href="'+asset+'2025-exhibitions.css"><link rel="stylesheet" href="'+asset+'exhibition-harmonization.css?v=20261126-work-titles">'
  +'</head><body class="ex25-body"'+(candidate?' data-exhibition-slug="'+ex.slug+'" data-route-mode="slug"':'')+'><a class="skip-link" href="#content">'+esc(c.skip)+'</a>'
  +'<header class="site-header"><a class="brand" href="'+(candidate?(lang==='en'?'/?lang=en':'/'+lang+'/'):'https://vipach.at/')+'" aria-label="VIPACH '+esc(archiveBrand[lang])+'"><img class="brand-logo" src="https://static.wixstatic.com/media/b0aee1_3ddaf3156e154fc0bda2ffe5cb999a5c~mv2.png" width="30" height="30" alt="" referrerpolicy="no-referrer"><span><strong>VIPACH</strong> / '+esc({en:'Exhibition',hu:'Kiállítás',de:'Ausstellung'}[lang])+'</span></a>'
  +'<div class="header-tools"><nav class="lang-nav" aria-label="'+esc(archiveLanguage[lang])+'">'+languageLinks+'</nav>'

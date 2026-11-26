@@ -1,0 +1,479 @@
+{
+  "version": 1,
+  "shows": {
+    "eletem-kepe": {
+      "eletemkepe-719c1f37ef39": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_111cc949dd4f468a94dbe304ea1f097f~mv2.jpg",
+        "descriptionSha256": "68de84a1f2fa228fd20e7ff245dac9de5ac9bce1b470fa27d16d364128f0d4e7",
+        "titles": {
+          "hu": "A felszálló füst",
+          "en": "When the Smoke Rises",
+          "de": "Wenn der Rauch aufsteigt"
+        },
+        "sourceTitle": {
+          "title": "Füstös Finomság",
+          "lang": "hu"
+        }
+      },
+      "eletemkepe-7083c6460bb5": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_1f384ad1f13a48ef82cc8ca83adcb5b6~mv2.jpg",
+        "descriptionSha256": "49c5aae14a61d3a7fddbc8d7a205ef201683c794b139809fed8cb2cb783939d6",
+        "titles": {
+          "hu": "Val d’Orcia emléke",
+          "en": "A Memory of Val d’Orcia",
+          "de": "Erinnerung an Val d’Orcia"
+        },
+        "sourceTitle": {
+          "title": "Toscana Dream (Val d’Orcia, 2016)",
+          "lang": "en"
+        }
+      },
+      "eletemkepe-e6ef2f123b3b": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_2239212c15a74440bfa4a939d1531d5d~mv2.jpg",
+        "descriptionSha256": "10f8fed259bbe78fd58eec59576500ae3787b1205ec79b6546798820f81c9b99",
+        "titles": {
+          "hu": "A kovács és a tűz",
+          "en": "The Blacksmith and the Fire",
+          "de": "Der Schmied und das Feuer"
+        },
+        "sourceTitle": {
+          "title": "Az idő kovácsa",
+          "lang": "hu"
+        }
+      },
+      "eletemkepe-371e50673e22": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_321fc00094b44cca9bf20ed3ddf0510a~mv2.jpg",
+        "descriptionSha256": "4e50e3032e4aeb8a31d528c8f2aff72a22160b80ea64f17a754843ffad471e6f",
+        "titles": {
+          "hu": "A cselló csöndjében",
+          "en": "In the Quiet of the Cello",
+          "de": "In der Stille des Cellos"
+        },
+        "sourceTitle": {
+          "title": "Én",
+          "lang": "hu"
+        }
+      },
+      "eletemkepe-f3bbb75370d8": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_37f1a6b0b3d04c94aaa3ace6178c3a5c~mv2.jpg",
+        "descriptionSha256": "3770c883960142fb787b06239cfa5ef98bac9e0abbc4317baec6a001c1df9617",
+        "titles": {
+          "hu": "Lábnyomok a karibi parton",
+          "en": "Footprints on a Caribbean Shore",
+          "de": "Fußspuren an der Karibikküste"
+        },
+        "sourceTitle": {
+          "title": "Lábnyomok",
+          "lang": "hu"
+        }
+      },
+      "eletemkepe-5ba6a68d1876": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_392da882c6b94ecf96f3c2e1efdbb5ff~mv2.jpg",
+        "descriptionSha256": "73a5ba1a0c6366a11d6d367c894e2eee2fe174a8e5f0a94f2c71665a7acecb6a",
+        "titles": {
+          "hu": "Manhattan fényei a túlpartról",
+          "en": "Manhattan Lights from Across the Water",
+          "de": "Manhattans Lichter vom anderen Ufer"
+        },
+        "sourceTitle": {
+          "title": "Éjjeli randevú New York fényeivel",
+          "lang": "hu"
+        }
+      },
+      "eletemkepe-c90ec4d760c2": {
+        "basis": "visible-gallery-photo",
+        "galleryImageFileId": "b0aee1_66c46500982746aa8bb5be9ab5287de5~mv2.jpg",
+        "titles": {
+          "hu": "Zongora egy fénysugárban",
+          "en": "Piano in a Shaft of Light",
+          "de": "Ein Klavier im Lichtstrahl"
+        }
+      },
+      "eletemkepe-6a0485e910a1": {
+        "basis": "reviewed-variant-description",
+        "galleryImageFileId": "b0aee1_6eb5aaee2b5b42e382275ba7802881f4~mv2.jpg",
+        "descriptionSha256": "bdfaeeecdc10230373dc075e98c93d70da346e4f50656ba974b0e0b2075ec5a4",
+        "titles": {
+          "hu": "Tél a jég belsejében",
+          "en": "Winter Inside the Ice",
+          "de": "Winter im Inneren des Eises"
+        }
+      },
+      "eletemkepe-3b5ba24c02ef": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_79d58c3381074d6f92b0a5edfe3f2c91~mv2.jpg",
+        "descriptionSha256": "daf4f1dceee23b0f883adfec31900dde121e056955143eefa4100b7c44385dea",
+        "titles": {
+          "hu": "Szív a gyertyalángban",
+          "en": "A Heart in the Candle Flame",
+          "de": "Ein Herz in der Kerzenflamme"
+        },
+        "sourceTitle": {
+          "title": "Feuer und Flamme",
+          "lang": "de"
+        }
+      },
+      "eletemkepe-1692a0e34a53": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_8d96c1daef8645c88b5df22a174333cc~mv2.jpg",
+        "descriptionSha256": "9944ad1d0e7da621f929fa21111a95b1f72fd1092c45e61115503f27be957666",
+        "titles": {
+          "hu": "Manhattan, éjjel a régi kikötőből",
+          "en": "Manhattan at Night from the Old Harbour",
+          "de": "Manhattan bei Nacht, vom alten Hafen aus"
+        },
+        "sourceTitle": {
+          "title": "Sleepless Symphony",
+          "lang": "en"
+        }
+      },
+      "eletemkepe-eed07d33a4a9": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_8ed1c9ecc7bf490e974a6ad683cb359c~mv2.jpg",
+        "descriptionSha256": "3c148782872933981493850c7aae5582ac4c350b070de28b9df141bf4d4a853b",
+        "titles": {
+          "hu": "A remény színei",
+          "en": "The Colours of Hope",
+          "de": "Die Farben der Hoffnung"
+        },
+        "sourceTitle": {
+          "title": "Remény – Hoffnung – Hope",
+          "lang": "mul"
+        }
+      },
+      "eletemkepe-ba9b1dccdc28": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_9ccb7a1b95634b2d80b25ec33e815ba1~mv2.jpg",
+        "descriptionSha256": "2aa77fcff7b85f8e2e237c15a0b905bb177b0ba095353ed033a61a23068ab4a7",
+        "titles": {
+          "hu": "Portré bekötött szemmel",
+          "en": "Portrait with a Blindfold",
+          "de": "Porträt mit verbundenen Augen"
+        },
+        "sourceTitle": {
+          "title": "Ő",
+          "lang": "hu"
+        }
+      },
+      "eletemkepe-ac4f36f8a01d": {
+        "basis": "visible-gallery-photo",
+        "galleryImageFileId": "b0aee1_b0b852d43bbd4ddf894777104ff9c902~mv2.jpg",
+        "titles": {
+          "hu": "Manhattan felé nézve",
+          "en": "Looking toward Manhattan",
+          "de": "Der Blick nach Manhattan"
+        }
+      },
+      "eletemkepe-5ac35f527809": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_b44fe1d7e1e74d28a7a5af955eb42b1c~mv2.jpg",
+        "descriptionSha256": "1daba7c98ccc588e47ddbd7c3f5d921c3386820db3945e13ead2ebdabbbaa0dd",
+        "titles": {
+          "hu": "A dirndl időtlen eleganciája",
+          "en": "The Timeless Elegance of the Dirndl",
+          "de": "Die zeitlose Eleganz des Dirndls"
+        },
+        "sourceTitle": {
+          "title": "Éljen a Dirndl",
+          "lang": "hu"
+        }
+      },
+      "eletemkepe-c9ead27cf0d9": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_b666757075be4b71afd6d459297f2226~mv2.jpg",
+        "descriptionSha256": "df81308269bc349b358f83857327e309e525382708c077e838aa8453b96805b6",
+        "titles": {
+          "hu": "Ötödik találkozás Prágában",
+          "en": "A Fifth Encounter in Prague",
+          "de": "Die fünfte Begegnung in Prag"
+        }
+      },
+      "eletemkepe-1c7fe16a4194": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_c65a9765151a4765a80b96ec50e45363~mv2.jpg",
+        "descriptionSha256": "0e4a9367cd917ec02d37af2948ff38bb082bc73718aa22aeeff0faeb382e6e4e",
+        "titles": {
+          "hu": "Üres szék a kastélyban",
+          "en": "An Empty Chair in the Castle",
+          "de": "Ein leerer Stuhl im Schloss"
+        }
+      },
+      "eletemkepe-eac1bee30ec2": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_d88b93e91d404850b3b4ad9d5322fbfd~mv2.jpg",
+        "descriptionSha256": "8845123593a4f045da6d3e33b0fd8f2f68e4fe93f0ab48ee512612a564d93191",
+        "titles": {
+          "hu": "A balett ereje",
+          "en": "The Quiet Strength of Ballet",
+          "de": "Die stille Kraft des Balletts"
+        },
+        "sourceTitle": {
+          "title": "A Lélek Tánca",
+          "lang": "hu"
+        }
+      },
+      "eletemkepe-8479f727a9ef": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_d8f54aa97bd84d518c943c93e631350c~mv2.jpg",
+        "descriptionSha256": "c5515b287ba84b1d6f99807f36265b1c1e2adcf8f7bc6a40d7294e6276100621",
+        "titles": {
+          "hu": "Szél a megáradt tó felett",
+          "en": "Wind over the Flooded Lake",
+          "de": "Wind über dem überfluteten See"
+        },
+        "sourceTitle": {
+          "title": "Wild is the Wind",
+          "lang": "en"
+        }
+      },
+      "eletemkepe-3bbefc05118c": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_de6bdf41434946b2a0b1c07d73f5069f~mv2.jpg",
+        "descriptionSha256": "6d44fdff635d3885efe30df6601cc8930dcbfdd839599566dfd8de72b7b9a2e0",
+        "titles": {
+          "hu": "Korcsolyázók a Burgtheater előtt",
+          "en": "Skaters in Front of the Burgtheater",
+          "de": "Eislauf vor dem Burgtheater"
+        }
+      },
+      "eletemkepe-003afe8992fd": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_e3261a5ab7d84511b5348ea82ed49f79~mv2.jpg",
+        "descriptionSha256": "f412c4c841d3e03bff274898772c1e791e5dfd6a1975d659726f92732552d4a6",
+        "titles": {
+          "hu": "Csend az esküvő előtt",
+          "en": "A Quiet Moment Before the Wedding",
+          "de": "Ein stiller Moment vor der Hochzeit"
+        },
+        "sourceTitle": {
+          "title": "Ébredés",
+          "lang": "hu"
+        }
+      }
+    },
+    "as-i-like-it-austria": {
+      "asilikeit-da0aa75aab64": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_0fd6add270b9489484999cad09297aba~mv2.jpg",
+        "descriptionSha256": "9a51b4a5aca44ca99346ea35a35ba74906bf01bd3fd2429c5a6e78f688e85606",
+        "titles": {
+          "hu": "A Belvedere esti tükre",
+          "en": "The Belvedere Reflected at Dusk",
+          "de": "Das Belvedere spiegelt sich im Abendlicht"
+        }
+      },
+      "asilikeit-ce5b826f4ae3": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_217fff58dd934de18aba6e4804fbdbde~mv2.jpg",
+        "descriptionSha256": "9fcf18aa3a5067eff5ff4936808c3cd4b92dcdd7938f2920371fe3849b367294",
+        "titles": {
+          "hu": "Fiáker az éjszakában",
+          "en": "A Fiaker at Night",
+          "de": "Ein Fiaker in der Nacht"
+        },
+        "sourceTitle": {
+          "title": "The Overflowing Night",
+          "lang": "en"
+        }
+      },
+      "asilikeit-e863ff3082b8": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_239eecdcc97a4736a089563bc1c74c96~mv2.jpg",
+        "descriptionSha256": "af941e88541d8245f5e9ded7b3bc8750c85d5608564ee127e42f3a9ce8f4038a",
+        "titles": {
+          "hu": "Indulás a Westbahnhofnál",
+          "en": "Setting Out from Westbahnhof",
+          "de": "Aufbruch am Westbahnhof"
+        },
+        "sourceTitle": {
+          "title": "Utazás",
+          "lang": "hu"
+        }
+      },
+      "asilikeit-844936de3dd5": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_24467de4b7a94976b1ca297f853884ce~mv2.jpg",
+        "descriptionSha256": "78913031da3c1faae57995e433c2d6f6fd20c52d935633a0c928e10a5ef80a89",
+        "titles": {
+          "hu": "Aranyló ősz",
+          "en": "Golden Autumn",
+          "de": "Goldener Herbst"
+        }
+      },
+      "asilikeit-4789a7c2c1f0": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_244c80992b324e5d920744869d1f3478~mv2.jpg",
+        "descriptionSha256": "46f590a10273467ad3435c9f1037e1dd7e9a4ecf1aca80c0ea7c1b15f36baeb4",
+        "titles": {
+          "hu": "Bécs, fényekből és dallamokból",
+          "en": "Vienna in Light and Melody",
+          "de": "Wien aus Licht und Melodien"
+        },
+        "sourceTitle": {
+          "title": "A fények és dallamok tánca Bécsben",
+          "lang": "hu"
+        }
+      },
+      "asilikeit-5020371540fb": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_392fc272831f4b158ea4908fe640319b~mv2.jpg",
+        "descriptionSha256": "161805764ca8ad842f703fa732b5da448ab03a77911d293968e13c670410af87",
+        "titles": {
+          "hu": "Találkozások a Schottentornál",
+          "en": "Encounters at Schottentor",
+          "de": "Begegnungen am Schottentor"
+        }
+      },
+      "asilikeit-a1e2cb005f07": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_5cc2486649384838b674c5c0198e7f07~mv2.jpg",
+        "descriptionSha256": "a29d6131f2d10ccd1df01a7a56b3f418c35be583052ba8504d59b44679a59a09",
+        "titles": {
+          "hu": "Naplemente a podersdorfi világítótoronynál",
+          "en": "Sunset at the Podersdorf Lighthouse",
+          "de": "Sonnenuntergang am Podersdorfer Leuchtturm"
+        }
+      },
+      "asilikeit-8e955fa88e16": {
+        "basis": "visible-gallery-photo",
+        "galleryImageFileId": "b0aee1_62e9deaf34154e71a8eb9bc11143fd79~mv2.jpg",
+        "titles": {
+          "hu": "Szappanbuborékok a téren",
+          "en": "Soap Bubbles in the Square",
+          "de": "Seifenblasen auf dem Platz"
+        }
+      },
+      "asilikeit-3c51b19aa027": {
+        "basis": "reviewed-variant-description",
+        "galleryImageFileId": "b0aee1_6b9be3441587481f9a2d9419ac006d23~mv2.jpg",
+        "descriptionSha256": "e4011f2766f87b7b473a614d1b7bfb9a45dd3225cea920b96c9163f2eb8c3a08",
+        "titles": {
+          "hu": "Ami közös bennünk",
+          "en": "What We Have in Common",
+          "de": "Was uns verbindet"
+        },
+        "sourceTitle": {
+          "title": "Megtévesztően Hasonló",
+          "lang": "hu"
+        }
+      },
+      "asilikeit-f5ce80663718": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_7a70cc7b022148fcb95323f68e0f2f88~mv2.jpg",
+        "descriptionSha256": "95565f52e804f94991d8db12b697c383dd21ed3a8f63ac519f5ebfc620e41467",
+        "titles": {
+          "hu": "Kék Cobra a macskakövön",
+          "en": "A Blue Cobra on the Cobbles",
+          "de": "Ein blauer Shelby auf Kopfsteinpflaster"
+        }
+      },
+      "asilikeit-7f10b8f48731": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_7cfbc41107f34f05b49d24f8d7516389~mv2.jpg",
+        "descriptionSha256": "0fce36559615d8ff3c775d6949e098ada94a646032e204680cff4c4ae1c91018",
+        "titles": {
+          "hu": "Schönbrunn kapuja mögött",
+          "en": "Beyond the Schönbrunn Gate",
+          "de": "Hinter dem Tor von Schönbrunn"
+        }
+      },
+      "asilikeit-89a64ca4313e": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_89e63d8e9ef34eb6963a2219503c0aed~mv2.jpg",
+        "descriptionSha256": "61460b843922b49925ed9238d5ab8c3005b524fec8dc86bc24348c60d91ceea7",
+        "titles": {
+          "hu": "Nyári este a Tichynél",
+          "en": "A Summer Evening at Tichy",
+          "de": "Ein Sommerabend beim Tichy"
+        }
+      },
+      "asilikeit-accee5c39590": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_9980840cbc604f648e14c4d2fbd60b7c~mv2.jpg",
+        "descriptionSha256": "1158c4ae6a2140b0ac939fb21b91b0573581e73d85031c7dd55fa1aa0ba03079",
+        "titles": {
+          "hu": "Két alak, más léptékben",
+          "en": "Two Figures on a Different Scale",
+          "de": "Zwei Figuren in einem anderen Maßstab"
+        }
+      },
+      "asilikeit-844abe713397": {
+        "basis": "visible-gallery-photo",
+        "galleryImageFileId": "b0aee1_9fb0a5b7b8a946748e367cdf42bf6b08~mv2.jpg",
+        "titles": {
+          "hu": "Fénycsík a felhők felett",
+          "en": "A Sliver of Light above the Clouds",
+          "de": "Ein Lichtstreifen über den Wolken"
+        }
+      },
+      "asilikeit-f34e5c36d713": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_ad91877f287b4f9594ecf0e1776b38fb~mv2.jpg",
+        "descriptionSha256": "18dcdb0ab311bf1a49efe23baf9d2b7d9361c925daf99e370704a185db3dfe78",
+        "titles": {
+          "hu": "Óriáskerék fekete-fehérben",
+          "en": "The Giant Ferris Wheel in Black and White",
+          "de": "Das Riesenrad in Schwarz-Weiß"
+        }
+      },
+      "asilikeit-c90dce593fd2": {
+        "basis": "visible-gallery-photo",
+        "galleryImageFileId": "b0aee1_b3d53d44dca24d05a2d03e64293c7d30~mv2.jpg",
+        "titles": {
+          "hu": "Rózsaszín virágok a fényben",
+          "en": "Pink Blossoms in the Light",
+          "de": "Rosa Blüten im Licht"
+        }
+      },
+      "asilikeit-474a405f62e0": {
+        "basis": "visible-gallery-photo",
+        "galleryImageFileId": "b0aee1_cddbc9bb66db45db9bac607823523667~mv2.jpg",
+        "titles": {
+          "hu": "Híd az alkonyatban",
+          "en": "Bridge at Dusk",
+          "de": "Brücke in der Abenddämmerung"
+        }
+      },
+      "asilikeit-e4aba83b9917": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_e8ede06599fb4bbdbf0939b5c396c5f8~mv2.jpg",
+        "descriptionSha256": "d6b844650ead90ac1667ef71acd0b8e1e8e4ac4d588ab8bbdff3b9a79f0768c2",
+        "titles": {
+          "hu": "Átjáró az őszi lombok alatt",
+          "en": "A Passage beneath Autumn Leaves",
+          "de": "Ein Durchgang unter Herbstlaub"
+        }
+      },
+      "asilikeit-1ad77d482128": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_eaf81ebd967844528fb1c2ef2231269e~mv2.jpg",
+        "descriptionSha256": "2fc8baa4aa7c30a370fe308cf7e8ca54a108be92b4a36cc1f9f7d7c6f97183cd",
+        "titles": {
+          "hu": "A Gerstner íves lépcsője",
+          "en": "The Curving Staircase at Gerstner",
+          "de": "Die geschwungene Treppe beim Gerstner"
+        }
+      },
+      "asilikeit-ad326a449763": {
+        "basis": "wix-description",
+        "galleryImageFileId": "b0aee1_f70a80a44f164556b6b5c8820738cc27~mv2.jpg",
+        "descriptionSha256": "c3c0c5142e6d97d84137edbddb97d5a68ec85b80cd29cbdd651f0a659b6f3663",
+        "titles": {
+          "hu": "Egy csók a bécsi éjszakában",
+          "en": "A Kiss in the Viennese Night",
+          "de": "Ein Kuss in der Wiener Nacht"
+        },
+        "sourceTitle": {
+          "title": "Kisses from Vienna",
+          "lang": "en"
+        }
+      }
+    }
+  }
+}
