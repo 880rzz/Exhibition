@@ -451,7 +451,7 @@ function buildLlms(facts, featured) {
     '> Official directory of past VIPACH photography exhibitions in Vienna, Austria. Exhibitions are offered in Hungarian, English and Austrian German.',
     '',
     '- [Exhibition facts (JSON)](' + baseUrl + publicExhibitionsPath + '): source-linked exhibition dates, venue, catalogue counts and display status.',
-    '- [VIPACH](https://www.vipach.at/): the community photography club in Vienna and Budapest; it grew from the Vienna Hungarian School photo club within the Central Federation.',
+    '- [VIPACH](https://vipach.at/): the community photography club in Vienna and Budapest; it grew from the Vienna Hungarian School photo club within the Central Federation.',
     '- This domain is the VIPACH cultural exhibition archive, not a separate organization or a commercial service.',
     '- [BANHALMI Photography](https://www.banhalmiphotography.com/) is the photography practice of Banhalmi Norbert e.U. [VIPACH for Business](https://business.vipach.at/) is a separate commercial digital-advertising service of that practice, not an activity of the association or this archive.',
     '- Use the privacy notice of the site visited. Shared names and links do not imply common legal control, consent or reuse permission.',
@@ -468,7 +468,7 @@ function buildLlms(facts, featured) {
   if (featured?.slug === 'spontan-2026') {
     lines.push('', '## SPONTÁN date and source note',
       '- [CITYgalleryVIENNA venue listing](' + spontanVenueSource + ') confirms public visits from 15 through 21 November 2026, closing at 20:00 Vienna time on the 21st. The 15 November reception began at 16:00 and the official opening at 17:00.',
-      '- The older [VIPACH Wix event listing](https://www.vipach.at/event-details/spontan-vipach-fotokiallitas-2026) carried a 22 November calendar end. This is a historical listing discrepancy, not the confirmed public visiting period.'
+      '- The original poster shows 22 November; it is kept unaltered in the exhibition archive. The final public visiting day was 21 November 2026.'
     );
   }
   lines.push('', '## Credits and rights',

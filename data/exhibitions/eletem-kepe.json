@@ -80,7 +80,7 @@
     "licenceVerifiedApprovedForPublicDisplay": 0,
     "priorWixPublicationOnlyLicenseVerificationRequired": 18,
     "rightsReviewRequiredUnidentified": 2,
-    "derivedFromWorksAt": "2026-11-25",
+    "derivedFromWorksAt": "2026-11-26",
     "derivation": "scripts/regenerate_exhibition_counts.mjs — counts must match works[]",
     "sourceClaimedPhotographers": 15,
     "photographers": 13,

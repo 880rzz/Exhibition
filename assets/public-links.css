@@ -1,13 +1,14 @@
 :root{--vip-external-arrow:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' d='M3.5 12.5l9-9m-6 .05h5.95v5.95'/%3E%3C/svg%3E")}
-a:is([href^="https://"],[href^="http://"]):not([href^="https://exhibition.vipach.at/"],[href="https://exhibition.vipach.at"])::after{content:"";display:inline-block;flex:0 0 .84em;width:.84em;height:.84em;margin-inline-start:.25em;vertical-align:-.045em;background:currentColor;-webkit-mask:var(--vip-external-arrow) center/contain no-repeat;mask:var(--vip-external-arrow) center/contain no-repeat}
-.vipach-wa{position:fixed;z-index:10;right:max(.75rem,env(safe-area-inset-right));bottom:max(.75rem,env(safe-area-inset-bottom));display:grid;grid-template-columns:auto auto;align-items:center;column-gap:.35rem;min-height:44px;max-width:calc(100vw - 1.5rem);padding:.55rem .8rem;color:#fff!important;background:#154d36;border-radius:.75rem;font:600 .81rem/1.24 system-ui,sans-serif;text-decoration:none!important;box-shadow:0 4px 18px #0003}
-.vipach-wa>span{grid-column:1;grid-row:1;font-size:.75rem}
-.vipach-wa>strong{grid-column:1;grid-row:2;font-weight:700}
-.vipach-wa::after{grid-column:2;grid-row:1 / span 2}
+a:is([href^="https://"],[href^="http://"]):not([href^="https://exhibition.vipach.at/"],[href="https://exhibition.vipach.at"],.vipach-wa)::after{content:"";display:inline-block;flex:0 0 .84em;width:.84em;height:.84em;margin-inline-start:.25em;vertical-align:-.045em;background:currentColor;-webkit-mask:var(--vip-external-arrow) center/contain no-repeat;mask:var(--vip-external-arrow) center/contain no-repeat}
+.vipach-wa{position:fixed;z-index:10;right:max(.75rem,env(safe-area-inset-right));bottom:max(.75rem,env(safe-area-inset-bottom));display:grid;place-items:center;width:52px;height:52px;padding:0;border:1px solid #765812;border-radius:5px;color:#fff!important;background:#765812;box-shadow:0 4px 18px #0003}
+.vipach-wa svg{display:block}
+.vipach-wa::after{content:none}
 /* Only the direct WhatsApp link floats; keep it out of the open navigation. */
 body.menu-open .vipach-wa,.vipach-wa~.vipach-contact-dock{display:none}
-.vipach-wa:hover{background:#103f2b}
-.vipach-wa:focus-visible{outline:2px solid #fff;outline-offset:-5px}
+.vipach-wa:hover{background:#5f4508}
+.vipach-wa:focus-visible{outline:2px solid #5f4508;outline-offset:3px}
+@media(forced-colors:active){.vipach-wa{color:ButtonText!important;background:ButtonFace;border-color:ButtonText}.vipach-wa:focus-visible{outline-color:Highlight}}
+@media print{.vipach-wa{display:none}}
 .site-footer{padding-bottom:max(5.25rem,env(safe-area-inset-bottom))}
 .vip-calendar-frame{display:block;width:100%;height:clamp(430px,72vh,720px);border:1px solid #c4c4be;border-radius:.65rem;margin:1rem 0;background:white}
 .vip-calendar-shell{min-width:0}

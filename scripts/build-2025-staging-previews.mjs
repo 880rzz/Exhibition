@@ -176,14 +176,15 @@ function artistCard(p,works,i,lang,show,slug){
    +'<div class="exhibitor-content"><p class="kicker">'+esc(c.artists)+' · '+String(i+1).padStart(2,'0')+'</p>'
    +'<h3>'+esc(p.name)+'</h3>'+images
    +(bio?'<h4>'+esc(c.artist)+'</h4>'+sourceMarkup(bio,lang,slug,'artists',p.id):'')
-   +'<p class="artist-contact"><span>'+esc(c.source)+'</span><a href="'+esc(p.legacyProfileUrl==='https://www.norbertbanhalmi.com/mybest'?({en:'https://www.banhalmi.art/#about',hu:'https://www.banhalmi.art/hu/#about',de:'https://www.banhalmi.art/de-at/#about'}[lang]):p.legacyProfileUrl)+'" target="_blank" rel="noopener noreferrer">'+esc(p.name)+'</a></p>'
+   // Historic Wix profile paths no longer resolve. This card and the jump list are the profile destination.
+   +(candidate&&p.legacyProfileUrl==='https://www.norbertbanhalmi.com/mybest'?'<p class="artist-contact"><a href="'+esc({en:'https://www.banhalmi.art/#about',hu:'https://www.banhalmi.art/hu/#about',de:'https://www.banhalmi.art/de-at/#about'}[lang])+'" rel="noopener noreferrer">'+esc(p.name)+'</a></p>':'')
    +'</div></article>';
 }
 function page(ex,lang){
  const c=copy[lang],t=editorial.exhibitions[ex.slug][lang],local=predecessorCopy[lang];
  const current=publishedExhibitions.find(x=>x.slug===ex.slug);
  const locale=l=>l==='de'?'de-AT':l;
- const sourcePage=current.external?.vipachPage?.[lang]||ex.sourceUrl;
+ const sourcePage=release?'#venue-evidence':current.external?.vipachPage?.[lang]||ex.sourceUrl;
  const theme=t.intro[t.intro.length-1];
  const first=ex.works[0],hero=img(first.imageSourceUrl);
  const cover=candidate?archiveCoverFor(ex.slug):null;
@@ -218,7 +219,7 @@ function page(ex,lang){
  const canonical=SITE+route(ex.slug,lang);
  const alternate=locales.map(l=>'<link rel="alternate" hreflang="'+locale(l)+'" href="'+SITE+route(ex.slug,l)+'">').concat(['<link rel="alternate" hreflang="x-default" href="'+SITE+route(ex.slug,'en')+'">']).join('');
  const metadata=exhibitionMeta(ex.slug,lang,canonical);
- const schema=candidate?archiveGraph({ex,current,lang,name:pageTitle,description:metadata.description,sourcePage,
+ const schema=candidate?archiveGraph({ex,current,lang,name:pageTitle,description:metadata.description,
    workName:w=>workName(w,lang),canonical}):null;
  const asset=candidate?'/assets/':'../../assets/';
  const history=twoShows?'<section class="history" id="history" aria-labelledby="history-title"><div class="history-inner"><div class="history-head reveal"><div><p class="kicker">VIPACH · '+esc(archiveBrand[lang])+'</p>'
@@ -234,18 +235,18 @@ function page(ex,lang){
  +'<title>'+esc(metadata.title)+(candidate?'':' — preview')+'</title>'
  +(candidate?'<link rel="canonical" href="'+canonical+'">'+alternate+'<script type="application/ld+json">'+JSON.stringify(schema).replace(/</g,'\\u003c')+'</script>':'')
  +(release?metadata.meta:'')
- +'<link rel="stylesheet" href="'+asset+'styles.css"><link rel="stylesheet" href="'+asset+'2025-exhibitions.css"><link rel="stylesheet" href="'+asset+'exhibition-harmonization.css?v=20261126-covers">'
+ +'<link rel="stylesheet" href="'+asset+'styles.css"><link rel="stylesheet" href="'+asset+'2025-exhibitions.css"><link rel="stylesheet" href="'+asset+'exhibition-harmonization.css?v=20261126-audit">'
  +'</head><body class="ex25-body"'+(candidate?' data-exhibition-slug="'+ex.slug+'" data-route-mode="slug"':'')+'><a class="skip-link" href="#content">'+esc(c.skip)+'</a>'
- +'<header class="site-header"><a class="brand" href="'+(candidate?(lang==='en'?'/?lang=en':'/'+lang+'/'):'https://www.vipach.at/')+'" aria-label="VIPACH '+esc(archiveBrand[lang])+'"><img class="brand-logo" src="https://static.wixstatic.com/media/b0aee1_3ddaf3156e154fc0bda2ffe5cb999a5c~mv2.png" width="30" height="30" alt="" referrerpolicy="no-referrer"><span><strong>VIPACH</strong> / '+esc({en:'Exhibition',hu:'Kiállítás',de:'Ausstellung'}[lang])+'</span></a>'
+ +'<header class="site-header"><a class="brand" href="'+(candidate?(lang==='en'?'/?lang=en':'/'+lang+'/'):'https://vipach.at/')+'" aria-label="VIPACH '+esc(archiveBrand[lang])+'"><img class="brand-logo" src="https://static.wixstatic.com/media/b0aee1_3ddaf3156e154fc0bda2ffe5cb999a5c~mv2.png" width="30" height="30" alt="" referrerpolicy="no-referrer"><span><strong>VIPACH</strong> / '+esc({en:'Exhibition',hu:'Kiállítás',de:'Ausstellung'}[lang])+'</span></a>'
  +'<div class="header-tools"><nav class="lang-nav" aria-label="'+esc(archiveLanguage[lang])+'">'+languageLinks+'</nav>'
  +'<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="'+esc(c.archive)+'"><span></span><span></span></button></div>'
  +'<nav id="site-menu" class="site-menu" aria-label="'+esc(c.archive)+'">'
  +menuHtml(lang,ex.slug)+'</nav></header>'
  +'<main id="content">'
- +'<section class="hero ex25-exhibition-hero" aria-labelledby="hero-title">'
+ +'<section class="hero ex25-exhibition-hero has-editorial-cover" aria-labelledby="hero-title">'
  +heroVisual
- +'<div class="hero-copy"><p class="eyebrow hero-eyebrow">VIPACH · Vienna Photo Art & Creative Hub</p>'
- +'<h1 id="hero-title">'+esc(pageTitle)+'<span>'+esc(t.eyebrow)+'</span></h1>'
+ +'<div class="hero-copy"><div class="hero-heading"><p class="eyebrow hero-eyebrow">VIPACH · Vienna Photo Art & Creative Hub</p>'
+ +'<h1 id="hero-title">'+esc(pageTitle)+'<span>'+esc(t.eyebrow)+'</span></h1></div>'
  +'<div class="hero-meta"><div class="hero-date">'+dateText+'</div><div class="hero-details">'
  +'<div><strong>'+esc(c.dates)+'</strong><span>'+esc(t.date)+'</span></div>'
  +'<div><strong>'+esc(c.venue)+'</strong><span>'+esc(venue)+'</span></div>'
@@ -275,8 +276,8 @@ function page(ex,lang){
  +'<p class="event-note">'+esc(candidate?local.historical:t.register)+'</p></div><div class="reveal"><dl class="visit-card">'
  +'<div class="visit-line"><dt>'+esc(c.dates)+'</dt><dd>'+esc(t.date)+'</dd></div>'
  +'<div class="visit-line"><dt>'+esc(c.venue)+'</dt><dd>'+esc(venue)+'</dd></div>'
- +'<div class="visit-line"><dt>'+esc(c.opening)+'</dt><dd><a href="'+esc(openSource.source)+'" rel="noopener noreferrer">'+esc(opening)+'</a></dd></div>'
- +'</dl><div class="actions"><a class="button primary" href="'+esc(candidate?sourcePage:ex.sourceUrl)+'" rel="noopener noreferrer" target="_blank">'+esc(candidate?local.source:c.source)+'</a>'
+ +'<div class="visit-line"><dt>'+esc(c.opening)+'</dt><dd>'+esc(opening)+'</dd></div>'
+ +'</dl><div class="actions"><a class="button primary" href="'+esc(candidate?sourcePage:ex.sourceUrl)+'"'+(release?'':' rel="noopener noreferrer" target="_blank"')+'>'+esc(release?{en:'Venue and event record',de:'Veranstaltungsort und Originaleintrag',hu:'A kiállítás helyszíni forrása'}[lang]:candidate?local.source:c.source)+'</a>'
  +'<a class="button" href="mailto:office@vipach.at">office@vipach.at</a></div></div></div></section>'
  +'<section class="section image-rights" id="image-rights" aria-labelledby="image-rights-title"><div class="section-inner">'
  +'<h2 id="image-rights-title">'+esc(c.rights)+'</h2>'+(release?'<p>'+esc(releaseRights[lang])+'</p>':'<p>'+esc(t.pending)+'</p><p>'+esc(c.review)+'</p>')+'</div></section>'

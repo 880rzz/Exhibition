@@ -4,7 +4,7 @@
   "context": {
     "role": "Community photography exhibition archive",
     "website": "https://exhibition.vipach.at/",
-    "communityClub": "https://www.vipach.at/",
+    "communityClub": "https://vipach.at/",
     "professionalPhotography": "https://www.banhalmiphotography.com/",
     "commercialDigitalAdvertising": "https://business.vipach.at/",
     "note": "VIPACH for Business is a separate commercial service of Banhalmi Norbert e.U.; not part of the community club or archive."
@@ -52,9 +52,8 @@
       },
       "sources": {
         "venueExhibitionListing": "https://publicartists.online/event/vipach-151126/",
-        "historicalOrganizerCalendar": "https://www.vipach.at/event-details/spontan-vipach-fotokiallitas-2026",
         "historicalOrganizerCalendarEnd": "2026-11-22T23:59:00+01:00",
-        "dateNote": "Historical calendar discrepancy. Use the venue-confirmed public visiting period above."
+        "dateNote": "The historical calendar and original poster indicated 22 November. The gallery confirms 21 November 2026 as the final public visiting day."
       },
       "curator": "Balogh Dávid",
       "organizers": [
@@ -173,10 +172,8 @@
         "addressCountry": "AT"
       },
       "sources": {
-        "organizerExhibition": "https://www.vipach.at/eletemkepe",
-        "openingListing": "https://publicartists.online/en/event/eletem-kepe-071225/",
         "venueExhibitionListing": "https://publicartists.online/event/eletem-kepe-071225/",
-        "venueAddress": "https://publicartists.online/en/event/eletem-kepe-071225/"
+        "venueAddress": "https://publicartists.online/event/eletem-kepe-071225/"
       },
       "curator": "Balogh Dávid",
       "catalogue": {
@@ -436,10 +433,8 @@
         "addressCountry": "AT"
       },
       "sources": {
-        "organizerExhibition": "https://www.vipach.at/asilikeit",
-        "openingListing": "https://www.vipach.at/event-details/asilikeit",
         "venueExhibitionListing": "https://publicartists.online/event/bmi-fotoclub-301125/",
-        "venueAddress": "https://www.vipach.at/event-details/asilikeit"
+        "venueAddress": "https://publicartists.online/event/bmi-fotoclub-301125/"
       },
       "curator": "Balogh Dávid",
       "catalogue": {
