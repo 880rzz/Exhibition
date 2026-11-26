@@ -83,7 +83,7 @@ function pressMarkup(ex,lang){
  const items=publishedExhibitions.find(x=>x.slug===ex.slug)?.pressCoverage?.items||[];
  if(!items.length)return '';
  return '<section class="ex-press-section" id="press" aria-labelledby="ex-press-title"><div class="ex-press-inner"><h2 class="display-2" id="ex-press-title">'+esc(pressTitle[lang])+'</h2><div class="ex-press-list">'+
-   items.map(item=>'<article class="ex-press-item"><div class="ex-press-meta">'+esc(item.publication)+' '+(item.date?'<time datetime="'+esc(item.date)+'">'+esc(item.date)+'</time>':'<span>'+esc(item.issue)+'</span>')+'</div><h3><a href="'+esc(item.url)+'" hreflang="'+esc(item.language)+'" rel="noopener noreferrer">'+esc(pressTitleFor(item,lang))+'</a></h3><p>'+esc(item.description[lang])+'</p></article>').join('')+
+   items.map(item=>'<article class="ex-press-item"><div class="ex-press-meta">'+esc(item.publication)+' '+(item.date?'<time datetime="'+esc(item.date)+'">'+esc(item.date)+'</time>':'<span>'+esc(item.issue)+'</span>')+'</div><h3><a data-external-action href="'+esc(item.url)+'" hreflang="'+esc(item.language)+'" rel="noopener noreferrer">'+esc(pressTitleFor(item,lang))+'</a></h3><p>'+esc(item.description[lang])+'</p></article>').join('')+
    '</div></div></section>';
 }
 
@@ -207,7 +207,7 @@ function page(ex,lang){
    const link=exhibitionHref(item,lang);
    return '<article class="history-item"><div class="history-no">'+String(i+1).padStart(2,'0')+' / '+year+'</div>'
      +'<div><h3>'+esc(exhibitionName(item,lang))+'</h3></div><div class="history-copy"><a href="'+esc(link)+'"'+(candidate?' rel="prev"':'')+'>'+
-       esc(exhibitionName(item,lang))+' →</a></div></article>';
+       esc(exhibitionName(item,lang))+'</a></div></article>';
  }).join('');
  const canonical=SITE+route(ex.slug,lang);
  const alternate=locales.map(l=>'<link rel="alternate" hreflang="'+locale(l)+'" href="'+SITE+route(ex.slug,l)+'">').concat(['<link rel="alternate" hreflang="x-default" href="'+SITE+route(ex.slug,'en')+'">']).join('');

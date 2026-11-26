@@ -157,8 +157,8 @@ function renderPressSection(exhibition, localeId) {
       (published ? '<time datetime="' + published + '">' + published + '</time>' : '') + '</div>' +
       '<h3><a href="' + esc(item.url) + '" hreflang="' + lang + '" target="_blank" rel="noopener noreferrer external">' + esc(pressTitleFor(item,localeId)) + '</a></h3>' +
       '<p lang="' + (localeId === 'de' ? 'de' : localeId) + '">' + esc(item.description[localeId]) + '</p>' +
-      '<a class="ex-press-read" href="' + esc(item.url) + '" target="_blank" rel="noopener noreferrer external">' +
-      esc(copy.read) + ' ↗</a></article>';
+      '<a class="ex-press-read" data-external-action href="' + esc(item.url) + '" target="_blank" rel="noopener noreferrer external">' +
+      esc(copy.read) + '</a></article>';
   });
   return '<section class="ex-press-section" id="press" aria-labelledby="ex-press-title">' +
     '<div class="ex-press-inner"><p class="kicker">' + esc(copy.kicker) + '</p>' +
