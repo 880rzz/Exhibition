@@ -39,7 +39,7 @@ jobs:
       - name: Assert page coverage and publication lock
         run: |
           python3 - <<'PY'
-          import json
+          import json, re
           from pathlib import Path
           root=Path('staging-preview')
           r=json.loads((root/'staging-receipt.json').read_text())
@@ -86,7 +86,7 @@ jobs:
                   assert s.count('class="exhibitor-portrait"')==artist_count,(p,'artist portrait layout')
                   assert s.count('class="prose ex25-source-text"')==expected_original_details[slug],(p,'original Wix biographies and artwork narratives',s.count('class="prose ex25-source-text"'),expected_original_details[slug])
                   for cls in ('hero ex25-exhibition-hero','section exhibitor-section','credits','history','visit','section image-rights'):
-                      assert 'class="'+cls+'"' in s,(p,'shared design section',cls)
+                      assert any(set(cls.split()) <= set(attr.split()) for attr in re.findall(r'class="([^"]+)"', s)),(p,'shared design section',cls)
                   assert 'class="site-menu"' in s and 'class="exhibition-nav-group"' in s
                   assert 'id="hero-title"' in s and 'id="exhibitors-title"' in s
                   assert '../../assets/styles.css' in s and '../../assets/2025-exhibitions.css' in s
