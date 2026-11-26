@@ -46,7 +46,7 @@ Docs:
 - Venue: CITYgalleryVIENNA by publicartists, Mahlerstraße 11, 1010 Wien
 - Curator: Balogh Dávid · Organizers: Hölcz Eszter & Ayadi Lívia · Patron: Bánhalmi Norbert
 - 16 photographers · 20 works
-- Featured event supporter: **OM SYSTEM Shop** (SPONTÁN-only; OM SYSTEM brand partnership belongs on [vipach.at](https://www.vipach.at/))
+- Exhibition supporter: **OM SYSTEM** (SPONTÁN, Életem képe and As I Like It Austria). The logo links to [OM SYSTEM Shop](https://www.omsystemshop.hu/).
 
 The exhibition poster is hosted in the VIPACH Wix Media Manager and delivered from the Wix CDN.
 

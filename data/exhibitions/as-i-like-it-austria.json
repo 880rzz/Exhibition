@@ -431,7 +431,7 @@
     "licenceVerifiedApprovedForPublicDisplay": 0,
     "priorWixPublicationOnlyLicenseVerificationRequired": 19,
     "rightsReviewRequiredUnidentified": 1,
-    "derivedFromWorksAt": "2026-11-25",
+    "derivedFromWorksAt": "2026-11-26",
     "derivation": "scripts/regenerate_exhibition_counts.mjs — counts must match works[]"
   },
   "cover": {

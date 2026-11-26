@@ -6,10 +6,6 @@ const routes = slug => ({
   hu: base + '/hu/' + slug + '/',
   de: base + '/de/' + slug + '/',
 });
-const sourceUrls = (event, opening) => ({
-  organizerExhibition: event.external?.vipachPage?.hu || event.external?.vipachEventPage,
-  openingListing: opening,
-});
 function publicVenue(v) {
   const address = v.address || v;
   return {
@@ -32,7 +28,7 @@ function archiveFacts(event, show, scope) {
     publicVisit: { start: event.dates.publicVisit.start, end: event.dates.publicVisit.end },
     opening: { listedStart: event.dates.opening.listedStart, listedEnd: event.dates.opening.listedEnd, timeZone: 'Europe/Vienna' },
     venue,
-    sources: { ...sourceUrls(event, event.dates.opening.source), venueExhibitionListing: gallerySources[show.slug], venueAddress: event.venue.addressSource },
+    sources: { venueExhibitionListing: gallerySources[show.slug], venueAddress: gallerySources[show.slug] },
     curator: event.team?.curator?.name,
     catalogue: {
       works: show.works.length,
@@ -67,9 +63,8 @@ function spontanFacts(event) {
     venue: publicVenue(event.venue),
     sources: {
       venueExhibitionListing: spontanVenueSource,
-      historicalOrganizerCalendar: event.external.vipachEventPage,
       historicalOrganizerCalendarEnd: '2026-11-22T23:59:00+01:00',
-      dateNote: 'Historical calendar discrepancy. Use the venue-confirmed public visiting period above.',
+      dateNote: 'The historical calendar and original poster indicated 22 November. The gallery confirms 21 November 2026 as the final public visiting day.',
     },
     curator: event.team?.curator?.name,
     organizers: event.team?.organizers?.map(x => x.name),
@@ -95,7 +90,7 @@ export function publicExhibitionFacts(exhibitions, scope) {
     context: {
       role: 'Community photography exhibition archive',
       website: base+'/',
-      communityClub: 'https://www.vipach.at/',
+      communityClub: 'https://vipach.at/',
       professionalPhotography: 'https://www.banhalmiphotography.com/',
       commercialDigitalAdvertising: 'https://business.vipach.at/',
       note: 'VIPACH for Business is a separate commercial service of Banhalmi Norbert e.U.; not part of the community club or archive.',

@@ -56,7 +56,7 @@ export function exhibitionMeta(slug, lang, canonical) {
 }
 
 function organisation() {
-  return { '@type': 'Organization', '@id': orgId, name: 'VIPACH — Vienna Photo Art & Creative Hub', url: 'https://www.vipach.at/',
+  return { '@type': 'Organization', '@id': orgId, name: 'VIPACH — Vienna Photo Art & Creative Hub', url: 'https://vipach.at/',
     sameAs: ['https://www.wikidata.org/wiki/Q138416887'],
     subjectOf: { '@type': 'WebPage', '@id': federationProfile, url: federationProfile, about: id(orgId) } };
 }
@@ -64,7 +64,7 @@ function siteGraph() {
   return { '@type': 'WebSite', '@id': webSiteId, url: base + '/', name: 'VIPACH Exhibition', publisher: id(orgId) };
 }
 
-export function archiveGraph({ ex, current, lang, name, description, sourcePage, workName, canonical }) {
+export function archiveGraph({ ex, current, lang, name, description, workName, canonical }) {
   const eventUrl = route(ex.slug, 'en'), eventId = eventUrl + '#event';
   const people = ex.artistProfiles.map(p => ({
     '@type': 'Person', '@id': eventUrl + '#artist-' + p.id, name: p.name,
@@ -82,10 +82,10 @@ export function archiveGraph({ ex, current, lang, name, description, sourcePage,
     sponsor: { '@type': 'Organization', name: 'OM SYSTEM' },
     startDate: current.dates.publicVisit.start, endDate: current.dates.publicVisit.end, location: id(venueId),
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-    subjectOf: uniq([sourcePage, gallerySources[ex.slug]]).map(url => ({ '@type': 'WebPage', url })), workFeatured: works.map(w => id(w['@id'])) };
+    subjectOf: [{ '@type': 'WebPage', url: gallerySources[ex.slug] }], workFeatured: works.map(w => id(w['@id'])) };
   const page = { '@type': 'WebPage', '@id': canonical + '#webpage', url: canonical, name, description, inLanguage: locale(lang),
     isPartOf: id(webSiteId), mainEntity: id(eventId), about: [id(eventId), id(venueId)], publisher: id(orgId),
-    citation: uniq([sourcePage, gallerySources[ex.slug], current.dates.opening?.source, current.venue.addressSource,
+    citation: uniq([gallerySources[ex.slug],
       ...(current.pressCoverage?.items || []).map(p => p.url)]) };
   return { '@context': 'https://schema.org', '@graph': [siteGraph(), organisation(), place, page, event, ...people, ...works] };
 }
@@ -118,6 +118,7 @@ export function rewriteSpontanSeo(html, lang, canonical, exhibition) {
       Object.assign(event, { url: eventUrl, startDate: exhibition.dates.opening.officialStart,
         endDate: exhibition.dates.publicVisit.verifiedClosingTime, doorTime: exhibition.dates.opening.doorTime,
         subjectOf: { '@type': 'WebPage', url: spontanVenueSource } });
+      delete event.sameAs; // Replaced by the original host record as subjectOf, not identity equivalence.
       delete event.offers; // no current admission availability claim on a past exhibition
       delete event.eventStatus;
       delete event.image; // legacy cover stays in the page hero; no free-standing publicity claim
