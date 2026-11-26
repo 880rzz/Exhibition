@@ -17,6 +17,10 @@ assert.match(motion, /@media screen and \(prefers-reduced-motion:no-preference\)
 assert.match(motion, /\.js \.motion-target:not\(\.motion-visible\)\{opacity:0;transform:translateY\(var\(--motion-enter-distance,14px\)\)\}/);
 assert.equal(motion.match(/translateY\(/g)?.length,1);
 assert.match(motion, /#exhibitors-title\.motion-target\{--motion-enter-distance:0px\}/);
+assert.match(css,/--editorial-serif:\s*Georgia/);
+assert.match(css,/--chapter-space:\s*clamp\(3rem, 7vw, 6\.5rem\)/);
+assert.match(css,/padding-block: var\(--chapter-space\);\s+border-block: 1px solid var\(--line\)/);
+assert.match(css,/min-block-size: 44px;[^}]+border-radius: 5px/);
 const posterCss=read('assets/exhibition-harmonization.css');
 assert.match(posterCss, /#exhibitors-title \+ \.ex25-translation-note \{ margin-block-start: 12px; \}/);
 

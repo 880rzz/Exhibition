@@ -14,5 +14,5 @@ const l={
 export function venueEvidenceMarkup(slug,locale){
  const e=venueSources[slug], c=l[locale];
  if(!e || !c)return '';
- return '<section class="section exhibition-venue-evidence" id="venue-evidence" aria-labelledby="venue-evidence-title"><div class="section-inner editorial-grid"><div><p class="kicker">CITYgalleryVIENNA · publicartists</p><h2 class="display-2" id="venue-evidence-title">'+c.title+'</h2></div><div class="prose"><p>'+c.desc+'</p><p>Mahlerstraße 11 · 1010 Wien</p><div class="actions"><a class="button primary" href="'+e.url+'" rel="noreferrer">'+c.event+'</a><a class="button" href="'+venueHome+'" rel="noreferrer">'+c.venue+'</a></div></div></div></section>';
+ return '<section class="section exhibition-venue-evidence" id="venue-evidence" aria-labelledby="venue-evidence-title"><div class="section-inner editorial-grid"><div><p class="kicker">CITYgalleryVIENNA · publicartists</p><h2 class="display-2" id="venue-evidence-title">'+c.title+'</h2></div><div class="prose"><p>'+c.desc+'</p><p>Mahlerstraße 11 · 1010 Wien</p><div class="actions"><a class="button primary" data-external-action href="'+e.url+'" rel="noreferrer">'+c.event+'</a><a class="button" href="'+venueHome+'" rel="noreferrer">'+c.venue+'</a></div></div></div></section>';
 }
