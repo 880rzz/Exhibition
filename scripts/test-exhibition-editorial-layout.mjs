@@ -10,6 +10,16 @@ assert.match(css, /\.site-menu\s*\{\s*inset-block-start: var\(--exhibition-heade
 assert.match(css, /scroll-margin-top: calc\(var\(--exhibition-header-size\) \+ 14px\)/);
 assert.match(css, /\.visit-line\s*\{\s*grid-template-columns: minmax\(0, 1fr\); gap: \.25rem/);
 
+// The motion rules must never leave visible headings in their translated state.
+const motion = css.slice(css.indexOf('/* Motion is optional.'), css.indexOf('.event-note{'));
+assert.match(motion, /\.motion-target\{opacity:1;transform:none\}/);
+assert.match(motion, /@media screen and \(prefers-reduced-motion:no-preference\)/);
+assert.match(motion, /\.js \.motion-target:not\(\.motion-visible\)\{opacity:0;transform:translateY\(var\(--motion-enter-distance,14px\)\)\}/);
+assert.equal(motion.match(/translateY\(/g)?.length,1);
+assert.match(motion, /#exhibitors-title\.motion-target\{--motion-enter-distance:0px\}/);
+const posterCss=read('assets/exhibition-harmonization.css');
+assert.match(posterCss, /#exhibitors-title \+ \.ex25-translation-note \{ margin-block-start: 12px; \}/);
+
 const writes = [];
 let height = 124.2, resize;
 const masthead = { getBoundingClientRect: () => ({height}) };
