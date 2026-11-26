@@ -86,6 +86,11 @@ for (const lang of ['en','hu','de']){
    }
   }
   assert.equal(count(html,'referrerpolicy="no-referrer"'),ex.artistProfiles.length+22);
+  if(!candidateMode){
+   assert.equal(count(html,'src="/assets/om-system-supporter.svg"'),1,url+' exact official sponsor SVG');
+   assert.ok(html.includes('href="https://www.omsystemshop.hu/" hreflang="hu"'),url+' supporter shop target');
+   assert.ok(html.includes('"sponsor":{"@type":"Organization","name":"OM SYSTEM"}'),url+' supporter entity');
+  }
   const cover=archiveCoverFor(ex.slug);
   assert.ok(html.includes('<div class="hero-visual ex25-archive-cover"><img src="'+cover.url+'" width="'+cover.width+'" height="'+cover.height+'" alt="'),url+' exact owner-supplied archive hero');
   assert.ok(/class="hero-visual ex25-archive-cover"><img [^>]+alt="[^"]+" referrerpolicy="no-referrer"/.test(html),url+' descriptive cover');

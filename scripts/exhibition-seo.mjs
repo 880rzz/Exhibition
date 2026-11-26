@@ -79,6 +79,7 @@ export function archiveGraph({ ex, current, lang, name, description, sourcePage,
     address: { '@type': 'PostalAddress', streetAddress: current.venue.streetAddress, postalCode: current.venue.postalCode,
       addressLocality: current.venue.addressLocality, addressCountry: current.venue.addressCountry } };
   const event = { '@type': 'ExhibitionEvent', '@id': eventId, url: eventUrl, name, description, organizer: id(orgId),
+    sponsor: { '@type': 'Organization', name: 'OM SYSTEM' },
     startDate: current.dates.publicVisit.start, endDate: current.dates.publicVisit.end, location: id(venueId),
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     subjectOf: uniq([sourcePage, gallerySources[ex.slug]]).map(url => ({ '@type': 'WebPage', url })), workFeatured: works.map(w => id(w['@id'])) };
