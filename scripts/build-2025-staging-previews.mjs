@@ -14,6 +14,7 @@ import { newestFeatured, menuExhibitions, exhibitionDate } from './exhibition-ch
 import { renderExhibitionNavigation } from './exhibition-navigation.mjs';
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 import { archive2025Release } from './exhibition-2025-release-scope.mjs';
+import { archiveCoverFor } from './exhibition-2025-cover-assets.mjs';
 import { exhibitionMeta, archiveGraph } from './exhibition-seo.mjs';
 const release=process.argv.includes('--render-reviewed-archive');
 const candidate = release||process.argv.includes('--archive-candidate');
@@ -66,9 +67,6 @@ const releaseRights={
  en:'The rights holders gave the organiser permission to exhibit their works. This does not grant visitors permission to republish or otherwise reuse the works. The images are shown here in the VIPACH exhibition archive with permission. This does not give visitors permission to download, republish or otherwise reuse them. Contact the rights holder for separate permission.',
  hu:'A jogtulajdonosok engedélyt adtak a szervezőnek a művek kiállítási bemutatására. Ez nem ad a látogatóknak újraközlési vagy más újrafelhasználási engedélyt. A képek engedéllyel szerepelnek a VIPACH kiállítási archívumában. Ez nem jogosítja fel a látogatót a letöltésre, újraközlésre vagy más felhasználásra. Ehhez a jogtulajdonos külön engedélye szükséges.',
  de:'Die Rechteinhaber haben dem Veranstalter erlaubt, ihre Werke auszustellen. Daraus ergibt sich für Besucherinnen und Besucher keine Erlaubnis zur Weiterveröffentlichung oder anderen Nutzung. Die Bilder werden hier mit Erlaubnis im VIPACH-Ausstellungsarchiv gezeigt. Daraus ergibt sich keine Erlaubnis zum Herunterladen, zur Weiterveröffentlichung oder zu einer anderweitigen Nutzung. Dafür ist eine separate Zustimmung der Rechteinhaber erforderlich.'
-};
-const posterAlt={
- en:'Original VIPACH exhibition cover: ',hu:'Eredeti VIPACH kiállítási borító: ',de:'Originales VIPACH-Ausstellungsmotiv: '
 };
 const exhibitionSummary={
  'eletem-kepe':{
@@ -188,7 +186,7 @@ function page(ex,lang){
  const sourcePage=current.external?.vipachPage?.[lang]||ex.sourceUrl;
  const theme=t.intro[t.intro.length-1];
  const first=ex.works[0],hero=img(first.imageSourceUrl);
- const cover=archiveScope?.heroDisplay?.images?.[ex.slug];
+ const cover=candidate?archiveCoverFor(ex.slug):null;
  const pageTitle=showName(ex.slug,lang);
  const dateText=ex.slug==='eletem-kepe'?'07—13.12.2025':'30.11—06.12.2025';
  const openSource=current.dates.opening;
@@ -227,7 +225,7 @@ function page(ex,lang){
  +'<h2 id="history-title" class="display-2">'+esc(candidate?local.heading:c.past)+'</h2></div><div class="prose"><p class="lead">'+esc(c.statement)+'</p></div></div>'
  +'<div class="history-list reveal">'+twoShows+'</div></div></section>':'';
  const heroVisual=candidate
-   ? '<div class="hero-visual ex25-archive-cover"><img src="'+esc(cover.url)+'" width="'+cover.width+'" height="'+cover.height+'" alt="'+esc(posterAlt[lang]+pageTitle)+'" referrerpolicy="no-referrer" fetchpriority="high" decoding="async"></div>'
+   ? '<div class="hero-visual ex25-archive-cover"><img src="'+esc(cover.url)+'" width="'+cover.width+'" height="'+cover.height+'" alt="'+esc(cover.alt[lang])+'" referrerpolicy="no-referrer" fetchpriority="high" decoding="async"></div>'
    : '<div class="hero-visual"><img src="'+esc(hero)+'" width="1920" height="1920" alt="'+esc(c.works)+' — '+esc(c.review)+'" fetchpriority="high"></div>';
  return '<!doctype html><html lang="'+(lang==='de'?'de-AT':lang)+'"><head>'
  +'<meta charset="utf-8"><meta name="referrer" content="no-referrer"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
@@ -236,7 +234,7 @@ function page(ex,lang){
  +'<title>'+esc(metadata.title)+(candidate?'':' — preview')+'</title>'
  +(candidate?'<link rel="canonical" href="'+canonical+'">'+alternate+'<script type="application/ld+json">'+JSON.stringify(schema).replace(/</g,'\\u003c')+'</script>':'')
  +(release?metadata.meta:'')
- +'<link rel="stylesheet" href="'+asset+'styles.css"><link rel="stylesheet" href="'+asset+'2025-exhibitions.css"><link rel="stylesheet" href="'+asset+'exhibition-harmonization.css">'
+ +'<link rel="stylesheet" href="'+asset+'styles.css"><link rel="stylesheet" href="'+asset+'2025-exhibitions.css"><link rel="stylesheet" href="'+asset+'exhibition-harmonization.css?v=20261126-covers">'
  +'</head><body class="ex25-body"'+(candidate?' data-exhibition-slug="'+ex.slug+'" data-route-mode="slug"':'')+'><a class="skip-link" href="#content">'+esc(c.skip)+'</a>'
  +'<header class="site-header"><a class="brand" href="'+(candidate?(lang==='en'?'/?lang=en':'/'+lang+'/'):'https://www.vipach.at/')+'" aria-label="VIPACH '+esc(archiveBrand[lang])+'"><img class="brand-logo" src="https://static.wixstatic.com/media/b0aee1_3ddaf3156e154fc0bda2ffe5cb999a5c~mv2.png" width="30" height="30" alt="" referrerpolicy="no-referrer"><span><strong>VIPACH</strong> / '+esc({en:'Exhibition',hu:'Kiállítás',de:'Ausstellung'}[lang])+'</span></a>'
  +'<div class="header-tools"><nav class="lang-nav" aria-label="'+esc(archiveLanguage[lang])+'">'+languageLinks+'</nav>'
