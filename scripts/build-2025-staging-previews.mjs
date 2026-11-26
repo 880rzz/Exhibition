@@ -4,12 +4,13 @@
  * SOURCE-ONLY: writes review HTML to staging-preview/; production builder untouched.
  * Images are original Wix media references, mirrored privately under VIPACH.
  */
+import { exhibitionEditorialMarkup } from './exhibition-editorial.mjs';
 import fs from 'node:fs';
 import { pressTitleFor } from './exhibition-press-language.mjs';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { venueEvidenceMarkup, venueSources } from './exhibition-venue-evidence.mjs';
+import { venueEvidenceMarkup } from './exhibition-venue-evidence.mjs';
 import { newestFeatured, menuExhibitions, exhibitionDate } from './exhibition-chronology.mjs';
 import { renderExhibitionNavigation } from './exhibition-navigation.mjs';
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
@@ -67,18 +68,6 @@ const releaseRights={
  en:'The rights holders gave the organiser permission to exhibit their works. This does not grant visitors permission to republish or otherwise reuse the works. The images are shown here in the VIPACH exhibition archive with permission. This does not give visitors permission to download, republish or otherwise reuse them. Contact the rights holder for separate permission.',
  hu:'A jogtulajdonosok engedélyt adtak a szervezőnek a művek kiállítási bemutatására. Ez nem ad a látogatóknak újraközlési vagy más újrafelhasználási engedélyt. A képek engedéllyel szerepelnek a VIPACH kiállítási archívumában. Ez nem jogosítja fel a látogatót a letöltésre, újraközlésre vagy más felhasználásra. Ehhez a jogtulajdonos külön engedélye szükséges.',
  de:'Die Rechteinhaber haben dem Veranstalter erlaubt, ihre Werke auszustellen. Daraus ergibt sich für Besucherinnen und Besucher keine Erlaubnis zur Weiterveröffentlichung oder anderen Nutzung. Die Bilder werden hier mit Erlaubnis im VIPACH-Ausstellungsarchiv gezeigt. Daraus ergibt sich keine Erlaubnis zum Herunterladen, zur Weiterveröffentlichung oder zu einer anderweitigen Nutzung. Dafür ist eine separate Zustimmung der Rechteinhaber erforderlich.'
-};
-const exhibitionSummary={
- 'eletem-kepe':{
- en:'Fifteen photographers, twenty works. The exhibition was held at CITYgalleryVIENNA, Mahlerstraße 11, 1010 Vienna, from 7 to 13 December 2025.',
- hu:'Tizenöt alkotó, húsz mű. A kiállítás 2025. december 7–13. között volt látható a CITYgalleryVIENNA galériában (Mahlerstraße 11, 1010 Bécs).',
- de:'Fünfzehn Kunstschaffende, zwanzig Werke. Die Ausstellung war vom 7. bis 13. Dezember 2025 in der CITYgalleryVIENNA, Mahlerstraße 11, 1010 Wien, zu sehen.'
- },
- 'as-i-like-it-austria':{
- en:'Twenty photographs were shown from 30 November to 6 December 2025 at CITYgalleryVIENNA, Mahlerstraße 11, 1010 Vienna. The original VIPACH gallery credits 19 photographers; contemporary coverage reported 18.',
- hu:'Húsz fénykép szerepelt a kiállításon 2025. november 30. és december 6. között a CITYgalleryVIENNA galériában (Mahlerstraße 11, 1010 Bécs). A VIPACH eredeti galériája 19 alkotót tüntet fel, egy korabeli beszámoló 18-at.',
- de:'Zwanzig Fotografien waren vom 30. November bis 6. Dezember 2025 in der CITYgalleryVIENNA, Mahlerstraße 11, 1010 Wien, zu sehen. Die ursprüngliche VIPACH-Galerie nennt 19 Kunstschaffende; die zeitgenössische Berichterstattung nannte 18.'
- }
 };
 const archiveBrand={en:'Exhibition',de:'Ausstellung',hu:'Kiállítás'};
 const archiveLanguage={en:'Language',de:'Sprache',hu:'Nyelv'};
@@ -235,7 +224,7 @@ function page(ex,lang){
  +'<title>'+esc(metadata.title)+(candidate?'':' — preview')+'</title>'
  +(candidate?'<link rel="canonical" href="'+canonical+'">'+alternate+'<script type="application/ld+json">'+JSON.stringify(schema).replace(/</g,'\\u003c')+'</script>':'')
  +(release?metadata.meta:'')
- +'<link rel="stylesheet" href="'+asset+'styles.css"><link rel="stylesheet" href="'+asset+'2025-exhibitions.css"><link rel="stylesheet" href="'+asset+'exhibition-harmonization.css?v=20261126-audit">'
+ +'<link rel="stylesheet" href="'+asset+'styles.css"><link rel="stylesheet" href="'+asset+'2025-exhibitions.css"><link rel="stylesheet" href="'+asset+'exhibition-harmonization.css?v=20261126-editorial">'
  +'</head><body class="ex25-body"'+(candidate?' data-exhibition-slug="'+ex.slug+'" data-route-mode="slug"':'')+'><a class="skip-link" href="#content">'+esc(c.skip)+'</a>'
  +'<header class="site-header"><a class="brand" href="'+(candidate?(lang==='en'?'/?lang=en':'/'+lang+'/'):'https://vipach.at/')+'" aria-label="VIPACH '+esc(archiveBrand[lang])+'"><img class="brand-logo" src="https://static.wixstatic.com/media/b0aee1_3ddaf3156e154fc0bda2ffe5cb999a5c~mv2.png" width="30" height="30" alt="" referrerpolicy="no-referrer"><span><strong>VIPACH</strong> / '+esc({en:'Exhibition',hu:'Kiállítás',de:'Ausstellung'}[lang])+'</span></a>'
  +'<div class="header-tools"><nav class="lang-nav" aria-label="'+esc(archiveLanguage[lang])+'">'+languageLinks+'</nav>'
@@ -252,7 +241,7 @@ function page(ex,lang){
  +'<div><strong>'+esc(c.venue)+'</strong><span>'+esc(venue)+'</span></div>'
  +'<div><strong>'+esc(c.works)+'</strong><span>'+esc(candidate?local.official:c.review)+'</span></div>'
  +'</div></div>'+(release?{"en":"<div class=\"hero-sponsor\" aria-label=\"Exhibition supporter\"><p class=\"hero-sponsor-label\">Exhibition supporter</p><a class=\"hero-sponsor-link\" href=\"https://www.omsystemshop.hu/\" hreflang=\"hu\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"OM SYSTEM Shop (Hungarian)\"><img src=\"/assets/om-system-supporter.svg\" alt=\"OM SYSTEM\" width=\"100\" height=\"100\" loading=\"lazy\" decoding=\"async\"></a></div>","hu":"<div class=\"hero-sponsor\" aria-label=\"A kiállítás támogatója\"><p class=\"hero-sponsor-label\">A kiállítás támogatója</p><a class=\"hero-sponsor-link\" href=\"https://www.omsystemshop.hu/\" hreflang=\"hu\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"OM SYSTEM Shop\"><img src=\"/assets/om-system-supporter.svg\" alt=\"OM SYSTEM\" width=\"100\" height=\"100\" loading=\"lazy\" decoding=\"async\"></a></div>","de":"<div class=\"hero-sponsor\" aria-label=\"Unterstützer der Ausstellung\"><p class=\"hero-sponsor-label\">Unterstützer der Ausstellung</p><a class=\"hero-sponsor-link\" href=\"https://www.omsystemshop.hu/\" hreflang=\"hu\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"OM SYSTEM Shop (Ungarisch)\"><img src=\"/assets/om-system-supporter.svg\" alt=\"OM SYSTEM\" width=\"100\" height=\"100\" loading=\"lazy\" decoding=\"async\"></a></div>"}[lang]:'')+'</div></section>'
-  +(release?'<section class="section ex25-context" aria-labelledby="ex25-context-title"><div class="section-inner editorial-grid"><div><p class="kicker">VIPACH · 2025</p><h2 class="display-2" id="ex25-context-title">'+esc({en:'At a glance',hu:'A kiállítás röviden',de:'Die Ausstellung auf einen Blick'}[lang])+'</h2></div><div class="prose"><p>'+esc(exhibitionSummary[ex.slug][lang])+'</p><p><a href="'+esc(venueSources[ex.slug].url)+'" rel="noreferrer">'+esc({en:'Original event listing',hu:'Eredeti eseményadatok',de:'Ursprünglicher Veranstaltungseintrag'}[lang])+'</a></p></div></div></section>':'')
+  +(release?exhibitionEditorialMarkup(ex.slug,lang,{hasPress:Boolean(current.pressCoverage?.items?.length)}):'')
  +(release?'':'<div class="ex25-prepublication" role="note"><strong>'+esc(candidate?local.review:c.review)+'</strong><p>'+esc(t.pending)+'</p></div>')
  +'<section class="section"><div class="section-inner section-index reveal"><div class="section-no">01 / '+esc(c.story)+'</div><p class="statement">'+esc(c.statement)+'</p></div></section>'
  +'<section class="section" id="story"><div class="section-inner editorial-grid"><div class="reveal"><p class="kicker">'+esc(t.eyebrow)+'</p>'
@@ -262,7 +251,7 @@ function page(ex,lang){
  +'<section class="section exhibitor-section" id="exhibitors" aria-labelledby="exhibitors-title"><div class="section-inner">'
  +'<p class="kicker">'+esc(c.artists)+' · '+ex.artistProfiles.length+' / '+ex.artistProfiles.length+'</p>'
  +'<h2 class="display-2" id="exhibitors-title">'+esc(c.artists)+'</h2>'
- +'<nav class="exhibitor-jump" aria-label="'+esc(c.exhibitorJump)+'"><details class="exhibitor-jump-details"><summary>'+esc(c.exhibitorJump)+' <span aria-hidden="true">⌄</span></summary><ul>'+artistList+'</ul></details></nav>'
+ +'<nav class="exhibitor-jump" aria-label="'+esc(c.exhibitorJump)+'"><details class="exhibitor-jump-details"><summary id="exhibitor-index">'+esc(c.exhibitorJump)+' <span aria-hidden="true">⌄</span></summary><ul>'+artistList+'</ul></details></nav>'
  +roster+'</div></section>'
  +'<section class="credits" id="team"><div class="credits-inner"><div class="credits-head reveal"><div><p class="kicker">'+esc(c.team)+'</p><h2 class="display-2">'+esc(c.team)+'</h2></div>'
  +'<div class="prose"><p class="lead">'+esc(t.intro[0])+'</p></div></div>'

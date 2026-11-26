@@ -32,4 +32,21 @@ vm.runInNewContext(prefix,{document:doc,window:{ResizeObserver},ResizeObserver})
 assert.deepEqual(writes,[['--exhibition-header-size','125px']]);
 height=58;resize();
 assert.deepEqual(writes.at(-1),['--exhibition-header-size','58px']);
-console.log('Exhibition media radius, text wrapping, and sticky masthead spacing verified.');
+
+const localeTitles = { '':'At a glance', 'de/':'Die Ausstellung auf einen Blick', 'hu/':'A kiállítás röviden' };
+for (const [prefix,title] of Object.entries(localeTitles)) {
+  for (const slug of ['','spontan-2026/','eletem-kepe/','as-i-like-it-austria/']) {
+    const file=prefix+slug+'index.html', html=read(file);
+    const overview=html.match(/<section class="section exhibition-overview[^"]*"[^>]*>[\s\S]*?<\/section>/g);
+    assert.equal(overview?.length,1,file);
+    assert.ok(html.indexOf(overview[0])>html.indexOf('class="hero has-editorial-cover"') && html.indexOf(overview[0])<html.indexOf('id="exhibitors"'),file);
+    assert.ok(overview[0].includes('>'+title+'</h2>'),file);
+    assert.match(overview[0],/<nav class="exhibition-overview-nav" aria-label="[^"]+">/);
+    const refs=[...overview[0].matchAll(/href="#([^"]+)"/g)].map(m=>m[1]);
+    assert.deepEqual(refs,['exhibitors','exhibitor-index','venue-evidence','press'],file);
+    for(const id of refs) assert.equal(html.split('id="'+id+'"').length,2,file+' unique '+id);
+    assert.match(html,/<summary id="exhibitor-index">/);
+    if (slug==='as-i-like-it-austria/') assert.match(overview[0],/19[^<]*18/);
+  }
+}
+console.log('Exhibition overview, locale jumps, media radius, text wrapping, and sticky masthead spacing verified.');
