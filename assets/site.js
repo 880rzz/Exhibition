@@ -1,4 +1,13 @@
 document.documentElement.classList.add('js');
+/* Keep anchor targets and the disclosure menu below the actual, wrapping masthead. */
+const masthead=document.querySelector('.site-header');
+if(masthead){
+ const updateMastheadSize=()=>document.documentElement.style.setProperty(
+   '--exhibition-header-size',Math.ceil(masthead.getBoundingClientRect().height)+'px');
+ updateMastheadSize();
+ if('ResizeObserver' in window)new ResizeObserver(updateMastheadSize).observe(masthead);
+ else window.addEventListener('resize',updateMastheadSize,{passive:true});
+}
 const items=document.querySelectorAll('.reveal');
 if('IntersectionObserver' in window&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
  const observer=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}});},{threshold:.12,rootMargin:'0px 0px -6% 0px'});

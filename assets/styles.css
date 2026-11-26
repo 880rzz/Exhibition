@@ -235,3 +235,62 @@ html.menu-open .vipach-contact-dock{visibility:hidden;pointer-events:none}
 .ex-press-read{display:inline-flex;align-items:center;min-height:44px;margin-top:12px;color:inherit;text-underline-offset:.22em;font-size:.88rem}
 .ex-press-section a:focus-visible{outline:2px solid #b79c44;outline-offset:4px}
 @media(max-width:660px){.ex-press-list{grid-template-columns:minmax(0,1fr);gap:36px}.ex-press-inner{width:calc(100% - 40px)}}
+
+
+/* Editorial rhythm and readable narrow columns, shared by every locale. */
+:root {
+  --exhibition-header-size: 64px;
+  --exhibition-media-radius: 5px;
+  --leading-heading: 1.17;
+  --leading-display: 1.14;
+  --leading-body: 1.62;
+}
+img, video { border-radius: var(--exhibition-media-radius); }
+:where(p,li,dt,dd,a,summary) { overflow-wrap: anywhere; }
+:where(.hero-copy,.hero-details > *, .visit-line > *, .exhibitor-content,
+       .editorial-grid > *, .history-item > *, .credits-head > *, .credit-row > *) {
+  min-inline-size: 0;
+}
+:where(h1,h2,h3,h4,.statement,.credit-name) { overflow-wrap: anywhere; hyphens: auto; }
+.display-2 { max-inline-size: min(100%, 26ch); }
+.prose { max-inline-size: 65ch; }
+.prose p, .history-copy, .visit-line { line-height: var(--leading-body); }
+.prose :where(h3,h4) + p { margin-block-start: .6em; }
+.prose :where(ul,ol) { margin-block: .75em 1.25em; }
+.ex25-context, .visit { border-block-start: 1px solid var(--line); }
+.ex25-context .section-inner { padding-block: clamp(.4rem, 1.75vw, 1rem); }
+.exhibitor-content > :where(.ex25-prepublication,.ex25-translation-note) { margin-block: .6rem; }
+.exhibitor-artwork + .exhibitor-bio { margin-block-start: 1.5rem; }
+.hero h1 span { margin-block-start: 1em; }
+.hero-sponsor-link {
+  inline-size: auto;
+  max-inline-size: 100%;
+  min-inline-size: 0;
+}
+.hero-sponsor-link img {
+  inline-size: clamp(64px,6vw,76px);
+  max-inline-size: min(100%, 76px);
+  min-inline-size: 0;
+  flex: 0 1 auto;
+}
+[id] { scroll-margin-top: calc(var(--exhibition-header-size) + 14px); }
+.exhibitor-card { scroll-margin-top: calc(var(--exhibition-header-size) + 18px); }
+.site-menu {
+  inset-block-start: var(--exhibition-header-size);
+  block-size: calc(100svh - var(--exhibition-header-size));
+}
+@media (max-width: 680px) {
+  :root { --exhibition-header-size: 58px; }
+  .hero-copy { min-block-size: 0; padding-block-end: clamp(22px,5vw,34px); }
+  .hero h1 { margin-block-start: clamp(24px,6vw,48px); }
+  .hero-meta { margin-block-start: clamp(28px,6vw,44px); gap: 18px; }
+  .hero-details { gap: 14px; }
+  .section, .credits, .history, .visit { padding-block: clamp(44px,12vw,76px); }
+  .header-visit-notice { line-height: 1.4; }
+  .visit-line { grid-template-columns: minmax(0, 1fr); gap: .25rem; }
+  .visit-line dt { font-weight: 600; }
+}
+@media (max-width: 360px) {
+  .site-header { column-gap: .5rem; }
+  .site-header > .brand { white-space: normal; }
+}

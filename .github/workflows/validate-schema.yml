@@ -14,6 +14,8 @@ on:
       - '_config.yml'
       - 'llms.txt'
       - 'assets/entry-language.js'
+      - 'assets/styles.css'
+      - 'assets/site.js'
       - 'privacy/**'
       - '.github/workflows/validate-schema.yml'
   push:
@@ -31,6 +33,8 @@ on:
       - '_config.yml'
       - 'llms.txt'
       - 'assets/entry-language.js'
+      - 'assets/styles.css'
+      - 'assets/site.js'
       - 'privacy/**'
       - '.github/workflows/validate-schema.yml'
   workflow_dispatch:
@@ -41,6 +45,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Verify shared editorial layout rules and masthead resizing
+        run: node scripts/test-exhibition-editorial-layout.mjs
       - name: Verify exact owner-attested 2025 archive uses and prevent all other publication
         run: node scripts/check-2025-public-source-separation.mjs
       - name: Assert 40 gallery images have confirmed Wix artist mapping
