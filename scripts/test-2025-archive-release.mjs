@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 import path from 'node:path';
 import { archive2025Release } from './exhibition-2025-release-scope.mjs';
+import { archiveCoverFor } from './exhibition-2025-cover-assets.mjs';
 const release=archive2025Release();
 assert.ok(release,'archive release evidence missing');
 const candidateMode=process.argv.includes('--candidate');
@@ -85,8 +86,8 @@ for (const lang of ['en','hu','de']){
    }
   }
   assert.equal(count(html,'referrerpolicy="no-referrer"'),ex.artistProfiles.length+22);
-  const cover=release.heroDisplay.images[ex.slug];
-  assert.ok(html.includes('<div class="hero-visual ex25-archive-cover"><img src="'+cover.url+'" width="'+cover.width+'" height="'+cover.height+'" alt="'),url+' exact Wix hero');
+  const cover=archiveCoverFor(ex.slug);
+  assert.ok(html.includes('<div class="hero-visual ex25-archive-cover"><img src="'+cover.url+'" width="'+cover.width+'" height="'+cover.height+'" alt="'),url+' exact owner-supplied archive hero');
   assert.ok(/class="hero-visual ex25-archive-cover"><img [^>]+alt="[^"]+" referrerpolicy="no-referrer"/.test(html),url+' descriptive cover');
   for (const a of ex.artistProfiles){
    const boundary=html.indexOf('id="artist-'+a.id+'"');

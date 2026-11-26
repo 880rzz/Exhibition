@@ -12,6 +12,7 @@
  */
 import assert from 'node:assert/strict';
 import { archive2025Release } from './exhibition-2025-release-scope.mjs';
+import { archiveCoverFor } from './exhibition-2025-cover-assets.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -68,7 +69,7 @@ for (const ex of src.exhibitions) for (const lang of ['en','hu','de']) {
   ...ex.artistProfiles.map(p=>[p.portraitSourceUrl,'exhibitor-portrait'])
  ]);
 }
-const heroCovers=Object.entries(scope?.heroDisplay?.images||{});
+const heroCovers=(scope?.slugs||[]).map(slug=>[slug,archiveCoverFor(slug)]);
 const allUrls=new Set(urls);
 const nonPublic=new Set(['.git','.github','staging-preview','private-review','docs','scripts','templates','node_modules','_site']);
 function scan(dir='.') {
@@ -86,8 +87,9 @@ function scan(dir='.') {
   for(const url of allUrls)assert.equal(html.split(url).length-1,expected.filter(([u])=>u===url).length,file+' has out-of-scope art/portrait URL: '+url);
   for(const [slug,cover] of heroCovers){
    const isShow=permitted.has(file)&&path.basename(path.dirname(file))===slug;
-   assert.equal(html.split(cover.url).length-1,isShow?1:0,file+' Wix cover scope: '+slug);
-   if(isShow)assert.ok(html.includes('<div class="hero-visual ex25-archive-cover"><img src="'+cover.url+'"'),file+' Wix image must only be the hero');
+   assert.equal(html.split(scope.heroDisplay.images[slug].url).length-1,0,file+' superseded cover: '+slug);
+   assert.equal(html.split(cover.url).length-1,isShow?1:0,file+' owner-supplied cover scope: '+slug);
+   if(isShow)assert.ok(html.includes('<div class="hero-visual ex25-archive-cover"><img src="'+cover.url+'"'),file+' cover must only be the hero');
   }
   if(expected.length)assert(!/rel="license"|license-url|<meta[^>]+(?:og:image|twitter:image)|creativecommons\.org\/licenses/i.test(html),file+' unauthorized cover or reuse licence');
  }
@@ -100,6 +102,7 @@ console.log(JSON.stringify({
  independentlyVerifiedUseCount:0,
  checkedPublicAssets:visited,
  jekyllExclusion:'data/staging,private-review',
- imagesCopiedIntoPublicAssets:false,
+ worksOrPortraitsCopiedIntoPublicAssets:false,
+ approvedLocalCoverCount:heroCovers.length,
  ownerAttestedArchiveUses:scope?74:0
 }));
