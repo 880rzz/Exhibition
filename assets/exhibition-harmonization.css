@@ -37,3 +37,20 @@
   .hero.has-editorial-cover .hero-meta { grid-row: 3; margin: 0; padding: clamp(22px,4vw,36px) var(--gutter) 0; }
   .hero.has-editorial-cover .hero-sponsor { grid-row: 4; margin-inline: var(--gutter); }
 }
+
+
+/* Keep the first archive summary short and its next steps in the document flow. */
+.section.exhibition-overview { padding-block: clamp(32px,6vw,72px); }
+.exhibition-overview .editorial-grid { gap: clamp(16px,4vw,56px); }
+.exhibition-overview .section-inner { padding-block: 0; }
+.exhibition-overview .kicker { margin-block-end: 12px; }
+.exhibition-overview-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 0; padding: 0; }
+.exhibition-overview-nav li { min-inline-size: 0; }
+.exhibition-overview-nav a {
+  display: inline-flex; align-items: center; min-block-size: 44px; max-inline-size: 100%;
+  padding: 6px 12px; border: 1px solid var(--line); border-radius: 5px;
+  color: var(--ink); font-size: var(--fs-caption); font-weight: 600; line-height: 1.3;
+  text-decoration: none; background: var(--paper);
+}
+.exhibition-overview-nav a:hover { border-color: var(--ink); }
+.exhibition-overview-nav a:focus-visible { outline: 2px solid #765812; outline-offset: 2px; }

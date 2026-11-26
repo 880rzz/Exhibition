@@ -6,6 +6,7 @@
  * - full-html exhibitions use frozen templates under templates/exhibitions/<slug>/
  * - archive exhibitions render templates/exhibition-archive.html from JSON
  */
+import { exhibitionEditorialMarkup } from './exhibition-editorial.mjs';
 import fs from 'node:fs';
 import { updateExhibitionPublicLinks } from './exhibition-public-links.mjs';
 import { pressTitleFor } from './exhibition-press-language.mjs';
@@ -231,7 +232,11 @@ function rewriteFullHtml({ html, exhibition, localeId, mode, exhibitions, featur
   }
 
   out = out.replace('<!-- EXHIBITION_VENUE_EVIDENCE -->', venueEvidenceMarkup(slug, localeId));
-  if (slug === 'spontan-2026') out = rewriteSpontanSeo(out, localeId, absoluteUrl(canonicalRoutes[localeId]), exhibition);
+  if (slug === 'spontan-2026') {
+    if (!out.includes('<!-- EXHIBITION_EDITORIAL -->')) throw new Error('Missing editorial slot: ' + localeId);
+    out = out.replace('<!-- EXHIBITION_EDITORIAL -->', exhibitionEditorialMarkup(slug, localeId, { hasPress: Boolean(exhibition.pressCoverage?.items?.length) }));
+    out = rewriteSpontanSeo(out, localeId, absoluteUrl(canonicalRoutes[localeId]), exhibition);
+  }
 
   const pressSection = renderPressSection(exhibition, localeId);
   if (pressSection) {
