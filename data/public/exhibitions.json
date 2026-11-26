@@ -24,6 +24,10 @@
         "de": "SPONTAN"
       },
       "status": "past-exhibition",
+      "supporter": {
+        "name": "OM SYSTEM",
+        "shop": "https://www.omsystemshop.hu/"
+      },
       "urls": {
         "en": "https://exhibition.vipach.at/spontan-2026/",
         "hu": "https://exhibition.vipach.at/hu/spontan-2026/",
@@ -144,6 +148,10 @@
         "de": "Das Bild meines Lebens"
       },
       "status": "past-exhibition",
+      "supporter": {
+        "name": "OM SYSTEM",
+        "shop": "https://www.omsystemshop.hu/"
+      },
       "urls": {
         "en": "https://exhibition.vipach.at/eletem-kepe/",
         "hu": "https://exhibition.vipach.at/hu/eletem-kepe/",
@@ -402,6 +410,10 @@
         "de": "As I Like It Austria"
       },
       "status": "past-exhibition",
+      "supporter": {
+        "name": "OM SYSTEM",
+        "shop": "https://www.omsystemshop.hu/"
+      },
       "urls": {
         "en": "https://exhibition.vipach.at/as-i-like-it-austria/",
         "hu": "https://exhibition.vipach.at/hu/as-i-like-it-austria/",
