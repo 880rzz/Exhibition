@@ -223,7 +223,32 @@ assert.equal(spontan.counts.approvedForPublicDisplay, 0);
 
 // --- Sitemap / robots continuity ---
 const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
-assert.match(sitemap, /https:\/\/exhibition\.vipach\.at\//, 'featured EN in sitemap');
+const permanent = {
+  en: 'https://exhibition.vipach.at/spontan-2026/',
+  'de-AT': 'https://exhibition.vipach.at/de/spontan-2026/',
+  hu: 'https://exhibition.vipach.at/hu/spontan-2026/',
+  'x-default': 'https://exhibition.vipach.at/spontan-2026/',
+};
+// CITYgalleryVIENNA's original SPONTÁN record links to these fragments on the old root.
+const legacyArtistIds = [
+  'gartner-edit','loksi67','adrian-ferenczik','kanya-judit','eszter-holcz','sardi-peter-krisztina',
+  'denise-trajkovska','janos-klotz','balogh-david-exhibitor','katifoto-exhibitor','toth-mano-exhibitor',
+  'gabor-exhibitor','naylivart-exhibitor','adamszki-exhibitor','lena-banhalmi','norbert-banhalmi-exhibitor',
+];
+for (const [prefix, locale] of [['','en'],['de/','de-AT'],['hu/','hu']]) {
+  const alias = fs.readFileSync(path.join(root, prefix, 'index.html'), 'utf8');
+  const slug = fs.readFileSync(path.join(root, prefix, 'spontan-2026/index.html'), 'utf8');
+  const body = html => html.match(/<main\b[\s\S]*?<\/main>/)?.[0];
+  assert.ok(body(alias) && body(alias) === body(slug), prefix + ' keep the full root catalogue and its links and anchors');
+  for (const id of legacyArtistIds) assert.ok(body(alias).includes('id="'+id+'"'), prefix + ' preserve the old artist fragment #' + id);
+  for (const html of [alias, slug]) {
+    assert.ok(html.includes('<link rel="canonical" href="'+permanent[locale]+'">'));
+    assert.deepEqual(Object.fromEntries([...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)">/g)].map(m=>m.slice(1))), permanent);
+  }
+  const aliasUrl = 'https://exhibition.vipach.at/' + prefix;
+  assert.ok(!sitemap.includes('<loc>' + aliasUrl + '</loc>'), prefix + ' no duplicate featured aliases in sitemap');
+  assert.equal(sitemap.split('<loc>' + permanent[locale] + '</loc>').length, 2, prefix + ' keep one same-language permanent address in sitemap');
+}
 assert.match(sitemap, /https:\/\/exhibition\.vipach\.at\/spontan-2026\//, 'permanent SPONTÁN slug in sitemap');
 assert.match(sitemap, /https:\/\/exhibition\.vipach\.at\/as-i-like-it-austria\//, 'archive slug in sitemap');
 assert.doesNotMatch(sitemap, /eletem-kepe-2-0/, 'planned exhibitions excluded from sitemap');

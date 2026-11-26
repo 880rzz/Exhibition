@@ -62,14 +62,15 @@ body.menu-open{overflow:hidden}
 @media(max-width:680px){.site-menu{top:58px;height:calc(100svh - 58px);width:100%;border-left:0}.menu-toggle{width:38px;height:38px}}
 
 
-/* EVENT-MOTION-CONTACT-MAP-V1 */
+/* Motion is optional. Only pending elements move; visible/reduced-motion content uses its real position. */
 .motion-target{opacity:1;transform:none}
-.js .motion-target{opacity:0;transform:translateY(14px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)}
-.js .motion-target.motion-visible{opacity:1;transform:none}
-.js .motion-target[data-motion="heading"]{transform:translateY(18px)}
-.js .motion-target[data-motion="description"]{transform:translateY(10px)}
-@media(prefers-reduced-motion:reduce){
-  .js .motion-target{opacity:1;transform:none;transition:none}
+@media screen and (prefers-reduced-motion:no-preference){
+  .js .motion-target{transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)}
+  .motion-target[data-motion="heading"]{--motion-enter-distance:18px}
+  .motion-target[data-motion="description"]{--motion-enter-distance:10px}
+  /* A fade is enough for a heading with important copy close beneath it. */
+  #exhibitors-title.motion-target{--motion-enter-distance:0px}
+  .js .motion-target:not(.motion-visible){opacity:0;transform:translateY(var(--motion-enter-distance,14px))}
 }
 
 .event-note{max-width:760px;margin:28px 0 0;font-size:var(--fs-body);line-height:1.5;color:var(--muted)}

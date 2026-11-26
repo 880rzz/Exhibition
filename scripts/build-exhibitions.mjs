@@ -190,10 +190,20 @@ function rewriteFullHtml({ html, exhibition, localeId, mode, exhibitions, featur
     .replace(/href="\/hu\/"/g, `href="${routes.hu}"`)
     .replace(/href="\/de\/"/g, `href="${routes.de}"`);
 
+  // The SPONTÁN root is a 200 alias: preserve the requested URL, language switcher and legacy fragments.
+  // Search and social metadata should all name the permanent, same-language catalogue instead.
+  const canonicalRoutes = slug === 'spontan-2026'
+    ? Object.fromEntries(site.locales.map(l => [l.id, slugPaths(slug, l.id)]))
+    : routes;
+  for (const l of [...site.locales, {id:'en',hreflang:'x-default'}]) {
+    const alternate = new RegExp(`<link rel="alternate" hreflang="${l.hreflang}" href="[^"]*">`);
+    out = out.replace(alternate,
+      `<link rel="alternate" hreflang="${l.hreflang}" href="${absoluteUrl(canonicalRoutes[l.id])}">`);
+  }
   // Canonical specifically
   out = out.replace(
     /<link\s+rel="canonical"\s+href="[^"]*"\s*>/i,
-    `<link rel="canonical" href="${absoluteUrl(routes[localeId])}">`
+    `<link rel="canonical" href="${absoluteUrl(canonicalRoutes[localeId])}">`
   );
 
   if (localeId === 'en') out = out.replace('<a class="brand" href="/"', '<a class="brand" href="/?lang=en"');
@@ -221,7 +231,7 @@ function rewriteFullHtml({ html, exhibition, localeId, mode, exhibitions, featur
   }
 
   out = out.replace('<!-- EXHIBITION_VENUE_EVIDENCE -->', venueEvidenceMarkup(slug, localeId));
-  if (slug === 'spontan-2026') out = rewriteSpontanSeo(out, localeId, absoluteUrl(routes[localeId]), exhibition);
+  if (slug === 'spontan-2026') out = rewriteSpontanSeo(out, localeId, absoluteUrl(canonicalRoutes[localeId]), exhibition);
 
   const pressSection = renderPressSection(exhibition, localeId);
   if (pressSection) {
@@ -427,7 +437,7 @@ function buildSitemap(exhibitions, featured) {
   }
 
   pushTriple((localeId) => slugPaths('events', localeId));
-  if (featured) {
+  if (featured && featured.slug !== 'spontan-2026') {
     pushTriple((localeId) => featuredPaths(localeId));
   }
   for (const exhibition of exhibitions) {

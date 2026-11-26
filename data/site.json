@@ -34,7 +34,7 @@
     "zvr": "079797621"
   },
   "notes": [
-    "Root paths `/`, `/hu/`, `/de/` remain the featured-exhibition landing (currently SPONTÁN 2026) for live continuity.",
+    "Root paths `/`, `/hu/`, `/de/` remain the full featured-exhibition landing for live continuity. For SPONTÁN 2026 their canonical signals use the corresponding permanent slug paths; all existing anchors remain on the aliases.",
     "Every exhibition also gets permanent slug paths `/{slug}/`, `/hu/{slug}/`, `/de/{slug}/`.",
     "OM SYSTEM supports the three published 2025–2026 exhibitions. OM SYSTEM Shop is the destination of the supporter link, not a separate claim about the organiser."
   ]

@@ -18,6 +18,7 @@ for(const [url,languages,fallback,expected] of [
  ['/?utm_source=press', ['de-AT'], null, ['/de/?utm_source=press']],
  ['/?lang=en', ['de-AT'], null, []],
  ['/#press', ['de-AT'], null, []],
+ ['/#gartner-edit', ['de-AT'], null, []],
  ['/hu/', ['de-AT'], null, []],
  ['/de/', ['hu-HU'], null, []],
  ['/spontan-2026/', ['hu-HU'], null, []],

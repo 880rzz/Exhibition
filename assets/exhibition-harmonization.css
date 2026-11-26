@@ -20,6 +20,7 @@
 }
 .ex25-original-link { display:inline-flex; align-items:center; min-height:44px; margin:0 0 1.1rem; }
 .ex25-translation-note { color: var(--muted, #555); font-size: .86em; margin-block: .25rem .6rem; }
+#exhibitors-title + .ex25-translation-note { margin-block-start: 12px; }
 
 /* Square archive image area without cropping poster text. */
 .hero .hero-visual.ex25-archive-cover img { aspect-ratio: 1; object-fit: contain; }
