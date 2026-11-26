@@ -55,6 +55,8 @@ jobs:
         run: node scripts/check-2025-public-source-separation.mjs
       - name: Assert 40 gallery images have confirmed Wix artist mapping
         run: node scripts/check-2025-gallery-attribution.mjs
+      - name: Verify image-bound editorial titles in all three languages
+        run: node scripts/test-2025-catalogue-titles.mjs
       - name: Verify committed 2025 archive content and 3L permanent navigation
         run: node scripts/test-2025-archive-release.mjs
       - name: Verify browser language selection and stable locale links
@@ -69,6 +71,8 @@ jobs:
         run: node scripts/test-exhibition-public-links.mjs
       - name: Build exhibition pages from data
         run: node scripts/build-exhibitions.mjs
+      - name: Verify regenerated editorial titles and original-label distinctions
+        run: node scripts/test-2025-catalogue-titles.mjs
       - name: Verify rebuilt 2025 archive content and 3L permanent navigation
         run: node scripts/test-2025-archive-release.mjs
       - name: Regenerate current published-image rights inventory

@@ -64,17 +64,22 @@ function siteGraph() {
   return { '@type': 'WebSite', '@id': webSiteId, url: base + '/', name: 'VIPACH Exhibition', publisher: id(orgId) };
 }
 
-export function archiveGraph({ ex, current, lang, name, description, workName, canonical }) {
+export function archiveGraph({ ex, current, lang, name, description, workTitle, canonical }) {
   const eventUrl = route(ex.slug, 'en'), eventId = eventUrl + '#event';
   const people = ex.artistProfiles.map(p => ({
     '@type': 'Person', '@id': eventUrl + '#artist-' + p.id, name: p.name,
   }));
-  const works = ex.works.map(w => ({
-    '@type': 'VisualArtwork', '@id': eventUrl + '#' + w.id,
-    // Catalog label, not a proposed title. Never add the Wix exhibit-only bytes in another use.
-    name: workName(w), artform: 'Photography', creator: id(eventUrl + '#artist-' + w.galleryEvidence.artistProfileId),
-    mainEntityOfPage: canonical + '#' + w.id,
-  }));
+  const works = ex.works.map(w => {
+    const title = workTitle(w);
+    return {
+      '@type': 'VisualArtwork', '@id': eventUrl + '#' + w.id,
+      // Name is an editorial label. Mark the basis just as on the page; preserve a verified original when available.
+      name: title.title, disambiguatingDescription: title.provenanceLabel,
+      ...(title.originalTitle ? { alternateName: title.originalTitle } : {}),
+      artform: 'Photography', creator: id(eventUrl + '#artist-' + w.galleryEvidence.artistProfileId),
+      mainEntityOfPage: canonical + '#' + w.id,
+    };
+  });
   const place = { '@type': 'Place', '@id': venueId, name: current.venue.name, url: venueHome,
     address: { '@type': 'PostalAddress', streetAddress: current.venue.streetAddress, postalCode: current.venue.postalCode,
       addressLocality: current.venue.addressLocality, addressCountry: current.venue.addressCountry } };
