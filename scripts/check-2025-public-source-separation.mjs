@@ -10,6 +10,7 @@
  *  - no unapproved 2025 work/portrait source URL is embedded in public pages
  * The Jekyll build output is separately inspected by the workflow.
  */
+import { archivedPortraitReplacement } from './exhibition-portrait-replacements.mjs';
 import assert from 'node:assert/strict';
 import { archive2025Release } from './exhibition-2025-release-scope.mjs';
 import { archiveCoverFor } from './exhibition-2025-cover-assets.mjs';
@@ -66,7 +67,7 @@ for (const ex of src.exhibitions) for (const lang of ['en','hu','de']) {
  assert(fs.existsSync(rel),rel);
  if(scope)permitted.set(rel,[
   ...ex.works.map(w=>[w.imageSourceUrl,'exhibitor-work-image']),
-  ...ex.artistProfiles.map(p=>[p.portraitSourceUrl,'exhibitor-portrait'])
+  ...ex.artistProfiles.map(p=>[archivedPortraitReplacement(ex.slug,p)?.url||p.portraitSourceUrl,'exhibitor-portrait'])
  ]);
 }
 const heroCovers=(scope?.slugs||[]).map(slug=>[slug,archiveCoverFor(slug)]);
@@ -104,5 +105,6 @@ console.log(JSON.stringify({
  jekyllExclusion:'data/staging,private-review',
  worksOrPortraitsCopiedIntoPublicAssets:false,
  approvedLocalCoverCount:heroCovers.length,
+ ownerSuppliedProfileReplacementCount:scope?1:0,
  ownerAttestedArchiveUses:scope?74:0
 }));

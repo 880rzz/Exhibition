@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import { archivedPortraitReplacement } from './exhibition-portrait-replacements.mjs';
 import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 import path from 'node:path';
@@ -98,7 +99,13 @@ for (const lang of ['en','hu','de']){
    const boundary=html.indexOf('id="artist-'+a.id+'"');
    assert.notEqual(boundary,-1,a.id);
    const card=html.slice(boundary,html.indexOf('</article>',boundary));
-   assert.ok(card.includes('src="'+a.portraitSourceUrl+'"'));
+   const replacement=archivedPortraitReplacement(ex.slug,a);
+   assert.ok(card.includes('src="'+(replacement?.url||a.portraitSourceUrl)+'"'));
+   if(replacement){
+    assert.ok(card.includes('width="768" height="768"'));
+    assert.equal(count(html,replacement.url),1);
+    assert.equal(count(html,a.portraitSourceUrl),0);
+   }
    for(const w of ex.works.filter(w=>w.galleryEvidence.artistProfileId===a.id)){
     assert.ok(card.includes('id="'+w.id+'"'),w.id+' outside attributed artist card');
     assert.ok(card.includes('src="'+w.imageSourceUrl+'"'),w.id+' source media changed');
