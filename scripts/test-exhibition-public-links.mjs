@@ -14,14 +14,14 @@ for(const l of ['en','de','hu']){
  const p=l==='en'?'':l+'/';
  for(const f of ['index.html','events/index.html','privacy/index.html',...slugs.map(x=>x+'/index.html')]){
   const s=fs.readFileSync(p+f,'utf8');assert.equal((s.match(/class="vipach-wa"/g)||[]).length,1,p+f);
-  assert.ok(s.includes('href="https://wa.me/4367761655592"')&&s.includes('/assets/public-links.css?v=20261126-quiet'),p+f);
+  assert.ok(s.includes('href="https://wa.me/4367761655592"')&&s.includes('/assets/public-links.css?v='+(f==='events/index.html'?'20261127-calendar':'20261126-quiet')),p+f);
   if(!/^(privacy|events)\//.test(f))assert.ok(s.includes('class="calendar-menu-link" href="/'+p+'events/"'),p+f);
   const wa=s.match(/<a class="vipach-wa"[^>]*aria-label="([^"]+)"[^>]*>([\s\S]+?)<\/a>/);
   assert.ok(wa && wa[1].includes('WhatsApp') && !wa[1].includes('+43'),p+f);
   assert.match(wa[2],/^<svg [^>]*aria-hidden="true"[^>]*><path [^>]*><\/path><\/svg>$/,p+f);
   assert.doesNotMatch(s,/https:\/\/(?:www\.)?vipach\.at\/(?:artist\/|event-details\/|kapcsolat\/impresszum|eletemkepe(?:["?]|\b)|asilikeit(?:["?]|\b))/,p+f);
   const strong=[...s.matchAll(/<a\b[^>]*\bdata-external-action(?:[ >])[^>]*>/g)].map(m=>m[0]);
-  const expected=f==='index.html'||f==='spontan-2026/index.html'?3: ['as-i-like-it-austria/index.html','eletem-kepe/index.html'].includes(f)?4:f==='events/index.html'?1:0;
+  const expected=f==='index.html'||f==='spontan-2026/index.html'?3: ['as-i-like-it-austria/index.html','eletem-kepe/index.html'].includes(f)?4:0;
   assert.equal(strong.length,expected,p+f+' strong actions');
   for(const tag of strong){
    assert.match(tag,/href="https:\/\//,p+f);

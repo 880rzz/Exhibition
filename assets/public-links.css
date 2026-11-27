@@ -20,7 +20,12 @@ body.menu-open .vipach-wa,.vipach-wa~.vipach-contact-dock{display:none}
 .calendar-wrap{max-width:62rem;width:calc(100% - 2rem);margin:0 auto;padding:clamp(2rem,6vw,5rem) 0 1rem}
 .calendar-wrap header,.calendar-wrap section{padding:1.25rem 0}
 .calendar-wrap h1{font-size:clamp(2rem,6vw,4.5rem);line-height:1.05;margin:.45em 0}
-.calendar-wrap button{min-height:44px;padding:.45rem .85rem;margin:0 .45rem .45rem 0;font:inherit}
+.vip-calendar-actions{display:flex;flex-wrap:wrap;align-items:stretch;gap:.75rem;margin-block:1rem}
+.vip-calendar-actions :is(button,a){display:inline-flex;align-items:center;justify-content:center;min-height:44px;max-width:100%;padding:.55rem .9rem;margin:0;border:1px solid #765812;border-radius:5px;background:transparent;color:inherit;font:inherit;font-weight:600;text-align:center;white-space:normal;overflow-wrap:normal}
+.vip-calendar-actions [hidden],#vip-calendar-panel[hidden]{display:none}
+.vip-calendar-actions :is(button,a):hover{background:#7658120c}
+.vip-calendar-actions :is(button,a):focus-visible{outline:2px solid #765812;outline-offset:3px}
+@media(max-width:480px){.vip-calendar-actions :is(button,a){flex-basis:100%}}
 .calendar-wrap a{text-decoration:underline;text-underline-offset:.2em}
-.calendar-wrap .calendar-external-link{text-decoration:none}
+.calendar-wrap .vip-calendar-alternative{text-decoration:none}
 .calendar-wrap .vip-calendar-shell{border-top:1px solid var(--line)}
