@@ -53,6 +53,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Verify the multilingual public archive index
+        run: node scripts/test-exhibition-archive-index.mjs
       - name: Verify shared editorial layout rules and masthead resizing
         run: node scripts/test-exhibition-editorial-layout.mjs
       - name: Verify exact owner-attested 2025 archive uses and prevent all other publication

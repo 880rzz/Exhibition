@@ -2,6 +2,7 @@
 
 > Official directory of past VIPACH photography exhibitions in Vienna, Austria. Exhibitions are offered in Hungarian, English and Austrian German.
 
+- [Archive index](https://exhibition.vipach.at/archive/) · [Magyar](https://exhibition.vipach.at/hu/archive/) · [Deutsch](https://exhibition.vipach.at/de/archive/).
 - [Exhibition facts (JSON)](https://exhibition.vipach.at/data/public/exhibitions.json): source-linked exhibition dates, venue, catalogue counts and display status.
 - [VIPACH](https://vipach.at/): the community photography club in Vienna and Budapest; it grew from the Vienna Hungarian School photo club within the Central Federation.
 - This domain is the VIPACH cultural exhibition archive, not a separate organization or a commercial service.

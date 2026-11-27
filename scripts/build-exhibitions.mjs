@@ -36,7 +36,7 @@ const copy = {
     labelWhen: 'Date', labelWhere: 'Venue', sectionTitle: 'About this entry',
     dateUnconfirmed: 'The exact dates are not confirmed.',
     venueUnconfirmed: 'The venue is not confirmed.',
-    historyLink: 'VIPACH exhibition history (in Hungarian)', sourceLink: 'VIPACH exhibition page',
+    historyLink: 'VIPACH exhibition archive', sourceLink: 'VIPACH exhibition page',
     eventLink: 'VIPACH event page', privacy: 'Legal notice and privacy',
     historicalSummary: 'This exhibition appears in the VIPACH exhibition history. The listing gives the year and venue but does not specify the exact visiting dates.',
     plannedSummary: 'This exhibition is planned. Exact dates, venue and participants have not been announced here.',
@@ -68,7 +68,7 @@ const copy = {
     labelWhen: 'Zeitraum', labelWhere: 'Ort', sectionTitle: 'Zu diesem Archiveintrag',
     dateUnconfirmed: 'Die genauen Termine stehen noch nicht fest.',
     venueUnconfirmed: 'Der Veranstaltungsort steht noch nicht fest.',
-    historyLink: 'Bisherige VIPACH-Ausstellungen (auf Ungarisch)', sourceLink: 'Ausstellungsseite von VIPACH',
+    historyLink: 'VIPACH-Ausstellungsarchiv', sourceLink: 'Ausstellungsseite von VIPACH',
     eventLink: 'Veranstaltungsseite von VIPACH', privacy: 'Impressum und Datenschutz',
     historicalSummary: 'Die Ausstellung ist in der VIPACH-Ausstellungsübersicht verzeichnet. Die Quelle nennt das Jahr und den Veranstaltungsort, aber keine genauen Besuchstermine.',
     plannedSummary: 'Die Ausstellung ist geplant. Genaue Termine, Veranstaltungsort und Mitwirkende wurden hier noch nicht bekannt gegeben.',
@@ -315,7 +315,7 @@ function renderArchive(exhibition, localeId, exhibitions, featured) {
   const external = exhibition.external || {};
   const linkItems = [];
   if (external.vipachHistoryListing) {
-    linkItems.push(`<a href="${escapeHtml(external.vipachHistoryListing)}" hreflang="hu" rel="noopener">${t.historyLink}</a>`);
+    linkItems.push(`<a href="${slugPaths('archive', localeId)}" rel="noopener">${t.historyLink}</a>`);
   }
   if (external.vipachPage) {
     const page = external.vipachPage[localeId] || external.vipachPage.en || external.vipachPage.hu;
@@ -421,6 +421,37 @@ function outputPathFor(localeId, slug, mode) {
   return path.join(root, localeId, slug, 'index.html');
 }
 
+function renderArchiveIndex(exhibitions, featured, localeId) {
+  const t = copy[localeId], esc = escapeHtml;
+  const locale = localeMeta(localeId);
+  const canonical = absoluteUrl(slugPaths('archive', localeId));
+  const alt = [...site.locales, {id:'en', htmlLang:'x-default'}].map(l =>
+    `<link rel="alternate" hreflang="${l.htmlLang}" href="${absoluteUrl(slugPaths('archive', l.id))}">`).join('');
+  const intro = {
+    en: ['Explore the exhibitions, artists and stories in the VIPACH archive.', 'Exhibitions', 'Planned exhibitions', 'Back to the photography club', 'Latest exhibition'],
+    hu: ['Fedezd fel a VIPACH kiállításait, alkotóit és a tárlatok történetét.', 'Kiállítások', 'Tervezett kiállítások', 'Vissza a fotóklubhoz', 'Legutóbbi kiállítás'],
+    de: ['Entdecken Sie die Ausstellungen, Kunstschaffenden und Geschichten im VIPACH-Archiv.', 'Ausstellungen', 'Geplante Ausstellungen', 'Zurück zum Fotoclub', 'Neueste Ausstellung'],
+  }[localeId];
+  const sorted = [...exhibitions].sort((a,b) =>
+    String(exhibitionDate(b) || b.year || '').localeCompare(String(exhibitionDate(a) || a.year || ''))
+    || a.slug.localeCompare(b.slug));
+  const rows = planned => sorted.filter(ex => (ex.status === 'planned') === planned).map(ex => {
+    const year = exhibitionDate(ex)?.slice(0,4) || ex.year;
+    return `<li class="history-item"><span class="history-no">${esc(year)}</span><h3><a href="${slugPaths(ex.slug, localeId)}">${esc(titleFor(ex, localeId))}</a></h3></li>`;
+  }).join('');
+  const home = slugPaths(featured.slug, localeId);
+  const club = 'https://vipach.at/' + localeId + '/';
+  const privacy = slugPaths('privacy', localeId);
+  const languages = site.locales.map(l =>
+    `<a href="${slugPaths('archive', l.id)}" lang="${l.htmlLang}"${l.id === localeId ? ' aria-current="page"' : ''}>${l.id.toUpperCase()}</a>`).join('');
+  return `<!doctype html>
+<html lang="${locale.htmlLang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(t.archive)}</title><meta name="description" content="${esc(intro[0])}"><link rel="canonical" href="${canonical}">${alt}<link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/exhibition-harmonization.css?v=20261126-work-titles"></head>
+<body><a class="skip-link" href="#content">${esc(t.skip)}</a><header class="site-header"><a class="brand" href="${home}" aria-label="${esc(t.brand)}"><strong>VIPACH</strong><span> / ${esc(t.exhibition)}</span></a><div class="header-tools"><nav class="lang-nav" aria-label="${esc(t.language)}">${languages}</nav><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="${esc(t.openMenu)}"><span></span><span></span></button></div><nav class="site-menu" id="site-menu" aria-label="${esc(t.navigation)}"><a href="${canonical}" aria-current="page">${esc(t.archive)}</a>${archiveNavigationHtml(exhibitions, featured, localeId, 'archive', 'slug')}<a href="${club}">${esc(intro[3])}</a></nav></header>
+<main id="content" tabindex="-1"><section class="section"><div class="section-inner"><p class="kicker">VIPACH · Vienna Photo Art &amp; Creative Hub</p><h1 class="display-2">${esc(t.archive)}</h1><p class="lead">${esc(intro[0])}</p></div></section><section class="history" id="archive"><div class="history-inner"><h2 class="display-2">${esc(intro[1])}</h2><ul class="history-list" style="list-style:none;padding:0">${rows(false)}</ul></div></section><section class="history" id="planned"><div class="history-inner"><h2 class="display-2">${esc(intro[2])}</h2><ul class="history-list" style="list-style:none;padding:0">${rows(true)}</ul></div></section></main>
+<footer class="site-footer"><div class="wrap"><p><a href="${home}">${esc(intro[4])}</a> · <a href="${club}">${esc(intro[3])}</a> · <a href="${privacy}">${esc(t.privacy)}</a></p></div></footer><script src="/assets/site.js" defer></script></body></html>
+`;
+}
+
 function buildSitemap(exhibitions, featured) {
   const urls = [];
   const lastmod = new Date().toISOString().slice(0, 10);
@@ -442,6 +473,7 @@ function buildSitemap(exhibitions, featured) {
   }
 
   pushTriple((localeId) => slugPaths('events', localeId));
+  pushTriple((localeId) => slugPaths('archive', localeId));
   if (featured && featured.slug !== 'spontan-2026') {
     pushTriple((localeId) => featuredPaths(localeId));
   }
@@ -465,6 +497,7 @@ function buildLlms(facts, featured) {
     '',
     '> Official directory of past VIPACH photography exhibitions in Vienna, Austria. Exhibitions are offered in Hungarian, English and Austrian German.',
     '',
+    '- [Archive index](' + baseUrl + '/archive/) · [Magyar](' + baseUrl + '/hu/archive/) · [Deutsch](' + baseUrl + '/de/archive/).',
     '- [Exhibition facts (JSON)](' + baseUrl + publicExhibitionsPath + '): source-linked exhibition dates, venue, catalogue counts and display status.',
     '- [VIPACH](https://vipach.at/): the community photography club in Vienna and Budapest; it grew from the Vienna Hungarian School photo club within the Central Federation.',
     '- This domain is the VIPACH cultural exhibition archive, not a separate organization or a commercial service.',
@@ -556,6 +589,9 @@ function main() {
     if (a.status !== 0) throw new Error('Scoped 2025 archive render failed');
   }
 
+  for (const locale of site.locales) {
+    writeFile(outputPathFor(locale.id, 'archive', 'slug'), renderArchiveIndex(exhibitions, featured, locale.id));
+  }
   updateExhibitionPublicLinks(root,exhibitions);
 
   writeFile(path.join(root, 'sitemap.xml'), buildSitemap(exhibitions, featured));
