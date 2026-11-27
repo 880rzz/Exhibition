@@ -1,42 +1,42 @@
 {
-  "url": "https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FVienna&showPrint=0&src=NzdiMGQ3ZTg1ODczNDc4NTI5NDc4N2UxNWUyMTczMjgzMjdmMmQ4NGZjYjZiYzMyMWMwOWY2MGI2NTYxM2NmZUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23616161",
+  "url": "https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FVienna&showPrint=0&src=NzdiMGQ3ZTg1ODczNDc4NTI5NDc4N2UxNWUyMTczMjgzMjdmMmQ4NGZjYjZiYzMyMWMwOWY2MGI2NTYxM2NmZUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23616161&mode=AGENDA&showTabs=0",
   "email": "office@vipach.at",
   "localized": {
     "en": {
       "nav": "Events",
       "title": "VIPACH events calendar",
       "lead": "Find the club’s upcoming activities in Vienna and Budapest.",
-      "email": "Email us to sign up",
-      "privacy": "Google Calendar loads only when you choose to open it. Google then receives connection data. Event titles are shown as supplied by the organizers.",
-      "show": "Show calendar",
-      "hide": "Hide calendar",
-      "open": "Open calendar in Google",
+      "email": "Ask by email instead",
+      "privacy": "The calendar is off by default. If you allow it, Google receives connection data such as your IP address and may use cookies or similar technologies. You can turn it off again at any time.",
+      "show": "Allow and load Google Calendar",
+      "hide": "Turn off Google Calendar",
       "frame": "Official calendar of VIPACH events",
-      "note": "A calendar entry does not guarantee availability. Include the event name and date in your email."
+      "note": "Ask about upcoming events or sign up by email. If you already know the event, include its name and date. We confirm your place separately.",
+      "privacyLink": "Calendar privacy details"
     },
     "de": {
       "nav": "Termine",
       "title": "VIPACH-Veranstaltungskalender",
       "lead": "Hier findest du die kommenden Aktivitäten des Fotoclubs in Wien und Budapest.",
-      "email": "Per E-Mail anmelden",
-      "privacy": "Google Kalender wird erst geladen, wenn du ihn öffnest. Dann erhält Google Verbindungsdaten. Veranstaltungstitel erscheinen in der Originalsprache.",
-      "show": "Kalender anzeigen",
-      "hide": "Kalender ausblenden",
-      "open": "Kalender bei Google öffnen",
+      "email": "Stattdessen per E-Mail fragen",
+      "privacy": "Der Kalender ist standardmäßig deaktiviert. Wenn du ihn freigibst, erhält Google Verbindungsdaten wie deine IP-Adresse und kann Cookies oder ähnliche Technologien verwenden. Du kannst den Kalender jederzeit wieder deaktivieren.",
+      "show": "Google Kalender erlauben und laden",
+      "hide": "Google Kalender deaktivieren",
       "frame": "Offizieller VIPACH-Veranstaltungskalender",
-      "note": "Ein Kalendereintrag garantiert keinen freien Platz. Nenne in deiner E-Mail den Namen und das Datum der Veranstaltung."
+      "note": "Frag per E-Mail nach den nächsten Terminen oder melde dich an. Wenn du die Veranstaltung schon kennst, nenne ihren Namen und das Datum. Wir bestätigen deinen Platz separat.",
+      "privacyLink": "Datenschutz zum Kalender"
     },
     "hu": {
       "nav": "Programok",
       "title": "VIPACH-programnaptár",
       "lead": "Itt találod a fotóklub következő bécsi és budapesti programjait.",
-      "email": "Jelentkezés e-mailben",
-      "privacy": "A Google Naptár csak akkor töltődik be, ha megnyitod. Ekkor a Google kapcsolati adatokat kap. Az eseménycímek a szervezők által megadott nyelven jelennek meg.",
-      "show": "Naptár megjelenítése",
-      "hide": "Naptár elrejtése",
-      "open": "Naptár megnyitása a Google oldalán",
+      "email": "Inkább e-mailben érdeklődöm",
+      "privacy": "A naptár alapból ki van kapcsolva. Ha engedélyezed, a Google kapcsolódási adatokat, például IP-címet kap, és sütiket vagy hasonló technológiákat használhat. A naptárat bármikor kikapcsolhatod.",
+      "show": "Google Naptár engedélyezése és betöltése",
+      "hide": "Google Naptár kikapcsolása",
       "frame": "A VIPACH hivatalos programnaptára",
-      "note": "A naptárbejegyzés nem jelent visszaigazolást. Az e-mailben írd meg a program nevét és dátumát."
+      "note": "A következő programokról e-mailben kérdezhetsz, és ott jelentkezhetsz. Ha már tudod, melyik eseményre jönnél, írd meg a nevét és dátumát. A helyedet külön visszaigazoljuk.",
+      "privacyLink": "A naptár adatvédelmi tájékoztatója"
     }
   }
 }
