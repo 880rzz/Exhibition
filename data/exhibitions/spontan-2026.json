@@ -210,7 +210,7 @@
       "sameAs": [
         "https://www.instagram.com/holczeszter/"
       ],
-      "image": "https://static.wixstatic.com/media/cc56a5_e80d4dbe53fa4e8a9affead277f735e5~mv2.png",
+      "image": "https://exhibition.vipach.at/assets/portraits/eszter-holcz-square.webp",
       "schemaId": "https://exhibition.vipach.at/#eszter-holcz",
       "role": "photographer",
       "works": [
@@ -461,7 +461,7 @@
   "liveHtmlMedia": {
     "schema": "live-embed-rights-v4.1",
     "note": "Frozen SPONTÁN HTML still embeds historical Wix CDN URLs to preserve the live exhibition experience and artist credits. Prior public appearance ≠ verified republication licence. Do not treat these embeds as licence-cleared.",
-    "externalWixImageCount": 20,
+    "externalWixImageCount": 19,
     "externalWixImages": [
       {
         "url": "https://static.wixstatic.com/media/1250bf_0903c8551f1c44bb8d474da973d24540~mv2.jpg",
@@ -570,13 +570,6 @@
       },
       {
         "url": "https://static.wixstatic.com/media/ca97d5_c9f5149e2f274218996a736c166d3dad~mv2.jpg",
-        "publicationStatus": "rights-review-required",
-        "licenseVerificationStatus": "license-verification-required",
-        "publicReleaseApproved": false,
-        "priorPublicationProvenance": "wix-cdn-on-exhibition.vipach.at"
-      },
-      {
-        "url": "https://static.wixstatic.com/media/cc56a5_e80d4dbe53fa4e8a9affead277f735e5~mv2.png",
         "publicationStatus": "rights-review-required",
         "licenseVerificationStatus": "license-verification-required",
         "publicReleaseApproved": false,

@@ -4,6 +4,7 @@
  * SOURCE-ONLY: writes review HTML to staging-preview/; production builder untouched.
  * Images are original Wix media references, mirrored privately under VIPACH.
  */
+import { archivedPortraitReplacement } from './exhibition-portrait-replacements.mjs';
 import { catalogueTitle } from './exhibition-catalogue-titles.mjs';
 import { exhibitionEditorialMarkup } from './exhibition-editorial.mjs';
 import fs from 'node:fs';
@@ -163,9 +164,10 @@ function workMarkup(w,lang,extra,show){
 }
 function artistCard(p,works,i,lang,show,slug){
  const c=copy[lang],bio=artistBiography(p.name,show);
+ const replacement=candidate?archivedPortraitReplacement(slug,p):null;
  const images=works.map((w,n)=>workMarkup(w,lang,n>0,slug)).join('');
  return '<article class="exhibitor-card" id="artist-'+esc(p.id)+'">'
-   +'<figure class="exhibitor-portrait"><img src="'+esc(img(p.portraitSourceUrl))+'" alt="'+esc(p.name)+'" width="'+esc(p.portraitWidth||700)+'" height="'+esc(p.portraitHeight||900)+'" referrerpolicy="no-referrer" loading="lazy" decoding="async"></figure>'
+   +'<figure class="exhibitor-portrait"><img src="'+esc(replacement?.url||img(p.portraitSourceUrl))+'" alt="'+esc(p.name)+'" width="'+esc(replacement?.width||p.portraitWidth||700)+'" height="'+esc(replacement?.height||p.portraitHeight||900)+'" referrerpolicy="no-referrer" loading="lazy" decoding="async"></figure>'
    +'<div class="exhibitor-content"><p class="kicker">'+esc(c.artists)+' · '+String(i+1).padStart(2,'0')+'</p>'
    +'<h3>'+esc(p.name)+'</h3>'+images
    +(bio?'<h4>'+esc(c.artist)+'</h4>'+sourceMarkup(bio,lang,slug,'artists',p.id):'')
@@ -294,6 +296,7 @@ if(candidate){
  if(!release){
  // Clone only already-public SPONTÁN routes and dependencies, nothing private.
  fs.cpSync(path.join(ROOT,'gallery'),path.join(OUT,'gallery'),{recursive:true});
+ fs.cpSync(path.join(ROOT,'assets','portraits'),path.join(OUT,'assets','portraits'),{recursive:true});
  for(const asset of ['om-system-supporter.svg']){
    fs.copyFileSync(path.join(ROOT,'assets',asset),path.join(OUT,'assets',asset));
  }
