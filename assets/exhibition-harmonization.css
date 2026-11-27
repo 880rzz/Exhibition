@@ -60,3 +60,7 @@
 .ex25-body .exhibitor-content .exhibitor-extra-title:has(+ .ex25-title-basis) { margin-block-end: 4px; }
 .ex25-body .exhibitor-content .ex25-title-basis { color: var(--muted); font-size: .875rem; line-height: 1.45; margin-block: 0 .85rem; }
 .ex25-original-title { font-size: .94rem; line-height: 1.45; margin-block: 0 .85rem; }
+
+/* Keep Eszter's supplied square crop intact in both exhibition profiles. */
+:is(#eszter-holcz,#artist-eszter) > .exhibitor-portrait { aspect-ratio: 1; }
+:is(#eszter-holcz,#artist-eszter) > .exhibitor-portrait img { object-fit: contain; }
